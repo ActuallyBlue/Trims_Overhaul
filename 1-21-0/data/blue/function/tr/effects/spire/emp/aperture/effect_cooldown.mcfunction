@@ -1,0 +1,1 @@
+scoreboard players reset #.entity_tp_effect blue.misc

@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "item":"minecraft:gold_ingot",
+          "id":"minecraft:gold_ingot"
+      },
+      "title": {"translate":"trim_material.minecraft.gold"},
+      "description": ["+0.04 ",{"translate":"attribute.name.generic.attack_speed"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/copper",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

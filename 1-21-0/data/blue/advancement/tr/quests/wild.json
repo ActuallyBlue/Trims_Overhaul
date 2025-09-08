@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "minecraft:lush_caves"
+            }
+          },
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.wild_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"wild":false}}}}}
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/quests/wild"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "enter": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "minecraft:stronghold",
+            "structures": "minecraft:stronghold"
+          }
+        }
+      }
+    },
+    "exit": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "structure": "minecraft:stronghold",
+                "structures": "minecraft:stronghold"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/eye/alarm/main"
+  }
+}

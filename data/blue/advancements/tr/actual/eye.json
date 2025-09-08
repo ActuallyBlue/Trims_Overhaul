@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "item":"minecraft:eye_armor_trim_smithing_template",
+          "id":"minecraft:eye_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.eye"},
+      "description": {"translate":"blue.tr.adv.eye.desc","fallback":"Even sight cannot be trusted, for as what can be seen is not real; it's merely a show"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/dune",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

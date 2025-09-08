@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.misc": -721
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/wild/tame/kill"
+  }
+}

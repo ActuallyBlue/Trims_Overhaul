@@ -1,0 +1,10 @@
+{
+  "asset_name": "shulker_shell",
+  "description": {
+    "color": "#BE20C7",
+    "translate": "trim_material.blue.shulker_shell",
+    "fallback": "Shulker Material"
+  },
+  "ingredient": "minecraft:shulker_shell",
+  "item_model_index": 0.0008
+}

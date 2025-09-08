@@ -1,0 +1,4 @@
+execute if score #.isolated_lunge blue.misc matches 1 positioned ~-0.9 ~-0.25 ~-0.9 as @e[type=!#blue:tr/peaceful,tag=!smithed.strict,dx=0.8,dy=1.5,dz=0.8,tag=!blue.tr.vex] at @s run function blue:tr/effects/vex/lunge/isolated_slash
+execute unless score #.isolated_lunge blue.misc matches 1 positioned ~-0.75 ~-0.25 ~-0.75 as @e[type=!#blue:tr/peaceful,tag=!smithed.strict,dx=0.5,dy=1.5,dz=0.5,tag=!blue.tr.vex] at @s run function blue:tr/effects/vex/lunge/slash
+execute if score #.isolated_lunge blue.misc matches 1 run particle dust 0.81 0.78 0.65 1 ~ ~0.7 ~ 0.25 0.15 0.25 0 3
+particle dust 0.81 0.78 0.65 1 ~ ~0.7 ~ 0.25 0.15 0.25 0 3

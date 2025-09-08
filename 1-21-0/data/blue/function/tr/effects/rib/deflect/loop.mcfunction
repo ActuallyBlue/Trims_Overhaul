@@ -1,0 +1,3 @@
+execute as @e[type=fireball,tag=blue.tr.rib_deflected] at @s run function blue:tr/effects/rib/deflect/entity
+execute at @e[type=area_effect_cloud,tag=blue.tr.rib_fireball] positioned ~-0.5 ~-0.5 ~-0.5 as @a[dx=0,tag=!blue.tr.rib] run damage @s 6 in_fire by @a[tag=blue.tr.rib,limit=1]
+execute if entity @e[type=area_effect_cloud,tag=blue.tr.rib_fireball,limit=1] run schedule function blue:tr/effects/rib/deflect/loop 1t

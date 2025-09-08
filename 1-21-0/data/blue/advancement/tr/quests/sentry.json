@@ -1,0 +1,33 @@
+{
+  "criteria": {
+      "start_0":{"trigger":"voluntary_exile","conditions":{"player":{"effects":{"raid_omen":{"amplifier":0}}}}},
+      "start_1":{"trigger":"voluntary_exile","conditions":{"player":{"effects":{"raid_omen":{"amplifier":1}}}}},
+      "start_2":{"trigger":"voluntary_exile","conditions":{"player":{"effects":{"raid_omen":{"amplifier":2}}}}},
+      "start_3":{"trigger":"voluntary_exile","conditions":{"player":{"effects":{"raid_omen":{"amplifier":3}}}}},
+      "start_4":{"trigger":"voluntary_exile","conditions":{"player":{"effects":{"raid_omen":{"amplifier":{"min":4}}}}}
+    },
+    "end": {
+      "trigger": "minecraft:hero_of_the_village",
+      "conditions": {
+        "player": [
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.sentry_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"sentry":false}}}}}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "start_0",
+      "start_1",
+      "start_2",
+      "start_3",
+      "start_4",
+      "end"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/quests/sentry"
+  }
+}

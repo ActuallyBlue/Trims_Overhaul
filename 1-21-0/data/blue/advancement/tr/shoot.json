@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "shot": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": true
+          },
+          "effects": {
+            "minecraft:hero_of_the_village": {}
+          },
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:crossbow"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/sentry/ballista/shoot"
+  }
+}

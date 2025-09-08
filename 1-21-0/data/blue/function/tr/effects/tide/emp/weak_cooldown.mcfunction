@@ -1,0 +1,1 @@
+scoreboard players reset #.tide.weak_cooldown blue.misc

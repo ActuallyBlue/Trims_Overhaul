@@ -1,0 +1,1 @@
+scoreboard players reset #.coast.fire_cooldown blue.misc

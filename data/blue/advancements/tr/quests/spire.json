@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:dragon_egg"]
+          }
+        ],
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "blue:tr/quests/spire_crystals": {
+                    "8": true
+                  },
+                  "blue:tr/blacklist": {
+                    "spire": false
+                  }
+                }
+              }
+            }
+          },
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.spire_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1}
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/quests/spire"
+  }
+}

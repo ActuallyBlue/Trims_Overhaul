@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:vindicator",
+              "equipment": {
+                "legs": {
+                  "items": ["minecraft:emerald_ore"]
+                }
+              }
+            }
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.4
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/quests/vex_hit"
+  }
+}

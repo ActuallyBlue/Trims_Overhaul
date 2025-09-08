@@ -1,0 +1,6 @@
+execute if score #.temp blue.misc matches ..800 facing entity @s feet run particle wax_off ~ ~0.25 ~ ^ ^ ^-150000 0.00015 0 force
+execute if score #.temp blue.misc matches ..800 rotated ~4.5 ~ positioned ^ ^ ^0.09 facing entity @s feet run particle wax_off ~ ~0.25 ~ ^ ^ ^-150000 0.00015 0 force @a[scores={blue.particles=2..}]
+execute if score #.temp blue.misc matches 801..1200 facing entity @s feet run particle wax_off ~ ~0.25 ~ ^ ^ ^-150000 0.0003 0 force
+execute if score #.temp blue.misc matches 801..1200 rotated ~4.5 ~ positioned ^ ^ ^0.09 facing entity @s feet run particle wax_off ~ ~0.25 ~ ^ ^ ^-150000 0.0003 0 force @a[scores={blue.particles=2..}]
+execute if score #.temp blue.misc matches 1201.. facing entity @s feet run particle wax_off ~ ~0.25 ~ ^ ^ ^-150000 0.00045 0 force
+execute if score #.temp blue.misc matches 1201.. rotated ~4.5 ~ positioned ^ ^ ^0.09 facing entity @s feet run particle wax_off ~ ~0.25 ~ ^ ^ ^-150000 0.00045 0 force @a[scores={blue.particles=2..}]

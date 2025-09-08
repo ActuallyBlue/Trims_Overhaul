@@ -1,0 +1,66 @@
+{
+  "criteria": {
+    "main": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "player",
+              "equipment": {
+                "mainhand": {
+                  "tag": "minecraft:axes"
+                }
+              }
+            }
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "#blue:tr/peaceful"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "fangs": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:evoker_fangs"
+            }
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "#blue:tr/peaceful"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fangs",
+      "main"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/effects/vex/strike/hit"
+  }
+}

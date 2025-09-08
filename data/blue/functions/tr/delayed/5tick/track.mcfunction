@@ -1,0 +1,16 @@
+execute if entity @s[tag=blue.tr.trim.sentry] anchored eyes facing entity @a[tag=blue.tr.sentry,limit=1] eyes run particle dust 0.29 0.53 0.36 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.coast] anchored eyes facing entity @a[tag=blue.tr.coast,limit=1] eyes run particle dust 0.76 0.78 0.53 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.snout] anchored eyes facing entity @a[tag=blue.tr.snout,limit=1] eyes run particle dust 0.95 0.69 0.1 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.ward] anchored eyes facing entity @a[tag=blue.tr.ward,limit=1] eyes run particle dust 0.36 0.44 0.68 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.host] anchored eyes facing entity @a[tag=blue.tr.host,limit=1] eyes run particle dust 0.64 0.27 0.27 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.silence] anchored eyes facing entity @a[tag=blue.tr.silence,limit=1] eyes run particle dust 0.22 0.26 0.81 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.raiser] anchored eyes facing entity @a[tag=blue.tr.raiser,limit=1] eyes run particle dust 0.58 0.71 0.14 0.09 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.spire] anchored eyes facing entity @a[tag=blue.tr.spire,limit=1] eyes run particle dust 0.75 0.13 0.78 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.dune] anchored eyes facing entity @a[tag=blue.tr.dune,limit=1] eyes run particle dust 0.91 0.77 0.28 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.rib] anchored eyes facing entity @a[tag=blue.tr.rib,limit=1] eyes run particle dust 0.90 0.28 0.29 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.wayfinder] anchored eyes facing entity @a[tag=blue.tr.wayfinder,limit=1] eyes run particle dust 0.95 1.0 0.78 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.shaper] anchored eyes facing entity @a[tag=blue.tr.shaper,limit=1] eyes run particle dust 0.56 0.56 0.56 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.wild] anchored eyes facing entity @a[tag=blue.tr.wild,limit=1] eyes run particle dust 0 0.84 0.16 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.tide] anchored eyes facing entity @a[tag=blue.tr.tide,limit=1] eyes run particle dust 0.1 0.61 0.87 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.eye] anchored eyes facing entity @a[tag=blue.tr.eye,limit=1] eyes run particle dust 0.12 0.54 0.27 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.vex] anchored eyes facing entity @a[tag=blue.tr.vex,limit=1] eyes run particle dust 0.81 0.78 0.65 0.15 ^ ^-0.25 ^0.7 0 0 0 0 5 normal @s

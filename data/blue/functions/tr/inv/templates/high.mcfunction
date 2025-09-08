@@ -1,0 +1,17 @@
+execute if score #.slot blue.misc matches 19 run item replace entity @s container.19 with air
+execute if score #.slot blue.misc matches 20 run item replace entity @s container.20 with air
+execute if score #.slot blue.misc matches 21 run item replace entity @s container.21 with air
+execute if score #.slot blue.misc matches 22 run item replace entity @s container.22 with air
+execute if score #.slot blue.misc matches 23 run item replace entity @s container.23 with air
+execute if score #.slot blue.misc matches 24 run item replace entity @s container.24 with air
+execute if score #.slot blue.misc matches 25 run item replace entity @s container.25 with air
+execute if score #.slot blue.misc matches 26 run item replace entity @s container.26 with air
+execute if score #.slot blue.misc matches 27 run item replace entity @s container.27 with air
+execute if score #.slot blue.misc matches 28 run item replace entity @s container.28 with air
+execute if score #.slot blue.misc matches 29 run item replace entity @s container.29 with air
+execute if score #.slot blue.misc matches 30 run item replace entity @s container.30 with air
+execute if score #.slot blue.misc matches 31 run item replace entity @s container.31 with air
+execute if score #.slot blue.misc matches 32 run item replace entity @s container.32 with air
+execute if score #.slot blue.misc matches 33 run item replace entity @s container.33 with air
+execute if score #.slot blue.misc matches 34 run item replace entity @s container.34 with air
+execute if score #.slot blue.misc matches 35 run item replace entity @s container.35 with air

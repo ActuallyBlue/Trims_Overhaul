@@ -1,0 +1,16 @@
+clear @s[tag=!blue.tr.wayfinder] wayfinder_armor_trim_smithing_template
+clear @s[tag=!blue.tr.silence] silence_armor_trim_smithing_template
+clear @s[tag=!blue.tr.shaper] shaper_armor_trim_smithing_template
+clear @s[tag=!blue.tr.raiser] raiser_armor_trim_smithing_template
+clear @s[tag=!blue.tr.sentry] sentry_armor_trim_smithing_template
+clear @s[tag=!blue.tr.spire] spire_armor_trim_smithing_template
+clear @s[tag=!blue.tr.coast] coast_armor_trim_smithing_template
+clear @s[tag=!blue.tr.snout] snout_armor_trim_smithing_template
+clear @s[tag=!blue.tr.ward] ward_armor_trim_smithing_template
+clear @s[tag=!blue.tr.dune] dune_armor_trim_smithing_template
+clear @s[tag=!blue.tr.wild] wild_armor_trim_smithing_template
+clear @s[tag=!blue.tr.tide] tide_armor_trim_smithing_template
+clear @s[tag=!blue.tr.host] host_armor_trim_smithing_template
+clear @s[tag=!blue.tr.eye] eye_armor_trim_smithing_template
+clear @s[tag=!blue.tr.rib] rib_armor_trim_smithing_template
+clear @s[tag=!blue.tr.vex] vex_armor_trim_smithing_template

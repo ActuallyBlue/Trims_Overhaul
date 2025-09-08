@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "has_template": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#blue:tr/templates"
+          }
+        ],
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "gamemode": [
+              "survival",
+              "adventure"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/inv/templates/checks"
+  }
+}

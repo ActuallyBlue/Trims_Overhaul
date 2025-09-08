@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "item":"minecraft:iron_ingot",
+          "id":"minecraft:iron_ingot"
+      },
+      "title": {"translate":"trim_material.minecraft.iron"},
+      "description": ["+0.5 ",{"translate":"attribute.name.generic.armor"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/gold",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+execute at @a[tag=blue.tr.ward] at @n[type=marker,tag=blue.tr.ward_field] run playsound block.enchantment_table.use player @a ~ ~ ~ 1.5 1.25

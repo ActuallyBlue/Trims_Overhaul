@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "entity": {
+          "type": "fishing_bobber"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/coast/fisher"
+  }
+}

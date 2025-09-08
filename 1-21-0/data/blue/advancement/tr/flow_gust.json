@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "wind_burst": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_flying": false
+          },
+          "equipment": {
+            "mainhand": {
+              "items": "mace",
+              "predicates": {
+                "minecraft:enchantments": [
+                  {
+                    "enchantments": "minecraft:wind_burst"
+                  }
+                ]
+              }
+            }
+          },
+          "movement": {
+            "fall_distance": {
+              "min": 1.5
+            }
+          }
+        }
+      }
+    },
+    "wind_charge": {
+      "trigger": "minecraft:fall_from_height"
+    }
+  },
+  "requirements": [
+    [
+      "wind_charge",
+      "wind_burst"
+    ]
+  ]
+}

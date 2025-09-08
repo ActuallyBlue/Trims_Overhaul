@@ -1,0 +1,47 @@
+{
+  "criteria": {
+    "two_items": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:drowned",
+          "equipment": {
+            "mainhand": {},
+            "offhand": {}
+          }
+        },
+        "player": [
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.tide_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"tide":false}}}}}
+        ]
+      }
+    },
+    "one_item": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:drowned",
+          "equipment": {
+            "mainhand": {}
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.015
+          },
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.tide_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"tide":false}}}}}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "two_items",
+      "one_item"
+    ]
+  ]
+}

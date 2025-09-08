@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:diamond"
+      },
+      "title": {"translate":"trim_material.minecraft.diamond"},
+      "description": ["+0.7 ",{"translate":"attribute.name.generic.armor_toughness"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/redstone",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

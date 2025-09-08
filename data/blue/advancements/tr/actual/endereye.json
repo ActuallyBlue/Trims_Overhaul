@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "item":"minecraft:ender_eye",
+          "id":"minecraft:ender_eye"
+      },
+      "title": [{"translate":"item.minecraft.ender_eye"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
+      "description": "",
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/blaze",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

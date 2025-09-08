@@ -1,0 +1,2 @@
+kill @e[type=text_display,tag=blue.tr.gamble.display,predicate=!blue:shared/has_vehicle]
+execute if entity @e[type=text_display,tag=blue.tr.gamble.display,limit=1] run schedule function blue:tr/effects/snout/gamble/item/display 10t

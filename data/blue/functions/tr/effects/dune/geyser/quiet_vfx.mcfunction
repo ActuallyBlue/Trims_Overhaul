@@ -1,0 +1,2 @@
+execute unless score #.20 blue.misc matches 2..10 unless score #.20 blue.misc matches 12.. run playsound block.lava.pop player @a[advancements={blue:tr/trust={dune=false}}] ~ ~0.25 ~ 0.2 0.7
+execute if score #.20 blue.misc matches 1 run playsound weather.rain player @a[advancements={blue:tr/trust={dune=true}}] ~ ~0.25 ~ 0.1 1.5

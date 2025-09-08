@@ -1,0 +1,1 @@
+execute on origin if entity @s[tag=blue.tr.bolt] run return 1

@@ -1,0 +1,1 @@
+execute on target if entity @s[tag=blue.tr.spire] run return 1

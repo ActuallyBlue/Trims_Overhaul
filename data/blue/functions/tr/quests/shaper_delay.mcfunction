@@ -1,0 +1,1 @@
+advancement revoke @a[advancements={blue:tr/quests/shaper_multi={6=false}}] only blue:tr/quests/shaper_multi

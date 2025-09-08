@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BHB",
+    "HCH",
+    "BHB"
+  ],
+  "key": {
+    "B": [
+      {
+        "item": "minecraft:tube_coral_block"
+      },
+      {
+        "item": "minecraft:horn_coral_block"
+      },
+      {
+        "item": "minecraft:fire_coral_block"
+      },
+      {
+        "item": "minecraft:brain_coral_block"
+      },
+      {
+        "item": "minecraft:bubble_coral_block"
+      }
+    ],
+    "H": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "C": {
+      "item": "minecraft:conduit"
+    }
+  },
+  "result": {
+    "id": "minecraft:coast_armor_trim_smithing_template",
+    "item": "minecraft:coast_armor_trim_smithing_template"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,1 @@
+execute on owner if entity @s[tag=blue.tr.wild] run return 1

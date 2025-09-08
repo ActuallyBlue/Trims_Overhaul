@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:wind_charge"
+      },
+      "title": [{"translate":"item.minecraft.wind_charge"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
+      "description": "",
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/shulker",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

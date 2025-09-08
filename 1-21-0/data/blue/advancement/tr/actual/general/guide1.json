@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:knowledge_book"
+      },
+      "title": {"translate":"blue.tr.adv.objectives.title","fallback":"Objectives"},
+      "description": {"translate":"blue.tr.adv.objectives.desc","fallback":"Be the first one to find the templates and complete it's objective before anyone else to obtain usable templates alongside ownership over it."},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/hide/0",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

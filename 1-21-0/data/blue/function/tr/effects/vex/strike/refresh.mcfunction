@@ -1,0 +1,1 @@
+scoreboard players set #.vex.sneak blue.misc 10

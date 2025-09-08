@@ -1,0 +1,10 @@
+{
+  "asset_name": "nautilus_shell",
+  "description": {
+    "color": "#CBBDA4",
+    "translate": "trim_material.blue.nautilus_shell",
+    "fallback": "Nautilus Material"
+  },
+  "ingredient": "minecraft:nautilus_shell",
+  "item_model_index": 0.0003
+}

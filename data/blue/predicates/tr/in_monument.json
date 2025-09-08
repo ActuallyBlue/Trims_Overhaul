@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "structure": "minecraft:monument",
+    "structures": "minecraft:monument"
+  }
+}

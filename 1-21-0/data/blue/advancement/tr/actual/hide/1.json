@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:glass_pane"
+      },
+      "title": "1",
+      "description": "",
+      "announce_to_chat": false,
+      "hidden": true,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/hide/4",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

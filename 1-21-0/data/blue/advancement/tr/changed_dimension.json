@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/inv/changed_dimension"
+  }
+}

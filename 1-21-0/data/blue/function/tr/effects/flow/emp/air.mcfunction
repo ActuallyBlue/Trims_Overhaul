@@ -1,0 +1,1 @@
+execute on origin at @s[tag=blue.tr.flow,predicate=!blue:shared/on_ground] if block ~ ~ ~ #air if block ~ ~-1 ~ #air if block ~ ~-2 ~ #air if block ~ ~-3 ~ #air if block ~ ~-4 ~ #air if block ~ ~-5 ~ #air run return 1

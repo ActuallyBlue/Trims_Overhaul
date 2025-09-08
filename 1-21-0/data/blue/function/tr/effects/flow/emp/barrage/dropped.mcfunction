@@ -1,0 +1,4 @@
+execute if score #.flow.wind_barrage_duration blue.config matches -1 run return run title @s actionbar {"translate":"blue.tr.wind_barrage_disabled","fallback":"Wind Barrage is disabled by the server","color":"gray"}
+execute unless score #.flow.barrage_cooldown blue.misc matches 1.. if block ~ ~ ~ #air if block ~ ~-1 ~ #air if block ~ ~-2 ~ #air if block ~ ~-3 ~ #air if block ~ ~-4 ~ #air store success score #.barrage_time blue.misc run kill
+execute if score #.flow.barrage_cooldown blue.misc matches 1.. on origin run title @s[tag=blue.tr.flow] actionbar [{"translate":"blue.tr.wind_barrage_name","fallback":"Wind Barrage","color":"#85B2C5"},{"translate":"blue.tr.on_cooldown","fallback":" is on cooldown","color":"gray"}]
+execute if score #.flow.barrage_cooldown blue.misc matches 1 run data modify entity @s PickupDelay set value 0s

@@ -1,0 +1,63 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "advancements": {
+              "blue:tr/quests/flow_kills": {
+                "1": true,
+                "7": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "block": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "advancements": {
+                  "blue:tr/quests/flow_kills": {
+                    "1": true,
+                    "7": false
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#replaceable"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hit",
+      "block"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/quests/flow_reset"
+  }
+}

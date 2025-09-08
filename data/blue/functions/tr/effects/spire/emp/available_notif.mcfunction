@@ -1,0 +1,2 @@
+title @s actionbar [{"translate":"blue.tr.reversal_name","fallback":"Reversal","color":"#BE20C7"},{"translate":"blue.tr.ability_available","fallback":" is now available","color":"gray"}]
+playsound block.amethyst_block.step player @s ~ ~ ~ 0.8 2

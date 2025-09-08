@@ -1,0 +1,1 @@
+scoreboard players reset #.wild.florist_cooldown blue.misc

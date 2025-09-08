@@ -1,0 +1,1 @@
+effect clear @a[tag=blue.tr.spire] levitation

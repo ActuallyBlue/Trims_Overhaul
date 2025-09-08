@@ -1,0 +1,2 @@
+execute unless entity @a[tag=blue.tr.mats.shard,limit=1] if entity @a[predicate=blue:tr/muffled,limit=1] run schedule function blue:tr/effects/snout/gamble/muffle_loop 1t
+execute as @a[predicate=blue:tr/muffled] at @s run function blue:tr/effects/silence/muffled

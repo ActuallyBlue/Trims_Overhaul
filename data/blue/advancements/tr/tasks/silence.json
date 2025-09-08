@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:warden"
+        },
+        "player": [
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.silence_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"silence":false}}}}}
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/tasks/silence"
+  }
+}

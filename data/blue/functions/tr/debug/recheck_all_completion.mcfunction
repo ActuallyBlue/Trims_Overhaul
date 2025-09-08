@@ -1,0 +1,16 @@
+execute unless data storage blue:data trims.owner.wayfinder{text:"None"} run scoreboard players set #.tr.wayfinder_completed blue.config 1
+execute unless data storage blue:data trims.owner.silence{text:"None"} run scoreboard players set #.tr.silence_completed blue.config 1
+execute unless data storage blue:data trims.owner.shaper{text:"None"} run scoreboard players set #.tr.shaper_completed blue.config 1
+execute unless data storage blue:data trims.owner.raiser{text:"None"} run scoreboard players set #.tr.raiser_completed blue.config 1
+execute unless data storage blue:data trims.owner.sentry{text:"None"} run scoreboard players set #.tr.sentry_completed blue.config 1
+execute unless data storage blue:data trims.owner.spire{text:"None"} run scoreboard players set #.tr.spire_completed blue.config 1
+execute unless data storage blue:data trims.owner.coast{text:"None"} run scoreboard players set #.tr.coast_completed blue.config 1
+execute unless data storage blue:data trims.owner.snout{text:"None"} run scoreboard players set #.tr.snout_completed blue.config 1
+execute unless data storage blue:data trims.owner.ward{text:"None"} run scoreboard players set #.tr.ward_completed blue.config 1
+execute unless data storage blue:data trims.owner.dune{text:"None"} run scoreboard players set #.tr.dune_completed blue.config 1
+execute unless data storage blue:data trims.owner.wild{text:"None"} run scoreboard players set #.tr.wild_completed blue.config 1
+execute unless data storage blue:data trims.owner.tide{text:"None"} run scoreboard players set #.tr.tide_completed blue.config 1
+execute unless data storage blue:data trims.owner.host{text:"None"} run scoreboard players set #.tr.host_completed blue.config 1
+execute unless data storage blue:data trims.owner.eye{text:"None"} run scoreboard players set #.tr.eye_completed blue.config 1
+execute unless data storage blue:data trims.owner.rib{text:"None"} run scoreboard players set #.tr.rib_completed blue.config 1
+execute unless data storage blue:data trims.owner.vex{text:"None"} run scoreboard players set #.tr.vex_completed blue.config 1

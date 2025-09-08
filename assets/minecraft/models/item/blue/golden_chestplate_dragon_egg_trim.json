@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/blue/custom/golden_chestplate",
+    "layer1": "minecraft:item/blue/chestplate_trim_dragon_egg"
+  }
+}

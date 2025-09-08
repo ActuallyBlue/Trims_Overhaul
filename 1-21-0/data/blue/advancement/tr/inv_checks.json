@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "in_inventory": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#trimmable_armor"
+          }
+        ]
+      }
+    },
+    "in_cursor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "slots": {
+            "player.cursor": {
+              "items": "#trimmable_armor"
+            }
+          }
+        }
+      }
+    },
+    "tick": {
+      "trigger": "tick"
+    }
+  },
+  "requirements": [
+    [
+      "in_cursor",
+      "in_inventory"
+    ],
+    [
+      "tick"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/inv/all_checks"
+  }
+}

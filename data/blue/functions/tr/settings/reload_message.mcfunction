@@ -1,0 +1,5 @@
+execute unless score #.temp blue.misc matches -123 store success score #.tr.reload_message blue.config unless score #.tr.reload_message blue.config matches 1
+execute unless score #.temp blue.misc matches -123 if score #.tr.reload_message blue.config matches 0 run playsound block.note_block.chime player @s ~ ~ ~ 0.5 0.6
+execute unless score #.temp blue.misc matches -123 if score #.tr.reload_message blue.config matches 1 run playsound block.note_block.chime player @s ~ ~ ~ 0.5 0.9
+execute if score #.tr.reload_message blue.config matches 0 run tellraw @s [{"translate":"blue.tr.reload_message","fallback":"Reload Message","color":"gray","clickEvent":{"action":"run_command","value":"/function blue:tr/settings/reload_message"}},{"text":": ","color":"dark_gray"},{"translate":"options.off","color":"dark_red"}]
+execute if score #.tr.reload_message blue.config matches 1 run tellraw @s [{"translate":"blue.tr.reload_message","fallback":"Reload Message","color":"gray","clickEvent":{"action":"run_command","value":"/function blue:tr/settings/reload_message"}},{"text":": ","color":"dark_gray"},{"translate":"options.on","color":"dark_green"}]

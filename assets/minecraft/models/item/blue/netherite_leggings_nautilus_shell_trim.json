@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/blue/custom/netherite_leggings",
+    "layer1": "minecraft:item/blue/leggings_trim_nautilus_shell"
+  }
+}

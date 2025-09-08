@@ -1,0 +1,2 @@
+execute at @a[tag=blue.tr.mats.amethyst] run particle dust_color_transition 0.5 0 0.7 0.9 0.8 0 0.8 ~ ~0.8 ~ 0.3 0.3 0.3 0 1
+execute if entity @a[tag=blue.tr.mats.amethyst,limit=1] run schedule function blue:tr/delayed/amethyst 1t

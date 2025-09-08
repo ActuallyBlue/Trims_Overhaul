@@ -1,0 +1,10 @@
+{
+  "asset_name": "heart_of_the_sea",
+  "description": {
+    "color": "#008FD6",
+    "translate": "trim_material.blue.heart_of_the_sea",
+    "fallback": "Sea Heart Material"
+  },
+  "ingredient": "minecraft:heart_of_the_sea",
+  "item_model_index": 0.0005
+}

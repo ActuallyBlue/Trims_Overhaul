@@ -1,0 +1,2 @@
+execute as @e[type=ender_pearl,scores={blue.misc=..0}] run function blue:tr/effects/eye/emp/disconfigure/clear
+execute as @e[type=eye_of_ender,scores={blue.misc=..0}] run function blue:tr/effects/eye/emp/disconfigure/clear

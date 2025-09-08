@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "movement": {
+      "speed": {
+        "max": 0.1
+      }
+    },
+    "flags": {
+      "is_sneaking": true
+    }
+  }
+}

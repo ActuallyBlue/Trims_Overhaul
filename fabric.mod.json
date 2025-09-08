@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "trims_overhaul",
+  "version": "3.0.0",
+  "name": "Trims Overhaul",
+  "description": "Give every trim unique powers, obtainable though quests",
+  "license": "LicenseRef-Datapack",
+  "environment": "*",
+  "depends": {
+    "fabric-resource-loader-v0": "*"
+  },
+  "icon": "pack.png",
+  "contact": {
+    "homepage": "https://modrinth.com/datapack/trims-overhaul",
+    "sources": "https://github.com/ActuallyBlue/Trims_Overhaul",
+    "issues": "https://github.com/ActuallyBlue/Trims_Overhaul/issues"
+  }
+}

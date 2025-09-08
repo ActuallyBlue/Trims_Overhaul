@@ -1,0 +1,2 @@
+execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=blue.tr.host.morale,limit=1] at @s run return run function blue:tr/effects/host/exchange/swapable
+execute positioned ^ ^ ^0.5 if entity @s[distance=..20] run function blue:tr/effects/host/exchange/cast

@@ -1,0 +1,110 @@
+{
+  "type": "minecraft:multi_action",
+  "title": [
+    "     ",
+    {
+      "translate": "blue.tr.trims_overhaul",
+      "fallback": "Trims Overhaul",
+      "color": "#3aa56a"
+    }
+  ],
+  "external_title": {
+    "translate": "blue.tr.trims_overhaul",
+    "fallback": "Trims Overhaul",
+    "color": "#3aa56a"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "/    v3.0.0    \\\nBy ActuallyBlue",
+        "color": "gray"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": [
+        {
+          "translate": "blue.tr.beg_for_followers",
+          "fallback": "If you've enjoyed this project, then\n please consider following on Modrinth",
+          "color": "gray"
+        },
+        {
+          "text": "\n┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐"
+        }
+      ]
+    }
+  ],
+  "columns": 1,
+  "actions": [
+    {
+      "label": {
+        "translate": "blue.tr.resource_pack_button",
+        "fallback": "[Resource Pack]",
+        "color": "#1bd96a"
+      },
+      "action": {
+        "type": "open_url",
+        "url": "https://modrinth.com/resourcepack/trims-resources"
+      }
+    },
+    {
+      "width": 140,
+      "label": {
+        "translate": "blue.tr.modrinth_button",
+        "fallback": "[Modrinth]",
+        "color": "#1bd96a"
+      },
+      "action": {
+        "type": "open_url",
+        "url": "https://modrinth.com/datapack/trims-overhaul"
+      }
+    },
+    {
+      "width": 130,
+      "label": {
+        "translate": "blue.tr.discord_button",
+        "fallback": "[Discord]",
+        "color": "#7289da"
+      },
+      "action": {
+        "type": "open_url",
+        "url": "https://discord.gg/TsC8AnaZeV"
+      }
+    },
+    {
+      "width": 120,
+      "label": {
+        "translate": "blue.tr.github_button",
+        "fallback": "[GitHub]",
+        "color": "#797b83"
+      },
+      "action": {
+        "type": "open_url",
+        "url": "https://github.com/ActuallyBlue/Trims_Overhaul"
+      }
+    },
+    {
+      "width": 110,
+      "label": {
+        "translate": "blue.tr.wiki_button",
+        "fallback": "[Wiki]",
+        "color": "#797b83"
+      },
+      "action": {
+        "type": "open_url",
+        "url": "https://github.com/ActuallyBlue/Trims_Overhaul/wiki"
+      }
+    }
+  ],
+  "exit_action": {
+    "action": {
+      "type": "show_dialog",
+      "dialog": "smithed:data_packs"
+    },
+    "label": {
+      "translate": "gui.back"
+    },
+    "width": 100
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item":"netherite_boots",
+      "id":"netherite_boots"
+    },
+    "title": {"translate":"blue.tr.fearless_adventures.title","fallback":"Fearless Adventures"},
+    "description": {"translate":"blue.tr.fearless_adventures.desc","fallback":"Discover every structure"},
+    "frame": "challenge"
+  },
+  "parent": "minecraft:adventure/sleep_in_bed",
+  "criteria": {
+    "ancient_city":{"trigger":"location","conditions":{"player":{"location":{"structure":"ancient_city","structures":"ancient_city"}}}},
+    "bastion_remnant":{"trigger":"location","conditions":{"player":{"location":{"structure":"bastion_remnant","structures":"bastion_remnant"}}}},
+    "buried_treasure":{"trigger":"location","conditions":{"player":{"location":{"structure":"buried_treasure","structures":"buried_treasure"}}}},
+    "desert_pyramid":{"trigger":"location","conditions":{"player":{"location":{"structure":"desert_pyramid","structures":"desert_pyramid"}}}},
+    "end_city":{"trigger":"location","conditions":{"player":{"location":{"structure":"end_city","structures":"end_city"}}}},
+    "fortress":{"trigger":"location","conditions":{"player":{"location":{"structure":"fortress","structures":"fortress"}}}},
+    "igloo":{"trigger":"location","conditions":{"player":{"location":{"structure":"igloo","structures":"igloo"}}}},
+    "jungle_pyramid":{"trigger":"location","conditions":{"player":{"location":{"structure":"jungle_pyramid","structures":"jungle_pyramid"}}}},
+    "mansion":{"trigger":"location","conditions":{"player":{"location":{"structure":"mansion","structures":"mansion"}}}},
+    "mineshaft":{"trigger":"location","conditions":{"player":{"location":{"structure":"mineshaft","structures":"mineshaft"}}}},
+    "mineshaft_mesa":{"trigger":"location","conditions":{"player":{"location":{"structure":"mineshaft_mesa","structures":"mineshaft_mesa"}}}},
+    "monument":{"trigger":"location","conditions":{"player":{"location":{"structure":"monument","structures":"monument"}}}},
+    "nether_fossil":{"trigger":"location","conditions":{"player":{"location":{"structure":"nether_fossil","structures":"nether_fossil"}}}},
+    "ocean_ruin_cold":{"trigger":"location","conditions":{"player":{"location":{"structure":"ocean_ruin_cold","structures":"ocean_ruin_cold"}}}},
+    "ocean_ruin_warm":{"trigger":"location","conditions":{"player":{"location":{"structure":"ocean_ruin_warm","structures":"ocean_ruin_warm"}}}},
+    "pillager_outpost":{"trigger":"location","conditions":{"player":{"location":{"structure":"pillager_outpost","structures":"pillager_outpost"}}}},
+    "ruined_portal":{"trigger":"location","conditions":{"player":{"location":{"structure":"ruined_portal","structures":"ruined_portal"}}}},
+    "ruined_portal_desert":{"trigger":"location","conditions":{"player":{"location":{"structure":"ruined_portal_desert","structures":"ruined_portal_desert"}}}},
+    "ruined_portal_jungle":{"trigger":"location","conditions":{"player":{"location":{"structure":"ruined_portal_jungle","structures":"ruined_portal_jungle"}}}},
+    "ruined_portal_mountain":{"trigger":"location","conditions":{"player":{"location":{"structure":"ruined_portal_mountain","structures":"ruined_portal_mountain"}}}},
+    "ruined_portal_nether":{"trigger":"location","conditions":{"player":{"location":{"structure":"ruined_portal_nether","structures":"ruined_portal_nether"}}}},
+    "ruined_portal_ocean":{"trigger":"location","conditions":{"player":{"location":{"structure":"ruined_portal_ocean","structures":"ruined_portal_ocean"}}}},
+    "ruined_portal_swamp":{"trigger":"location","conditions":{"player":{"location":{"structure":"ruined_portal_swamp","structures":"ruined_portal_swamp"}}}},
+    "shipwreck":{"trigger":"location","conditions":{"player":{"location":{"structure":"shipwreck","structures":"shipwreck"}}}},
+    "shipwreck_beached":{"trigger":"location","conditions":{"player":{"location":{"structure":"shipwreck_beached","structures":"shipwreck_beached"}}}},
+    "stronghold":{"trigger":"location","conditions":{"player":{"location":{"structure":"stronghold","structures":"stronghold"}}}},
+    "swamp_hut":{"trigger":"location","conditions":{"player":{"location":{"structure":"swamp_hut","structures":"swamp_hut"}}}},
+    "trail_ruins":{"trigger":"location","conditions":{"player":{"location":{"structure":"trail_ruins","structures":"trail_ruins"}}}},
+    "village_desert":{"trigger":"location","conditions":{"player":{"location":{"structure":"village_desert","structures":"village_desert"}}}},
+    "village_plains":{"trigger":"location","conditions":{"player":{"location":{"structure":"village_plains","structures":"village_plains"}}}},
+    "village_savanna":{"trigger":"location","conditions":{"player":{"location":{"structure":"village_savanna","structures":"village_savanna"}}}},
+    "village_snowy":{"trigger":"location","conditions":{"player":{"location":{"structure":"village_snowy","structures":"village_snowy"}}}},
+    "village_taiga":{"trigger":"location","conditions":{"player":{"location":{"structure":"village_taiga","structures":"village_taiga"}}}}
+    }
+}

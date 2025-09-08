@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "blue:tr/coast"
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/quests/coast"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "trims-overhaul",
+	"pack": {
+			"pack_format": 15,
+      "supported_formats": {"min_inclusive":15,"max_inclusive":81},
+			"description": [
+        {"text": "Datapack by ActuallyBlue\n","color":"#0a9add"},
+        {"text": "Version 3.0.0 - MC 1.20.0+","color":"#449CAB"}
+      ]
+    },
+    "filter": {
+      "block": [
+        {"namespace": "^minecraft$","path": "recipes/.*_armor_trim_smithing_template\\.json"},
+        {"namespace": "^minecraft$","path": "recipe/.*_armor_trim_smithing_template\\.json"}
+      ]
+    },
+    "overlays": {
+      "entries": [
+        {"formats":{"min_inclusive":18,"max_inclusive":47},"directory":"1-20-2"},
+        {"formats":{"min_inclusive":26,"max_inclusive":47},"directory":"1-20-3"},
+        {"formats":{"min_inclusive":27,"max_inclusive":47},"directory":"1-20-5"},
+        {"formats":{"min_inclusive":48,"max_inclusive":200},"directory":"1-21-0"},
+        {"formats":{"min_inclusive":57,"max_inclusive":200},"directory":"1-21-2"},
+        {"formats":{"min_inclusive":58,"max_inclusive":200},"directory":"1-21-4"},
+        {"formats":{"min_inclusive":62,"max_inclusive":200},"directory":"1-21-5"},
+        {"formats":{"min_inclusive":77,"max_inclusive":200},"directory":"1-21-6"},
+        {"formats":{"min_inclusive":81,"max_inclusive":200},"directory":"1-21-7"},
+        {"formats":{"min_inclusive":42,"max_inclusive":100},"directory":"rp_1-21-2"},
+        {"formats":{"min_inclusive":43,"max_inclusive":100},"directory":"rp_1-21-4"}
+    ]
+  }
+}

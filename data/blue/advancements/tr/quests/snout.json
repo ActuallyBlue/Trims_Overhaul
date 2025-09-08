@@ -1,0 +1,18 @@
+{"criteria":{
+  "enchanted_book":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["enchanted_book"]}}},
+  "iron_boots":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["iron_boots"]}}},
+  "splash_potion":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["splash_potion"]}}},
+  "potion":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["potion"]}}},
+  "iron_nugget":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["iron_nugget"]}}},
+  "ender_pearl":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["ender_pearl"]}}},
+  "string":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["string"]}}},
+  "obsidian":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["obsidian"]}}},
+  "fire_charge":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["fire_charge"]}}},
+  "crying_obsidian":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["crying_obsidian"]}}},
+  "leather":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["leather"]}}},
+  "soul_sand":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["soul_sand"]}}},
+  "nether_brick":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["nether_brick"]}}},
+  "spectral_arrow":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["spectral_arrow"]}}},
+  "gravel":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["gravel"]}}},
+  "blackstone":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":["blackstone"]}}}},
+"rewards":{"function":"blue:tr/quests/snout"}}

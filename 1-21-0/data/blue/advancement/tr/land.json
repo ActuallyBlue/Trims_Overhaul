@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:fall_from_height",
+      "conditions": {
+        "player": {
+          "effects": {
+            "minecraft:resistance": {
+              "amplifier": 78
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/spire/emp/land"
+  }
+}

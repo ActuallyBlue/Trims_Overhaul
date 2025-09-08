@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=blue.tr.dune_sandstorm] at @s run function blue:tr/effects/dune/sandstorm/entity

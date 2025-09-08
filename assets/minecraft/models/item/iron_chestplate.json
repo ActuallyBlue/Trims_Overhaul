@@ -1,0 +1,128 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "minecraft:item/blue/iron_chestplate_gunpowder_trim",
+      "predicate": {
+        "trim_type": 0.0001
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_echo_shard_trim",
+      "predicate": {
+        "trim_type": 0.0002
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_nautilus_shell_trim",
+      "predicate": {
+        "trim_type": 0.0003
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_blaze_powder_trim",
+      "predicate": {
+        "trim_type": 0.0004
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_heart_of_the_sea_trim",
+      "predicate": {
+        "trim_type": 0.0005
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_ender_eye_trim",
+      "predicate": {
+        "trim_type": 0.0006
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_nether_star_trim",
+      "predicate": {
+        "trim_type": 0.0007
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_shulker_shell_trim",
+      "predicate": {
+        "trim_type": 0.0008
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_dragon_egg_trim",
+      "predicate": {
+        "trim_type": 0.0009
+      }
+    },
+    {
+      "model": "minecraft:item/blue/iron_chestplate_wind_charge_trim",
+      "predicate": {
+        "trim_type": 0.001
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_quartz_trim",
+      "predicate": {
+        "trim_type": 0.1
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_iron_darker_trim",
+      "predicate": {
+        "trim_type": 0.2
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_netherite_trim",
+      "predicate": {
+        "trim_type": 0.3
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_redstone_trim",
+      "predicate": {
+        "trim_type": 0.4
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_copper_trim",
+      "predicate": {
+        "trim_type": 0.5
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_gold_trim",
+      "predicate": {
+        "trim_type": 0.6
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_emerald_trim",
+      "predicate": {
+        "trim_type": 0.7
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_diamond_trim",
+      "predicate": {
+        "trim_type": 0.8
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_lapis_trim",
+      "predicate": {
+        "trim_type": 0.9
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/iron_chestplate_amethyst_trim",
+      "predicate": {
+        "trim_type": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "minecraft:item/iron_chestplate"
+  }
+}

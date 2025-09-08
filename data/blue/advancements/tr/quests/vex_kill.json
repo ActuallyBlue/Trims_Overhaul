@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:vindicator",
+          "equipment": {
+            "legs": {
+              "items": ["minecraft:emerald_ore"]
+            }
+          }
+        },
+        "player": [
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.vex_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"vex":false}}}}}
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/quests/vex_kill"
+  }
+}

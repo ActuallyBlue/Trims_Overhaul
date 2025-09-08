@@ -1,0 +1,10 @@
+{
+  "asset_name": "dragon_egg",
+  "description": {
+    "color": "#45175c",
+    "translate": "trim_material.blue.dragon_egg",
+    "fallback": "Dragon Egg Material"
+  },
+  "ingredient": "minecraft:dragon_egg",
+  "item_model_index": 0.0009
+}

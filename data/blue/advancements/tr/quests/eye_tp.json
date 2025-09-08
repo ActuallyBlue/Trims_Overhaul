@@ -1,0 +1,66 @@
+{
+  "criteria": {
+    "pearl": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id":"minecraft:is_fall",
+                "expected": true
+              }
+            ]
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.used_pearl": {
+                "min": 1
+              }
+            }
+          },
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.eye_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"eye":false}}}}}
+        ]
+      }
+    },
+    "fell": {
+      "trigger": "minecraft:fall_from_height",
+      "conditions": {
+        "distance": {
+          "absolute": {
+            "min": 3
+          }
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.used_pearl": {
+                "min": 1
+              }
+            }
+          },
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.eye_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"eye":false}}}}}
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pearl",
+      "fell"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/quests/eye_tp"
+  }
+}

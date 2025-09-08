@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item":"minecraft:enchanted_golden_apple",
+      "id":"minecraft:enchanted_golden_apple"
+    },
+    "title": {
+      "translate": "blue.tr.curist_name",
+      "fallback": "The Curist"
+    },
+    "description": {
+      "translate": "blue.tr.curist",
+      "fallback": "Cure 7 Zombie Villagers"
+    },
+    "frame": "goal",
+    "announce_to_chat": false
+  },
+  "parent": "minecraft:story/cure_zombie_villager",
+  "criteria": {
+    "7":{"trigger":"minecraft:cured_zombie_villager","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/cure":{"6":true}}}}}},
+    "6":{"trigger":"minecraft:cured_zombie_villager","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/cure":{"5":true}}}}}},
+    "5":{"trigger":"minecraft:cured_zombie_villager","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/cure":{"4":true}}}}}},
+    "4":{"trigger":"minecraft:cured_zombie_villager","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/cure":{"3":true}}}}}},
+    "3":{"trigger":"minecraft:cured_zombie_villager","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/cure":{"2":true}}}}}},
+    "2":{"trigger":"minecraft:cured_zombie_villager","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/cure":{"1":true}}}}}},
+    "1":{"trigger":"minecraft:cured_zombie_villager"}
+  }
+}

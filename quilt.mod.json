@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "com.modrinth",
+    "id": "trims_overhaul",
+    "version": "3.0.0",
+    "metadata": {
+      "name": "Trims Overhaul",
+      "description": "Give every trim unique powers, obtainable though quests",
+      "icon": "pack.png",
+      "contact": {
+        "homepage": "https://modrinth.com/datapack/trims-overhaul",
+        "sources": "https://github.com/ActuallyBlue/Trims_Overhaul",
+        "issues": "https://github.com/ActuallyBlue/Trims_Overhaul/issues"
+      }
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "depends": [
+      {
+        "id": "quilt_resource_loader",
+        "versions": "*",
+        "unless": "fabric-resource-loader-v0"
+      }
+    ]
+  }
+}

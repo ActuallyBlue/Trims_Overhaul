@@ -1,0 +1,7 @@
+execute if predicate blue:tr/in_stronghold run function blue:tr/effects/eye/in_stronghold
+execute if score @s blue.tr.combat matches 0.. if items entity @s weapon.* ender_eye if score #.eye.alarm_placed blue.misc matches 1 anchored eyes positioned ^ ^ ^2.5 run function blue:tr/effects/eye/alarm/macro with storage blue:data trims.eye
+execute if score @s blue.tr.combat matches 0.. if items entity @s weapon.* ender_eye unless score #.eye.alarm_placed blue.misc matches 1 run title @s actionbar {"translate":"blue.tr.no_stronghold","fallback":"You need to enter a stronghold to select it (Cannot be undone)","color":"gray"}
+execute if entity @s[tag=blue.tr.mats.eye] at b163102f-0-1-0-1 as @a[distance=..300,advancements={blue:tr/trust={eye=false}},predicate=blue:tr/in_stronghold,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/eye/alarm/debuff
+execute if score #.eye.grand_reveal blue.misc matches 1.. run return fail
+execute if score #.sneaking blue.misc matches 1 run return run effect give @e[type=!#blue:tr/no_effects,distance=3..32,limit=4,sort=random,tag=!smithed.strict,predicate=!blue:shared/has_glowing] glowing 2 0 true
+execute if score #.sneaking blue.misc matches 0 run effect give @e[type=!#blue:tr/no_effects,distance=2..24,limit=4,sort=random,tag=!smithed.strict,predicate=!blue:shared/has_glowing] glowing 2 0 true

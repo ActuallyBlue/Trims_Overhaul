@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:wither"
+            }
+          },
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.misc": {
+                "min": 3
+              }
+            }
+          }
+        ],
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:armor_stand",
+            "team": "blue.tr.rib"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/completion/rib"
+  }
+}

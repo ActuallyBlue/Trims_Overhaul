@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=blue.tr.gamble.halt_marker] at @s run function blue:tr/effects/snout/gamble/halt/cast

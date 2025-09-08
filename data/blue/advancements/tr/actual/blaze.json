@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "item":"minecraft:blaze_powder",
+          "id":"minecraft:blaze_powder"
+      },
+      "title": [{"translate":"item.minecraft.blaze_powder"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
+      "description": "",
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/nautilus",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

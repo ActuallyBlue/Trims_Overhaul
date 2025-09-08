@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "entity": {
+          "type": "fishing_bobber"
+        },
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:reference",
+                "name": "blue:tr/in_desert"
+              },
+              {
+                "condition": "location_check",
+                "predicate": {
+                  "structure": "shipwreck",
+                  "structures": "shipwreck"
+                }
+              },
+              {
+                "condition": "location_check",
+                "predicate": {
+                  "structure": "shipwreck_beached",
+                  "structures": "shipwreck_beached"
+                }
+              }
+            ]
+          },
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.coast_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"coast":false}}}}}
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/tasks/coast"
+  }
+}

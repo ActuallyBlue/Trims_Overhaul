@@ -1,0 +1,3 @@
+execute if items entity @s contents #blue:tr/undermine positioned ^ ^-0.5 ^-1.5 if entity @a[distance=..0.01,predicate=blue:shared/is_sneaking,limit=1] at @s if block ~ ~-1 ~ #blue:trims/undermine run return run fill ~ ~-1 ~ ~ ~-1 ~ air destroy
+execute on origin if entity @s[tag=blue.tr.mats.powder] run scoreboard players set #.temp blue.misc -822
+execute if score #.temp blue.misc matches -822 if items entity @s contents tnt[count=1] run function blue:tr/effects/shaper/emp/check

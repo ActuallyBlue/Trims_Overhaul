@@ -1,0 +1,1 @@
+scoreboard players reset #.can_plunge blue.misc

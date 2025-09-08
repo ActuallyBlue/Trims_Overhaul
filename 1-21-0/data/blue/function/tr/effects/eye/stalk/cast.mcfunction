@@ -1,0 +1,4 @@
+execute if entity @s[distance=..150] positioned ^ ^ ^1.4 if block ~ ~ ~ #blue:trims/transparent if block ^ ^ ^-0.7 #blue:trims/transparent run function blue:tr/effects/eye/stalk/cast
+execute if entity @s[distance=80.01..] positioned ~-2.5 ~-2.5 ~-2.5 as @a[dx=5,dy=5,dz=5,tag=!blue.tr.stalk_limit,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/eye/stalk/visible
+execute if entity @s[distance=40.01..80] positioned ~-1.5 ~-1.5 ~-1.5 as @a[dx=3,dy=3,dz=3,tag=!blue.tr.stalk_limit,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/eye/stalk/visible
+execute if entity @s[distance=..40] positioned ~-0.5 ~-0.5 ~-0.5 as @a[dx=0,tag=!blue.tr.stalk_limit,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/eye/stalk/visible

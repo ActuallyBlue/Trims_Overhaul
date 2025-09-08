@@ -1,0 +1,8 @@
+execute unless block ~ ~1 ~ sand run return run kill
+setblock ~ ~ ~ air
+setblock ~ ~1 ~ air
+execute align xyz run summon block_display ~ ~1.6 ~ {teleport_duration:20,Tags:["blue.tr.dune_geyser.temp"],block_state:{Name:"sand"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[0.99f,1f,0.99f],translation:[0.005f,-1f,0.005f]},Passengers:[{block_state:{Name:"sand"},id:"block_display",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[0.99f,1f,0.99f],translation:[0.005f,-2f,0.005f]}}]}
+summon marker ~ ~ ~ {Tags:["blue.tr.dune_geyser"]}
+schedule function blue:tr/effects/dune/geyser/loop 1t
+summon block_display ~ ~ ~ {Tags:["blue.tr.dune_geyser"],teleport_duration:11,Passengers:[{block_state:{Name:"suspicious_sand"},id:"block_display",transformation:{left_rotation:[0f,0f,0.342f,0.94f],right_rotation:[0f,0f,-0.031f,0.999f],scale:[1.24f,0.489f,1.188f],translation:[-0.13f,-1.139f,-0.594f]}},{block_state:{Name:"suspicious_sand"},id:"block_display",transformation:{left_rotation:[0.338f,0f,0f,0.941f],right_rotation:[0.028f,0f,0f,-1f],scale:[1.178f,0.478f,1.246f],translation:[-0.589f,-0.38f,-0.831f]}},{block_state:{Name:"suspicious_sand"},id:"block_display",transformation:{left_rotation:[-0.338f,0f,0f,0.941f],right_rotation:[-0.028f,0f,0f,-1f],scale:[1.178f,0.478f,1.246f],translation:[-0.589f,-1.139f,-0.131f]}}],block_state:{Name:"suspicious_sand"},transformation:{left_rotation:[0f,0f,-0.341f,0.94f],right_rotation:[0f,0f,0.029f,1f],scale:[1.241f,0.476f,1.188f],translation:[-0.825f,-0.366f,-0.594f]}}
+kill

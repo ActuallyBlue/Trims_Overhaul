@@ -1,0 +1,2 @@
+execute as @e[type=falling_block,tag=blue.tr.dune_block] at @s run function blue:tr/effects/dune/raisure/entity
+execute as @e[type=interaction,tag=blue.tr.dune_hitbox] at @s run function blue:tr/effects/dune/raisure/hitbox

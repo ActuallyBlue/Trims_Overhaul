@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "item":"minecraft:copper_ingot",
+          "id":"minecraft:copper_ingot"
+      },
+      "title": [{"translate":"trim_material.minecraft.copper"},"    "],
+      "description": ["+0.02 ",{"translate":"attribute.name.generic.knockback_resistance"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/mats",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

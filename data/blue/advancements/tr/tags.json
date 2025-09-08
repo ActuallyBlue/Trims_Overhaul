@@ -1,0 +1,121 @@
+{
+  "criteria": {
+    "not_sneaking": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        }
+      }
+    },
+    "using_shield": {
+      "trigger": "using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "shield"
+          ]
+        }
+      }
+    },
+    "heavy_hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 1
+          }
+        }
+      }
+    },
+    "has_trim": {
+      "trigger": "minecraft:impossible"
+    },
+    "unlocked_wayfinder": {
+      "trigger": "impossible"
+    },
+    "unlocked_silence": {
+      "trigger": "impossible"
+    },
+    "unlocked_raiser": {
+      "trigger": "impossible"
+    },
+    "unlocked_sentry": {
+      "trigger": "impossible"
+    },
+    "unlocked_shaper": {
+      "trigger": "impossible"
+    },
+    "unlocked_coast": {
+      "trigger": "impossible"
+    },
+    "unlocked_snout": {
+      "trigger": "impossible"
+    },
+    "unlocked_spire": {
+      "trigger": "impossible"
+    },
+    "unlocked_dune": {
+      "trigger": "impossible"
+    },
+    "unlocked_host": {
+      "trigger": "impossible"
+    },
+    "unlocked_tide": {
+      "trigger": "impossible"
+    },
+    "unlocked_ward": {
+      "trigger": "impossible"
+    },
+    "unlocked_flow": {
+      "trigger": "impossible"
+    },
+     "unlocked_bolt": {
+       "trigger": "impossible"
+    },
+    "unlocked_wild": {
+      "trigger": "impossible"
+    },
+    "unlocked_eye": {
+      "trigger": "impossible"
+    },
+    "unlocked_rib": {
+      "trigger": "impossible"
+    },
+    "unlocked_vex": {
+      "trigger": "impossible"
+    },
+    "tutorial_rtd": {
+      "trigger": "impossible"
+    },
+    "tutorial_pickup_trim": {
+      "trigger": "impossible"
+    },
+    "tutorial_complete_objective": {
+      "trigger": "impossible"
+    },
+    "tutorial_transfer": {
+      "trigger": "impossible"
+    },
+    "tutorial_resource_pack": {
+      "trigger": "impossible"
+    },
+    "tutorial_piercer": {
+      "trigger": "impossible"
+    },
+    "tutorial_vortex": {
+      "trigger": "impossible"
+    },
+    "tutorial_barrage": {
+      "trigger": "impossible"
+    },
+    "tutorial_creative": {
+      "trigger": "impossible"
+    },
+    "tutorial_new_player": {
+      "trigger": "impossible"
+    }
+  }
+}

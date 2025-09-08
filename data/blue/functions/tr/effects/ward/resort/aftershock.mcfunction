@@ -1,0 +1,1 @@
+execute at @a[tag=blue.tr.ward,limit=1] run function blue:tr/effects/ward/resort/player

@@ -1,0 +1,2 @@
+playsound block.amethyst_block.step player @s ~ ~ ~ 1.25 1.8
+title @s actionbar [{"translate":"blue.tr.controlled_demolition_name","fallback":"Controlled Demolition","color":"#8F8F8F"},{"translate":"blue.tr.ability_available","fallback":" is now available","color":"gray"}]

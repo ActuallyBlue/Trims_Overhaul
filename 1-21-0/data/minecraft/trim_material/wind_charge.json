@@ -1,0 +1,10 @@
+{
+  "asset_name": "wind_charge",
+  "description": {
+    "color": "#B8CAD1",
+    "translate": "trim_material.blue.wind_charge",
+    "fallback": "Wind Material"
+  },
+  "ingredient": "minecraft:wind_charge",
+  "item_model_index": 0.001
+}

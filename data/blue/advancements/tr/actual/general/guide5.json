@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+          "item":"minecraft:knowledge_book",
+          "id":"minecraft:knowledge_book"
+      },
+      "title": {"translate":"blue.tr.adv.keep_inv.title","fallback":"Keep Inventory"},
+      "description": {"translate":"blue.tr.adv.keep_inv.desc","fallback":"Dropped trims will teleport back into your inventory whenever you respawn. If you were killed by a player, then they'll instead receive one trim from your inventory, alongside ownership over them."},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/general/guide4",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

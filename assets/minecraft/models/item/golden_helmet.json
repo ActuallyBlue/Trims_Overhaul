@@ -1,0 +1,128 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "minecraft:item/blue/golden_helmet_gunpowder_trim",
+      "predicate": {
+        "trim_type": 0.0001
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_echo_shard_trim",
+      "predicate": {
+        "trim_type": 0.0002
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_nautilus_shell_trim",
+      "predicate": {
+        "trim_type": 0.0003
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_blaze_powder_trim",
+      "predicate": {
+        "trim_type": 0.0004
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_heart_of_the_sea_trim",
+      "predicate": {
+        "trim_type": 0.0005
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_ender_eye_trim",
+      "predicate": {
+        "trim_type": 0.0006
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_nether_star_trim",
+      "predicate": {
+        "trim_type": 0.0007
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_shulker_shell_trim",
+      "predicate": {
+        "trim_type": 0.0008
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_dragon_egg_trim",
+      "predicate": {
+        "trim_type": 0.0009
+      }
+    },
+    {
+      "model": "minecraft:item/blue/golden_helmet_wind_charge_trim",
+      "predicate": {
+        "trim_type": 0.001
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_quartz_trim",
+      "predicate": {
+        "trim_type": 0.1
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_iron_trim",
+      "predicate": {
+        "trim_type": 0.2
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_netherite_trim",
+      "predicate": {
+        "trim_type": 0.3
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_redstone_trim",
+      "predicate": {
+        "trim_type": 0.4
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_copper_trim",
+      "predicate": {
+        "trim_type": 0.5
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_gold_darker_trim",
+      "predicate": {
+        "trim_type": 0.6
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_emerald_trim",
+      "predicate": {
+        "trim_type": 0.7
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_diamond_trim",
+      "predicate": {
+        "trim_type": 0.8
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_lapis_trim",
+      "predicate": {
+        "trim_type": 0.9
+      }
+    },
+    {
+      "model": "minecraft:item/blue/vanilla/golden_helmet_amethyst_trim",
+      "predicate": {
+        "trim_type": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "minecraft:item/golden_helmet"
+  }
+}

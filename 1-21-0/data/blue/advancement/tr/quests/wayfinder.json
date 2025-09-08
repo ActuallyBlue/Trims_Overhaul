@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "id": "netherite_boots"
+    },
+    "title": {"translate":"blue.tr.fearless_adventures.title","fallback":"Fearless Adventures"},
+    "description": {"translate":"blue.tr.fearless_adventures.desc","fallback":"Discover every structure"},
+    "frame": "challenge"
+  },
+  "parent": "minecraft:adventure/sleep_in_bed",
+  "criteria": {
+    "ancient_city":{"trigger":"location","conditions":{"player":{"location":{"structures":"ancient_city"}}}},
+    "bastion_remnant":{"trigger":"location","conditions":{"player":{"location":{"structures":"bastion_remnant"}}}},
+    "buried_treasure":{"trigger":"location","conditions":{"player":{"location":{"structures":"buried_treasure"}}}},
+    "desert_pyramid":{"trigger":"location","conditions":{"player":{"location":{"structures":"desert_pyramid"}}}},
+    "end_city":{"trigger":"location","conditions":{"player":{"location":{"structures":"end_city"}}}},
+    "fortress":{"trigger":"location","conditions":{"player":{"location":{"structures":"fortress"}}}},
+    "igloo":{"trigger":"location","conditions":{"player":{"location":{"structures":"igloo"}}}},
+    "jungle_pyramid":{"trigger":"location","conditions":{"player":{"location":{"structures":"jungle_pyramid"}}}},
+    "mansion":{"trigger":"location","conditions":{"player":{"location":{"structures":"mansion"}}}},
+    "mineshaft":{"trigger":"location","conditions":{"player":{"location":{"structures":"mineshaft"}}}},
+    "mineshaft_mesa":{"trigger":"location","conditions":{"player":{"location":{"structures":"mineshaft_mesa"}}}},
+    "monument":{"trigger":"location","conditions":{"player":{"location":{"structures":"monument"}}}},
+    "nether_fossil":{"trigger":"location","conditions":{"player":{"location":{"structures":"nether_fossil"}}}},
+    "ocean_ruin_cold":{"trigger":"location","conditions":{"player":{"location":{"structures":"ocean_ruin_cold"}}}},
+    "ocean_ruin_warm":{"trigger":"location","conditions":{"player":{"location":{"structures":"ocean_ruin_warm"}}}},
+    "pillager_outpost":{"trigger":"location","conditions":{"player":{"location":{"structures":"pillager_outpost"}}}},
+    "ruined_portal":{"trigger":"location","conditions":{"player":{"location":{"structures":"ruined_portal"}}}},
+    "ruined_portal_desert":{"trigger":"location","conditions":{"player":{"location":{"structures":"ruined_portal_desert"}}}},
+    "ruined_portal_jungle":{"trigger":"location","conditions":{"player":{"location":{"structures":"ruined_portal_jungle"}}}},
+    "ruined_portal_mountain":{"trigger":"location","conditions":{"player":{"location":{"structures":"ruined_portal_mountain"}}}},
+    "ruined_portal_nether":{"trigger":"location","conditions":{"player":{"location":{"structures":"ruined_portal_nether"}}}},
+    "ruined_portal_ocean":{"trigger":"location","conditions":{"player":{"location":{"structures":"ruined_portal_ocean"}}}},
+    "ruined_portal_swamp":{"trigger":"location","conditions":{"player":{"location":{"structures":"ruined_portal_swamp"}}}},
+    "shipwreck":{"trigger":"location","conditions":{"player":{"location":{"structures":"shipwreck"}}}},
+    "shipwreck_beached":{"trigger":"location","conditions":{"player":{"location":{"structures":"shipwreck_beached"}}}},
+    "stronghold":{"trigger":"location","conditions":{"player":{"location":{"structures":"stronghold"}}}},
+    "swamp_hut":{"trigger":"location","conditions":{"player":{"location":{"structures":"swamp_hut"}}}},
+    "trail_ruins":{"trigger":"location","conditions":{"player":{"location":{"structures":"trail_ruins"}}}},
+    "village_desert":{"trigger":"location","conditions":{"player":{"location":{"structures":"village_desert"}}}},
+    "village_plains":{"trigger":"location","conditions":{"player":{"location":{"structures":"village_plains"}}}},
+    "village_savanna":{"trigger":"location","conditions":{"player":{"location":{"structures":"village_savanna"}}}},
+    "village_snowy":{"trigger":"location","conditions":{"player":{"location":{"structures":"village_snowy"}}}},
+    "village_taiga":{"trigger":"location","conditions":{"player":{"location":{"structures":"village_taiga"}}}},
+    "trial_chamber":{"trigger":"location","conditions":{"player":{"location":{"structures":"trial_chambers"}}}}
+  }
+}

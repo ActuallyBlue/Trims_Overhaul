@@ -1,0 +1,16 @@
+data modify storage blue:data trims.wayfinder.owner.color set value dark_gray
+data modify storage blue:data trims.silence.owner.color set value dark_gray
+data modify storage blue:data trims.shaper.owner.color set value dark_gray
+data modify storage blue:data trims.raiser.owner.color set value dark_gray
+data modify storage blue:data trims.sentry.owner.color set value dark_gray
+data modify storage blue:data trims.spire.owner.color set value dark_gray
+data modify storage blue:data trims.coast.owner.color set value dark_gray
+data modify storage blue:data trims.snout.owner.color set value dark_gray
+data modify storage blue:data trims.ward.owner.color set value dark_gray
+data modify storage blue:data trims.dune.owner.color set value dark_gray
+data modify storage blue:data trims.wild.owner.color set value dark_gray
+data modify storage blue:data trims.tide.owner.color set value dark_gray
+data modify storage blue:data trims.host.owner.color set value dark_gray
+data modify storage blue:data trims.eye.owner.color set value dark_gray
+data modify storage blue:data trims.rib.owner.color set value dark_gray
+data modify storage blue:data trims.vex.owner.color set value dark_gray

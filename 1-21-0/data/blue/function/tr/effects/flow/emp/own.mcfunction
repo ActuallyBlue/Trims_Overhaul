@@ -1,0 +1,1 @@
+execute on origin if entity @s[advancements={blue:tr/trust={flow=true}}] run return 1

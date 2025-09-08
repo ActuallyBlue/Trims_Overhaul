@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:wild_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.wild"},
+      "description": {"translate":"blue.tr.adv.wild.desc","fallback":"Taming the world reveals more than loyalty; it brings new strength to the nature around you"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/coast",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

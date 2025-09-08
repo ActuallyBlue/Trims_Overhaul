@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "player_killed_entity",
+      "conditions": {
+        "killing_blow": {
+          "tags": [
+            {
+              "id":"is_explosion",
+              "expected": true
+            }
+          ]
+        },
+        "player": [
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "blue:tr/quests/shaper_multi": {
+                    "6": false
+                  },
+                  "blue:tr/blacklist": {
+                    "shaper": false
+                  }
+                }
+              }
+            }
+          },
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.shaper_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1}
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/quests/shaper_kill"
+  }
+}

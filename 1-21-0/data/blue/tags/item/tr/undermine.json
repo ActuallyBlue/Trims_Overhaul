@@ -1,0 +1,29 @@
+{
+  "values": [
+    "coal_ore",
+    "coal",
+    "emerald_ore",
+    "emerald",
+    "diamond_ore",
+    "diamond",
+    "iron_ore",
+    "raw_iron",
+    "iron_ingot",
+    "gold_ore",
+    "raw_gold",
+    "gold_ingot",
+    "lapis_ore",
+    "lapis_lazuli",
+    "copper_ore",
+    "raw_copper",
+    "copper_ingot",
+    "redstone_ore",
+    "redstone",
+    "andesite",
+    "granite",
+    "stone",
+    "cobblestone",
+    "diorite",
+    "dirt"
+  ]
+}

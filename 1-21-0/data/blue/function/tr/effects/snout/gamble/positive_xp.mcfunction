@@ -1,0 +1,3 @@
+title @s actionbar {"translate":"blue.tr.gamble.positive_experience","fallback":"Positive Experience","color":"gray"}
+execute as @a[advancements={blue:tr/trust={snout=false}},distance=..12,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/snout/gamble/remove_xp
+execute as @a[advancements={blue:tr/trust={snout=true}},distance=..12,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/snout/gamble/give_xp

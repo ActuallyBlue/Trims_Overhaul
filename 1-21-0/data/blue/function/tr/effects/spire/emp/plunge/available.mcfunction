@@ -1,0 +1,1 @@
+scoreboard players set #.can_plunge blue.misc 1

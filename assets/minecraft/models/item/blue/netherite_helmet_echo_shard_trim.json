@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/blue/custom/netherite_helmet",
+    "layer1": "minecraft:item/blue/helmet_trim_echo_shard"
+  }
+}

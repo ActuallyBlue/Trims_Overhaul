@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "in_inventory": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "trimmable_armor"
+          }
+        ]
+      }
+    },
+    "tick": {
+      "trigger": "tick"
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/inv/all_checks"
+  }
+}

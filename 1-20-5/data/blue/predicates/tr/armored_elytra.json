@@ -1,0 +1,42 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "chest": {
+          "items": "elytra",
+          "predicates": {
+            "minecraft:bundle_contents": {
+              "items": {
+                "contains": [
+                  {
+                    "predicates": {
+                      "minecraft:trim": {}
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "chest": {
+            "predicates": {
+              "minecraft:trim": {}
+            }
+          }
+        }
+      }
+    }
+  }
+]

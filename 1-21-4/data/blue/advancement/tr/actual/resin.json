@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:resin_brick"
+      },
+      "title": [{"translate":"trim_material.minecraft.resin"},"    "],
+      "description": ["+0.05 ",{"translate":"attribute.name.movement_efficiency"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/actual/copper",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

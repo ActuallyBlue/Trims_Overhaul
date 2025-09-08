@@ -1,0 +1,16 @@
+execute if items entity @s armor.* *[trim~{material:"dragon_egg"}] run function blue:tr/inv/mats/has_egg
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:netherite"},legs:{material:"minecraft:netherite"},chest:{material:"minecraft:netherite"},head:{material:"minecraft:netherite"}} run return run function blue:tr/inv/mats/netherite
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:quartz"},legs:{material:"minecraft:quartz"},chest:{material:"minecraft:quartz"},head:{material:"minecraft:quartz"}} run return run function blue:tr/inv/mats/quartz
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:lapis"},legs:{material:"minecraft:lapis"},chest:{material:"minecraft:lapis"},head:{material:"minecraft:lapis"}} run return run function blue:tr/inv/mats/lapis
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:diamond"},legs:{material:"minecraft:diamond"},chest:{material:"minecraft:diamond"},head:{material:"minecraft:diamond"}} run return run function blue:tr/inv/mats/diamond
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:iron"},legs:{material:"minecraft:iron"},chest:{material:"minecraft:iron"},head:{material:"minecraft:iron"}} run return run function blue:tr/inv/mats/iron
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:gold"},legs:{material:"minecraft:gold"},chest:{material:"minecraft:gold"},head:{material:"minecraft:gold"}} run return run function blue:tr/inv/mats/gold
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:redstone"},legs:{material:"minecraft:redstone"},chest:{material:"minecraft:redstone"},head:{material:"minecraft:redstone"}} run return run function blue:tr/inv/mats/redstone
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:copper"},legs:{material:"minecraft:copper"},chest:{material:"minecraft:copper"},head:{material:"minecraft:copper"}} run return run function blue:tr/inv/mats/copper
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:emerald"},legs:{material:"minecraft:emerald"},chest:{material:"minecraft:emerald"},head:{material:"minecraft:emerald"}} run return run function blue:tr/inv/mats/emerald
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:resin"},legs:{material:"minecraft:resin"},chest:{material:"minecraft:resin"},head:{material:"minecraft:resin"}} run return run function blue:tr/inv/mats/resin
+execute if data storage blue:data trims.armor{feet:{material:"minecraft:amethyst"},legs:{material:"minecraft:amethyst"},chest:{material:"minecraft:amethyst"},head:{material:"minecraft:amethyst"}} at @s run return run function blue:tr/inv/mats/amethyst
+execute if data storage blue:data trims.armor.head run function blue:tr/inv/mats/head
+execute if data storage blue:data trims.armor.chest run function blue:tr/inv/mats/chest
+execute if data storage blue:data trims.armor.legs run function blue:tr/inv/mats/legs
+execute if data storage blue:data trims.armor.feet run function blue:tr/inv/mats/feet

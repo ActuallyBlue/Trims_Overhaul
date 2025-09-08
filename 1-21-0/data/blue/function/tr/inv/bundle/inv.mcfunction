@@ -1,0 +1,27 @@
+execute if items entity @s inventory.0 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.9"}
+execute if items entity @s inventory.1 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.10"}
+execute if items entity @s inventory.2 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.11"}
+execute if items entity @s inventory.3 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.12"}
+execute if items entity @s inventory.4 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.13"}
+execute if items entity @s inventory.5 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.14"}
+execute if items entity @s inventory.6 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.15"}
+execute if items entity @s inventory.7 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.16"}
+execute if items entity @s inventory.8 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.17"}
+execute if items entity @s inventory.9 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.18"}
+execute if items entity @s inventory.10 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.19"}
+execute if items entity @s inventory.11 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.20"}
+execute if items entity @s inventory.12 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.21"}
+execute if items entity @s inventory.13 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.22"}
+execute if items entity @s inventory.14 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.23"}
+execute if items entity @s inventory.15 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.24"}
+execute if items entity @s inventory.16 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.25"}
+execute if items entity @s inventory.17 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.26"}
+execute if items entity @s inventory.18 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.27"}
+execute if items entity @s inventory.19 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.28"}
+execute if items entity @s inventory.20 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.29"}
+execute if items entity @s inventory.21 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.30"}
+execute if items entity @s inventory.22 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.31"}
+execute if items entity @s inventory.23 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.32"}
+execute if items entity @s inventory.24 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.33"}
+execute if items entity @s inventory.25 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run return run function blue:tr/inv/bundle/slot {slot:"container.34"}
+execute if items entity @s inventory.26 #bundles[bundle_contents~{items:{contains:[{predicates:{trim:{}}}]}}] run function blue:tr/inv/bundle/slot {slot:"container.35"}

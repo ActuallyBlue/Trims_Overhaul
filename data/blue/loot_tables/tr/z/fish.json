@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 0,
+        "max": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "#.temp"
+          },
+          "score": "blue.misc",
+          "scale": 0.1
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:gameplay/fishing/fish",
+          "value": "minecraft:gameplay/fishing/fish"
+        }
+      ]
+    }
+  ]
+}

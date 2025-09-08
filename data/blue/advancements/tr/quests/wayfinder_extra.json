@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biome": "minecraft:mushroom_fields",
+            "biomes": "minecraft:mushroom_fields"
+          }
+        }
+      }
+    }
+  }
+}

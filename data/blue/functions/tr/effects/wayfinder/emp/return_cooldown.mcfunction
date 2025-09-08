@@ -1,0 +1,1 @@
+scoreboard players reset #.wayfinder.return_cooldown blue.misc

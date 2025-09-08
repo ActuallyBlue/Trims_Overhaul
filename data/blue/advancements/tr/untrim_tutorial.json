@@ -1,0 +1,55 @@
+{
+  "criteria": {
+    "place": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "blue:tr/tags": {
+                "has_trim": true
+              }
+            }
+          }
+        },
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:smithing_table"
+          }
+        ]
+      }
+    },
+    "use": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "blue:tr/tags": {
+                "has_trim": true
+              }
+            }
+          }
+        },
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:smithing_table"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place",
+      "use"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/inv/untrim_tutorial"
+  }
+}

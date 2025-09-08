@@ -1,0 +1,10 @@
+execute if score @s[tag=blue.tr.wayfinder] TrimCMDs.BLUE matches 521 run function blue:tr/inv/transfer/owner/wayfinder
+execute if score @s[tag=blue.tr.silence] TrimCMDs.BLUE matches 522 run function blue:tr/inv/transfer/owner/silence
+execute if score @s[tag=blue.tr.raiser] TrimCMDs.BLUE matches 523 run function blue:tr/inv/transfer/owner/raiser
+execute if score @s[tag=blue.tr.shaper] TrimCMDs.BLUE matches 524 run function blue:tr/inv/transfer/owner/shaper
+execute if score @s[tag=blue.tr.sentry] TrimCMDs.BLUE matches 525 run function blue:tr/inv/transfer/owner/sentry
+execute if score @s[tag=blue.tr.spire] TrimCMDs.BLUE matches 526 run function blue:tr/inv/transfer/owner/spire
+execute if score @s[tag=blue.tr.coast] TrimCMDs.BLUE matches 527 run function blue:tr/inv/transfer/owner/coast
+execute if score @s[tag=blue.tr.snout] TrimCMDs.BLUE matches 528 run function blue:tr/inv/transfer/owner/snout
+execute if score @s[tag=blue.tr.ward] TrimCMDs.BLUE matches 529 run function blue:tr/inv/transfer/owner/ward
+execute if entity @s[tag=blue.tr.transfer_failed] run function blue:tr/inv/transfer/owner/fail

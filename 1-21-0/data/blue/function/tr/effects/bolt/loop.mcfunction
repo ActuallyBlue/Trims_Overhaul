@@ -1,0 +1,2 @@
+execute as @e[type=marker,tag=blue.tr.bolt_block] at @s run function blue:tr/effects/bolt/entity
+execute if entity @e[type=marker,tag=blue.tr.bolt_block,limit=1] run schedule function blue:tr/effects/bolt/loop 1t

@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "echo_shard",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "type": "score",
+                "target": {
+                  "type": "fixed",
+                  "name": "#.count"
+                },
+                "score": "blue.misc"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "elder_guardian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:elder_guardian"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "monument"
+              },
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "blue:tr/quests/tide": true,
+                  "blue:tr/blacklist": {
+                    "tide": false
+                  }
+                }
+              }
+            }
+          },
+          {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.tide_completed"},"score":"blue.config"},"range":1}},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1}
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/quests/tide"
+  }
+}

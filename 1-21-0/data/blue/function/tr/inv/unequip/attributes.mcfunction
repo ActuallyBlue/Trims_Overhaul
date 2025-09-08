@@ -1,0 +1,14 @@
+attribute @s generic.armor_toughness modifier remove blue:tr.trim
+attribute @s generic.movement_speed modifier remove blue:tr.trim
+attribute @s generic.attack_damage modifier remove blue:tr.trim
+attribute @s generic.attack_speed modifier remove blue:tr.trim
+attribute @s generic.max_health modifier remove blue:tr.trim
+attribute @s generic.armor modifier remove blue:tr.trim
+attribute @s generic.luck modifier remove blue:tr.trim
+attribute @s player.block_interaction_range modifier remove blue:tr.trim
+attribute @s player.mining_efficiency modifier remove blue:tr.trim
+attribute @s generic.step_height modifier remove blue:tr.trim
+attribute @s generic.fall_damage_multiplier modifier remove blue:tr.trim
+attribute @s generic.safe_fall_distance modifier remove blue:tr.trim
+attribute @s generic.attack_knockback modifier remove blue:tr.trim
+attribute @s generic.gravity modifier remove blue:tr.trim

@@ -1,0 +1,1 @@
+execute as @a[advancements={blue:tr/tags={has_trim=true,tutorial_complete_objective=false}}] at @s run function blue:tr/completion/z/tutorial

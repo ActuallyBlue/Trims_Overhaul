@@ -1,0 +1,1 @@
+execute as @a[tag=blue.tr.coast_delay] at @s run function blue:tr/effects/coast/harpoon/motion
