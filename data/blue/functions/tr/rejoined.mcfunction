@@ -1,3 +1,4 @@
+tag @s remove blue.tr.coast_delay
 execute if score #.tr.wayfinder_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/wayfinder=false}] only blue:tr/actual/wayfinder
 execute if score #.tr.silence_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/silence=false}] only blue:tr/actual/silence
 execute if score #.tr.shaper_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/shaper=false}] only blue:tr/actual/shaper

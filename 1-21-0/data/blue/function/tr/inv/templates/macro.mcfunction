@@ -1,3 +1,4 @@
+$execute if score #.tr.$(trim)_completed blue.config matches 0 if function blue:tr/inv/templates/unlock/is_limit if entity @s[advancements={blue:tr/blacklist={$(trim)=false}}] run function blue:tr/completion/$(trim)
 $execute at @s[advancements={blue:tr/tags={unlocked_$(trim)=false}}] run function blue:tr/inv/templates/unlock/$(trim)
 execute if score #.tr.template_clearing blue.config matches 0 run return fail
 $execute store result score #.clear_temp blue.misc run clear @s $(trim)_armor_trim_smithing_template[custom_data={blue:trim}]

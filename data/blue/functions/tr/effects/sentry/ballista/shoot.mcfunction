@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/shoot
+advancement revoke @s only blue:tr/shoot req
 execute unless score #.sentry.charge blue.misc matches 48.. run return 0
 execute anchored eyes positioned ^ ^ ^ as @e[type=arrow,tag=!blue.tr.checked,distance=..2] run function blue:tr/effects/sentry/ballista/owner
 execute unless score #.sentry.shoot blue.misc matches 1 run return 0

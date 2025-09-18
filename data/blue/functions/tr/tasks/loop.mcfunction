@@ -1,4 +1,4 @@
-execute if score #.tr.tide_completed blue.config matches 2 as @a[tag=blue.tr.tide,scores={blue.tr.swim=100..,blue.tr.combat=100..},limit=1] run function blue:tr/tasks/tide
-execute if score #.tr.tide_completed blue.config matches 0 as @a[scores={blue.tr.swim=100..,blue.tr.combat=100..}] run function blue:tr/tasks/tide
+execute if score #.tr.tide_completed blue.config matches 2 as @a[tag=blue.tr.tide,scores={blue.tr.swim=100..,blue.tr.combat=100..},predicate=blue:shared/is_swimming,limit=1] run function blue:tr/tasks/tide
+execute if score #.tr.tide_completed blue.config matches 0 as @a[scores={blue.tr.swim=100..,blue.tr.combat=100..},predicate=blue:shared/is_swimming] run function blue:tr/tasks/tide
 execute if score #.tr.wayfinder_completed blue.config matches 1.. as @a[tag=blue.tr.wayfinder,scores={blue.tr.walk=10000..,blue.tr.combat=100..},limit=1] unless score @s blue.tr.structures matches 32.. run function blue:tr/tasks/wayfinder
 execute if score #.tr.wayfinder_completed blue.config matches 0 as @a[scores={blue.tr.walk=10000..,blue.tr.combat=100..}] run function blue:tr/tasks/wayfinder

@@ -1,4 +1,6 @@
-execute at @s[advancements={blue:tr/tags={unlocked_silence=false}}] run function blue:tr/inv/templates/unlock/silence
+execute if score #.tr.objective_type blue.config matches 3 unless score #.tr.limit_owned_trims blue.config matches 1 if score #.tr.silence_completed blue.config matches 0 if entity @s[advancements={blue:tr/blacklist={silence=false}}] run function blue:tr/completion/silence
+execute if score #.tr.objective_type blue.config matches 3 if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=false}}] if score #.tr.silence_completed blue.config matches 0 if entity @s[advancements={blue:tr/blacklist={silence=false}}] run function blue:tr/completion/silence
+execute at @s[advancements={blue:tr/tags={unlocked_silence=false}}] run function blue:tr/inv/templates/unlock/coast
 execute if score #.tr.template_clearing blue.config matches 0 run return 0
 execute store result score #.clear_temp blue.misc run clear @s silence_armor_trim_smithing_template{blue:trim}
 clear @s silence_armor_trim_smithing_template

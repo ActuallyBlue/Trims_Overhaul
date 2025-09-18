@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/reservoir
+advancement revoke @s only blue:tr/reservoir req
 execute unless entity @s[tag=blue.tr.mats.heart] run return fail
 playsound entity.generic.swim player @a ~ ~ ~ 0.5 2
 scoreboard players add #.tide.stacks blue.misc 1

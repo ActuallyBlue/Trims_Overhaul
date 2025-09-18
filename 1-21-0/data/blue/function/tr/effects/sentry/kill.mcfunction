@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/kill_raider
+advancement revoke @s only blue:tr/kill_raider req
 execute if entity @e[type=ravager,distance=..24,limit=1] run effect give @s resistance 5 1
 execute if entity @e[type=ravager,distance=..24,limit=1] run effect give @s resistance 2 2
 execute if entity @e[type=vindicator,tag=!smithed.strict,distance=..24,limit=1] run effect give @s strength 5 1

@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/explosion
+advancement revoke @s only blue:tr/explosion req
 effect give @s instant_health
 execute if entity @s[tag=blue.tr.mats.powder] run function blue:tr/effects/shaper/emp/tnt_hit
 execute if entity @s[tag=blue.tr.mats.powder] run return 0

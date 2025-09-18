@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/quests/eye
+advancement revoke @s only blue:tr/quests/eye req
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_eye=false}}] run return 0
 execute if score #.tr.eye_completed blue.config matches 2 unless entity @s[tag=blue.tr.eye] run return 0
 execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return 0

@@ -1,5 +1,5 @@
 effect clear @s mining_fatigue
-execute store success score #.swimming blue.misc if predicate {"condition":"entity_properties","entity":"this","predicate":{"flags":{"is_swimming":true}}}
+execute store success score #.swimming blue.misc if predicate blue:shared/is_swimming
 execute store success score #.tide.ambient blue.misc unless score #.tide.ambient blue.misc matches 1
 execute unless score #.swimming blue.misc matches 1 if score #.tide.ambient blue.misc matches 0 run particle dolphin ~ ~0.8 ~ 0.22 0.4 0.22 0 1 normal @a[scores={blue.particles=1..}]
 execute unless score #.swimming blue.misc matches 1 if score #.tide.ambient blue.misc matches 1 run particle dolphin ~ ~0.9 ~ 0.22 0.4 0.22 0 1 normal @a[scores={blue.particles=2..}]

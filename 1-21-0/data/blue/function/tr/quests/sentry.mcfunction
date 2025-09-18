@@ -6,7 +6,8 @@ execute if entity @s[advancements={blue:tr/quests/sentry={start_1=true}}] run sc
 execute if entity @s[advancements={blue:tr/quests/sentry={start_2=true}}] run scoreboard players add #.temp blue.misc 3600
 execute if entity @s[advancements={blue:tr/quests/sentry={start_3=true}}] run scoreboard players add #.temp blue.misc 4800
 execute if entity @s[advancements={blue:tr/quests/sentry={start_4=true}}] run scoreboard players add #.temp blue.misc 6000
-summon area_effect_cloud ~ ~3 ~ {Radius:0,Duration:20000,Tags:["blue.tr.sentry_quest","smithed.entity","smithed.strict"],custom_particle:{type:"minecraft:block",block_state:"minecraft:air"},Particle:{type:"minecraft:block",block_state:"minecraft:air"}}
+execute if entity @s[advancements={blue:tr/quests/sentry={start_0=false,start_1=false}}] run scoreboard players add #.temp blue.misc 3600
+execute if entity @s[advancements={blue:tr/quests/sentry={end=false}}] run summon area_effect_cloud ~ ~3 ~ {Radius:0,Duration:20000,Tags:["blue.tr.sentry_quest","smithed.entity","smithed.strict"],custom_particle:{type:"minecraft:block",block_state:"minecraft:air"},Particle:{type:"minecraft:block",block_state:"minecraft:air"}}
 execute positioned ~ ~3 ~ store result entity @n[type=area_effect_cloud,tag=blue.tr.sentry_quest,distance=..0.1] Duration int 1 run scoreboard players get #.temp blue.misc
 execute store success score #.temp blue.misc if entity @s[advancements={blue:tr/quests/sentry={end=true}}]
 advancement revoke @s only blue:tr/quests/sentry

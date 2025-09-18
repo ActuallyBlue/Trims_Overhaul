@@ -31,7 +31,10 @@
     }
   },
   "result": {
-    "id": "minecraft:coast_armor_trim_smithing_template"
+    "id": "minecraft:coast_armor_trim_smithing_template",
+    "components": {
+      "minecraft:enchantment_glint_override": true
+    }
   },
   "show_notification": true
 }

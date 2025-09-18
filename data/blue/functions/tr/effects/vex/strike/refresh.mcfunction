@@ -1,1 +1,1 @@
-scoreboard players set #.vex.sneak blue.misc 10
+execute if score #.vex.sneak blue.misc matches ..-3 run scoreboard players set #.vex.sneak blue.misc -2

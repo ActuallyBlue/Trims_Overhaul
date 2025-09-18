@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/struck
+advancement revoke @s only blue:tr/struck req
 playsound entity.firework_rocket.large_blast_far player @a ~ ~ ~ 2 0.5
 playsound entity.firework_rocket.twinkle_far player @a ~ ~ ~ 2 0.5
 particle electric_spark ~ ~1 ~ 0.4 0.9 0.4 1 48

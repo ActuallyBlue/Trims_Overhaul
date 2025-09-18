@@ -4,6 +4,7 @@ execute if score #.temp blue.misc matches 0 store result score #.isolation blue.
 execute if score #.temp blue.misc matches 0 store result score #.isolation blue.misc if entity @e[type=!#blue:tr/peaceful,type=!player,distance=0.01..5,limit=2]
 execute if score #.temp blue.misc matches 1 run scoreboard players set #.isolation blue.misc 1
 execute unless score #.isolation blue.misc matches 1 if score #.isolated blue.misc matches 1 run function blue:tr/effects/vex/de-isolate
+execute if score #.vex.sneak blue.misc matches -1 run function blue:tr/effects/vex/lunge/available
 execute if score #.vex.sneak blue.misc matches 1..6 if entity @s[advancements={blue:tr/tags={not_sneaking=true}},predicate=blue:shared/is_sneaking] rotated ~ -20 run function blue:tr/effects/vex/lunge/start
 execute if score #.vex.sneak blue.misc matches 7.. if entity @s[advancements={blue:tr/tags={not_sneaking=true}},predicate=blue:shared/is_sneaking] run function blue:tr/effects/vex/lunge/pre
 execute if score #.vex.sneak blue.misc matches ..-108 run function blue:tr/effects/vex/lunge/active

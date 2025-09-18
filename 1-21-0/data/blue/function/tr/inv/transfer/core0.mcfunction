@@ -8,3 +8,4 @@ execute if score @s[tag=blue.tr.coast] TrimCMDs.BLUE matches 527 run function bl
 execute if score @s[tag=blue.tr.snout] TrimCMDs.BLUE matches 528 run function blue:tr/inv/transfer/owner/main {trim:snout,translate:"Snout",color:"#F2B01A"}
 execute if score @s[tag=blue.tr.ward] TrimCMDs.BLUE matches 529 run function blue:tr/inv/transfer/owner/main {trim:ward,translate:"Ward",color:"#5C70AE"}
 execute if entity @s[tag=blue.tr.transfer_failed] run function blue:tr/inv/transfer/owner/fail
+setblock 200600 2 200600 barrel

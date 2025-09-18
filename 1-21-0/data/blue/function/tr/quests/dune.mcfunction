@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/quests/dune
+advancement revoke @s only blue:tr/quests/dune req
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_dune=false}}] run return fail
 execute if score #.tr.dune_completed blue.config matches 2 unless entity @s[tag=blue.tr.dune] run return fail
 execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return fail

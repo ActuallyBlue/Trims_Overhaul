@@ -12,7 +12,7 @@ execute store result storage blue:data trims.temp.export.owner_finder int 1 run 
 execute store result storage blue:data trims.temp.export.reload_message int 1 run scoreboard players get #.tr.reload_message blue.config
 execute store result storage blue:data trims.temp.export.wind_barrage_duration int 1 run scoreboard players get #.flow.wind_barrage_duration blue.config
 execute store result storage blue:data trims.temp.export.throw_cooldown int 1 run scoreboard players get #.shaper.throw_cooldown blue.config
-execute store result storage blue:data trims.temp.export.disconfigure_time int 1 run scoreboard players get #.eye.disconfigure_time blue.config
+execute store result storage blue:data trims.temp.export.disfigure_time int 1 run scoreboard players get #.eye.disfigure_time blue.config
 execute store result storage blue:data trims.temp.export.auto_damage int 1 run scoreboard players get #.ward.auto_damage blue.config
 execute store result storage blue:data trims.temp.export.trap_limit int 1 run scoreboard players get #.wild.trap_limit blue.config
 execute store result storage blue:data trims.temp.export.gamble_multiplier int 1 run scoreboard players get #.snout.gamble_multiplier blue.config

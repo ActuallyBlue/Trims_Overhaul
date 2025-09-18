@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/tame_kill
+advancement revoke @s only blue:tr/tame_kill req
 execute if entity @a[tag=blue.tr.wild,limit=1] run damage @s 4 blue:tr/poke by @a[tag=blue.tr.wild,limit=1]
 execute unless entity @a[tag=blue.tr.wild,limit=1] run damage @s 4 blue:tr/poke
 playsound entity.zombie_villager.cure player @s ~ ~ ~ 2 2

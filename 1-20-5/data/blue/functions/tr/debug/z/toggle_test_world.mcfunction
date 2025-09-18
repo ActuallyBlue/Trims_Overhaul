@@ -14,7 +14,8 @@ execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run scoreboard objectives remove Set_Trim
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run return 0
 execute unless score #st blue.misc matches 1.. unless entity @s run scoreboard players enable @a Set_Trim
-execute unless score #st blue.misc matches 1.. unless entity @s as @a run function blue:tr/delayed/5tick/cmd/skip_tutorials
+execute unless score #st blue.misc matches 1.. unless entity @s as @a unless entity @s[advancements={blue:tr/tags={tutorial_barrage=true,tutorial_piercer=true,tutorial_vortex=true,tutorial_complete_objective=true,tutorial_resource_pack=true,tutorial_pickup_trim=true,tutorial_new_player=true,tutorial_creative=true,tutorial_transfer=true,tutorial_rtd=true}}] run function blue:tr/delayed/5tick/cmd/skip_tutorials
+execute unless score #st blue.misc matches 1.. unless entity @s run tag @a add blue.tr.ignore_first
 execute unless score #st blue.misc matches 1.. unless entity @s run schedule function blue:tr/debug/z/toggle_test_world 1t
 execute unless score #st blue.misc matches 1.. unless entity @s as @a[scores={Set_Trim=1..}] at @s run function blue:tr/debug/z/toggle_test_world
 execute unless score #st blue.misc matches 1.. unless entity @s run return 0
@@ -81,10 +82,10 @@ execute if score #st blue.misc matches 2 if entity @a[tag=blue.tr.trim.wayfinder
 execute if score #st blue.misc matches 2 if entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run return 0
 execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run advancement grant @s only blue:tr/trust wayfinder
 execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run tag @s add blue.tr.wayfinder
-execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:wayfinder",material:"minecraft:nether_star"}]
-execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:wayfinder",material:"minecraft:nether_star"}]
-execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:wayfinder",material:"minecraft:nether_star"}]
-execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:wayfinder",material:"minecraft:nether_star"}]
+execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"wayfinder",material:"nether_star"}]
+execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"wayfinder",material:"nether_star"}]
+execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"wayfinder",material:"nether_star"}]
+execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"wayfinder",material:"nether_star"}]
 execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run give @s compass
 execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run give @s lodestone
 execute if score #st blue.misc matches 2 unless entity @a[tag=blue.tr.trim.wayfinder,distance=0.1..] run give @s filled_map
@@ -94,30 +95,30 @@ execute if score #st blue.misc matches 3 if entity @a[tag=blue.tr.trim.silence,d
 execute if score #st blue.misc matches 3 if entity @a[tag=blue.tr.trim.silence,distance=0.1..] run return 0
 execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run advancement grant @s only blue:tr/trust silence
 execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run tag @s add blue.tr.silence
-execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:silence",material:"minecraft:echo_shard"}]
-execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:silence",material:"minecraft:echo_shard"}]
-execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:silence",material:"minecraft:echo_shard"}]
-execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:silence",material:"minecraft:echo_shard"}]
+execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"silence",material:"echo_shard"}]
+execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"silence",material:"echo_shard"}]
+execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"silence",material:"echo_shard"}]
+execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"silence",material:"echo_shard"}]
 execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run give @s echo_shard 64
 execute if score #st blue.misc matches 3 unless entity @a[tag=blue.tr.trim.silence,distance=0.1..] run return 0
 execute if score #st blue.misc matches 4 if entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.shaper]"},"is already using shaper"]
 execute if score #st blue.misc matches 4 if entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run return 0
 execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run advancement grant @s only blue:tr/trust shaper
 execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run tag @s add blue.tr.shaper
-execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:shaper",material:"minecraft:gunpowder"}]
-execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:shaper",material:"minecraft:gunpowder"}]
-execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:shaper",material:"minecraft:gunpowder"}]
-execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:shaper",material:"minecraft:gunpowder"}]
+execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"shaper",material:"gunpowder"}]
+execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"shaper",material:"gunpowder"}]
+execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"shaper",material:"gunpowder"}]
+execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"shaper",material:"gunpowder"}]
 execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run give @s tnt 32
 execute if score #st blue.misc matches 4 unless entity @a[tag=blue.tr.trim.shaper,distance=0.1..] run return 0
 execute if score #st blue.misc matches 5 if entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.sentry]"},"is already using sentry"]
 execute if score #st blue.misc matches 5 if entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run return 0
 execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run advancement grant @s only blue:tr/trust sentry
 execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run tag @s add blue.tr.sentry
-execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:sentry",material:"minecraft:diamond"}]
-execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:sentry",material:"minecraft:diamond"}]
-execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:sentry",material:"minecraft:diamond"}]
-execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:sentry",material:"minecraft:diamond"}]
+execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"sentry",material:"diamond"}]
+execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"sentry",material:"diamond"}]
+execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"sentry",material:"diamond"}]
+execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"sentry",material:"diamond"}]
 execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run give @s crossbow
 execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run effect give @s hero_of_the_village 120 4 true
 execute if score #st blue.misc matches 5 unless entity @a[tag=blue.tr.trim.sentry,distance=0.1..] run effect give @s hero_of_the_village 120 4 true
@@ -125,10 +126,10 @@ execute if score #st blue.misc matches 6 if entity @a[tag=blue.tr.trim.raiser,di
 execute if score #st blue.misc matches 6 if entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run return 0
 execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run advancement grant @s only blue:tr/trust raiser
 execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run tag @s add blue.tr.raiser
-execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:raiser",material:"minecraft:lapis"}]
-execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:raiser",material:"minecraft:lapis"}]
-execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:raiser",material:"minecraft:lapis"}]
-execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:raiser",material:"minecraft:lapis"}]
+execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"raiser",material:"lapis"}]
+execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"raiser",material:"lapis"}]
+execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"raiser",material:"lapis"}]
+execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"raiser",material:"lapis"}]
 execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run give @s experience_bottle
 execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run xp set @s 60 levels
 execute if score #st blue.misc matches 6 unless entity @a[tag=blue.tr.trim.raiser,distance=0.1..] run return 0
@@ -136,10 +137,10 @@ execute if score #st blue.misc matches 7 if entity @a[tag=blue.tr.trim.coast,dis
 execute if score #st blue.misc matches 7 if entity @a[tag=blue.tr.trim.coast,distance=0.1..] run return 0
 execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run advancement grant @s only blue:tr/trust coast
 execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run tag @s add blue.tr.coast
-execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:coast",material:"minecraft:emerald"}]
-execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:coast",material:"minecraft:emerald"}]
-execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:coast",material:"minecraft:emerald"}]
-execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:coast",material:"minecraft:emerald"}]
+execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"coast",material:"emerald"}]
+execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"coast",material:"emerald"}]
+execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"coast",material:"emerald"}]
+execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"coast",material:"emerald"}]
 execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run give @s trident
 execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run give @s cod 32
 execute if score #st blue.misc matches 7 unless entity @a[tag=blue.tr.trim.coast,distance=0.1..] run give @s pufferfish 32
@@ -150,10 +151,10 @@ execute if score #st blue.misc matches 8 if entity @a[tag=blue.tr.trim.snout,dis
 execute if score #st blue.misc matches 8 if entity @a[tag=blue.tr.trim.snout,distance=0.1..] run return 0
 execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run advancement grant @s only blue:tr/trust snout
 execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run tag @s add blue.tr.snout
-execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:snout",material:"minecraft:gold"}]
-execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:snout",material:"minecraft:gold"}]
-execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:snout",material:"minecraft:gold"}]
-execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:snout",material:"minecraft:gold"}]
+execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"snout",material:"gold"}]
+execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"snout",material:"gold"}]
+execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"snout",material:"gold"}]
+execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"snout",material:"gold"}]
 execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run give @s gold_nugget 32
 execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run give @s gold_ingot 32
 execute if score #st blue.misc matches 8 unless entity @a[tag=blue.tr.trim.snout,distance=0.1..] run give @s gold_block 32
@@ -162,30 +163,30 @@ execute if score #st blue.misc matches 9 if entity @a[tag=blue.tr.trim.spire,dis
 execute if score #st blue.misc matches 9 if entity @a[tag=blue.tr.trim.spire,distance=0.1..] run return 0
 execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run advancement grant @s only blue:tr/trust spire
 execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run tag @s add blue.tr.spire
-execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:spire",material:"minecraft:shulker_shell"}]
-execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:spire",material:"minecraft:shulker_shell"}]
-execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:spire",material:"minecraft:shulker_shell"}]
-execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:spire",material:"minecraft:shulker_shell"}]
+execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"spire",material:"shulker_shell"}]
+execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"spire",material:"shulker_shell"}]
+execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"spire",material:"shulker_shell"}]
+execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"spire",material:"shulker_shell"}]
 execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run give @s dragon_breath 16
 execute if score #st blue.misc matches 9 unless entity @a[tag=blue.tr.trim.spire,distance=0.1..] run return 0
 execute if score #st blue.misc matches 10 if entity @a[tag=blue.tr.trim.dune,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.dune]"},"is already using dune"]
 execute if score #st blue.misc matches 10 if entity @a[tag=blue.tr.trim.dune,distance=0.1..] run return 0
 execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run advancement grant @s only blue:tr/trust dune
 execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run tag @s add blue.tr.dune
-execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:dune",material:"minecraft:iron"}]
-execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:dune",material:"minecraft:iron"}]
-execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:dune",material:"minecraft:iron"}]
-execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:dune",material:"minecraft:iron"}]
+execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"dune",material:"iron"}]
+execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"dune",material:"iron"}]
+execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"dune",material:"iron"}]
+execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"dune",material:"iron"}]
 execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run give @s sand 32
 execute if score #st blue.misc matches 10 unless entity @a[tag=blue.tr.trim.dune,distance=0.1..] run return 0
 execute if score #st blue.misc matches 11 if entity @a[tag=blue.tr.trim.ward,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.ward]"},"is already using ward"]
 execute if score #st blue.misc matches 11 if entity @a[tag=blue.tr.trim.ward,distance=0.1..] run return 0
 execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run advancement grant @s only blue:tr/trust ward
 execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run tag @s add blue.tr.ward
-execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:ward",material:"minecraft:netherite"}]
-execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:ward",material:"minecraft:netherite"}]
-execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:ward",material:"minecraft:netherite"}]
-execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:ward",material:"minecraft:netherite"}]
+execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"ward",material:"netherite"}]
+execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"ward",material:"netherite"}]
+execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"ward",material:"netherite"}]
+execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"ward",material:"netherite"}]
 execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run give @s shield
 execute if score #st blue.misc matches 11 unless entity @a[tag=blue.tr.trim.ward,distance=0.1..] run return 0
 execute if score #st blue.misc matches 12 if entity @a[tag=blue.tr.trim.host,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.host]"},"is already using host"]
@@ -193,20 +194,20 @@ execute if score #st blue.misc matches 12 if entity @a[tag=blue.tr.trim.host,dis
 execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run advancement grant @s only blue:tr/trust host
 execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run tag @s add blue.tr.host
 execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run advancement grant @s only blue:tr/cure
-execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:host",material:"minecraft:redstone"}]
-execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:host",material:"minecraft:redstone"}]
-execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:host",material:"minecraft:redstone"}]
-execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:host",material:"minecraft:redstone"}]
+execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"host",material:"redstone"}]
+execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"host",material:"redstone"}]
+execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"host",material:"redstone"}]
+execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"host",material:"redstone"}]
 execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run give @s iron_golem_spawn_egg
 execute if score #st blue.misc matches 12 unless entity @a[tag=blue.tr.trim.host,distance=0.1..] run return 0
 execute if score #st blue.misc matches 14 if entity @a[tag=blue.tr.trim.tide,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.tide]"},"is already using tide"]
 execute if score #st blue.misc matches 14 if entity @a[tag=blue.tr.trim.tide,distance=0.1..] run return 0
 execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run advancement grant @s only blue:tr/trust tide
 execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run tag @s add blue.tr.tide
-execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:tide",material:"minecraft:heart_of_the_sea"}]
-execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:tide",material:"minecraft:heart_of_the_sea"}]
-execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:tide",material:"minecraft:heart_of_the_sea"}]
-execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:tide",material:"minecraft:heart_of_the_sea"}]
+execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"tide",material:"heart_of_the_sea"}]
+execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"tide",material:"heart_of_the_sea"}]
+execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"tide",material:"heart_of_the_sea"}]
+execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"tide",material:"heart_of_the_sea"}]
 execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run give @s trident
 execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run give @s trident
 execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.trim.tide,distance=0.1..] run return 0
@@ -214,10 +215,10 @@ execute if score #st blue.misc matches 16 if entity @a[tag=blue.tr.trim.eye,dist
 execute if score #st blue.misc matches 16 if entity @a[tag=blue.tr.trim.eye,distance=0.1..] run return 0
 execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run advancement grant @s only blue:tr/trust eye
 execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run tag @s add blue.tr.eye
-execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:eye",material:"minecraft:ender_eye"}]
-execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:eye",material:"minecraft:ender_eye"}]
-execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:eye",material:"minecraft:ender_eye"}]
-execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:eye",material:"minecraft:ender_eye"}]
+execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"eye",material:"ender_eye"}]
+execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"eye",material:"ender_eye"}]
+execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"eye",material:"ender_eye"}]
+execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"eye",material:"ender_eye"}]
 execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run give @s ender_pearl 8
 execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run give @s ender_eye 4
 execute if score #st blue.misc matches 16 unless entity @a[tag=blue.tr.trim.eye,distance=0.1..] run give @s spyglass
@@ -226,10 +227,10 @@ execute if score #st blue.misc matches 17 if entity @a[tag=blue.tr.trim.vex,dist
 execute if score #st blue.misc matches 17 if entity @a[tag=blue.tr.trim.vex,distance=0.1..] run return 0
 execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run advancement grant @s only blue:tr/trust vex
 execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run tag @s add blue.tr.vex
-execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:vex",material:"minecraft:quartz"}]
-execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:vex",material:"minecraft:quartz"}]
-execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:vex",material:"minecraft:quartz"}]
-execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:vex",material:"minecraft:quartz"}]
+execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"vex",material:"quartz"}]
+execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"vex",material:"quartz"}]
+execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"vex",material:"quartz"}]
+execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"vex",material:"quartz"}]
 execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run give @s diamond_axe
 execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.trim.vex,distance=0.1..] run return 0
 execute if score #st blue.misc matches 18 if entity @a[tag=blue.tr.trim.wild,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.wild]"},"is already using wild"]
@@ -237,16 +238,16 @@ execute if score #st blue.misc matches 18 if entity @a[tag=blue.tr.trim.wild,dis
 execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run advancement grant @s only blue:tr/trust wild
 execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run tag @s add blue.tr.wild
 execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run give @s cornflower 16
-execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:wild",material:"minecraft:nautilus_shell"}]
-execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:wild",material:"minecraft:nautilus_shell"}]
-execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:wild",material:"minecraft:nautilus_shell"}]
-execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:wild",material:"minecraft:nautilus_shell"}]
+execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"wild",material:"nautilus_shell"}]
+execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"wild",material:"nautilus_shell"}]
+execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"wild",material:"nautilus_shell"}]
+execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"wild",material:"nautilus_shell"}]
 execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.trim.wild,distance=0.1..] run return 0
 execute if score #st blue.misc matches 19 if entity @a[tag=blue.tr.trim.rib,distance=0.1..] run tellraw @s [{"selector":"@a[tag=blue.tr.trim.rib]"},"is already using rib"]
 execute if score #st blue.misc matches 19 if entity @a[tag=blue.tr.trim.rib,distance=0.1..] run return 0
 execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run advancement grant @s only blue:tr/trust rib
 execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run tag @s add blue.tr.rib
-execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"minecraft:rib",material:"minecraft:blaze_powder"}]
-execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"minecraft:rib",material:"minecraft:blaze_powder"}]
-execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"minecraft:rib",material:"minecraft:blaze_powder"}]
-execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"minecraft:rib",material:"minecraft:blaze_powder"}]
+execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.head with diamond_helmet[trim={pattern:"rib",material:"blaze_powder"}]
+execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[trim={pattern:"rib",material:"blaze_powder"}]
+execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[trim={pattern:"rib",material:"blaze_powder"}]
+execute if score #st blue.misc matches 19 unless entity @a[tag=blue.tr.trim.rib,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[trim={pattern:"rib",material:"blaze_powder"}]

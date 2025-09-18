@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/tasks/sentry
+advancement revoke @s only blue:tr/tasks/sentry req
 execute if score #.tr.sentry_completed blue.config matches 2 unless entity @s[tag=blue.tr.sentry] run return 0
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_sentry=false}}] run return 0
 execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return 0

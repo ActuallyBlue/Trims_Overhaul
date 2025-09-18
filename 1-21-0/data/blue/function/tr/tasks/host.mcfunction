@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/tasks/host
+advancement revoke @s only blue:tr/tasks/host req
 execute if score #.tr.host_completed blue.config matches 2 unless entity @s[tag=blue.tr.host] run return fail
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_host=false}}] run return fail
 execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return fail

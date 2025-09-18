@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/harvester
+advancement revoke @s only blue:tr/harvester req
 execute store result score #.temp blue.misc run attribute @s luck get 10
 scoreboard players add #.temp blue.misc 21
 execute if score #.temp blue.misc matches 500.. run scoreboard players set #.temp blue.misc 500

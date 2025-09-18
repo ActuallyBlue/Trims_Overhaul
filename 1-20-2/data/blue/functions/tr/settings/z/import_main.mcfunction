@@ -42,7 +42,7 @@ $execute unless score #.tr.owner_finder blue.config matches $(of) run data modif
 $execute unless score #.tr.reload_message blue.config matches $(rm) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.reload_message","fallback":"Reload Message"}','{"text":", ","color":"gray"}']
 $execute unless score #.flow.wind_barrage_duration blue.config matches $(swbd) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.sm.barrage","fallback":"Wind Barrage Duration"}','{"text":", ","color":"gray"}']
 $execute unless score #.shaper.throw_cooldown blue.config matches $(stc) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.sm.throw","fallback":"TNT Throw Cooldown"}','{"text":", ","color":"gray"}']
-$execute unless score #.eye.disconfigure_time blue.config matches $(sdt) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.sm.disconfigure","fallback":"Disconfigure Time"}','{"text":", ","color":"gray"}']
+$execute unless score #.eye.disfigure_time blue.config matches $(sdt) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.sm.disfigure","fallback":"Disfigure Time"}','{"text":", ","color":"gray"}']
 $execute unless score #.ward.auto_damage blue.config matches $(sad) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.sm.auto_damage","fallback":"Auto Damage"}','{"text":", ","color":"gray"}']
 $execute unless score #.wild.trap_limit blue.config matches $(stl) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.sm.trap","fallback":"Grass Trap Limit"}','{"text":", ","color":"gray"}']
 $execute unless score #.snout.gamble_multiplier blue.config matches $(sgm) run data modify storage blue:data trims.display append value ['{"translate":"blue.tr.sm.gamble_limit","fallback":"Gamble Limit"}','{"text":", ","color":"gray"}']
@@ -72,7 +72,7 @@ execute unless score #.temp blue.misc matches 15..29 run tellraw @s {"storage":"
 execute unless score #.temp blue.misc matches 1 run function blue:tr/settings/z/import with storage blue:data trims.temp.export
 $scoreboard players set #.flow.wind_barrage_duration blue.config $(swbd)
 $scoreboard players set #.shaper.throw_cooldown blue.config $(stc)
-$scoreboard players set #.eye.disconfigure_time blue.config $(sdt)
+$scoreboard players set #.eye.disfigure_time blue.config $(sdt)
 $scoreboard players set #.ward.auto_damage blue.config $(sad)
 $scoreboard players set #.wild.trap_limit blue.config $(stl)
 $scoreboard players set #.snout.gamble_multiplier blue.config $(sgm)

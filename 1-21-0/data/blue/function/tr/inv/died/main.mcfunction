@@ -7,13 +7,15 @@ scoreboard players set @s blue.tr.combat 0
 scoreboard players add #.wait_for_respawn blue.misc 1
 scoreboard players operation #.link blue.id = @s blue.id
 scoreboard players reset #.player blue.tr.died
-execute store success score #.player blue.tr.died if score #.tr.death_transfer_amount blue.config matches 1.. on attacker run tag @s[type=player,advancements={blue:tr/blacklist=false},tag=!blue.tr.respawn] add blue.tr.killer
+execute if score #.tr.limit_owned_trims blue.config matches 1 store success score #.player blue.tr.died if score #.tr.death_transfer_amount blue.config matches 1.. on attacker run tag @s[type=player,advancements={blue:tr/blacklist=false,blue:tr/tags={has_trim=false}},tag=!blue.tr.respawn] add blue.tr.killer
+execute unless score #.tr.limit_owned_trims blue.config matches 1 store success score #.player blue.tr.died if score #.tr.death_transfer_amount blue.config matches 1.. on attacker run tag @s[type=player,advancements={blue:tr/blacklist=false},tag=!blue.tr.respawn] add blue.tr.killer
 data modify storage blue:data trims.merge.return_item.Owner set from entity @s UUID
 execute if score #.player blue.tr.died matches 1 run data modify storage blue:data trims.merge.item_data.Owner set from entity @a[tag=blue.tr.killer,limit=1] UUID
 scoreboard players set #.drop_temp blue.misc 0
 execute if score #.tr.death_transfer_amount blue.config matches 1000 run function blue:tr/inv/died/hardcore
 data remove storage blue:data trims.fake_inv
 execute as @e[type=item,distance=..3,tag=!blue.tr.checked] run function blue:tr/inv/died/check_keep
+advancement grant @s only blue:tr/inv_checks
 execute unless score #.player blue.tr.died matches 1 run return fail
 execute if entity @s[tag=blue.tr.wayfinder] if entity @a[tag=blue.tr.killer,advancements={blue:tr/blacklist={wayfinder=false}},limit=1] run function blue:tr/inv/died/macro {trim:wayfinder,translate:"Wayfinder","color":"#F1FFC8"}
 execute if entity @s[tag=blue.tr.silence] if entity @a[tag=blue.tr.killer,advancements={blue:tr/blacklist={silence=false}},limit=1] run function blue:tr/inv/died/macro {trim:silence,translate:"Silence","color":"#3842Cf"}

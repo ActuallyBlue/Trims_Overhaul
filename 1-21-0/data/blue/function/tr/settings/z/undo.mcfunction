@@ -2,7 +2,7 @@ playsound block.note_block.chime player @s ~ ~ ~ 1 1
 tellraw @s {"translate":"blue.tr.undo_import","fallback":"Settings have been successfully restored.","color":"gray"}
 $scoreboard players set #.flow.wind_barrage_duration blue.config $(swbd)
 $scoreboard players set #.shaper.throw_cooldown blue.config $(stc)
-$scoreboard players set #.eye.disconfigure_time blue.config $(sdt)
+$scoreboard players set #.eye.disfigure_time blue.config $(sdt)
 $scoreboard players set #.ward.auto_damage blue.config $(sad)
 $scoreboard players set #.wild.trap_limit blue.config $(stl)
 $scoreboard players set #.snout.gamble_multiplier blue.config $(sgm)

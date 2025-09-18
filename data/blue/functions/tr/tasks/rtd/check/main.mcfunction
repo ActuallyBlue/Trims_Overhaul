@@ -19,6 +19,7 @@ execute if entity @s[tag=blue.tr.RTD.host] run function blue:tr/tasks/rtd/check/
 execute if entity @s[tag=blue.tr.RTD.eye] run function blue:tr/tasks/rtd/check/eye
 execute if entity @s[tag=blue.tr.RTD.rib] run function blue:tr/tasks/rtd/check/rib
 execute if entity @s[tag=blue.tr.RTD.vex] run function blue:tr/tasks/rtd/check/vex
+advancement grant @s only blue:tr/tags tutorial_rtd
 scoreboard players reset @s blue.tr.RTDtime
 scoreboard players reset @s blue.tr.RTDval
 scoreboard players reset @s RTD.BLUE

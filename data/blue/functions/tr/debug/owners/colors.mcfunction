@@ -15,20 +15,3 @@ tellraw @s {"text":"Eye","color":"#1F8A46"}
 tellraw @s {"text":"Rib","color":"#E6484B"}
 tellraw @s {"text":"Vex","color":"#CFC6A5"}
 tellraw @s {"text":"• Base","color":"gray"}
-# best order;
-# Wayfinder
-# Silence
-# Shaper
-# Sentry
-# Raiser
-# Snout
-# Coast
-# Spire
-# Ward
-# Dune
-# Host
-# Tide
-# Wild
-# Eye
-# Vex
-# Rib

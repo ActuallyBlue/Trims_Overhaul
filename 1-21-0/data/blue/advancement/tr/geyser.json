@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "sand": {
+    "req": {
       "trigger": "minecraft:placed_block",
       "conditions": {
         "player": [

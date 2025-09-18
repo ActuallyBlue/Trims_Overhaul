@@ -20,3 +20,4 @@ tag @s add blue.tr.RTDCD
 execute store result score @s blue.tr.RTDval run loot spawn 0 0 0 loot blue:tr/z/rng_50
 playsound entity.arrow.hit_player player @s ~ ~ ~ 3 0.5
 title @s times 10t 5s 1s
+execute if entity @s[advancements={blue:tr/tags={tutorial_rtd=false}}] run function blue:tr/tasks/rtd/first

@@ -9,7 +9,6 @@ execute as @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue
 execute at @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run particle small_flame ~ ~1 ~ 0.3 0.5 0.3 0.02 6
 execute as @e[type=!#blue:tr/peaceful,type=!player,distance=..4.5,team=!blue.tr.rib] run damage @s 5 on_fire by @a[tag=blue.tr.rib,limit=1]
 execute at @e[type=!#blue:tr/peaceful,type=!player,distance=..4.5,team=!blue.tr.rib] run particle small_flame ~ ~1 ~ 0.3 0.5 0.3 0.02 6
-
 particle flame ~ ~1 ~ 0 0.2 0 0.2 20 normal @a[scores={blue.particles=2..}]
 playsound entity.blaze.shoot player @a ~ ~ ~ 1 1.25
 particle flame ~ ~1 ~ 0 0.2 0 0.2 30

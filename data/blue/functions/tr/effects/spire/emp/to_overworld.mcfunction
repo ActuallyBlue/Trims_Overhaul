@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/land
+advancement revoke @s only blue:tr/land req
 execute as b163102f-0-2-0-1 run kill @s[type=!marker]
 particle end_rod ~ ~1 ~ 0.2 0.3 0.2 0.1 32 force
 particle reverse_portal ~ ~ ~ 0.3 0.5 0.3 0.5 240 force

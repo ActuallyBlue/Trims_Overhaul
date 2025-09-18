@@ -1,7 +1,6 @@
 kill @s[scores={blue.misc=40..}]
 scoreboard players add @s blue.misc 1
 schedule function blue:tr/effects/snout/gamble/axe/loop 1t
-execute if score @s blue.misc matches 1 run data modify entity @s teleport_duration set value 20
 execute if score @s blue.misc matches 3 run tp @s ^ ^ ^-0.75
 execute if score @s blue.misc matches 3 run data merge entity @s {teleport_duration:5,start_interpolation:0,transformation:{scale:[9,10,9],translation:[0f,5f,0f],left_rotation:[0.18f,-0.68f,-0.18f,0.68f]}}
 execute if score @s blue.misc matches 3 positioned ^ ^ ^-0.25 run particle wax_on ~ ~1.5 ~ 0.3 1 0.3 1 16

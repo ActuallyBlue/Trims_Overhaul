@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/stalk
+advancement revoke @s only blue:tr/stalk req
 scoreboard players set #.eye.watching blue.misc 2
 execute anchored eyes run particle glow ^ ^ ^149 0.3 0.3 0.3 0 1 force @s
 execute anchored eyes positioned ^ ^ ^1.5 run function blue:tr/effects/eye/stalk/cast

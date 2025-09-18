@@ -13,7 +13,8 @@
             "type": "minecraft:player",
             "advancements": {
               "blue:tr/quests/spire_crystals": {
-                "1": true
+                "1": true,
+                "8": false
               }
             }
           }

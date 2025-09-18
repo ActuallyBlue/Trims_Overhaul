@@ -13,7 +13,8 @@ execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run return run schedule function blue:tr/debug/z/toggle_test_world 1t
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run return run scoreboard objectives remove Set_Trim
 execute unless score #st blue.misc matches 1.. unless entity @s run scoreboard players enable @a Set_Trim
-execute unless score #st blue.misc matches 1.. unless entity @s as @a run function blue:tr/delayed/5tick/cmd/skip_tutorials
+execute unless score #st blue.misc matches 1.. unless entity @s as @a unless entity @s[advancements={blue:tr/tags={tutorial_barrage=true,tutorial_piercer=true,tutorial_vortex=true,tutorial_complete_objective=true,tutorial_resource_pack=true,tutorial_pickup_trim=true,tutorial_new_player=true,tutorial_creative=true,tutorial_transfer=true,tutorial_rtd=true}}] run function blue:tr/delayed/5tick/cmd/skip_tutorials
+execute unless score #st blue.misc matches 1.. unless entity @s run tag @a add blue.tr.ignore_first
 execute unless score #st blue.misc matches 1.. unless entity @s run schedule function blue:tr/debug/z/toggle_test_world 1t
 execute unless score #st blue.misc matches 1.. unless entity @s run return run execute as @a[scores={Set_Trim=1..}] at @s run function blue:tr/debug/z/toggle_test_world
 scoreboard players reset @s Set_Trim

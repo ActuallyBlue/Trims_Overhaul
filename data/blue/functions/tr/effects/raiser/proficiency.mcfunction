@@ -1,4 +1,3 @@
-
 attribute @s generic.movement_speed modifier remove b163102f-0-5-0-1
 attribute @s generic.attack_speed modifier remove b163102f-0-5-0-1
 attribute @s generic.attack_damage modifier remove b163102f-0-5-0-1

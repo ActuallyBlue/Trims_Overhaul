@@ -8,3 +8,4 @@ execute if score @s[tag=blue.tr.eye] TrimCMDs.BLUE matches 536 run function blue
 execute if score @s[tag=blue.tr.rib] TrimCMDs.BLUE matches 537 run function blue:tr/inv/transfer/owner/main {trim:rib,translate:"Rib","color":"#E6484B"}
 execute if score @s[tag=blue.tr.vex] TrimCMDs.BLUE matches 538 run function blue:tr/inv/transfer/owner/main {trim:vex,translate:"Vex","color":"#CFC6A5"}
 execute if entity @s[tag=blue.tr.transfer_failed] run function blue:tr/inv/transfer/owner/fail
+setblock 200600 2 200600 barrel

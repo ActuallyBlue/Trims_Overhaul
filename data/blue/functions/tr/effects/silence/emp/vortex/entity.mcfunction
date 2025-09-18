@@ -1,4 +1,3 @@
-
 scoreboard players add @s blue.misc 1
 schedule function blue:tr/effects/silence/emp/vortex/loop 1t
 execute if score @s blue.misc matches 1..3 run particle sculk_charge_pop ~ ~ ~ 0.4 0.4 0.4 0.01 24

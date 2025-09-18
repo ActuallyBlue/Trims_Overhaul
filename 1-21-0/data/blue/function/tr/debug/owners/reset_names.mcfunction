@@ -1,18 +1,18 @@
-execute unless data storage blue:data trims.wayfinder.owner.text run data modify storage blue:data trims.wayfinder.owner.text set value None
-execute unless data storage blue:data trims.silence.owner.text run data modify storage blue:data trims.silence.owner.text set value None
-execute unless data storage blue:data trims.shaper.owner.text run data modify storage blue:data trims.shaper.owner.text set value None
-execute unless data storage blue:data trims.raiser.owner.text run data modify storage blue:data trims.raiser.owner.text set value None
-execute unless data storage blue:data trims.sentry.owner.text run data modify storage blue:data trims.sentry.owner.text set value None
-execute unless data storage blue:data trims.spire.owner.text run data modify storage blue:data trims.spire.owner.text set value None
-execute unless data storage blue:data trims.coast.owner.text run data modify storage blue:data trims.coast.owner.text set value None
-execute unless data storage blue:data trims.snout.owner.text run data modify storage blue:data trims.snout.owner.text set value None
-execute unless data storage blue:data trims.ward.owner.text run data modify storage blue:data trims.ward.owner.text set value None
-execute unless data storage blue:data trims.dune.owner.text run data modify storage blue:data trims.dune.owner.text set value None
-execute unless data storage blue:data trims.flow.owner.text run data modify storage blue:data trims.flow.owner.text set value None
-execute unless data storage blue:data trims.bolt.owner.text run data modify storage blue:data trims.bolt.owner.text set value None
-execute unless data storage blue:data trims.wild.owner.text run data modify storage blue:data trims.wild.owner.text set value None
-execute unless data storage blue:data trims.tide.owner.text run data modify storage blue:data trims.tide.owner.text set value None
-execute unless data storage blue:data trims.host.owner.text run data modify storage blue:data trims.host.owner.text set value None
-execute unless data storage blue:data trims.eye.owner.text run data modify storage blue:data trims.eye.owner.text set value None
-execute unless data storage blue:data trims.rib.owner.text run data modify storage blue:data trims.rib.owner.text set value None
-execute unless data storage blue:data trims.vex.owner.text run data modify storage blue:data trims.vex.owner.text set value None
+data remove storage blue:data trims.wayfinder.owner.text
+data remove storage blue:data trims.silence.owner.text
+data remove storage blue:data trims.shaper.owner.text
+data remove storage blue:data trims.raiser.owner.text
+data remove storage blue:data trims.sentry.owner.text
+data remove storage blue:data trims.spire.owner.text
+data remove storage blue:data trims.coast.owner.text
+data remove storage blue:data trims.snout.owner.text
+data remove storage blue:data trims.ward.owner.text
+data remove storage blue:data trims.dune.owner.text
+data remove storage blue:data trims.flow.owner.text
+data remove storage blue:data trims.bolt.owner.text
+data remove storage blue:data trims.wild.owner.text
+data remove storage blue:data trims.tide.owner.text
+data remove storage blue:data trims.host.owner.text
+data remove storage blue:data trims.eye.owner.text
+data remove storage blue:data trims.rib.owner.text
+data remove storage blue:data trims.vex.owner.text
