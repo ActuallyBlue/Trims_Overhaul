@@ -1,0 +1,1 @@
+$attribute @s block_break_speed modifier add blue:tr.trim $(copper) add_value

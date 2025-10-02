@@ -10,9 +10,7 @@
           }
         },
         "item": {
-          "items": [
-            "minecraft:gold_ingot"
-          ]
+          "items": "minecraft:gold_ingot"
         },
         "player": [
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},
@@ -31,9 +29,7 @@
           }
         },
         "item": {
-          "items": [
-            "minecraft:gold_ingot"
-          ]
+          "items": "minecraft:gold_ingot"
         },
         "player": [
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},

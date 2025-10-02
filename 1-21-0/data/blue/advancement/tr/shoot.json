@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "shot": {
+    "req": {
       "trigger": "minecraft:shot_crossbow",
       "conditions": {
         "player": {
@@ -12,9 +12,7 @@
           },
           "equipment": {
             "mainhand": {
-              "items": [
-                "minecraft:crossbow"
-              ]
+              "items": "minecraft:crossbow"
             }
           }
         }

@@ -14,7 +14,7 @@ execute if score #.temp blue.misc > #.wild.trap_limit blue.config run kill @e[ty
 execute if score #.temp blue.misc matches 1.. as @e[type=marker,tag=blue.tr.wild.trap] at @s positioned ~ ~1.25 ~ run function blue:tr/effects/wild/emp/trap/entity
 execute if score #.temp blue.misc matches 1.. positioned ^ ^ ^1 facing entity @e[type=marker,tag=blue.tr.wild.trap,distance=..32] eyes positioned ^ ^ ^-1 at @s[distance=..0.1] anchored eyes run function blue:tr/effects/wild/emp/trap/looking
 execute if score #.wild.looking blue.misc matches 1 unless score #.temp blue.misc matches -1 run function blue:tr/effects/wild/emp/trap/reset_looking
-execute if predicate blue:tr/movesneak align xyz positioned ~0.5 ~ ~0.5 if block ~ ~-1 ~ grass_block run function blue:tr/effects/wild/emp/trap/placing
+execute if predicate {"condition":"entity_properties","entity":"this","predicate":{"movement":{"speed":{"max":0.1}},"flags":{"is_sneaking":true}}} align xyz positioned ~0.5 ~ ~0.5 if block ~ ~-1 ~ grass_block run function blue:tr/effects/wild/emp/trap/placing
 execute if score #.wild.charge blue.misc matches 1.. unless score #.wild.charging blue.misc matches 1 run scoreboard players reset #.wild.charge blue.misc
 scoreboard players reset #.wild.charging blue.misc
 execute unless score #.20 blue.misc matches 10 run return fail

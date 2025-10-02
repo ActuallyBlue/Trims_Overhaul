@@ -4,3 +4,5 @@ execute if score #.tr.require_unlock blue.config matches 0 run return fail
 tellraw @s [{"translate":"blue.tr.unlock_obj","fallback":"You've unlocked the objective for","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"Bolt","color":"#B65D1A"}]
 playsound block.chest.locked player @s ~ ~ ~ 2 0.75
 particle trial_spawner_detection ~ ~0.5 ~ 0.3 0.6 0.3 0.05 2
+execute if score #.tr.objective_type blue.config matches 1 run tellraw @s [{"text":" - ","color":"gray"},{"translate":"blue.tr.bolt_quest","fallback":"Play the Creator's song beneath the night sky"}," ",{"storage":"blue:data","nbt":"trims.unlock_text","interpret":true}]
+execute if score #.tr.objective_type blue.config matches 2 run tellraw @s [{"text":" - ","color":"gray"},{"translate":"blue.tr.bolt_task","fallback":"Vault Opener"}," ",{"storage":"blue:data","nbt":"trims.unlock_text","interpret":true}]

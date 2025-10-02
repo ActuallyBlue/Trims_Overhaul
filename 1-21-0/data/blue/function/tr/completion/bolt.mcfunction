@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust bolt
 advancement grant @a only blue:tr/actual/bolt
 scoreboard players set @s blue.tr.plain_vault 0
 scoreboard players set #.tr.bolt_completed blue.config 1
+advancement revoke @s only blue:tr/quests/bolt
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Bolt","color":"#B65D1A"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/bolt

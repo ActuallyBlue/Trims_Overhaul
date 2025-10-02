@@ -12,7 +12,7 @@ execute unless score #.tr.limit_owned_trims blue.config matches 1 store success 
 data modify storage blue:data trims.merge.return_item.Owner set from entity @s UUID
 execute if score #.player blue.tr.died matches 1 run data modify storage blue:data trims.merge.item_data.Owner set from entity @a[tag=blue.tr.killer,limit=1] UUID
 scoreboard players set #.drop_temp blue.misc 0
-execute if score #.tr.death_transfer_amount blue.config matches 1000 run function blue:tr/inv/died/hardcore
+execute if score #.tr.death_transfer_amount blue.config matches 1000 if score @s blue.tr.current_trim matches 1.. run function blue:tr/inv/died/hardcore
 data remove storage blue:data trims.fake_inv
 execute as @e[type=item,distance=..3,tag=!blue.tr.checked] run function blue:tr/inv/died/check_keep
 advancement grant @s only blue:tr/inv_checks

@@ -14,9 +14,7 @@
       "trigger": "using_item",
       "conditions": {
         "item": {
-          "items": [
-            "shield"
-          ]
+          "items": "shield"
         }
       }
     },

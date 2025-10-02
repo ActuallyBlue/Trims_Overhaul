@@ -1,3 +1,4 @@
+execute if score #.rib.strict_skull blue.config matches 1 if score @s blue.tr.combat matches 200.. run return 0
 scoreboard players set #.rib.was_sneaking blue.misc 1
 execute unless entity @e[type=interaction,tag=blue.tr.rib_hitbox,limit=1] positioned ^ ^ ^0.6 run summon interaction ~ ~-0.2 ~ {width:0.4,height:0.5,Tags:["blue.tr.rib_hitbox"]}
 execute positioned ^ ^ ^0.6 run tp @e[type=interaction,tag=blue.tr.rib_hitbox,limit=1] ~ ~-0.2 ~

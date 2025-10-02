@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust spire
 advancement grant @a only blue:tr/actual/spire
 scoreboard players set @s blue.tr.dragons_killed 0
 scoreboard players set #.tr.spire_completed blue.config 1
+advancement revoke @s only blue:tr/quests/spire_crystals
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Spire","color":"#BE20C7"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/spire

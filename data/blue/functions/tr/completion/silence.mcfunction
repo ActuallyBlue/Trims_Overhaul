@@ -3,6 +3,7 @@ tag @s add blue.tr.silence
 advancement grant @s only blue:tr/trust silence
 advancement grant @a only blue:tr/actual/silence
 scoreboard players set #.tr.silence_completed blue.config 1
+advancement revoke @s only blue:tr/quests/silence
 team add blue.tr.silence
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Silence","color":"#3842Cf"}
 function blue:tr/completion/z/setup

@@ -38,10 +38,10 @@ scoreboard players add @s[advancements={blue:tr/quests/wayfinder={village_savann
 scoreboard players add @s[advancements={blue:tr/quests/wayfinder={village_snowy=true}}] blue.tr.structures 1
 scoreboard players add @s[advancements={blue:tr/quests/wayfinder={village_taiga=true}}] blue.tr.structures 1
 execute unless score #.temp blue.misc < @s blue.tr.structures run return 0
-playsound block.note_block.bell player @s ~ ~ ~ 0.5 2
-title @s[scores={blue.tr.structures=..12}] actionbar [{"translate":"blue.tr.wayfinder_quest_info","fallback":"New Structure!","color":"#F1FFC8"},{"text":" • ","color":"gray"},{"score":{"name":"@s","objective":"blue.tr.structures"}},"/12"]
-title @s[scores={blue.tr.structures=13..22}] actionbar [{"translate":"blue.tr.wayfinder_quest_info","fallback":"New Structure!","color":"#F1FFC8"},{"text":" • ","color":"gray"},{"score":{"name":"@s","objective":"blue.tr.structures"}},"/22"]
-title @s[scores={blue.tr.structures=23..}] actionbar [{"translate":"blue.tr.wayfinder_quest_info","fallback":"New Structure!","color":"#F1FFC8"},{"text":" • ","color":"gray"},{"score":{"name":"@s","objective":"blue.tr.structures"}},"/32"]
-execute if score @s blue.tr.structures matches 12 run function blue:tr/completion/wayfinder
-execute if score @s blue.tr.structures matches 22 run function blue:tr/completion/wayfinder
-execute if score @s blue.tr.structures matches 32 run function blue:tr/completion/wayfinder
+playsound block.note_block.bell player @s[tag=!blue.tr.no_display] ~ ~ ~ 0.5 2
+title @s[scores={blue.tr.structures=..12},tag=!blue.tr.no_display] actionbar [{"translate":"blue.tr.wayfinder_quest_info","fallback":"New Structure!","color":"#F1FFC8"},{"text":" • ","color":"gray"},{"score":{"name":"@s","objective":"blue.tr.structures"}},"/12"]
+title @s[scores={blue.tr.structures=13..22},tag=!blue.tr.no_display] actionbar [{"translate":"blue.tr.wayfinder_quest_info","fallback":"New Structure!","color":"#F1FFC8"},{"text":" • ","color":"gray"},{"score":{"name":"@s","objective":"blue.tr.structures"}},"/22"]
+title @s[scores={blue.tr.structures=23..},tag=!blue.tr.no_display] actionbar [{"translate":"blue.tr.wayfinder_quest_info","fallback":"New Structure!","color":"#F1FFC8"},{"text":" • ","color":"gray"},{"score":{"name":"@s","objective":"blue.tr.structures"}},"/32"]
+execute if score @s blue.tr.structures matches 12 run function blue:tr/completion/z/wayfinder
+execute if score @s blue.tr.structures matches 22 run function blue:tr/completion/z/wayfinder
+execute if score @s blue.tr.structures matches 32 run function blue:tr/completion/z/wayfinder

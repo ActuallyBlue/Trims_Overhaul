@@ -5,6 +5,7 @@ function blue:tr/settings/objective_type
 function blue:tr/settings/objective_announcements
 function blue:tr/settings/template_clearing
 function blue:tr/settings/require_unlock
+function blue:tr/settings/allow_empowerment
 function blue:tr/settings/limit_owned_trims
 function blue:tr/settings/random_task_defender
 function blue:tr/settings/death_transfer_amount

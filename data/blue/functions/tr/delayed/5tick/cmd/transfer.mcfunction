@@ -7,7 +7,7 @@ execute if score #.temp TrimCMDs.BLUE matches 20 run function blue:tr/inv/transf
 execute if score #.temp TrimCMDs.BLUE matches 20 run return 0
 tag @s add blue.tr.temp
 scoreboard players reset @s blue.tr.transfer
-execute positioned ^ ^ ^3 run scoreboard players operation @s blue.tr.transfer = @p[distance=..6,gamemode=!spectator,tag=!blue.tr.temp,predicate=!blue:tr/transferable] blue.id
+execute positioned ^ ^ ^3 run scoreboard players operation @s blue.tr.transfer = @p[distance=..6,gamemode=!spectator,tag=!blue.tr.temp,predicate=!blue:tr/not_transferable] blue.id
 execute unless score @s blue.tr.transfer matches 1.. positioned ^ ^ ^3 run scoreboard players operation @s blue.tr.transfer = @p[distance=..6,gamemode=!spectator,tag=!blue.tr.temp] blue.id
 tag @s remove blue.tr.temp
 execute unless score @s blue.tr.transfer matches 1.. run tellraw @s [{"text":"\n- ","color":"dark_gray"},{"translate":"blue.tr.no_transfer_target","fallback":"Failed to find a player in front of you","color":"gray"}," ",{"text":"ℹ\n","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"translate":"blue.tr.tutorial.transfer_hover_1","fallback":"Transferring can be disabled by the server.\n","color":"gray"},{"translate":"blue.tr.tutorial.transfer_hover_2","fallback":"The target needs to be within 6 blocks and not completely invisible\n\nIf you're having trouble with the direct armor method, try using templates. You can untrim your armor by placing a smithing table on top another.","color":"dark_gray"}]}}]

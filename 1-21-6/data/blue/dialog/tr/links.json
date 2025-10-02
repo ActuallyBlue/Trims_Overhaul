@@ -17,7 +17,7 @@
     {
       "type": "minecraft:plain_message",
       "contents": {
-        "text": "/    v3.0.1    \\\nBy ActuallyBlue",
+        "text": "/    v3.0.2    \\\nBy ActuallyBlue",
         "color": "gray"
       }
     },

@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust ward
 advancement grant @a only blue:tr/actual/ward
 scoreboard players set @s blue.tr.damage_blocked 0
 scoreboard players set #.tr.ward_completed blue.config 1
+advancement revoke @s only blue:tr/quests/ward_stored
 scoreboard objectives add blue.tr.damage_blocked custom:damage_blocked_by_shield
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Ward","color":"#5C70AE"}
 function blue:tr/completion/z/setup

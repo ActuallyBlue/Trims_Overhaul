@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust host
 advancement grant @a only blue:tr/actual/host
 scoreboard players set @s blue.tr.villagers_cured 0
 scoreboard players set #.tr.host_completed blue.config 1
+advancement revoke @s only blue:tr/quests/host
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Host","color":"#A34646"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/host

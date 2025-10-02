@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust eye
 advancement grant @a only blue:tr/actual/eye
 scoreboard players set @s blue.tr.silverfish_killed 0
 scoreboard players set #.tr.eye_completed blue.config 1
+advancement revoke @s only blue:tr/quests/eye
 scoreboard objectives add blue.tr.fear dummy
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Eye","color":"#1F8A46"}
 function blue:tr/completion/z/setup

@@ -6,7 +6,6 @@ advancement grant @s only blue:tr/actual/hide/q2
 advancement grant @s only blue:tr/actual/hide/q3
 advancement grant @s only blue:tr/actual/hide/q4
 advancement grant @s only blue:tr/actual/hide/q5
-advancement revoke @s only blue:tr/tags
 execute if score #.tr.wayfinder_completed blue.config matches 1.. run advancement grant @s only blue:tr/actual/wayfinder
 execute if score #.tr.silence_completed blue.config matches 1.. run advancement grant @s only blue:tr/actual/silence
 execute if score #.tr.shaper_completed blue.config matches 1.. run advancement grant @s only blue:tr/actual/shaper

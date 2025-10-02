@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust sentry
 advancement grant @a only blue:tr/actual/sentry
 scoreboard players set @s blue.tr.raids_won 0
 scoreboard players set #.tr.sentry_completed blue.config 1
+advancement revoke @s only blue:tr/quests/sentry
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Sentry","color":"#4B885B"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/sentry

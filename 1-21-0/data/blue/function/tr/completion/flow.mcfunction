@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust flow
 advancement grant @a only blue:tr/actual/flow
 scoreboard players set @s blue.tr.ominous_vault 0
 scoreboard players set #.tr.flow_completed blue.config 1
+advancement revoke @s only blue:tr/quests/flow_kills
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Flow","color":"#85B2C5"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/flow

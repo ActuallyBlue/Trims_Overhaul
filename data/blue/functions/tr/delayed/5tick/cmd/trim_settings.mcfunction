@@ -9,6 +9,7 @@ tellraw @s [{"translate":"Snout","color":"#F2B01A","hoverEvent":{"action":"show_
 scoreboard players set #.temp blue.misc -123
 function blue:tr/settings/ability/tracker_range
 function blue:tr/settings/ability/void_return
+function blue:tr/settings/ability/strict_skull
 function blue:tr/settings/ability/strict_scorch
 function blue:tr/settings/ability/strict_spawn
 function blue:tr/settings/ability/strict_ashen

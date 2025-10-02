@@ -1,11 +1,13 @@
 {
   "id": "trims-overhaul",
-	"pack": {
-			"pack_format": 15,
-      "supported_formats": [15,81],
-			"description": [
-        {"text": "Datapack by ActuallyBlue\n","color":"#0a9add"},
-        {"text": "Version 3.0.1 - MC 1.20.0+","color":"#449CAB"}
+    "pack": {
+      "pack_format": 16,
+      "supported_formats": [16,88],
+      "min_format": 16,
+      "max_format": 88,
+      "description": [
+        {"translate":"blue.tr.pack_info","fallback": "v%s - MC %s\n","with":["3.0.2","1.20.0+"],"color":"#0a9add"},
+        {"translate":"blue.pack_description","fallback": "By ActuallyBlue","color":"#39828f","italic":true}
       ]
     },
     "filter": {
@@ -19,14 +21,13 @@
         {"formats":[18,47],"directory":"1-20-2"},
         {"formats":[26,47],"directory":"1-20-3"},
         {"formats":[27,47],"directory":"1-20-5"},
-        {"formats":[48,200],"directory":"1-21-0"},
-        {"formats":[57,200],"directory":"1-21-2"},
-        {"formats":[58,200],"directory":"1-21-4"},
-        {"formats":[62,200],"directory":"1-21-5"},
-        {"formats":[77,200],"directory":"1-21-6"},
-        {"formats":[81,200],"directory":"1-21-7"},
-        {"formats":[42,100],"directory":"rp_1-21-2"},
-        {"formats":[43,100],"directory":"rp_1-21-4"}
+        {"formats":[48,200],"min_format":48,"max_format":200,"directory":"1-21-0"},
+        {"formats":[57,200],"min_format":57,"max_format":200,"directory":"1-21-2"},
+        {"formats":[58,200],"min_format":58,"max_format":200,"directory":"1-21-4"},
+        {"formats":[62,200],"min_format":62,"max_format":200,"directory":"1-21-5"},
+        {"formats":[77,200],"min_format":77,"max_format":200,"directory":"1-21-6"},
+        {"formats":[81,200],"min_format":81,"max_format":200,"directory":"1-21-7"},
+        {"formats":[88,200],"min_format":88,"max_format":200,"directory":"1-21-9"}
     ]
   }
 }

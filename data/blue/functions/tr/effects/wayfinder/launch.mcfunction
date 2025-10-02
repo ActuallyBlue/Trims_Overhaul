@@ -8,6 +8,6 @@ tp @s ~ ~0.5 ~
 execute if score #.temp blue.misc matches -1 run gamemode survival
 execute if score #.temp blue.misc matches -2 run gamemode adventure
 item modify entity @s weapon blue:tr/reduce_durability
-execute if predicate blue:tr/grapple_durability run return 0
+execute unless predicate blue:tr/grapple_durability run return 0
 playsound entity.item.break player @a ~ ~ ~ 1 1
 item replace entity @s weapon with air

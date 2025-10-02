@@ -1,3 +1,5 @@
+execute if entity @s[tag=b.tr.3x] run return 0
+tag @s add b.tr.3x
 attribute @s generic.max_health modifier remove 200600-2060-2060-2060-200605
 advancement grant @s[tag=blue.tr.wayfinder] only blue:tr/trust wayfinder
 advancement grant @s[tag=blue.tr.silence] only blue:tr/trust silence
@@ -8,8 +10,6 @@ advancement grant @s[tag=blue.tr.spire] only blue:tr/trust spire
 advancement grant @s[tag=blue.tr.coast] only blue:tr/trust coast
 advancement grant @s[tag=blue.tr.snout] only blue:tr/trust snout
 advancement grant @s[tag=blue.tr.ward] only blue:tr/trust ward
-advancement grant @s[tag=blue.tr.bolt] only blue:tr/trust bolt
-advancement grant @s[tag=blue.tr.flow] only blue:tr/trust flow
 advancement grant @s[tag=blue.tr.dune] only blue:tr/trust dune
 advancement grant @s[tag=blue.tr.wild] only blue:tr/trust wild
 advancement grant @s[tag=blue.tr.tide] only blue:tr/trust tide

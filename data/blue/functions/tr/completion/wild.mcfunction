@@ -5,6 +5,7 @@ advancement grant @a only blue:tr/actual/wild
 scoreboard players set @s blue.tr.animals_bred 0
 scoreboard players set @s blue.tr.animals_tamed 0
 scoreboard players set #.tr.wild_completed blue.config 1
+advancement revoke @s only blue:tr/quests/wild_tames
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Wild","color":"#00D529"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/wild

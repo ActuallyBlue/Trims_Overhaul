@@ -1,3 +1,3 @@
-execute if entity @s[tag=blue.tr.rib] if data storage blue:data trims.armor{feet:{material:"minecraft:blaze_powder"},legs:{material:"minecraft:blaze_powder"},chest:{material:"minecraft:blaze_powder"},head:{material:"minecraft:blaze_powder"}} run function blue:tr/inv/equip/blaze
+execute if entity @s[tag=blue.tr.rib] unless score #.tr.allow_empowerment blue.config matches 0 if data storage blue:data trims.armor{feet:{material:"minecraft:blaze_powder"},legs:{material:"minecraft:blaze_powder"},chest:{material:"minecraft:blaze_powder"},head:{material:"minecraft:blaze_powder"}} run function blue:tr/inv/equip/blaze
 scoreboard players set @s[tag=blue.tr.rib] blue.tr.current_trim 6
 tag @s add blue.tr.trim.rib

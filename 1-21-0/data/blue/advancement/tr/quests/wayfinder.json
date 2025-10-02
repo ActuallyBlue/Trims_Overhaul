@@ -1,13 +1,4 @@
 {
-  "display": {
-    "icon": {
-      "id": "netherite_boots"
-    },
-    "title": {"translate":"blue.tr.fearless_adventures.title","fallback":"Fearless Adventures"},
-    "description": {"translate":"blue.tr.fearless_adventures.desc","fallback":"Discover every structure"},
-    "frame": "challenge"
-  },
-  "parent": "minecraft:adventure/sleep_in_bed",
   "criteria": {
     "ancient_city":{"trigger":"location","conditions":{"player":{"location":{"structures":"ancient_city"}}}},
     "bastion_remnant":{"trigger":"location","conditions":{"player":{"location":{"structures":"bastion_remnant"}}}},

@@ -14,3 +14,5 @@ execute if entity @s[tag=blue.tr.trim.wild] anchored eyes rotated ~ 0 facing ent
 execute if entity @s[tag=blue.tr.trim.tide] anchored eyes rotated ~ 0 facing entity @a[tag=blue.tr.tide,limit=1] eyes run return run particle dust{color:[0.1f,0.61f,0.87f],scale:0.25} ^ ^-0.5 ^0.7 0 0 0 0 5 normal @s
 execute if entity @s[tag=blue.tr.trim.eye] anchored eyes rotated ~ 0 facing entity @a[tag=blue.tr.eye,limit=1] eyes run return run particle dust{color:[0.12f,0.54f,0.27f],scale:0.25} ^ ^-0.5 ^0.7 0 0 0 0 5 normal @s
 execute if entity @s[tag=blue.tr.trim.vex] anchored eyes rotated ~ 0 facing entity @a[tag=blue.tr.vex,limit=1] eyes run return run particle dust{color:[0.81f,0.78f,0.65f],scale:0.25} ^ ^-0.5 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.bolt] anchored eyes rotated ~ 0 facing entity @a[tag=blue.tr.bolt,limit=1] eyes run return run particle dust{color:[0.71f,0.36f,0.1f],scale:0.25} ^ ^-0.5 ^0.7 0 0 0 0 5 normal @s
+execute if entity @s[tag=blue.tr.trim.flow] anchored eyes rotated ~ 0 facing entity @a[tag=blue.tr.flow,limit=1] eyes run return run particle dust{color:[0.52f,0.69f,0.77f],scale:0.25} ^ ^-0.5 ^0.7 0 0 0 0 5 normal @s

@@ -3,6 +3,7 @@ execute store result storage blue:data trims.temp.export.objective_type int 1 ru
 execute store result storage blue:data trims.temp.export.objective_announcements int 1 run scoreboard players get #.tr.objective_announcements blue.config
 execute store result storage blue:data trims.temp.export.template_clearing int 1 run scoreboard players get #.tr.template_clearing blue.config
 execute store result storage blue:data trims.temp.export.require_unlock int 1 run scoreboard players get #.tr.require_unlock blue.config
+execute store result storage blue:data trims.temp.export.allow_empowerment int 1 run scoreboard players get #.tr.allow_empowerment blue.config
 execute store result storage blue:data trims.temp.export.limit_owned_trims int 1 run scoreboard players get #.tr.limit_owned_trims blue.config
 execute store result storage blue:data trims.temp.export.random_task_defender int 1 run scoreboard players get #.tr.random_task_defender blue.config
 execute store result storage blue:data trims.temp.export.death_transfer_amount int 1 run scoreboard players get #.tr.death_transfer_amount blue.config
@@ -19,8 +20,9 @@ execute store result storage blue:data trims.temp.export.gamble_multiplier int 1
 execute store result storage blue:data trims.temp.export.gamble_limit int 1 run scoreboard players get #.snout.gamble_limit blue.config
 execute store result storage blue:data trims.temp.export.tracker_range int 1 run scoreboard players get #.wayfinder.tracker_range blue.config
 execute store result storage blue:data trims.temp.export.void_return int 1 run scoreboard players get #.wayfinder.void_return blue.config
+execute store result storage blue:data trims.temp.export.strict_skull int 1 run scoreboard players get #.rib.strict_skull blue.config
 execute store result storage blue:data trims.temp.export.strict_ashen int 1 run scoreboard players get #.rib.strict_ashen blue.config
-execute store result storage blue:data trims.temp.export.scorch_combat int 1 run scoreboard players get #.rib.scorch_combat blue.config
+execute store result storage blue:data trims.temp.export.strict_scorch int 1 run scoreboard players get #.rib.strict_scorch blue.config
 execute store result storage blue:data trims.temp.export.strict_spawn int 1 run scoreboard players get #.rib.strict_spawn blue.config
 execute store result storage blue:data trims.temp.export.origin_tp int 1 run scoreboard players get #.spire.origin_tp blue.config
 execute store result storage blue:data trims.temp.export.aperture int 1 run scoreboard players get #.spire.aperture blue.config
@@ -30,3 +32,4 @@ execute store result storage blue:data trims.temp.export.bonus_shards int 1 run 
 execute store result storage blue:data trims.temp.export.vortex_griefing int 1 run scoreboard players get #.silence.vortex_griefing blue.config
 execute store result storage blue:data trims.temp.export.uncap_proficiency int 1 run scoreboard players get #.raiser.uncap_proficiency blue.config
 function blue:tr/settings/z/export with storage blue:data trims.temp.export
+data remove storage blue:data trims.temp.export

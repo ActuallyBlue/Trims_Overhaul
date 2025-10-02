@@ -1,5 +1,6 @@
 execute if score #.tr.manual_transferring blue.config matches 0 unless entity @s[gamemode=creative] run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.transfers_disabled","fallback":"Manual transfers are disabled via the server settings","color":"gray"}]
 execute if score #.tr.manual_transferring blue.config matches 0 unless entity @s[gamemode=creative] run return 0
+advancement grant @s only blue:tr/inv_checks
 tag @s add blue.tr.transfer_user
 scoreboard players operation #.link blue.id = @s blue.tr.transfer
 tag @a[distance=0.01..11,predicate=blue:shared/id_link,limit=1] add blue.tr.transfer_target

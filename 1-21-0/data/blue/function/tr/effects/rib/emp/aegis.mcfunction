@@ -1,8 +1,8 @@
 execute if score #.rib.ambient blue.misc matches 3 run particle flame ~ ~0.8 ~ 0.2 0.2 0.2 0.01 1
 particle small_flame ~ ~0.8 ~ 0.2 0.2 0.2 0.02 1
 execute as @n[type=#blue:tr/projectiles,tag=!blue.tr.rib_checked,distance=..5] at @s run function blue:tr/effects/rib/emp/aegis_burn
-execute if score #.rib.scorch_combat blue.config matches 1 if score @s blue.tr.combat matches -100.. run return fail
-execute store success score #.temp blue.misc if predicate blue:tr/rib_hot
+execute if score #.rib.strict_scorch blue.config matches 1 if score @s blue.tr.combat matches -100.. run return fail
+execute store success score #.temp blue.misc if predicate {"condition":"any_of","terms":[{"condition":"entity_properties","entity":"this","predicate":{"flags":{"is_on_fire":true}}},{"condition":"location_check","predicate":{"dimension":"the_nether"}}]}
 execute unless score #.temp blue.misc matches 1 unless predicate blue:r/03c run return fail
 execute if score #.temp blue.misc matches 1 unless predicate blue:r/04c run return fail
 execute as @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run damage @s 5 on_fire by @a[tag=blue.tr.rib,limit=1]

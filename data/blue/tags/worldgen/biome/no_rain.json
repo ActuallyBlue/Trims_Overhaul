@@ -1,11 +1,8 @@
 {
   "values": [
-    "minecraft:desert",
-    "minecraft:savanna",
-    "minecraft:badlands",
-    "minecraft:savanna_plateau",
-    "minecraft:wooded_badlands",
-    "minecraft:eroded_badlands",
-    "minecraft:windswept_savanna"
+    "#minecraft:is_savanna",
+    "#blue:deserts",
+    {"id":"#c:is_dry/overworld","required":false},
+    {"id":"#c:climate_dry","required":false}
   ]
 }

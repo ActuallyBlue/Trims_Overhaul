@@ -1,7 +1,7 @@
 execute if score #.rib.ambient blue.misc matches 3 run particle flame ~ ~0.8 ~ 0.2 0.2 0.2 0.01 1
 particle small_flame ~ ~0.8 ~ 0.2 0.2 0.2 0.02 1
 execute as @e[type=#blue:tr/projectiles,tag=!blue.tr.rib_checked,distance=..5,sort=nearest,limit=1] at @s run function blue:tr/effects/rib/emp/aegis_burn
-execute if score #.rib.scorch_combat blue.config matches 1 if score @s blue.tr.combat matches -100.. run return 0
+execute if score #.rib.strict_scorch blue.config matches 1 if score @s blue.tr.combat matches -100.. run return 0
 execute store success score #.temp blue.misc if predicate blue:tr/rib_hot
 execute unless score #.temp blue.misc matches 1 unless predicate blue:r/03c run return 0
 execute if score #.temp blue.misc matches 1 unless predicate blue:r/04c run return 0

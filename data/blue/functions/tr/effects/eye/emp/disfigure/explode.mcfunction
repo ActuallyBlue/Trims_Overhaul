@@ -1,4 +1,5 @@
 kill
+particle scrape ~ ~ ~ 0 0 0 2 16 force
 execute if entity @s[tag=blue.tr.eye_thrown] run function blue:tr/effects/eye/emp/disfigure/mist
 execute if entity @s[tag=blue.tr.eye_thrown] run return 0
 execute on origin if score @s blue.tr.current_trim matches 3 run function blue:tr/effects/eye/emp/disfigure/mist

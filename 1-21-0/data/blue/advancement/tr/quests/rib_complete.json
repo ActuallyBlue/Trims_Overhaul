@@ -19,6 +19,21 @@
                 "min": 3
               }
             }
+          },
+          {
+            "condition": "inverted",
+            "term": {
+              "condition": "value_check",
+              "value": {
+                "type": "score",
+                "target": {
+                  "type": "fixed",
+                  "name": "#.tr.rib_completed"
+                },
+                "score": "blue.config"
+              },
+              "range": 1
+            }
           }
         ],
         "killing_blow": {

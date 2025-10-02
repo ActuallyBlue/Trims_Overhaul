@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "inventory_changed",
+      "conditions": {
+        "player": {
+          "slots": {
+            "player.crafting.*": {
+              "items": [
+                "minecraft:heart_of_the_sea",
+                "minecraft:nautilus_shell",
+                "minecraft:shulker_shell",
+                "minecraft:blaze_powder",
+                "minecraft:nether_star",
+                "minecraft:wind_charge",
+                "minecraft:dragon_egg",
+                "minecraft:echo_shard",
+                "minecraft:ender_eye",
+                "minecraft:gunpowder"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/delayed/remove_material"
+  }
+}

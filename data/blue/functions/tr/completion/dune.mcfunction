@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust dune
 advancement grant @a only blue:tr/actual/dune
 scoreboard players set @s blue.tr.desert_time 0
 scoreboard players set #.tr.dune_completed blue.config 1
+advancement revoke @s only blue:tr/quests/dune
 scoreboard objectives add blue.tr.mined_sand mined:sand
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Dune","color":"#E7C547"}
 function blue:tr/completion/z/setup

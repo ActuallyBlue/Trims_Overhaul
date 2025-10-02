@@ -13,9 +13,7 @@
           }
         ],
         "item": {
-          "items": [
-            "minecraft:potion"
-          ],
+          "items": "minecraft:potion",
           "nbt": "{Potion:\"minecraft:water\"}",
           "components": {
             "minecraft:potion_contents": {

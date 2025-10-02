@@ -1,7 +1,6 @@
-execute if entity @s[advancements={blue:tr/provide_material={cursor=true}}] run item modify entity @s player.cursor blue:provide_material
-execute if entity @s[advancements={blue:tr/provide_material={cursor=true}}] run return run advancement revoke @s only blue:tr/provide_material
+advancement revoke @s only blue:tr/provide_material req
 execute store success score #.temp blue.misc run clear @s #trim_materials[!provides_trim_material] 0
-execute if score #.temp blue.misc matches 0 run return run advancement revoke @s only blue:tr/provide_material
+execute if score #.temp blue.misc matches 0 run return fail
 execute if items entity @s weapon.offhand #trim_materials[!provides_trim_material] run item modify entity @s weapon.offhand blue:provide_material
 execute if items entity @s inventory.0 #trim_materials[!provides_trim_material] run item modify entity @s inventory.0 blue:provide_material
 execute if items entity @s inventory.1 #trim_materials[!provides_trim_material] run item modify entity @s inventory.1 blue:provide_material

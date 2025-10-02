@@ -1,4 +1,4 @@
-$setblock ~ ~ ~ $(item)
+$fill ~ ~ ~ ~ ~ ~ $(item) destroy
 schedule function blue:tr/effects/bolt/loop 1t
 particle electric_spark ~ ~ ~ 0.35 0.35 0.35 0.1 18
 execute as @e[type=marker,tag=blue.tr.bolt_block,limit=1] facing entity @s feet run return run function blue:tr/effects/bolt/conduct/start

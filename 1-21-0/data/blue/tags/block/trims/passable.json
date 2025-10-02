@@ -33,6 +33,9 @@
     "sunflower",
     "mangrove_propagule",
     "spore_blossom",
-    "pink_petals"
+    "pink_petals",
+    {"id":"wildflowers","required":false},
+    {"id":"firefly_bush","required":false},
+    {"id":"cactus_flower","required":false}
   ]
 }

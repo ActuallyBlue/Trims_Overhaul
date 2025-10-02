@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust snout
 advancement grant @a only blue:tr/actual/snout
 scoreboard players set @s blue.tr.piglin_trades 0
 scoreboard players set #.tr.snout_completed blue.config 1
+advancement revoke @s only blue:tr/quests/snout
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Snout","color":"#F2B01A"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/snout
@@ -16,3 +17,4 @@ data modify storage blue:data trims.snout.owner.color set value "#F2B01A"
 title @s title ""
 playsound entity.villager.work_toolsmith player @a ~ ~ ~ 2 0.5
 particle falling_dust yellow_glazed_terracotta ~ ~2 ~ 2 2.5 2 0 300
+advancement revoke @s only blue:tr/quests/snout

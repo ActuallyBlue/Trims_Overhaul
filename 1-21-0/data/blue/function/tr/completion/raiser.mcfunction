@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust raiser
 advancement grant @a only blue:tr/actual/raiser
 scoreboard players set @s blue.tr.items_enchanted 0
 scoreboard players set #.tr.raiser_completed blue.config 1
+advancement revoke @s only blue:tr/quests/raiser
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Raiser","color":"#95B623"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/raiser

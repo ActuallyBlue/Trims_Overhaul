@@ -21,4 +21,4 @@ execute as @e[type=item,tag=!blue.tr.checked,distance=..6,nbt={Item:{id:"minecra
 execute as b163102f-0-e-0-1 at @s run function blue:tr/effects/spire/emp/item
 execute if score #.spire.aperture blue.config matches 0 run return fail
 execute if dimension the_end if entity @s[y=-40,dy=-30] positioned ~ -20 ~ run function blue:tr/effects/spire/emp/to_overworld
-execute if predicate blue:tr/aperture_res run particle end_rod ~ ~-1 ~ 0.3 1 0.3 0.015 2 normal @a[scores={blue.particles=1..}]
+execute if predicate {"condition":"entity_properties","entity":"this","predicate":{"effects":{"resistance":{"amplifier":78}}}} run particle end_rod ~ ~-1 ~ 0.3 1 0.3 0.015 2 normal @a[scores={blue.particles=1..}]

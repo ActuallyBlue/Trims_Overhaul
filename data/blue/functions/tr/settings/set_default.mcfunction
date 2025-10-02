@@ -7,7 +7,7 @@ scoreboard players set #.snout.gamble_limit blue.config 3
 scoreboard players set #.wayfinder.tracker_range blue.config 1
 scoreboard players set #.wayfinder.void_return blue.config 1
 scoreboard players set #.rib.strict_ashen blue.config 1
-scoreboard players set #.rib.scorch_combat blue.config 1
+scoreboard players set #.rib.strict_scorch blue.config 1
 scoreboard players set #.rib.strict_spawn blue.config 1
 scoreboard players set #.spire.origin_tp blue.config 1
 scoreboard players set #.spire.aperture blue.config 1

@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust rib
 advancement grant @a only blue:tr/actual/rib
 scoreboard players set @s blue.tr.lava_seconds 0
 scoreboard players set #.tr.rib_completed blue.config 1
+advancement revoke @s only blue:tr/quests/rib_complete
 team add blue.tr.rib
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Rib","color":"#E6484B"}
 function blue:tr/completion/z/setup

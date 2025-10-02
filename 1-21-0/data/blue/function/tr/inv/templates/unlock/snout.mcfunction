@@ -5,3 +5,5 @@ execute if score #.tr.require_unlock blue.config matches 0 run return fail
 tellraw @s [{"translate":"blue.tr.unlock_obj","fallback":"You've unlocked the objective for","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"Snout","color":"#F2B01A"}]
 playsound block.chest.locked player @s ~ ~ ~ 2 0.75
 particle wax_on ~ ~1.2 ~ 0.4 0.6 0.4 0 12
+execute if score #.tr.objective_type blue.config matches 1 run tellraw @s [{"text":" - ","color":"gray"},{"translate":"blue.tr.snout_quest","fallback":"Obtain every treasure that gold can grant"}," ",{"storage":"blue:data","nbt":"trims.unlock_text","interpret":true}]
+execute if score #.tr.objective_type blue.config matches 2 run tellraw @s [{"text":" - ","color":"gray"},{"translate":"blue.tr.snout_task","fallback":"Golden Trader"}," ",{"storage":"blue:data","nbt":"trims.unlock_text","interpret":true}]

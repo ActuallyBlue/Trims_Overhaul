@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "shot": {
+    "req": {
       "trigger": "minecraft:shot_crossbow",
       "conditions": {
         "player": {

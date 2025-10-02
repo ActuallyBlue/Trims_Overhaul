@@ -4,6 +4,7 @@ advancement grant @s only blue:tr/trust shaper
 advancement grant @a only blue:tr/actual/shaper
 scoreboard players set @s blue.tr.explosions_survived 0
 scoreboard players set #.tr.shaper_completed blue.config 1
+advancement revoke @s only blue:tr/quests/shaper_kill
 data modify storage blue:data trims.telemetry.append.type set value {"translate":"Shaper","color":"#8F8F8F"}
 function blue:tr/completion/z/setup
 function blue:tr/delayed/5tick/cmd/msg/shaper

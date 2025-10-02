@@ -6,7 +6,7 @@ execute store result score #.count blue.misc run data get entity @s Item.count
 execute on origin if entity @s[advancements={blue:tr/tags={tutorial_vortex=false}}] if score #.count blue.misc matches 1 run function blue:tr/effects/silence/emp/vortex/tutorial
 execute unless score #.count blue.misc matches 32.. run return fail
 execute if score #.silence.vortex_cooldown blue.misc matches 1 on origin run title @s[tag=blue.tr.silence] actionbar [{"translate":"blue.tr.vortex_name","fallback":"Vortex","color":"#3842Cf"},{"translate":"blue.tr.on_cooldown","fallback":" is on cooldown","color":"gray"}]
-execute if score #.silence.vortex_cooldown blue.misc matches 1 run data modify entity @s PickupDelay set value 0s
+execute if score #.silence.vortex_cooldown blue.misc matches 1 run return run data modify entity @s PickupDelay set value 0s
 scoreboard players remove #.count blue.misc 32
 execute on origin run loot give @s loot {"pools":[{"rolls":1,"entries":[{"type":"item","name":"echo_shard","functions":[{"function":"set_count","count":{"type":"score","target":{"type":"fixed","name":"#.count"},"score":"blue.misc"}}]}]}]}
 kill b163102f-0-f-0-1

@@ -1,3 +1,5 @@
+execute if entity @s[tag=b.tr.3x] run return fail
+tag @s add b.tr.3x
 attribute @s block_interaction_range modifier remove blue.tr.bolt_perm
 attribute @s submerged_mining_speed modifier remove blue.tr.bolt_perm
 attribute @s mining_efficiency modifier remove blue.tr.bolt_perm

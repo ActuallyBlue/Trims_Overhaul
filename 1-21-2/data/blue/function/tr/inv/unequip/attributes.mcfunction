@@ -6,6 +6,7 @@ attribute @s max_health modifier remove blue:tr.trim
 attribute @s armor modifier remove blue:tr.trim
 attribute @s luck modifier remove blue:tr.trim
 attribute @s block_interaction_range modifier remove blue:tr.trim
+attribute @s block_break_speed modifier remove blue:tr.trim
 attribute @s mining_efficiency modifier remove blue:tr.trim
 attribute @s step_height modifier remove blue:tr.trim
 attribute @s fall_damage_multiplier modifier remove blue:tr.trim

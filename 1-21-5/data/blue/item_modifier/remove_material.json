@@ -1,0 +1,12 @@
+[
+  {"function":"filtered","item_filter":{"items":"gunpowder"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"nautilus_shell"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"blaze_powder"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"ender_eye"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"echo_shard"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"heart_of_the_sea"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"shulker_shell"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"wind_charge"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"nether_star"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}},
+  {"function":"filtered","item_filter":{"items":"dragon_egg"},"modifier":{"function":"set_components","components":{"!minecraft:provides_trim_material":{}}}}
+]

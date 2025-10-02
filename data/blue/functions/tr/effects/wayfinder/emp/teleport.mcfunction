@@ -4,7 +4,7 @@ playsound entity.enderman.teleport player @a ~ ~ ~ 1.5 0.7
 execute at b163102f-0-3-0-1 run playsound entity.enderman.teleport player @a ~ ~ ~ 1.5 0.7
 execute if data storage blue:data trims.compass{id:"minecraft:compass"} run particle firework ~ ~9 ~ 0.2 5 0.2 0.01 30
 execute if data storage blue:data trims.compass{id:"minecraft:compass"} at b163102f-0-3-0-1 run particle firework ~ ~6 ~ 0.2 5 0.2 0.01 20
-execute if data storage blue:data trims.compass{id:"minecraft:compass"} at b163102f-0-3-0-1 run summon lightning_bolt ~ ~-12 ~
+execute if data storage blue:data trims.compass{id:"minecraft:compass"} at b163102f-0-3-0-1 run summon lightning_bolt ~ ~-20 ~
 execute unless data storage blue:data trims.compass{id:"minecraft:compass"} run particle sculk_soul ~ ~9 ~ 0.2 5 0.2 0.02 30
 execute unless data storage blue:data trims.compass{id:"minecraft:compass"} run playsound block.sculk.break player @a ~ ~ ~ 0.9 0.5
 execute unless data storage blue:data trims.compass{id:"minecraft:compass"} at b163102f-0-3-0-1 run playsound block.sculk.break player @a ~ ~ ~ 0.9 0.5

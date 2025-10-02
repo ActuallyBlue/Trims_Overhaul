@@ -1,4 +1,3 @@
-execute unless entity @s[tag=blue.tr.trim.vex] run return 0
 execute positioned ^ ^ ^3 as @e[type=!#blue:tr/peaceful,distance=..4] unless entity b163102f-0-8-0-1 at @s on attacker if entity @s[tag=blue.tr.vex] run summon area_effect_cloud ~ ~ ~ {Duration:1,UUID:[I;-1318907857,8,0,1]}
 execute if entity @s[advancements={blue:tr/axe_hit={fangs=false}}] run function blue:tr/effects/vex/strike/fangs
 advancement revoke @s only blue:tr/axe_hit

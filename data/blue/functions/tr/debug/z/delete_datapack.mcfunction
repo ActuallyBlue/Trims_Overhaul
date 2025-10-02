@@ -1,55 +1,10 @@
 execute unless entity @s[tag=blue.tr.delete.trims.datapack.confirmation] run tellraw @s {"translate":"blue.tr.no_delete_confirmation","fallback":"You don't have deletion confirmation, please run the remove_trims_overhaul debug function first.","color":"gray"}
 execute unless entity @s[tag=blue.tr.delete.trims.datapack.confirmation] run return 0
 tag @s remove blue.tr.delete.trims.datapack.confirmation
-execute as @a run attribute @s generic.knockback_resistance modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.armor_toughness modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.movement_speed modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.attack_damage modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.attack_speed modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.max_health modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.armor modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.luck modifier remove b163102f-0-0-0-1
-execute as @a run attribute @s generic.knockback_resistance modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.armor_toughness modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.movement_speed modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.attack_damage modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.attack_speed modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.max_health modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.armor modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.luck modifier remove b163102f-0-1-0-1
-execute as @a run attribute @s generic.knockback_resistance modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.armor_toughness modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.movement_speed modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.attack_damage modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.attack_speed modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.max_health modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.armor modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.luck modifier remove b163102f-0-2-0-1
-execute as @a run attribute @s generic.knockback_resistance modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.armor_toughness modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.movement_speed modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.attack_damage modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.attack_speed modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.max_health modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.armor modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.luck modifier remove b163102f-0-3-0-1
-execute as @a run attribute @s generic.knockback_resistance modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.armor_toughness modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.movement_speed modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.attack_damage modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.attack_speed modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.max_health modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.armor modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.luck modifier remove b163102f-0-4-0-1
-execute as @a run attribute @s generic.knockback_resistance modifier remove b163102f-0-5-0-1
-execute as @a run attribute @s generic.armor_toughness modifier remove b163102f-0-5-0-1
-execute as @a run attribute @s generic.movement_speed modifier remove b163102f-0-5-0-1
-execute as @a run attribute @s generic.attack_damage modifier remove b163102f-0-5-0-1
-execute as @a run attribute @s generic.attack_speed modifier remove b163102f-0-5-0-1
-execute as @a run attribute @s generic.max_health modifier remove b163102f-0-5-0-1
-execute as @a run attribute @s generic.armor modifier remove b163102f-0-5-0-1
-execute as @a run attribute @s generic.luck modifier remove b163102f-0-5-0-1
+data remove storage blue:data trims.inventory
+advancement grant @a only blue:tr/inv_checks
 data remove storage blue:data trims
+scoreboard players reset #.Trims_Overhaul blue.misc
 scoreboard objectives remove blue.tr.swim
 scoreboard objectives remove blue.tr.blocks_swam
 scoreboard objectives remove blue.tr.walk
@@ -100,38 +55,6 @@ tag @a remove blue.tr.host
 tag @a remove blue.tr.eye
 tag @a remove blue.tr.rib
 tag @a remove blue.tr.vex
-tag @a remove blue.tr.trim.wayfinder
-tag @a remove blue.tr.trim.silence
-tag @a remove blue.tr.trim.raiser
-tag @a remove blue.tr.trim.shaper
-tag @a remove blue.tr.trim.sentry
-tag @a remove blue.tr.trim.spire
-tag @a remove blue.tr.trim.coast
-tag @a remove blue.tr.trim.snout
-tag @a remove blue.tr.trim.ward
-tag @a remove blue.tr.trim.dune
-tag @a remove blue.tr.trim.wild
-tag @a remove blue.tr.trim.tide
-tag @a remove blue.tr.trim.host
-tag @a remove blue.tr.trim.eye
-tag @a remove blue.tr.trim.rib
-tag @a remove blue.tr.trim.vex
-tag @a remove blue.tr.mats.amethyst
-tag @a remove blue.tr.mats.blaze
-tag @a remove blue.tr.mats.eye
-tag @a remove blue.tr.mats.gold
-tag @a remove blue.tr.mats.heart
-tag @a remove blue.tr.mats.naut
-tag @a remove blue.tr.mats.powder
-tag @a remove blue.tr.mats.shard
-tag @a remove blue.tr.mats.set
-tag @a remove blue.tr.mats.shulker
-tag @a remove blue.tr.mats.star
-tag @a remove blue.tr.mats.wind
-tag @a remove blue.tr.feet_mat
-tag @a remove blue.tr.legs_mat
-tag @a remove blue.tr.chest_mat
-tag @a remove blue.tr.head_mat
 tag @a remove blue.tr.ignore_first
 tag @e remove blue.tr.armor
 tag @e remove blue.tr.checked
@@ -152,10 +75,7 @@ kill b163102f-0-b-0-1
 kill b163102f-0-c-0-1
 kill b163102f-0-d-0-1
 kill b163102f-0-e-0-1
-tellraw @s [{"translate":"blue.tr.delete_success","fallback":"You have disabled ActuallyBlue's 'Trims Overhaul' datapack, and it has removed all data involving it that it could from the world. If you wish to re-enable the datapack, run:\n","color":"dark_gray"},{"text":"/datapack enable \"file/trims-overhaul\"\n","color":"white"}]
+tellraw @a {"translate":"blue.tr.delete_success","fallback":"\nYou have disabled ActuallyBlue's %s datapack, and it has removed most of its data from your world.\n\n - Please confirm the datapack is disabled by confirming it doesn't appear in %s\n - If you wish to re-enable the datapack, just run: %s\n\n   (the `trims...` is a placeholder. Fill in whatever looks correct)","color":"gray","with":[{"translate":"blue.tr.trims_overhaul","fallback":"Trims Overhaul","color":"#3aa56a"},{"text":"/datapack disable \"file/trims...\"","color":"white"},{"text":"/datapack enable \"file/trims...\"","color":"white"}]}
 playsound block.bell.use master @a 0 -128 0 0 0.75 1
-tag @a remove blue.delete.trims.datapack.confirmation
-datapack disable "file/mr_trims-overhaul.zip"
-datapack disable "file/mr_trims-overhaul"
 datapack disable "file/trims-overhaul.zip"
 datapack disable "file/trims-overhaul"

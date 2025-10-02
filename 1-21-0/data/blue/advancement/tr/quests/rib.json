@@ -20,9 +20,7 @@
             "predicate": {
               "equipment": {
                 "head": {
-                  "items": [
-                    "wither_skeleton_skull"
-                  ]
+                  "items": "wither_skeleton_skull"
                 }
               }
             }

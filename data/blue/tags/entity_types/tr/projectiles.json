@@ -5,6 +5,13 @@
     "minecraft:llama_spit",
     "minecraft:snowball",
     "#minecraft:arrows",
-    "minecraft:egg"
+    "minecraft:egg",
+    {"id":"#c:arrows","required":false},
+    {"id":"archery:arrow_entity","required":false},
+    {"id":"projectiles:arrow","required":false},
+    {"id":"twilightforest:moonworm_shot","required":false},
+    {"id":"twilightforest:thrown_weapon","required":false},
+    {"id":"aether:golden_dart","required":false},
+    {"id":"aether:poison_dart","required":false}
   ]
 }

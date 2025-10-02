@@ -1,18 +1,6 @@
 {
   "criteria": {
-    "cursor": {
-      "trigger": "inventory_changed",
-      "conditions": {
-        "player": {
-          "slots": {
-            "player.cursor": {
-              "items": "#trim_materials"
-            }
-          }
-        }
-      }
-    },
-    "use": {
+    "req": {
       "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
@@ -24,12 +12,6 @@
       }
     }
   },
-  "requirements": [
-    [
-      "cursor",
-      "use"
-    ]
-  ],
   "rewards": {
     "function": "blue:tr/delayed/provide_material"
   }
