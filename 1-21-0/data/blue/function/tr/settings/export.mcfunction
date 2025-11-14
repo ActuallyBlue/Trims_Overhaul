@@ -31,5 +31,11 @@ execute store result storage blue:data trims.temp.export.bonus_emeralds int 1 ru
 execute store result storage blue:data trims.temp.export.bonus_shards int 1 run scoreboard players get #.silence.bonus_shards blue.config
 execute store result storage blue:data trims.temp.export.vortex_griefing int 1 run scoreboard players get #.silence.vortex_griefing blue.config
 execute store result storage blue:data trims.temp.export.uncap_proficiency int 1 run scoreboard players get #.raiser.uncap_proficiency blue.config
+execute store result storage blue:data trims.temp.export.tnt_bounce int 1 run scoreboard players get #.shaper.tnt_bounce blue.config
+execute store result storage blue:data trims.temp.export.warp_type int 1 run scoreboard players get #.wayfinder.warp_type blue.config
+execute store result storage blue:data trims.temp.export.guidance_range int 1 run scoreboard players get #.spire.guidance_range blue.config
+execute store result storage blue:data trims.temp.export.limit_plunge int 1 run scoreboard players get #.spire.limit_plunge blue.config
+execute store result storage blue:data trims.temp.export.armor_ownership int 1 run scoreboard players get #.tr.armor_ownership blue.config
+execute store result storage blue:data trims.temp.export.egg_bonus int 1 run scoreboard players get #.tr.egg_bonus blue.config
 function blue:tr/settings/z/export with storage blue:data trims.temp.export
 data remove storage blue:data trims.temp.export

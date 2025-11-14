@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:enchanted_book"
+      },
+      "title": {"translate":"blue.tr.adv.custom_materials.title","fallback":"Custom Materials"},
+      "description": {"translate":"blue.tr.adv.custom_materials.desc","fallback":"Combine them with their corresponding trim to greatly empower its abilities"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/gap",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

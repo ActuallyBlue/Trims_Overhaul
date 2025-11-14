@@ -1,6 +1,6 @@
 {
   "values": [
-    "blue:tr/load",
-    "blue:shared/load"
+    {"id":"blue:shared/load","required":false},
+    {"id":"blue:tr/load","required":false}
   ]
 }

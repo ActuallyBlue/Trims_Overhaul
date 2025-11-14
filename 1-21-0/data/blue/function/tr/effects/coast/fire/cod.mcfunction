@@ -4,3 +4,4 @@ playsound entity.vex.hurt player @a ~ ~ ~ 0.75 1.9
 schedule function blue:tr/effects/coast/fire/cooldown 5t
 scoreboard players set #.coast.fire_cooldown blue.misc 1
 tp @s ~ ~ ~ ~ ~
+execute if score #.temp0 blue.misc matches -597 run scoreboard players set @s blue.misc -3

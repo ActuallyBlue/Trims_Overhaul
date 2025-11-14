@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "offsetY": -1,
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:smithing_table"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:smithing_table"
+          }
+        ],
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "input": {
+              "sneak": true
+            }
+          },
+          "flags": {
+            "is_sneaking": true
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/inv/untrim"
+  }
+}

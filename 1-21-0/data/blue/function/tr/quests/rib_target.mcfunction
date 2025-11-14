@@ -8,5 +8,5 @@ team add blue.tr.rib
 summon armor_stand ~ ~ ~ {UUID:[I;-1318907857,100,0,1],Team:"blue.tr.rib"}
 damage @s 100 blue:tr/raw by b163102f-0-64-0-1 from @a[tag=blue.tr.temp,limit=1]
 execute store result score #.temp blue.misc run data get entity @s Health
-execute if score #.temp blue.misc matches ..10 run effect give @s resistance 8 9
+execute if score #.temp blue.misc matches ..30 run damage @s 100 blue:tr/raw by b163102f-0-64-0-1 from @a[tag=blue.tr.temp,limit=1]
 kill b163102f-0-64-0-1

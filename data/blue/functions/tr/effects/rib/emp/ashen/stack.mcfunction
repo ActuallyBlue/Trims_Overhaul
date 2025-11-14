@@ -20,6 +20,7 @@ scoreboard players set #.rib.ashen_cooldown blue.misc 1
 scoreboard players set #.rib.ashen_active blue.misc 500
 scoreboard players set #.rib.ashen_stacks blue.misc 0
 playsound entity.wither.death player @a ~ ~ ~ 1.5 2
+playsound entity.wither.ambient player @a ~ ~ ~ 1 1
 particle soul ~ ~1 ~ 0.2 0.4 0.2 0.4 128
 particle ash ~ ~1 ~ 0.8 0.9 0.8 0 320
 effect give @s resistance 15 9 true

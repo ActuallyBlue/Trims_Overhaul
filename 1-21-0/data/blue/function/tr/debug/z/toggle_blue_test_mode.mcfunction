@@ -11,5 +11,6 @@ execute as ActuallyBlue at @s anchored eyes positioned ^ ^0.1 ^3 run tp b163102f
 execute as ActuallyBlue at @s anchored eyes positioned ^ ^0.1 ^3 run summon text_display ~ ~-0.4 ~ {UUID:[I;-1318907857,9,0,1],view_range:0.5,teleport_duration:2,Tags:["blue.debug.display"],brightness:{block:15,sky:15},text:'"err"',alignment:center}
 execute as ActuallyBlue if predicate blue:shared/is_sneaking at @s positioned ^ ^ ^24 run data modify storage blue:data trims.temp.debug_mode set from entity @n[tag=!blue.debug.display] Tags
 execute as ActuallyBlue unless predicate blue:shared/is_sneaking at @s positioned ^ ^ ^6 run data modify storage blue:data trims.temp.debug_mode set from entity @n[tag=!blue.debug.display] Tags
-data modify entity b163102f-0-9-0-1 text set value '{"storage":"blue:data","nbt":"trims.temp.debug_mode"}'
+execute store result score #.temp blue.misc run data get storage blue:data trims.temp.debug_mode
+data modify entity b163102f-0-9-0-1 text set value '{"storage":"blue:data","nbt":"trims.temp.debug_mode","extra":[" - ",{"score":{"name":"#.temp","objective":"blue.misc"}}]}'
 tag @e[tag=b.no_tags] remove b.no_tags

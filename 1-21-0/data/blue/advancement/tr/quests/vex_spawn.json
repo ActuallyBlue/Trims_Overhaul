@@ -7,7 +7,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "structures": "minecraft:pillager_outpost"
+              "structures": [
+                "minecraft:pillager_outpost",
+                "minecraft:mansion"
+              ]
             }
           },
           {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.vex_completed"},"score":"blue.config"},"range":1}},
@@ -25,7 +28,7 @@
             "entity": "this",
             "predicate": {
               "type_specific": {
-                "type": "minecraft:player",
+                "type": "player",
                 "advancements": {
                   "blue:tr/quests/vex_spawn": {
                     "enter": true
@@ -42,7 +45,10 @@
             "term": {
               "condition": "minecraft:location_check",
               "predicate": {
-                "structures": "minecraft:pillager_outpost"
+                "structures": [
+                  "minecraft:pillager_outpost",
+                  "minecraft:mansion"
+                ]
               }
             }
           },

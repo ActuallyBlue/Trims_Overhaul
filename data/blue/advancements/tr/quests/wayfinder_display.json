@@ -5,6 +5,10 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:reference",
+            "name": "blue:shared/in_structure"
+          },
+          {
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
@@ -21,22 +25,8 @@
               }
             }
           },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "#.tr.require_unlock"
-              },
-              "score": "blue.config"
-            },
-            "range": 1
-          },
-          {
-            "condition": "minecraft:reference",
-            "name": "blue:tr/in_structure"
-          }
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":1}
         ]
       }
     },
@@ -45,20 +35,8 @@
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "#.tr.require_unlock"
-              },
-              "score": "blue.config"
-            },
-            "range": 0
-          },
-          {
             "condition": "minecraft:reference",
-            "name": "blue:tr/in_structure"
+            "name": "blue:shared/in_structure"
           },
           {
             "condition": "minecraft:entity_properties",
@@ -73,7 +51,9 @@
                 }
               }
             }
-          }
+          },
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":0}
         ]
       }
     }

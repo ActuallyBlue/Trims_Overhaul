@@ -6,7 +6,7 @@ execute if score #.sentry.ambient blue.misc matches 5 store success score #.sent
 execute if score #.sentry.charge blue.misc matches 0.. unless predicate blue:tr/can_shoot run scoreboard players reset #.sentry.charge blue.misc
 execute anchored eyes positioned ^ ^ ^1 as @e[type=arrow,tag=!blue.tr.checked,distance=..5] run function blue:tr/effects/sentry/pre-arrow
 execute unless predicate blue:tr/has_hero run return 0
-execute unless score #.sentry.charge blue.misc matches ..0 if predicate blue:tr/can_shoot anchored eyes run function blue:tr/effects/sentry/ballista/can_shoot
-execute if score #.sentry.charge blue.misc matches ..0 run scoreboard players add #.sentry.charge blue.misc 1
 effect clear @s slowness
 effect clear @s poison
+execute unless score #.sentry.charge blue.misc matches ..0 if predicate blue:tr/can_shoot anchored eyes run function blue:tr/effects/sentry/ballista/can_shoot
+execute if score #.sentry.charge blue.misc matches ..0 run scoreboard players add #.sentry.charge blue.misc 1

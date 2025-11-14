@@ -19,6 +19,7 @@ execute store result score #.temp blue.misc if entity @e[type=villager,distance=
 scoreboard players operation #.temp blue.misc *= #5 blue.misc
 execute as @e[type=iron_golem,distance=..22,limit=7] run scoreboard players add #.temp blue.misc 20
 execute as @a[advancements={blue:tr/trust={host=true}},gamemode=!creative,gamemode=!spectator,distance=0.01..24,limit=3] run scoreboard players add #.temp blue.misc 50
+execute unless entity @s[predicate=!blue:shared/in_village,tag=!blue.tr.dragon_egg] run scoreboard players add #.temp blue.misc 15
 execute if score #.temp blue.misc matches 160.. store success score #.temp blue.misc run attribute @s[advancements={blue:tr/cure={7=true}}] generic.max_health modifier add b163102f-0-5-0-1 "blue:tr.trim" 14 add_value
 execute if score #.temp blue.misc matches 140.. store success score #.temp blue.misc run attribute @s[advancements={blue:tr/cure={6=true}}] generic.max_health modifier add b163102f-0-5-0-1 "blue:tr.trim" 12 add_value
 execute if score #.temp blue.misc matches 120.. store success score #.temp blue.misc run attribute @s[advancements={blue:tr/cure={5=true}}] generic.max_health modifier add b163102f-0-5-0-1 "blue:tr.trim" 10 add_value

@@ -1,4 +1,4 @@
-execute if items entity @s armor.* *[trim~{material:"dragon_egg"}] run function blue:tr/inv/mats/has_egg
+execute if data storage blue:data trims.inventory[].components."minecraft:trim"{material:"minecraft:dragon_egg"} unless data storage blue:data trims.armor{has_egg:1b} run function blue:tr/inv/mats/has_egg
 execute if data storage blue:data trims.armor{feet:{material:"minecraft:netherite"},legs:{material:"minecraft:netherite"},chest:{material:"minecraft:netherite"},head:{material:"minecraft:netherite"}} run return run function blue:tr/inv/mats/netherite
 execute if data storage blue:data trims.armor{feet:{material:"minecraft:quartz"},legs:{material:"minecraft:quartz"},chest:{material:"minecraft:quartz"},head:{material:"minecraft:quartz"}} run return run function blue:tr/inv/mats/quartz
 execute if data storage blue:data trims.armor{feet:{material:"minecraft:lapis"},legs:{material:"minecraft:lapis"},chest:{material:"minecraft:lapis"},head:{material:"minecraft:lapis"}} run return run function blue:tr/inv/mats/lapis

@@ -1,8 +1,8 @@
 tag @s add blue.tr.RTDCD
 execute store success score #.temp blue.misc if score @s RTD.BLUE = @s blue.tr.RTDval
-execute store success score #.temp blue.misc if score @s RTD.BLUE = @s blue.tr.RTDval
 execute if score #.temp blue.misc matches 0 run playsound block.note_block.pling player @s ~ ~ ~ 3 0.5
 execute if score #.temp blue.misc matches 0 run title @s subtitle {"text":"✗","color":"dark_red"}
+execute if score #.temp blue.misc matches 1 run advancement grant @s[advancements={blue:tr/display/guides/rtd=false}] only blue:tr/display/guides/rtd
 execute if score #.temp blue.misc matches 1 run playsound block.note_block.pling player @s ~ ~ ~ 2.5 2
 execute if score #.temp blue.misc matches 1 run title @s subtitle {"text":"✓","color":"dark_green"}
 title @s title ""
@@ -25,7 +25,6 @@ execute if entity @s[tag=blue.tr.RTD.host] run function blue:tr/tasks/rtd/check/
 execute if entity @s[tag=blue.tr.RTD.eye] run function blue:tr/tasks/rtd/check/eye
 execute if entity @s[tag=blue.tr.RTD.rib] run function blue:tr/tasks/rtd/check/rib
 execute if entity @s[tag=blue.tr.RTD.vex] run function blue:tr/tasks/rtd/check/vex
-advancement grant @s only blue:tr/tags tutorial_rtd
 scoreboard players reset @s blue.tr.RTDtime
 scoreboard players reset @s blue.tr.RTDval
 scoreboard players reset @s RTD.BLUE

@@ -1,7 +1,7 @@
-advancement revoke @s only blue:tr/untrim
+advancement revoke @s only blue:tr/untrim req
 execute anchored eyes rotated ~ 0 if block ^ ^ ^0.5 smithing_table run fill ^ ^ ^0.5 ^ ^ ^0.5 air destroy
 execute anchored eyes rotated ~ 0 unless block ^ ^ ^0.5 smithing_table if block ^ ^ ^1.5 smithing_table run fill ^ ^ ^1.5 ^ ^ ^1.5 air destroy
-execute if score #.tr.manual_untrimming blue.config matches 0 run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.untrim_disabled","fallback":"Manual untrims are disabled via the server settings","color":"gray"}]
+execute if score #.tr.manual_untrimming blue.config matches 0 run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.manual_untrimming","fallback":"Manual Untrimming","color":"white","hoverEvent":{"action":"show_text","contents":{"translate":"blue.tr.manual_untrimming_hover","fallback":"If players can un-trim their armor with smithing tables (ON, OFF)","color":"gray"}},"italic":true},{"translate":"blue.tr.is_disabled","fallback":" is disabled on this server","color":"gray"}]
 execute if score #.tr.manual_untrimming blue.config matches 0 run return 0
 item replace block 200600 2 200600 container.7 from entity @s armor.head
 item replace block 200600 2 200600 container.6 from entity @s armor.chest
@@ -14,7 +14,7 @@ item replace entity @s armor.head from block 200600 2 200600 container.7
 item replace entity @s armor.chest from block 200600 2 200600 container.6
 item replace entity @s armor.legs from block 200600 2 200600 container.5
 item replace entity @s armor.feet from block 200600 2 200600 container.4
-setblock 200600 2 200600 barrel
+setblock 200600 2 200600 barrel{}
 execute unless data storage blue:data trims.temp.inventory[].tag.Trim run return 0
 particle item sculk_vein ~ ~1.3 ~ 0.24 0.4 0.24 0.05 32
 execute if data storage blue:data trims.temp.inventory[{Slot:7b,tag:{Trim:{material:"minecraft:quartz"}}}] run give @s minecraft:quartz
@@ -158,4 +158,4 @@ execute if data storage blue:data trims.temp.inventory[{Slot:6b,tag:{Trim:{patte
 execute if data storage blue:data trims.temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run give @s wayfinder_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
 execute if data storage blue:data trims.temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run give @s wayfinder_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
 data remove storage blue:data trims.temp.inventory
-setblock 200600 2 200600 barrel
+setblock 200600 2 200600 barrel{}

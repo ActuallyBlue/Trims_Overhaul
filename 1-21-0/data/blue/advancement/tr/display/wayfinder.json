@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:wayfinder_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.wayfinder"},
+      "description": {"translate":"blue.tr.adv.wayfinder.desc","fallback":"Exploring structure after structure sharpens your sense of direction, making paths feel shorter than they are"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/raiser",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

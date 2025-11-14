@@ -8,6 +8,9 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
+              "location": {
+                "structures": "#blue:all_structures"
+              },
               "type_specific": {
                 "type": "player",
                 "advancements": {
@@ -18,37 +21,11 @@
                     "wayfinder": false
                   }
                 }
-              },
-              "location": {
-                "structures": "#blue:all_structures"
               }
             }
           },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "#.tr.objective_type"
-              },
-              "score": "blue.config"
-            },
-            "range": 1
-          },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "#.tr.require_unlock"
-              },
-              "score": "blue.config"
-            },
-            "range": 1
-          },
-          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1}
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":1}
         ]
       }
     },
@@ -64,7 +41,7 @@
                 "structures": "#blue:all_structures"
               },
               "type_specific": {
-                "type": "minecraft:player",
+                "type": "player",
                 "advancements": {
                   "blue:tr/blacklist": {
                     "wayfinder": false
@@ -73,31 +50,8 @@
               }
             }
           },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "#.tr.objective_type"
-              },
-              "score": "blue.config"
-            },
-            "range": 1
-          },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "#.tr.require_unlock"
-              },
-              "score": "blue.config"
-            },
-            "range": 0
-          },
-          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1}
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
+          {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":0}
         ]
       }
     }

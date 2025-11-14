@@ -7,7 +7,7 @@
           "type": {
             "direct_entity": {
               "type_specific": {
-                "type": "minecraft:player",
+                "type": "player",
                 "advancements": {
                   "blue:tr/infliction": {
                     "can_inflict": true
@@ -37,7 +37,7 @@
         ],
         "entity": {
           "type_specific": {
-            "type": "minecraft:player",
+            "type": "player",
             "advancements": {
               "blue:tr/trust": {
                 "rib": false

@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:tide_armor_trim_smithing_template",
+         "id": "minecraft:tide_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.tide"},
+      "description": {"translate":"blue.tr.adv.tide.desc","fallback":"Conquering the oceans brings forth its tidal mastery, empowering itself in any similar territory"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/trim_row",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

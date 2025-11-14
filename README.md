@@ -4,7 +4,7 @@
 
 ### Join the [Discord](https://discord.gg/3Pj7GszXPM) for any help or issues - Check out the [Wiki](https://github.com/ActuallyBlue/Trims_Overhaul/wiki) for more information whenever
 
-#### Supports translations in: English, Español, Deutsch, Polski, Français, Português, Русский, 한국어, 日本語, and 简体中文 ⁽ᴺᵒᵗ ᴾᵉʳᶠᵉᶜᵗ⁾
+#### Supports translations in: English, Español, Français, Deutsch, Polski, Italiano, Português, Türkçe, Русский, 한국어, 日本語, and 简体中文 ⁽ᴺᵒᵗ ᴾᵉʳᶠᵉᶜᵗ⁾
 
 
 - If you're interested in staying up to date, or enjoy the project, then please consider following.
@@ -19,11 +19,11 @@
 
  - For the data pack; Open your world folder (`.minecraft/saves/world`)
    - Drop the zip into the `datapacks` folder as-is
-   - Then restart the server or world — /reload won't work
-    - When updating; don't disable the datapack, otherwise some progress will be lost.
+   - Then restart the server or world — `/reload` won't work
+     - When updating, don't disable the datapack or else some progress will be lost. The server should instead be closed, delete and replace the datapack, and then re-open it.
 
 <br>
-  
+
  - For the resource pack; In Minecraft, go to Options > Resource Packs
    - Then drag the new zip file into your Minecraft
    - And click on the arrow on the new pack to enable it.

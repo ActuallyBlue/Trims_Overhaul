@@ -85,13 +85,7 @@
     "unlocked_vex": {
       "trigger": "impossible"
     },
-    "tutorial_rtd": {
-      "trigger": "impossible"
-    },
     "tutorial_pickup_trim": {
-      "trigger": "impossible"
-    },
-    "tutorial_complete_objective": {
       "trigger": "impossible"
     },
     "tutorial_transfer": {

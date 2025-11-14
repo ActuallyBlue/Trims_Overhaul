@@ -1,6 +1,5 @@
 execute unless entity @s as @a[scores={color=..-1}] unless entity @s[tag=!blue.tr.trim.silence,team=!blue.tr.silence,tag=!blue.tr.trim.wild,tag=!blue.tr.trim.rib,team=!blue.tr.rib] run function blue:tr/delayed/color_compat
-execute unless entity @s run schedule function blue:tr/delayed/color_compat 3t
-execute unless entity @s run return 0
+execute unless entity @s run return run schedule function blue:tr/delayed/color_compat 3t
 execute if score @s[tag=blue.tr.trim.silence] color matches -1 run return run team modify blue.tr.silence color reset
 execute if score @s[tag=blue.tr.trim.silence] color matches -2 run return run team modify blue.tr.silence color black
 execute if score @s[tag=blue.tr.trim.silence] color matches -3 run return run team modify blue.tr.silence color dark_blue

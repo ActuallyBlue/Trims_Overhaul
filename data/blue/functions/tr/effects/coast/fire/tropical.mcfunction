@@ -4,6 +4,7 @@ playsound entity.vex.hurt player @a ~ ~ ~ 0.85 1.3
 schedule function blue:tr/effects/coast/fire/cooldown 8t
 scoreboard players set #.coast.fire_cooldown blue.misc 1
 tp @s ~ ~ ~ ~ ~
+execute if score #.temp0 blue.misc matches -597 run scoreboard players set @s blue.misc -2
 execute unless predicate blue:r/25c run return 0
 item replace entity @s container.0 with tropical_fish{Enchantments:[{}]}
 playsound entity.fish.swim player @a ~ ~ ~ 0.5 2

@@ -8,3 +8,4 @@ execute if score #.temp blue.misc matches 1 store result storage blue:data trims
 execute if score #.temp blue.misc matches 0 store result storage blue:data trims.temp.r1 float 0.1 run random value -20..20
 execute if score #.temp blue.misc matches 0 store result storage blue:data trims.temp.r2 float 0.1 run random value -20..20
 function blue:tr/effects/coast/fire/rot-m with storage blue:data trims.temp
+execute if score #.temp0 blue.misc matches -597 run scoreboard players set @s blue.misc -2

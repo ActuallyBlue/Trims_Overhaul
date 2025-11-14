@@ -22,6 +22,6 @@
     }
   },
   "rewards": {
-    "function": "blue:tr/effects/sentry/hit"
+    "function": "blue:tr/effects/sentry/hit_raider"
   }
 }

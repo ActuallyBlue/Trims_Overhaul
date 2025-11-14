@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:netherite_ingot"
+      },
+      "title": {"translate":"trim_material.minecraft.netherite"},
+      "description": [{"translate":"blue.tr.adv.netherite.desc","fallback":"Iron and Diamond"},{"text":" (-0.1)","color":"dark_gray"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/iron",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

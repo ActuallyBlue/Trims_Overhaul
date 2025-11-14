@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:book",
+         "id": "minecraft:book"
+      },
+      "title": [{"translate":"blue.tr.adv.wiki.title","fallback":"Official Wiki"},"    "],
+      "description": {"translate":"blue.tr.adv.wiki.desc","fallback":"There is a public, up to date wiki available on GitHub, with a clickable link in the [Links] menu."},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/hidden/0",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

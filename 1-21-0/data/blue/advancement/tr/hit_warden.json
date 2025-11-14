@@ -20,6 +20,6 @@
     }
   },
   "rewards": {
-    "function": "blue:tr/effects/silence/emp/hitwarden"
+    "function": "blue:tr/effects/silence/emp/hit_warden"
   }
 }

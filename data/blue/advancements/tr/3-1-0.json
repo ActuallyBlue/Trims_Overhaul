@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "tick"
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/inv/3-1-0"
+  }
+}

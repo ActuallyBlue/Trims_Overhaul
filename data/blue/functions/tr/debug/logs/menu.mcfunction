@@ -1,0 +1,7 @@
+playsound ui.button.click player @s 0 -128 0 0 1 0.75
+execute store result storage blue:data trims.logs.server int 0.00083334 run time query gametime
+execute store result score #.temp blue.misc run data get storage blue:data trims.logs.server
+execute store result score #.temp0 blue.misc run data get storage blue:data trims.logs.installation
+execute store result storage blue:data trims.logs.datapack int -1 run scoreboard players operation #.temp0 blue.misc -= #.temp blue.misc
+tellraw @s {"translate":"blue.tr.logs.base","fallback":" Server Started %s minutes ago\n Datapack downloaded %s minutes ago\n","color":"gray","with":[{"storage":"blue:data","nbt":"trims.logs.server","color":"white"},{"storage":"blue:data","nbt":"trims.logs.datapack","color":"white"}]}
+tellraw @s [{"text":" ","color":"gray"},{"translate":"blue.tr.menu.completion_logs","fallback":"[Completions]","clickEvent":{"action":"run_command","value":"/function blue:tr/debug/logs/completion"}}," ",{"translate":"blue.tr.menu.unlock_logs","fallback":"[Unlocks]","clickEvent":{"action":"run_command","value":"/function blue:tr/debug/logs/unlock"}}," ",{"translate":"blue.tr.menu.transfer_logs","fallback":"[Transfers]","clickEvent":{"action":"run_command","value":"/function blue:tr/debug/logs/transfer"}},"\n"]

@@ -5,5 +5,8 @@ summon text_display ~ ~ ~ {Tags:["blue.tr.gamble.display"],alignment:center,text
 ride @e[type=text_display,tag=blue.tr.gamble.display,sort=nearest,limit=1] mount @s
 schedule function blue:tr/effects/snout/gamble/item/display 1t
 data merge entity @s {PickupDelay:32767s,Age:-32768s,Health:32767s}
-particle wax_on ~ ~0.25 ~ 0 0 0 4 10
+particle wax_on ~ ~0.25 ~ 0 0 0 3 8
 tag @s add blue.tr.ground
+execute on origin store success score #.temp blue.misc if predicate blue:shared/in_bastion
+execute unless score #.temp blue.misc matches 1 on origin if entity @s[tag=blue.tr.dragon_egg] run scoreboard players set #.temp blue.misc 1
+execute if score #.temp blue.misc matches 1 run scoreboard players set @s blue.misc 16

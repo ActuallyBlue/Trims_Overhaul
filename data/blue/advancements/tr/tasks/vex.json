@@ -20,10 +20,13 @@
             }
           },
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:warden"
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:warden"
+              }
             }
           }
         ]
@@ -54,6 +57,9 @@
           {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"vex":false}}}}}
         ]
       }
+    },
+    "tick": {
+      "trigger": "minecraft:tick"
     }
   },
   "requirements": [
@@ -61,6 +67,9 @@
       "generic",
       "player",
       "vex"
+    ],
+    [
+      "tick"
     ]
   ],
   "rewards": {

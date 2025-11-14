@@ -1,6 +1,7 @@
 title @s actionbar {"translate":"blue.tr.gamble.overlord","fallback":"Overlord","color":"dark_green"}
-playsound entity.ravager.roar player @a ~ ~ ~ 3 0.5
-playsound entity.ender_dragon.growl player @a ~ ~ ~ 3 0.5
+playsound entity.ravager.roar player @a ~ ~ ~ 1 0.5
+playsound entity.wither.ambient player @a ~ ~ ~ 2 0.5
+playsound entity.ender_dragon.growl player @a ~ ~ ~ 3 0.6
 title @a[distance=0.01..32] subtitle {"text":"⚠","color":"dark_red"}
 title @a[distance=0.01..32] title ""
 particle dripping_dripstone_lava ~ ~1 ~ 5 3 5 0 128 force @a[scores={blue.particles=2..}]

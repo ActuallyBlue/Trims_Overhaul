@@ -22,6 +22,6 @@
     }
   },
   "rewards": {
-    "function": "blue:tr/effects/sentry/kill"
+    "function": "blue:tr/effects/sentry/kill_raider"
   }
 }

@@ -12,7 +12,7 @@
             "terms": [
               {
                 "condition": "minecraft:reference",
-                "name": "blue:tr/in_desert"
+                "name": "blue:shared/in_desert"
               },
               {
                 "condition": "location_check",

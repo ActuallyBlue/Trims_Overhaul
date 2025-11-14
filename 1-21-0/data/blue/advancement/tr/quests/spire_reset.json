@@ -10,7 +10,7 @@
             }
           },
           "type_specific": {
-            "type": "minecraft:player",
+            "type": "player",
             "advancements": {
               "blue:tr/quests/spire_crystals": {
                 "1": true,

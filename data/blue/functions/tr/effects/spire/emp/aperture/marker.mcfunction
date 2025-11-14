@@ -1,7 +1,7 @@
 scoreboard players add #.aperture_sound blue.misc 1
 scoreboard players add #.aperture_duration blue.misc 1
 execute if score #.aperture_sound blue.misc matches 100 store success score #.aperture_sound blue.misc run playsound block.portal.ambient player @a[x=0] ~ ~ ~ 17 0.5
-execute positioned ~-9 ~-1.5 ~-9 as @e[dx=18,dy=-40,dz=18,type=!marker] at @s run function blue:tr/effects/spire/emp/aperture/entity
+execute positioned ~-9 ~-1.5 ~-9 as @e[dx=18,dy=-40,dz=18,type=!marker,tag=!blue.tr.mats.shulker] at @s run function blue:tr/effects/spire/emp/aperture/entity
 execute if score #.aperture_duration blue.misc matches 900.. run function blue:tr/effects/spire/emp/aperture/kill
 execute unless score #.aperture_duration blue.misc matches ..850 run return 0
 particle end_rod ^-1.4 ^1.1 ^-1.1 ^-2000000 ^800000 ^-390000 0.0000004 0 force @a[scores={blue.particles=1..}]

@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:ward_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.ward"},
+      "description": {"translate":"blue.tr.adv.ward.desc","fallback":"Blocking strike after strike eventually becomes second nature, turning defense into offense"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/flow",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

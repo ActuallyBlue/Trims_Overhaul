@@ -1,5 +1,5 @@
-tag @s add blue.tr.chest_mat
-tag @s add blue.tr.indiv_mats
+tag @s add blue.tr.mats.chest
+tag @s add blue.tr.mats.pieces
 execute if data storage blue:data trims.armor.chest{material:"minecraft:netherite"} run function blue:tr/inv/mats/netherite/chest
 execute if data storage blue:data trims.armor.chest{material:"minecraft:redstone"} run attribute @s generic.max_health modifier add b163102f-0-2-0-1 "blue:tr.chest" 1.0 add
 execute if data storage blue:data trims.armor.chest{material:"minecraft:quartz"} run attribute @s generic.attack_damage modifier add b163102f-0-2-0-1 "blue:tr.chest" 0.3 add

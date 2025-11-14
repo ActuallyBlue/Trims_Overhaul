@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:structure_void"
+      },
+      "title": {"translate":"blue.tr.adv.q2.title","fallback":"Finding Trim Owner"},
+      "description": [{"translate":"blue.tr.adv.q2.desc","fallback":"Wearing a trim you don't own will create a faint particle in the direction of its owner if they're online."},{"translate":"blue.tr.configurable","fallback":" (Configurable)","color":"dark_gray"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/hidden/3-2",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

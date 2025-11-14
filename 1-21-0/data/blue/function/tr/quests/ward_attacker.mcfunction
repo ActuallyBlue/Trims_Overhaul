@@ -28,3 +28,4 @@ execute if entity @s[type=pillager] store success score #.temp0 blue.misc run re
 execute if entity @s[type=slime] store success score #.temp0 blue.misc run return run advancement grant @a[distance=..0.01,limit=1] only blue:tr/quests/ward_stored slime
 execute if entity @s[type=ravager] store success score #.temp0 blue.misc run return run advancement grant @a[distance=..0.01,limit=1] only blue:tr/quests/ward_stored ravager
 execute if entity @s[type=stray] store success score #.temp0 blue.misc run return run advancement grant @a[distance=..0.01,limit=1] only blue:tr/quests/ward_stored stray
+execute unless entity @s[type=!#blue:shared/peaceful] store success score #.temp0 blue.misc run advancement grant @a[distance=..0.01,limit=1] only blue:tr/quests/ward_stored unknown

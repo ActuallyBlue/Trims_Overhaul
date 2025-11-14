@@ -1,10 +1,11 @@
-scoreboard players remove @s blue.tr.fear 1
-execute if score #.eye.two_tick blue.misc matches 1 run scoreboard players remove @s[advancements={blue:tr/trust={eye=true}}] blue.tr.fear 1
-execute store result score #.temp blue.misc run scoreboard players operation #.val blue.misc = @s blue.tr.fear
+execute if score #.eye.view_fear blue.misc matches 1.. run scoreboard players add @s blue.tr.fear 20
+scoreboard players remove @s[advancements={blue:tr/trust={eye=true}}] blue.tr.fear 10
+scoreboard players set @s[scores={blue.tr.fear=..19}] blue.tr.fear 20
+execute store result score #.temp blue.misc store result score #.val blue.misc run scoreboard players remove @s blue.tr.fear 20
 scoreboard players operation #.val blue.misc *= #10000 blue.misc
 scoreboard players add #.temp blue.misc 1000
 scoreboard players operation #.val blue.misc /= #.temp blue.misc
-execute unless predicate {condition:"random_chance",chance:{min:0,max:{type:"score",target:{type:"fixed",name:"#.val"},score:"blue.misc",scale:0.000005}}} run return fail
+execute unless predicate {condition:"random_chance",chance:{min:0,max:{type:"score",target:{type:"fixed",name:"#.val"},score:"blue.misc",scale:0.0001}}} run return fail
 scoreboard players operation #.temp0 blue.misc = @s blue.tr.fear
 scoreboard players operation #.temp0 blue.misc /= #10 blue.misc
 scoreboard players operation @s blue.tr.fear -= #.temp0 blue.misc

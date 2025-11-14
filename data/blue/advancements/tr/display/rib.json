@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:rib_armor_trim_smithing_template",
+         "id": "minecraft:rib_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.rib"},
+      "description": {"translate":"blue.tr.adv.rib.desc","fallback":"Ash and bone remember fire, charged flames upheld, strikes spreading the Wither's influence"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/silence",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

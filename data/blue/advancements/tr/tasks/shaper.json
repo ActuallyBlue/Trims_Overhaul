@@ -7,7 +7,7 @@
           "type": {
             "tags": [
               {
-                "id":"minecraft:is_explosion",
+               "id": "minecraft:is_explosion",
                 "expected": true
               }
             ]

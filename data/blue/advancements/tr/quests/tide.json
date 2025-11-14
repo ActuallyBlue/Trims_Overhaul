@@ -43,5 +43,8 @@
       "two_items",
       "one_item"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "blue:tr/quests/tide_notify"
+  }
 }

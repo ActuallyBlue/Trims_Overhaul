@@ -1,0 +1,1 @@
+$execute positioned $(x) $(y) $(z) if entity @s[distance=..300] run scoreboard players set #.temp blue.misc -8213

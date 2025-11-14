@@ -1,3 +1,4 @@
+execute unless score #.wild.charging blue.misc matches 1 run particle spore_blossom_air ~ ~0.9 ~ 0.1 0.3 0.1 0 1 normal @a[scores={blue.particles=2..}]
 execute store result score #.temp blue.misc if entity @e[scores={blue.misc=-721},distance=0.01..16,limit=8]
 execute if biome ~ ~ ~ jungle run scoreboard players add #.temp blue.misc 3
 execute if score #.temp blue.misc matches 1.. run effect clear @s poison

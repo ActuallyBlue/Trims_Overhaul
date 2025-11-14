@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:emerald"
+      },
+      "title": {"translate":"trim_material.minecraft.emerald"},
+      "description": ["+0.5 ",{"translate":"attribute.name.generic.luck"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/diamond",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

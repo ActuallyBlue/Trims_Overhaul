@@ -12,3 +12,4 @@ execute if predicate blue:r/20c at @s run tp @s ~ ~ ~ ~ ~2
 execute unless score #.temp blue.misc matches 1 if predicate blue:r/10c at @s run tp @s ~ ~ ~ ~ ~3
 execute if predicate blue:r/20c at @s run tp @s ~ ~ ~ ~ ~-2
 execute unless score #.temp blue.misc matches 1 if predicate blue:r/10c at @s run tp @s ~ ~ ~ ~ ~-3
+execute if score #.temp0 blue.misc matches -597 run scoreboard players set @s blue.misc -2

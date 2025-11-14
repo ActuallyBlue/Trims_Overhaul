@@ -12,19 +12,19 @@ execute if score #.reversal_charge blue.misc matches ..39 run schedule function 
 execute if score #.reversal_charge blue.misc matches ..39 run schedule function blue:tr/effects/spire/emp/plunge/unavailable 40t
 execute if score #.reversal_charge blue.misc matches ..39 run function blue:tr/effects/spire/emp/reversal/launch
 execute if score #.reversal_charge blue.misc matches ..39 as @a[distance=..2,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/spire/emp/reversal/launch
-execute if score #.reversal_charge blue.misc matches ..39 run scoreboard players set #.reversal_charge blue.misc -60
+execute if score #.reversal_charge blue.misc matches ..39 run scoreboard players set #.reversal_charge blue.misc -120
 execute if score #.reversal_charge blue.misc matches 40..54 run schedule function blue:tr/effects/spire/emp/plunge/available 25t
 execute if score #.reversal_charge blue.misc matches 40..54 run schedule function blue:tr/effects/spire/emp/plunge/unavailable 50t
 execute if score #.reversal_charge blue.misc matches 40..54 run function blue:tr/effects/spire/emp/reversal/launch
 execute if score #.reversal_charge blue.misc matches 40..54 as @a[distance=..3.5,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/spire/emp/reversal/launch
-execute if score #.reversal_charge blue.misc matches 40..54 run scoreboard players set #.reversal_charge blue.misc -80
+execute if score #.reversal_charge blue.misc matches 40..54 run scoreboard players set #.reversal_charge blue.misc -160
 execute if score #.reversal_charge blue.misc matches 55..69 run schedule function blue:tr/effects/spire/emp/plunge/available 30t
 execute if score #.reversal_charge blue.misc matches 55..69 run schedule function blue:tr/effects/spire/emp/plunge/unavailable 60t
 execute if score #.reversal_charge blue.misc matches 55..69 run function blue:tr/effects/spire/emp/reversal/launch
 execute if score #.reversal_charge blue.misc matches 55..69 as @a[distance=..6.5,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/spire/emp/reversal/launch
-execute if score #.reversal_charge blue.misc matches 55..69 run scoreboard players set #.reversal_charge blue.misc -90
+execute if score #.reversal_charge blue.misc matches 55..69 run scoreboard players set #.reversal_charge blue.misc -170
 execute if score #.reversal_charge blue.misc matches 70.. run schedule function blue:tr/effects/spire/emp/plunge/available 38t
 execute if score #.reversal_charge blue.misc matches 70.. run schedule function blue:tr/effects/spire/emp/plunge/unavailable 76t
 execute if score #.reversal_charge blue.misc matches 70.. run function blue:tr/effects/spire/emp/reversal/launch
 execute if score #.reversal_charge blue.misc matches 70.. as @a[distance=..9.5,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/spire/emp/reversal/launch
-execute if score #.reversal_charge blue.misc matches 70.. run scoreboard players set #.reversal_charge blue.misc -100
+execute if score #.reversal_charge blue.misc matches 70.. run scoreboard players set #.reversal_charge blue.misc -200

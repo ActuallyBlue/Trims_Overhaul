@@ -4,4 +4,4 @@ execute if score #.coast.ambient blue.misc matches 4.. store success score #.coa
 execute summon area_effect_cloud store success score #.temp blue.misc run data modify storage blue:data trims.coast.Pos set from entity @s Pos
 execute unless predicate blue:shared/is_sneaking as @e[type=item,tag=!blue.tr.checked,distance=..4] run function blue:tr/effects/coast/fire/drop
 execute as @e[type=item_display,tag=blue.tr.coast_projectile] at @s run function blue:tr/effects/coast/fire/proj/main
-execute if score #.20 blue.misc matches 6 if predicate blue:tr/in_shipwreck run effect give @s luck 2 1 true
+execute unless score #.20 blue.misc matches 6 if predicate blue:shared/in_shipwreck run effect give @s luck 2 1 true

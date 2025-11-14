@@ -1,0 +1,6 @@
+execute store result score #.temp0 blue.misc run data get storage blue:data trims.logs.temp[-1].time
+execute store result storage blue:data trims.logs.time int -1 run scoreboard players operation #.temp0 blue.misc -= #.temp blue.misc
+execute if data storage blue:data trims.logs.temp[-1].stolen run tellraw @s {"translate":"blue.tr.logs.stolen","fallback":"%s stole %s from %s ◦ %s minutes ago","color":"gray","with":[{"storage":"blue:data","nbt":"trims.logs.temp[-1].target","color":"white"},{"storage":"blue:data","nbt":"trims.logs.temp[-1].trim","interpret":true},{"storage":"blue:data","nbt":"trims.logs.temp[-1].user","color":"white"},{"storage":"blue:data","nbt":"trims.logs.time","color":"white"}]}
+execute unless data storage blue:data trims.logs.temp[-1].stolen run tellraw @s {"translate":"blue.tr.logs.transfer","fallback":"%s transferred %s to %s ◦ %s minutes ago","color":"gray","with":[{"storage":"blue:data","nbt":"trims.logs.temp[-1].user","color":"white"},{"storage":"blue:data","nbt":"trims.logs.temp[-1].trim","interpret":true},{"storage":"blue:data","nbt":"trims.logs.temp[-1].target","color":"white"},{"storage":"blue:data","nbt":"trims.logs.time","color":"white"}]}
+data remove storage blue:data trims.logs.temp[-1]
+execute if data storage blue:data trims.logs.temp[] run function blue:tr/debug/logs/z/tl

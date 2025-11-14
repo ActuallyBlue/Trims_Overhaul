@@ -1,0 +1,17 @@
+execute if entity @s[tag=blue.tr.trim.wayfinder,tag=blue.tr.wayfinder] run function blue:tr/inv/unequip/wayfinder
+execute if entity @s[tag=blue.tr.trim.silence,tag=blue.tr.silence] run function blue:tr/inv/unequip/silence
+execute if entity @s[tag=blue.tr.trim.raiser,tag=blue.tr.raiser] run function blue:tr/inv/unequip/raiser
+execute if entity @s[tag=blue.tr.trim.shaper,tag=blue.tr.shaper] run function blue:tr/inv/unequip/shaper
+execute if entity @s[tag=blue.tr.trim.sentry,tag=blue.tr.sentry] run function blue:tr/inv/unequip/sentry
+execute if entity @s[tag=blue.tr.trim.spire,tag=blue.tr.spire] run function blue:tr/inv/unequip/spire
+execute if entity @s[tag=blue.tr.trim.coast,tag=blue.tr.coast] run function blue:tr/inv/unequip/coast
+execute if entity @s[tag=blue.tr.trim.snout,tag=blue.tr.snout] run function blue:tr/inv/unequip/snout
+execute if entity @s[tag=blue.tr.trim.ward,tag=blue.tr.ward] run function blue:tr/inv/unequip/ward
+execute if entity @s[tag=blue.tr.trim.dune,tag=blue.tr.dune] run function blue:tr/inv/unequip/dune
+execute if entity @s[tag=blue.tr.trim.wild,tag=blue.tr.wild] run function blue:tr/inv/unequip/wild
+execute if entity @s[tag=blue.tr.trim.tide,tag=blue.tr.tide] run function blue:tr/inv/unequip/tide
+execute if entity @s[tag=blue.tr.trim.host,tag=blue.tr.host] run function blue:tr/inv/unequip/host
+execute if entity @s[tag=blue.tr.trim.eye,tag=blue.tr.eye] run function blue:tr/inv/unequip/eye
+execute if entity @s[tag=blue.tr.trim.rib,tag=blue.tr.rib] run function blue:tr/inv/unequip/rib
+execute if entity @s[tag=blue.tr.trim.vex,tag=blue.tr.vex] run function blue:tr/inv/unequip/vex
+function blue:tr/inv/equip/remove_owner

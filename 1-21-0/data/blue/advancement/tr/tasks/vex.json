@@ -20,10 +20,13 @@
             }
           },
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:warden"
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:warden"
+              }
             }
           }
         ]
@@ -46,7 +49,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:player"
+          "type": "player"
         },
         "player": [
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},
@@ -54,6 +57,9 @@
           {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"vex":false}}}}}
         ]
       }
+    },
+    "tick": {
+      "trigger": "minecraft:tick"
     }
   },
   "requirements": [
@@ -61,6 +67,9 @@
       "generic",
       "player",
       "vex"
+    ],
+    [
+      "tick"
     ]
   ],
   "rewards": {

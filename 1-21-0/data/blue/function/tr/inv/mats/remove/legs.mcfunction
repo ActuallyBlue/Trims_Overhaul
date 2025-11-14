@@ -7,5 +7,5 @@ attribute @s generic.attack_speed modifier remove blue:tr.legs
 attribute @s generic.max_health modifier remove blue:tr.legs
 attribute @s generic.armor modifier remove blue:tr.legs
 attribute @s generic.luck modifier remove blue:tr.legs
-tag @s remove blue.tr.legs_mat
-tag @s[tag=!blue.tr.head_mat,tag=!blue.tr.chest_mat,tag=!blue.tr.feet_mat] remove blue.tr.indiv_mats
+tag @s remove blue.tr.mats.legs
+tag @s[tag=!blue.tr.mats.head,tag=!blue.tr.mats.chest,tag=!blue.tr.mats.feet] remove blue.tr.mats.pieces

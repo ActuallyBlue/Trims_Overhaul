@@ -46,6 +46,6 @@
     }
   },
   "rewards": {
-    "function": "blue:tr/completion/rib"
+    "function": "blue:tr/quests/rib_complete"
   }
 }

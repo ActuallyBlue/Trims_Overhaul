@@ -1,7 +1,7 @@
 scoreboard players set #.temp blue.misc 1
 scoreboard players add #.exchange_channel blue.misc 1
 execute if score @s blue.health matches ..10 run scoreboard players add #.exchange_channel blue.misc 1
-execute if score #.exchange_channel blue.misc matches 5.. run particle dust 0.9 0.9 0.8 1 ~ ~0.7 ~ 0.35 0.5 0.35 0 6 force @a[tag=blue.tr.host]
+execute if score #.exchange_channel blue.misc matches 5.. run particle dust 0.9 0.9 0.8 1 ~ ~0.7 ~ 0.35 0.5 0.35 0 6 force @a[tag=blue.tr.host,limit=1]
 execute unless score #.exchange_channel blue.misc matches 25.. run return 0
 execute if score @s blue.health matches ..10 if score @a[tag=blue.tr.host,limit=1] blue.health matches 16.. run effect give @s instant_health
 execute if score @s blue.health matches ..10 run damage @a[tag=blue.tr.host,scores={blue.health=16..},limit=1] 4 blue:tr/sacrifice

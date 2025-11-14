@@ -1,5 +1,6 @@
-execute if predicate blue:shared/in_water run function blue:tr/effects/tide/emp/water_burst
 execute unless score #.tide.surge_cooldown blue.misc matches 1 positioned over motion_blocking positioned ~ ~20 ~ if entity @s[dy=128] run function blue:tr/effects/tide/emp/tidal_surge
+execute unless score #.tide.surge_cooldown blue.misc matches 1 if block ~ ~-1 ~ #blue:shared/passable if block ~ ~-2 ~ #blue:shared/passable if block ~ ~-3 ~ #blue:shared/passable if block ~ ~-4 ~ #blue:shared/passable if block ~ ~-5 ~ #blue:shared/passable if block ~ ~-6 ~ #blue:shared/passable if block ~ ~-7 ~ #blue:shared/passable if block ~ ~-8 ~ #blue:shared/passable if block ~ ~-9 ~ #blue:shared/passable if block ~ ~-10 ~ #blue:shared/passable if block ~ ~-11 ~ #blue:shared/passable if block ~ ~-12 ~ #blue:shared/passable if block ~ ~-13 ~ #blue:shared/passable if block ~ ~-14 ~ #blue:shared/passable if block ~ ~-15 ~ #blue:shared/passable if block ~ ~-16 ~ #blue:shared/passable if block ~ ~-17 ~ #blue:shared/passable if block ~ ~-18 ~ #blue:shared/passable if block ~ ~-19 ~ #blue:shared/passable positioned ~ ~-20 ~ run function blue:tr/effects/tide/emp/cast
+execute unless score #.tide.cancel blue.misc matches 1 if predicate blue:shared/in_water run function blue:tr/effects/tide/emp/water_burst
 execute unless score #.tide.cancel blue.misc matches 1 run function blue:tr/effects/tide/emp/land_burst
 scoreboard players reset #.tide.cancel blue.misc
 function blue:tr/effects/tide/emp/display

@@ -1,0 +1,252 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trims Overhaul Downloader</title>
+<link rel="icon" href="pack.png" type="image/png" sizes="32x32">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/primer/21.0.9/build.css">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--muted:#8b949e;--accent:#58a6ff;--positive:#238636}
+html{color-scheme:dark}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--bg);color:#c9d1d9;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+.container{max-width:400px;width:100%}
+.card{position:relative;background:var(--card);border:1px solid #30363d;border-radius:10px;padding:1.3rem;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+h1{margin:0 0 1.25rem;font-size:1.2rem;text-align:center;color:#f0f6fc}
+.form-group{margin-bottom:.7rem}
+label{display:block;margin-bottom:.35rem;font-weight:600;color:var(--muted)}
+select,button{width:100%;padding:.55rem .7rem;font-size:.98rem;border-radius:6px;border:1px solid #30363d;background:var(--bg);color:#c9d1d9;transition:filter .15s ease}
+button:hover{filter:brightness(1.2)}
+.btn{margin-top:.6rem;padding:.54rem;font-weight:700;background:var(--positive);border:none;color:#fff;cursor:pointer}
+.progress-container{margin-top:.6rem;height:7px;background:#30363d;border-radius:4px;overflow:hidden}
+.progress-bar{height:100%;width:0;background:var(--accent);transition:width .12s linear}
+.status{margin-top:0;text-align:center;font-size:.88rem;color:var(--muted)}
+.disabled{opacity:.6;pointer-events:none}
+#status{white-space:pre-line}
+.in-card-icon{position:absolute;top:10px;left:10px;width:26px;height:26px;border-radius:6px;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:.4;transition:transform .15s ease,opacity .15s ease}
+.in-card-icon:hover{transform:scale(1.15);opacity:.9}
+.in-card-icon svg{width:100%;height:100%;display:block}
+#current-file{font-size:12px;text-align:center;color:#666;margin-top:6px}
+</style>
+</head>
+<body>
+<noscript><div style="position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:9999;background:#aa4444;color:#fff;border:1px solid #bb0000;padding:1rem 1.5rem;border-radius:10px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.4);max-width:400px;">⚠️ This site requires JavaScript to function properly.</div></noscript>
+<div class="container">
+  <div class="card" id="card">
+    <a class="in-card-icon" href="https://www.patreon.com/ActuallyBlue" target="_blank" rel="noopener noreferrer" aria-label="Patreon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 569 569"><circle cx="362.6" cy="204.6" r="204.6" fill="#e86250"/><rect width="100" height="545.8" fill="#593824"/></svg>
+    </a>
+    <a class="in-card-icon" style="left:auto;right:10px" href="https://venmo.com/u/ActuallyBlue" target="_blank" rel="noopener noreferrer" aria-label="Venmo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 12 100 100">
+        <path fill="#3D99FF" transform="scale(1.1) skewX(-9)" d="M15 20h20l15 45c2 6 8 6 10 0l15-45h20L60 90c-5 7-15 7-20 0z"/>
+      </svg>
+    </a>
+    <h1>Trims Overhaul Downloader</h1>
+    <div class="form-group">
+      <label for="mcver">Minecraft Version</label>
+      <select id="mcver"><option value="" disabled selected hidden>Select version...</option></select>
+    </div>
+    <div class="form-group">
+      <label for="lang">Language</label>
+      <select id="lang">
+        <option value="en_us">English</option><option value="es_es">Español</option><option value="fr_fr">Français</option>
+        <option value="de_de">Deutsch</option><option value="pl_pl">Polski</option><option value="it_it">Italiano</option>
+        <option value="pt_br">Português</option><option value="tr_tr">Türkçe</option><option value="ru_ru">Русский</option>
+        <option value="ko_kr">한국어</option><option value="ja_jp">日本語</option><option value="zh_cn">简体中文</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="type">Pack Type</label>
+      <select id="type">
+        <option value="data_pack">Data pack</option>
+        <option value="resource_pack">Resource pack</option>
+        <option value="data_resource_pack">Data + Resource pack</option>
+        <option value="mod">Mod (.jar)</option>
+      </select>
+      <small id="mod-info" hidden>Mod supports: Fabric, Forge, Quilt, and Neo-Forge</small>
+    </div>
+    <button class="btn" id="download" disabled>Download Pack</button>
+    <div class="progress-container" aria-hidden="true"><div class="progress-bar" id="progress"></div></div>
+    <div id="current-file"></div>
+    <div class="status" id="status">Select version, language, and pack type</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js" crossorigin="anonymous"></script>
+
+<script>
+window.ANALYTICS_ENDPOINT='https://trims.theactuallyblue.workers.dev/collect';
+
+const mcSel=document.getElementById('mcver'), langSel=document.getElementById('lang'), typeSel=document.getElementById('type'),
+      btn=document.getElementById('download'), status=document.getElementById('status'), prog=document.getElementById('progress'),
+      modInfo=document.getElementById('mod-info'),
+      SUPPORTED_VERSIONS=['1.20.0','1.20.1','1.20.2','1.20.3','1.20.4','1.20.5','1.20.6','1.21.0','1.21.1','1.21.2','1.21.3','1.21.4','1.21.5','1.21.6','1.21.7','1.21.8','1.21.9','1.21.10'],
+      DONT_COMPRESS_RE=/\.(nbt|ogg|jar|zip)$/i,
+      TYPE_CODE={data_pack:'DP',resource_pack:'RP',data_resource_pack:'DP_RP',mod:'MOD'};
+
+(function(list){
+  const frag=document.createDocumentFragment();
+  list.forEach(v=>{const o=document.createElement('option');o.value=v.replace(/\./g,'-');o.textContent=v;frag.appendChild(o)});
+  mcSel.appendChild(frag);
+  setStatus('Select version, language, and pack type');
+})(SUPPORTED_VERSIONS);
+
+mcSel.addEventListener('change',()=>btn.disabled=!mcSel.value);
+typeSel.addEventListener('change',()=>{
+  const d=typeSel.value==='data_pack';
+  langSel.classList.toggle('disabled',d); langSel.disabled=d;
+  modInfo.style.display = typeSel.value==='mod' ? 'block' : 'none';
+});
+typeSel.dispatchEvent(new Event('change'));
+
+function repoInfo(){const h=location.hostname.split('.'),p=location.pathname.split('/').filter(Boolean),u=h[0]||'';return{user:u,repo:p[0]||(`${u}.github.io`) }};
+
+function raw(p) {
+  return new URL(p, location.origin + location.pathname.replace(/\/[^/]*$/, '/')).href;
+}
+
+async function getTree() {
+  const r = repoInfo();
+  const url = `https://api.github.com/repos/${r.user}/${r.repo}/git/trees/HEAD?recursive=1`;
+  try {
+    const res = await fetch(url, { headers: { Accept: 'application/vnd.github.v3+json' } });
+
+    if (res.status === 403) {
+      console.warn("GitHub API rate limit hit — using fallback");
+      setStatus("⚠️ GitHub rate limit reached.\nDownloads may be slower temporarily.", "error");
+      return [];
+    }
+
+    if (!res.ok) throw new Error("Tree failed: " + res.status);
+    return (await res.json()).tree || [];
+
+  } catch (e) {
+    console.warn("Tree unavailable:", e);
+    setStatus("Could not load repository index.\nFalling back to direct downloads.", "error");
+    return [];
+  }
+}
+
+async function fetchBuf(url,retries=2){for(let i=0;;i++){try{const r=await fetch(url);if(!r.ok)throw new Error('HTTP '+r.status);return await r.arrayBuffer()}catch(e){if(i>=retries)throw e;await new Promise(s=>setTimeout(s,200*(i+1)))}}};
+let repoTree=[];(async()=>{try{repoTree = await getTree()}catch(e){console.warn('tree unavailable',e)}})();
+
+function _analyticsKey(v,l,t){return `analytics:last:${v}|${l}|${t}`};
+function analyticsAllowed(v,l,t){try{const k=_analyticsKey(v,l,t),r=sessionStorage.getItem(k);if(!r)return true;return(Date.now()-parseInt(r,10))>600000}catch{return true}};
+function markAnalyticsSent(v,l,t){try{sessionStorage.setItem(_analyticsKey(v,l,t),String(Date.now()))}catch{}};
+
+async function sendAnalytics(evt){
+  if(!window.ANALYTICS_ENDPOINT) return;
+  const v=evt.version||'unknown',l=evt.language||'unknown',t=evt.type||'unknown';
+  if(!analyticsAllowed(v,l,t)) return; markAnalyticsSent(v,l,t);
+  const body=JSON.stringify(evt), blob=new Blob([body],{type:'application/json'});
+  if(!(navigator.sendBeacon && navigator.sendBeacon(window.ANALYTICS_ENDPOINT,blob)))
+    try{await fetch(window.ANALYTICS_ENDPOINT,{method:'POST',body,keepalive:true,credentials:'omit',headers:{'Content-Type':'application/json'}})}catch{}
+}
+
+
+const fileLabel=document.getElementById('current-file');
+
+async function addMany(zip, paths, weightPerFile=1, onFileDone){
+  if(!paths?.length)return 0;
+  const limit=14,pool=new Set();
+  for(const p of paths){
+    const pr=Promise.resolve().then(async()=>{
+      setStatus(`Collecting ${p.split('/')[0]}…\n${p.split('/').pop()}`);
+      try{
+        const buf=await fetchBuf(raw(p));
+        zip.file(p,buf,DONT_COMPRESS_RE.test(p)?{compression:'STORE'}:{compression:'DEFLATE',compressionOptions:{level:9}});
+      }catch{}finally{onFileDone&&onFileDone(weightPerFile);}
+    }).finally(()=>pool.delete(pr));
+    pool.add(pr);
+    if(pool.size>=limit) await Promise.race(pool);
+  }
+  await Promise.all(pool);
+  return paths.length;
+}
+
+async function addIf(zip,path,dest,packFormat){
+  try{
+    let content = await fetchBuf(raw(path));
+    if (path.endsWith("pack.mcmeta")) {
+    const obj = JSON.parse(new TextDecoder().decode(content));
+    if (packFormat !== undefined) obj.pack.pack_format = packFormat;
+    content = new TextEncoder().encode(JSON.stringify(obj));
+    }
+    zip.file(dest||path,content,DONT_COMPRESS_RE.test(path)?{compression:'STORE'}:{compression:'DEFLATE',compressionOptions:{level:9}});
+    return true;
+  }catch{return false;}
+}
+
+btn.addEventListener('click',async()=>{
+  btn.disabled=true; prog.style.width='0%';
+  const sel=mcSel.value, lang=langSel.value||'en_us', type=typeSel.value, zip=new JSZip();
+  const normalizedSel = sel.replace(/-/g, '.');
+  const packFormat = (normalizedSel === '1.20.0' || normalizedSel === '1.20.1') ? 15 : undefined;
+  try{
+    setStatus('Adding metadata…'); prog.style.width='2%';
+    await addIf(zip,'pack.mcmeta','pack.mcmeta',packFormat);
+    await addIf(zip,'pack.png','pack.png');
+
+    const assetsNeeded=type!=='data_pack', dataNeeded=type!=='resource_pack', wantMod=type==='mod';
+    const existingRootFolders=new Set(repoTree.map(t=>t.path.split('/')[0])),foldersToInclude=[];
+
+
+    if (dataNeeded) {
+      const selMaj = +sel.split('-')[1] || 0;
+      const available = SUPPORTED_VERSIONS.map(v => v.replace(/\./g, '-'));
+      const index = available.indexOf(sel);
+
+      for (let i = 0; i <= index; i++) {
+        const v = available[i];
+        const maj = +v.split('-')[1] || 0;
+        if (maj === selMaj || (selMaj >= 21 && maj >= 21)) {
+          if (existingRootFolders.has(v)) foldersToInclude.push(v);
+        }
+      }
+
+      if (selMaj === 20 && existingRootFolders.has('data')) {
+        foldersToInclude.unshift('data');
+      }
+    }
+
+    const assetPaths=repoTree.length&&assetsNeeded?repoTree.filter(t=>t.type==='blob'&&t.path.startsWith('assets/')&&!t.path.startsWith('assets/minecraft/lang/')).map(t=>t.path):[];
+    const langPath=`assets/minecraft/lang/${lang}.json`;
+    const dataPaths=repoTree.length&&dataNeeded?repoTree.filter(t=>{if(t.type!=='blob')return false;for(const f of foldersToInclude){if(f==='data'&&t.path.startsWith('data/'))return true;if(t.path.startsWith(f+'/'))return true}return false}).map(t=>t.path):[];
+    const modPaths=repoTree.length&&wantMod?repoTree.filter(t=>t.type==='blob'&&(t.path.startsWith('META-INF/')||['fabric.mod.json','quilt.mod.json','pack.mcmeta'].includes(t.path))).map(t=>t.path):[];
+
+    let totalWeight=Math.max(1,assetPaths.length+dataPaths.length*3+modPaths.length),doneWeight=0;
+    const updateProg=()=>prog.style.width=Math.min(100,Math.round((doneWeight/totalWeight)*100))+'%';
+
+    if(assetsNeeded){
+      await addMany(zip,assetPaths,1,(w)=>{doneWeight+=w;updateProg()});
+      for(const path in zip.files){if(path.startsWith('assets/')&&path.endsWith('.json')){try{const c=await zip.files[path].async('string');zip.file(path,JSON.stringify(JSON.parse(c)))}catch{}}}
+      if(lang==='en_us') zip.file(langPath, JSON.stringify(Object.fromEntries(Object.entries(JSON.parse(new TextDecoder().decode(await fetchBuf(raw(langPath))))).slice(0,18))), {compression:'DEFLATE'});
+      else{let merged={};try{const buf=await fetchBuf(raw(langPath));merged=JSON.parse(new TextDecoder().decode(buf))}catch{}for(const[k,v]of Object.entries({"blue.gap.1":"\uE99A","blue.gap.2":"\uE99B","blue.gap.3":"\uE99C","blue.gap.5":"\uE99D"}))merged[k]=v;zip.file(langPath,JSON.stringify(merged));doneWeight+=0.5;updateProg()}
+    }
+
+    if(dataNeeded) await addMany(zip,dataPaths,3,(w)=>{doneWeight+=w;updateProg()});
+    if (wantMod) await addMany(zip, modPaths.filter(p => p !== 'pack.mcmeta'), 1, w=>{doneWeight+=w;updateProg()});
+
+    setStatus('Compressing archive…');
+    const base=Math.min(95,Math.round((doneWeight/totalWeight)*100));
+    const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:9},onUpdate:meta=>{const pct=Math.max(0,Math.min(100,meta.percent||0)),mapped=base+Math.round((100-base)*(pct/100));prog.style.width=mapped+'%'}});
+
+    const ext = wantMod ? 'jar' : 'zip',
+      code = TYPE_CODE[type] || 'DP',
+      fname = `CUSTOM_trims_overhaul-${code}-v${
+        JSON.parse(new TextDecoder().decode(await fetchBuf(raw("pack.mcmeta"))))
+            .pack.description?.[0]?.with?.[0]
+      }.${ext}`;
+
+    saveAs(blob,fname); setStatus(`Downloaded ${fname}`,'success'); prog.style.width='100%';
+  sendAnalytics({version:sel, language:lang, type});
+  }catch(e){console.error(e);setStatus('Error: '+(e&&e.message?e.message:e),'error')}
+
+  finally{btn.disabled=!mcSel.value}
+});
+
+function setStatus(t,c=''){status.textContent=t;status.className=c?`status ${c}`:'status'}
+</script>
+</body>
+</html>

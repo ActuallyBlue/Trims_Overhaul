@@ -1,0 +1,23 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "minecraft:air",
+          "minecraft:experience_bottle"
+        ]
+      }
+    },
+    "type_specific": {
+      "type": "player",
+      "input": {
+        "sneak": true
+      }
+    },
+    "flags": {
+      "is_sneaking": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:shulker_shell"
+      },
+      "title": [{"translate":"item.minecraft.shulker_shell"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
+      "description": "",
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/heart",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

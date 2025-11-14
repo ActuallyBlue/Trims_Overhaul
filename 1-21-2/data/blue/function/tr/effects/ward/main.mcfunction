@@ -9,5 +9,5 @@ execute unless score #.ward.resort_cooldown blue.misc matches 1 if score #.ward.
 scoreboard players operation #.ward.health blue.misc = @s blue.health
 scoreboard players operation @s blue.tr.damage_blocked /= #3 blue.misc
 execute unless score #.20 blue.misc matches 9 run return fail
-execute if biome ~ ~ ~ deep_dark run attribute @s armor_toughness modifier add blue:tr.trim 0.1 add_multiplied_total
+execute if biome ~ ~ ~ deep_dark run return run attribute @s armor_toughness modifier add blue:tr.trim 0.1 add_multiplied_total
 attribute @s armor_toughness modifier remove blue:tr.trim

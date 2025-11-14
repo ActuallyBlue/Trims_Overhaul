@@ -1,0 +1,20 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": "minecraft:crossbow"
+      }
+    },
+    "type_specific": {
+      "type": "player",
+      "input": {
+        "sneak": true
+      }
+    },
+    "flags": {
+      "is_sneaking": true
+    }
+  }
+}

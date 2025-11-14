@@ -1,0 +1,1 @@
+stopsound @a[tag=blue.tr.wayfinder,limit=1] player entity.fishing_bobber.retrieve

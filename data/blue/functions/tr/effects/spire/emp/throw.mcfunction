@@ -1,5 +1,5 @@
 execute if entity b163102f-0-e-0-1 on origin run title @s[tag=blue.tr.spire] actionbar {"translate":"blue.tr.spire_throw_cd","fallback":"You can only throw one at a time","color":"gray"}
-execute if entity b163102f-0-e-0-1 run data modify entity @s PickupDelay set value 0s
+execute if entity b163102f-0-e-0-1 run function blue:tr/item/quick_return
 execute if entity b163102f-0-e-0-1 run return 0
 tag @s add blue.tr.checked
 execute on origin if entity @s[tag=blue.tr.spire] run scoreboard players set #.temp blue.misc -253

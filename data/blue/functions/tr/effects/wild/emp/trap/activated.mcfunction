@@ -6,5 +6,5 @@ effect give @s slowness 8 1 true
 effect give @s weakness 6 0 true
 effect give @s mining_fatigue 8 1 true
 particle falling_spore_blossom ~ ~1 ~ 0.3 0.4 0.3 0.01 48
-scoreboard players set #.trap_activated blue.misc 1
+scoreboard players set #.temp blue.misc -5224
 tag @s add blue.tr.wild.cd

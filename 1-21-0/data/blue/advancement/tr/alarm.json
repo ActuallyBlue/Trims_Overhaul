@@ -4,6 +4,13 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": {
+          "type_specific": {
+            "type": "player",
+            "gamemode": [
+              "survival",
+              "adventure"
+            ]
+          },
           "location": {
             "structures": "minecraft:stronghold"
           }

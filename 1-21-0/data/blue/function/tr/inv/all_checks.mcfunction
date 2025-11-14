@@ -8,7 +8,7 @@ data modify storage blue:data trims.armor.head set from storage blue:data trims.
 data modify storage blue:data trims.armor.chest set from storage blue:data trims.inventory[{Slot:2b}].components."minecraft:trim"
 data modify storage blue:data trims.armor.legs set from storage blue:data trims.inventory[{Slot:1b}].components."minecraft:trim"
 data modify storage blue:data trims.armor.feet set from storage blue:data trims.inventory[{Slot:0b}].components."minecraft:trim"
-execute if entity @s[tag=blue.tr.indiv_mats] run function blue:tr/inv/mats/remove/checks
+execute if entity @s[tag=blue.tr.mats.pieces] run function blue:tr/inv/mats/remove/checks
 execute if entity @s[tag=blue.tr.mats.set] run function blue:tr/inv/mats/find
 execute if score @s blue.tr.current_trim matches 13..18 run function blue:tr/inv/unequip/3rd
 execute if score @s blue.tr.current_trim matches 7..12 run function blue:tr/inv/unequip/2nd

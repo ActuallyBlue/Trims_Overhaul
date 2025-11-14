@@ -1,17 +1,19 @@
 execute if score #.rib.strict_skull blue.config matches 1 if score @s blue.tr.combat matches 200.. run return 0
 scoreboard players set #.rib.was_sneaking blue.misc 1
-execute unless entity @e[type=interaction,tag=blue.tr.rib_hitbox,limit=1] positioned ^ ^ ^0.6 run summon interaction ~ ~-0.2 ~ {width:0.4,height:0.5,Tags:["blue.tr.rib_hitbox"]}
-execute positioned ^ ^ ^0.6 run tp @e[type=interaction,tag=blue.tr.rib_hitbox,limit=1] ~ ~-0.2 ~
-execute as @e[type=interaction,tag=blue.tr.rib_hitbox,nbt={attack:{}},limit=1] on attacker if score @s blue.tr.current_trim matches 6 run scoreboard players set #.rib.was_sneaking blue.misc 2
+execute positioned ^ ^ ^0.6 store success score #.temp blue.misc run tp @e[type=interaction,tag=blue.tr.rib_hitbox,limit=1] ~ ~-0.2 ~
+execute unless score #.temp blue.misc matches 1 positioned ^ ^ ^0.6 run summon interaction ~ ~-0.2 ~ {width:0.4,height:0.5,Tags:["blue.tr.rib_hitbox"]}
+execute positioned ^ ^ ^0.6 as @e[type=interaction,tag=blue.tr.rib_hitbox,distance=..4,nbt={attack:{}},limit=1] on attacker if score @s blue.tr.current_trim matches 6 run scoreboard players set #.rib.was_sneaking blue.misc 2
 execute unless score #.rib.was_sneaking blue.misc matches 2 run return 0
 kill @e[type=interaction,tag=blue.tr.rib_hitbox]
 kill b163102f-0-c-0-1
 summon wither_skull ^ ^ ^2 {UUID:[I;-1318907857,12,0,1]}
 scoreboard players reset #.rib.was_sneaking blue.misc
 scoreboard players set #.rib.skull_cooldown blue.misc 1
-schedule function blue:tr/effects/rib/skull/cooldown 200t
+schedule function blue:tr/effects/rib/skull/cooldown 220t
+execute if predicate blue:shared/in_fortress run schedule function blue:tr/effects/rib/skull/cooldown 140t
+execute if entity @s[tag=blue.tr.dragon_egg] run schedule function blue:tr/effects/rib/skull/cooldown 140t
 playsound entity.wither.shoot player @a ~ ~ ~ 1.5 1.2
-execute in overworld positioned 0.0 0 0.0 run tp b163102f-0-0-0-200000000 ^ ^ ^1.5
+execute in overworld positioned 0.0 0 0.0 run tp b163102f-0-0-0-200000000 ^ ^ ^2.5
 data modify entity b163102f-0-c-0-1 Motion set from entity b163102f-0-0-0-200000000 Pos
 kill b163102f-0-d-0-1
 summon marker ~ ~ ~ {UUID:[I;-1318907857,13,0,1]}

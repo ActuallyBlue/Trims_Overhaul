@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:nether_star",
+         "id": "minecraft:nether_star"
+      },
+      "title": [{"translate":"item.minecraft.nether_star"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
+      "description": "",
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/shulker",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

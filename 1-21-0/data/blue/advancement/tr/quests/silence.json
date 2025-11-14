@@ -64,7 +64,7 @@
         ],
         "player": {
           "type_specific": {
-            "type": "minecraft:player",
+            "type": "player",
             "advancements": {
               "blue:tr/blacklist": {
                 "silence": false

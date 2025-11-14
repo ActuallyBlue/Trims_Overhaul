@@ -3,6 +3,20 @@
     "req": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "#.tr.template_clearing"
+              },
+              "score": "blue.config"
+            },
+            "range": 1
+          }
+        ],
         "items": [
           {
             "items": "#blue:tr/templates",

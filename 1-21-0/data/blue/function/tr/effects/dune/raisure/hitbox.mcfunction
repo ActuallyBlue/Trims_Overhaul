@@ -1,6 +1,13 @@
-execute if data entity @s attack run function blue:tr/effects/dune/raisure/toss
+execute unless predicate blue:shared/has_vehicle positioned ~ ~-1 ~ run function blue:tr/effects/dune/raisure/land
 scoreboard players remove @s[scores={blue.misc=1..}] blue.misc 1
-execute if predicate blue:shared/has_vehicle run return fail
-execute positioned ~ ~-1 ~ align xyz run particle falling_dust{block_state:{Name:sand}} ~0.5 ~0.5 ~0.5 0.4 0.4 0.4 5 32
-playsound block.suspicious_sand.place player @a
-kill
+execute on attacker run scoreboard players set #.temp blue.misc -572
+execute unless score #.temp blue.misc matches -572 run return fail
+execute if score @s blue.misc matches 1.. run return run data remove entity @s attack
+execute on attacker rotated as @s in overworld positioned 0.0 0 0.0 run tp b163102f-0-0-0-200000000 ^ ^ ^1
+execute on vehicle run function blue:tr/effects/dune/raisure/vehicle
+playsound item.brush.brushing.sand.complete player @a ~ ~ ~ 1.4 1
+playsound entity.iron_golem.step player @a ~ ~ ~ 1.8 1.5
+scoreboard players reset #.temp blue.misc
+scoreboard players set @s blue.misc 4
+particle crit ~ ~-0.25 ~ 0 0 0 0.2 16
+data remove entity @s attack

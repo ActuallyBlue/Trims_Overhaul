@@ -1,10 +1,13 @@
 scoreboard players remove #.eye.watching blue.misc 1
 execute unless score #.eye.watching blue.misc matches ..0 run return fail
+scoreboard players set #.eye.scare_charge_old blue.misc 0
 scoreboard players reset #.eye.watching blue.misc
 scoreboard players operation #.temp blue.misc = #.eye.scare_charge blue.misc
 scoreboard players reset #.eye.scare_charge blue.misc
+execute if score #.temp blue.misc matches 200.. run playsound item.totem.use player @s ~ ~ ~ 0.5 2
 execute if score #.temp blue.misc matches 200.. anchored eyes positioned ^ ^ ^1.5 run function blue:tr/effects/eye/stalk/cast
 execute if score #.temp blue.misc matches 200.. run tag @a[tag=blue.tr.stalk_limit] remove blue.tr.stalk_limit
+execute if score #.eye.view_fear blue.misc matches 0.. run return fail
 schedule function blue:tr/effects/eye/stalk/actionbar 3t
 execute if score #.eye.scare_cooldown blue.misc matches 1 run return fail
 execute unless score #.temp blue.misc matches 20.. run title @s actionbar {"text":"👁👁👁👁👁👁👁👁👁👁","color":"dark_gray","italic":true}

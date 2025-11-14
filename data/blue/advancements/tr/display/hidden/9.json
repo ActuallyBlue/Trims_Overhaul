@@ -1,0 +1,19 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:glass_pane",
+         "id": "minecraft:glass_pane"
+      },
+      "title": "3",
+      "description": "",
+      "announce_to_chat": false,
+      "hidden": true,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/dragon_egg",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

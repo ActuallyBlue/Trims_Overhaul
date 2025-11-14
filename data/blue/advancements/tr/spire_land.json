@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "minecraft:fall_from_height",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#.spire.guidance_cooldown"
+                },
+                "score": "blue.misc"
+              },
+              "range": 1
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "effects": {
+                "minecraft:resistance": {
+                  "amplifier": 78
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/spire/emp/land"
+  }
+}

@@ -1,7 +1,4 @@
-data modify storage blue:data trims.armor.head{material:"minecraft:dragon_egg"} set from storage blue:data trims.armor.feet
-data modify storage blue:data trims.armor.chest{material:"minecraft:dragon_egg"} set from storage blue:data trims.armor.head
-data modify storage blue:data trims.armor.legs{material:"minecraft:dragon_egg"} set from storage blue:data trims.armor.chest
-data modify storage blue:data trims.armor.feet{material:"minecraft:dragon_egg"} set from storage blue:data trims.armor.legs
+execute if data storage blue:data trims.inventory[].components."minecraft:trim"{material:"minecraft:dragon_egg"} unless data storage blue:data trims.armor{has_egg:1b} run function blue:tr/inv/mats/has_egg
 execute if data storage blue:data trims.armor{feet:{material:"minecraft:netherite"},legs:{material:"minecraft:netherite"},chest:{material:"minecraft:netherite"},head:{material:"minecraft:netherite"}} run function blue:tr/inv/mats/netherite
 execute if data storage blue:data trims.armor{feet:{material:"minecraft:quartz"},legs:{material:"minecraft:quartz"},chest:{material:"minecraft:quartz"},head:{material:"minecraft:quartz"}} run function blue:tr/inv/mats/quartz
 execute if data storage blue:data trims.armor{feet:{material:"minecraft:lapis"},legs:{material:"minecraft:lapis"},chest:{material:"minecraft:lapis"},head:{material:"minecraft:lapis"}} run function blue:tr/inv/mats/lapis

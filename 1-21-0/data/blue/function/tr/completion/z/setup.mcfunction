@@ -1,9 +1,10 @@
 function blue:shared/get_name
-data modify storage blue:data trims.telemetry.completion append from storage blue:data trims.telemetry.append
-execute if score #.tr.objective_announcements blue.config matches 1 run playsound entity.experience_orb.pickup player @a[distance=5..] 0 -128 0 0 0.8 1
-advancement grant @s only blue:tr/tags has_trim
-advancement grant @s[advancements={blue:tr/actual/general/guide1=false}] only blue:tr/actual/general/guide1
-advancement grant @s[advancements={blue:tr/actual/general/guide3=false}] only blue:tr/actual/general/guide3
+advancement grant @s[advancements={blue:tr/tags={has_trim=false}}] only blue:tr/tags has_trim
+advancement grant @s[advancements={blue:tr/display/guides/objectives=false}] only blue:tr/display/guides/objectives
+advancement grant @s[advancements={blue:tr/display/guides/ownership=false}] only blue:tr/display/guides/ownership
+execute if score #.tr.armor_ownership blue.config matches 1 run return fail
+execute if score #.tr.objective_announcements blue.config matches 1 run playsound entity.experience_orb.pickup player @a[distance=6..] 0 -128 0 0 0.8 1
+data modify storage blue:data trims.logs.completion append from storage blue:data trims.logs.append
+scoreboard players set #.temp Trims_Menu.BLUE 51
 schedule function blue:tr/completion/z/delay 2t
 tag @s add blue.tr.RTDCD
-scoreboard players set #.temp TrimCMDs.BLUE 51

@@ -2,5 +2,5 @@
   "scaling": "when_caused_by_living_non_player",
   "message_id": "blue.tr.tide",
   "effects": "drowning",
-  "exhaustion": 0.0
+  "exhaustion": 0
 }

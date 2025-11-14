@@ -1,4 +1,4 @@
-effect give @e[type=!#blue:tr/no_effects,distance=5..128] glowing 9 9 true
+effect give @e[type=!#blue:shared/no_effects,distance=5..128] glowing 9 9 true
 scoreboard players add @a[distance=5..80] blue.tr.fear 50
 playsound entity.phantom.ambient player @a ~ ~ ~ 1 0.5
 effect give @a[distance=5..100] slowness 5 1 true

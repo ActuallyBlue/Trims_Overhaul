@@ -1,5 +1,5 @@
 scoreboard players add #.barrage_time blue.misc 1
-execute as @e[type=item,tag=!blue.tr.checked,distance=..6] if items entity @s contents wind_charge run data modify entity @s PickupDelay set value 0s
+execute as @e[type=item,tag=!blue.tr.checked,distance=..6] if items entity @s contents wind_charge run function blue:tr/item/quick_return
 execute if score #.barrage_time blue.misc matches 2 run function blue:tr/effects/flow/emp/barrage/start
 execute if score #.barrage_time blue.misc matches 2 run attribute @s generic.gravity modifier remove blue:tr.trim
 execute if score #.barrage_time blue.misc matches 2 run attribute @s generic.gravity modifier add blue:tr.trim -0.06 add_value

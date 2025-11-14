@@ -18,5 +18,6 @@ tp @s[tag=blue.tr.rib_item] @a[tag=blue.tr.rib,scores={blue.tr.combat=500..},lim
 tp @s[tag=blue.tr.vex_item] @a[tag=blue.tr.vex,scores={blue.tr.combat=500..},limit=1]
 scoreboard players set @s blue.misc 0
 execute at @s[distance=1..] run title @p[distance=..2] actionbar {"translate":"blue.tr.armor_return","fallback":"A trimmed armor piece has returned to you","color":"gray"}
+advancement grant @s[distance=1..,advancements={blue:tr/display/guides/protection=false}] only blue:tr/display/guides/protection
 execute at @s[distance=1..] run playsound entity.enderman.teleport player @p[distance=..2] ~ ~0.5 ~ 0.7 0.8
-execute at @s[distance=1..] run particle portal ~ ~1 ~ 0.05 0 0.05 0.1 32
+execute at @s[distance=1..] run particle portal ~ ~0.5 ~ 0.05 0.5 0.05 0.3 16

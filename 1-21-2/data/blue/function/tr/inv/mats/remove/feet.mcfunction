@@ -7,5 +7,5 @@ attribute @s attack_speed modifier remove blue:tr.feet
 attribute @s max_health modifier remove blue:tr.feet
 attribute @s armor modifier remove blue:tr.feet
 attribute @s luck modifier remove blue:tr.feet
-tag @s remove blue.tr.feet_mat
-tag @s[tag=!blue.tr.head_mat,tag=!blue.tr.chest_mat,tag=!blue.tr.legs_mat] remove blue.tr.indiv_mats
+tag @s remove blue.tr.mats.feet
+tag @s[tag=!blue.tr.mats.head,tag=!blue.tr.mats.chest,tag=!blue.tr.mats.legs] remove blue.tr.mats.pieces

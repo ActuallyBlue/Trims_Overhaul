@@ -1,1 +1,0 @@
-stopsound @a[tag=blue.tr.wayfinder] * ui.toast.challenge_complete

@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:echo_shard",
+         "id": "minecraft:echo_shard"
+      },
+      "title": [{"translate":"item.minecraft.echo_shard"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
+      "description": "",
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/ender_eye",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

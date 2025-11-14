@@ -1,3 +1,7 @@
+execute if entity @s[advancements={blue:tr/tags={tutorial_piercer=false}},predicate=blue:tr/raiser_charge] unless entity @s[scores={blue.tr.combat=..400},level=20..] run function blue:tr/effects/raiser/piercer/tutorial
+execute store result score #.temp blue.misc run xp query @s levels
+execute if score #.temp blue.misc = #.raiser.level_old blue.misc run return 0
+scoreboard players operation #.raiser.level_old blue.misc = #.temp blue.misc
 attribute @s generic.movement_speed modifier remove b163102f-0-5-0-1
 attribute @s generic.attack_speed modifier remove b163102f-0-5-0-1
 attribute @s generic.attack_damage modifier remove b163102f-0-5-0-1

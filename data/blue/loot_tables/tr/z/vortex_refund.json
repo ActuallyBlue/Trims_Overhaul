@@ -13,7 +13,7 @@
                 "type": "score",
                 "target": {
                   "type": "fixed",
-                  "name": "#.count"
+                  "name": "#.temp"
                 },
                 "score": "blue.misc"
               }

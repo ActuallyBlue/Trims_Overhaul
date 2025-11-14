@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:snout_armor_trim_smithing_template",
+         "id": "minecraft:snout_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.snout"},
+      "description": {"translate":"blue.tr.adv.snout.desc","fallback":"Those who've seen every possible outcome know just how unpredictable the exchange can be"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/wild",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

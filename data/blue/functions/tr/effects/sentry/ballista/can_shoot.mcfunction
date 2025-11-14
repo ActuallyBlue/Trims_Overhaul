@@ -7,19 +7,19 @@ execute if score #.sentry.charge blue.misc matches 9..20 run effect give @s slow
 execute if score #.sentry.charge blue.misc matches 21..32 run effect give @s slowness 1 3
 execute if score #.sentry.charge blue.misc matches 33..44 run effect give @s slowness 1 5
 execute if score #.sentry.charge blue.misc matches 45.. run effect give @s slowness 1 7
-execute if score #.sentry.charge blue.misc matches 3.. run particle dust 0 0.5 0.6 0.2 ^0.00 ^0.30 ^2.8 0.025 0.025 0.025 0 7
+execute if score #.sentry.charge blue.misc matches 3.. run particle dust 0 0.5 0.6 0.2 ^ ^0.30 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 6.. run particle dust 0 0.5 0.6 0.2 ^-0.12 ^0.28 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 9.. run particle dust 0 0.5 0.6 0.2 ^-0.21 ^0.21 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 12.. run particle dust 0 0.5 0.6 0.2 ^-0.28 ^0.12 ^2.8 0.025 0.025 0.025 0 7
-execute if score #.sentry.charge blue.misc matches 15.. run particle dust 0 0.5 0.6 0.2 ^-0.30 ^0.00 ^2.8 0.025 0.025 0.025 0 7
+execute if score #.sentry.charge blue.misc matches 15.. run particle dust 0 0.5 0.6 0.2 ^-0.30 ^ ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 18.. run particle dust 0 0.5 0.6 0.2 ^-0.28 ^-0.12 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 21.. run particle dust 0 0.5 0.6 0.2 ^-0.21 ^-0.21 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 24.. run particle dust 0 0.5 0.6 0.2 ^-0.12 ^-0.28 ^2.8 0.025 0.025 0.025 0 7
-execute if score #.sentry.charge blue.misc matches 27.. run particle dust 0 0.5 0.6 0.2 ^0.00 ^-0.30 ^2.8 0.025 0.025 0.025 0 7
+execute if score #.sentry.charge blue.misc matches 27.. run particle dust 0 0.5 0.6 0.2 ^ ^-0.30 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 30.. run particle dust 0 0.5 0.6 0.2 ^0.12 ^-0.28 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 33.. run particle dust 0 0.5 0.6 0.2 ^0.21 ^-0.21 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 36.. run particle dust 0 0.5 0.6 0.2 ^0.28 ^-0.12 ^2.8 0.025 0.025 0.025 0 7
-execute if score #.sentry.charge blue.misc matches 39.. run particle dust 0 0.5 0.6 0.2 ^0.30 ^0.00 ^2.8 0.025 0.025 0.025 0 7
+execute if score #.sentry.charge blue.misc matches 39.. run particle dust 0 0.5 0.6 0.2 ^0.30 ^ ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 42.. run particle dust 0 0.5 0.6 0.2 ^0.28 ^0.12 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 45.. run particle dust 0 0.5 0.6 0.2 ^0.21 ^0.21 ^2.8 0.025 0.025 0.025 0 7
 execute if score #.sentry.charge blue.misc matches 48.. run particle dust 0 0.5 0.6 0.2 ^0.12 ^0.28 ^2.8 0.025 0.025 0.025 0 7

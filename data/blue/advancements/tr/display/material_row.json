@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:written_book",
+         "id": "minecraft:written_book"
+      },
+      "title": {"translate":"blue.tr.adv.vanilla_materials.title","fallback":"Vanilla Materials"},
+      "description": [{"translate":"blue.tr.adv.vanilla_materials.desc","fallback":"When worn, they grant small stackable bonuses, with a full set and synergy both adding one to the stack."},{"translate":"blue.tr.vanilla_mat.note","fallback":" (~10%% Buff)","color":"dark_gray"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/gap",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

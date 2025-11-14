@@ -1,0 +1,2 @@
+execute unless block ~ ~ ~ #blue:shared/passable align y positioned ~ ~21 ~ run return run function blue:tr/effects/tide/emp/tidal_surge
+execute positioned ~ ~-1 ~ if entity @s[distance=..128] run function blue:tr/effects/tide/emp/cast

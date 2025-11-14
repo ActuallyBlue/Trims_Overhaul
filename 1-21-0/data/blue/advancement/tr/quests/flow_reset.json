@@ -5,7 +5,7 @@
       "conditions": {
         "player": {
           "type_specific": {
-            "type": "minecraft:player",
+            "type": "player",
             "advancements": {
               "blue:tr/quests/flow_kills": {
                 "1": true,
@@ -25,7 +25,7 @@
             "entity": "this",
             "predicate": {
               "type_specific": {
-                "type": "minecraft:player",
+                "type": "player",
                 "advancements": {
                   "blue:tr/quests/flow_kills": {
                     "1": true,
@@ -42,7 +42,7 @@
               "offsetY": -1,
               "predicate": {
                 "block": {
-                  "blocks": "#replaceable"
+                  "blocks": "#blue:shared/passable"
                 }
               }
             }

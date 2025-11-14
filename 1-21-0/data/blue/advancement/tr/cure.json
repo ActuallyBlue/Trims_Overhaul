@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id":"minecraft:enchanted_golden_apple"
+      "id": "minecraft:enchanted_golden_apple"
     },
     "title": {
       "translate": "blue.tr.curist_name",

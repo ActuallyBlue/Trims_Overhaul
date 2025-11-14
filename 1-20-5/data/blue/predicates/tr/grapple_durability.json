@@ -6,8 +6,8 @@
       "mainhand": {
         "predicates": {
           "minecraft:damage": {
-            "durability": {
-              "max": 63
+            "damage": {
+              "min": 63
             }
           }
         }

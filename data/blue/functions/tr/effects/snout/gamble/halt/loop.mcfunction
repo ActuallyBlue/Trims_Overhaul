@@ -1,6 +1,6 @@
 execute if entity @e[type=area_effect_cloud,tag=blue.tr.gamble.freeze,limit=1] run schedule function blue:tr/effects/snout/gamble/halt/loop 1t
 execute as @e[type=area_effect_cloud,tag=blue.tr.gamble.freeze,tag=!blue.tr.mob_freeze] at @s run function blue:tr/effects/snout/gamble/halt/aec
-execute at @e[type=area_effect_cloud,tag=blue.tr.mob_freeze] as @e[type=!#blue:tr/no_effects,type=!player,tag=!smithed.strict,distance=..1,sort=nearest,limit=1] run function blue:tr/effects/snout/gamble/halt/mob
+execute at @e[type=area_effect_cloud,tag=blue.tr.mob_freeze] as @e[type=!#blue:shared/no_effects,type=!player,tag=!smithed.strict,distance=..1,sort=nearest,limit=1] run function blue:tr/effects/snout/gamble/halt/mob
 execute if score #.20 blue.misc matches 10 at @e[type=area_effect_cloud,tag=blue.tr.snout_center] run stopsound @a[distance=..48] player item.lodestone_compass.lock
 execute unless score #.20 blue.misc matches 5 run return 0
 execute store success score #.clock_tick blue.misc unless score #.clock_tick blue.misc matches 1

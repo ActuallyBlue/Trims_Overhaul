@@ -1,0 +1,28 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "contents": {
+            "items": "minecraft:tnt",
+            "count": 1
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "contents": {
+            "items": "#blue:tr/undermine"
+          }
+        }
+      }
+    }
+  ]
+}

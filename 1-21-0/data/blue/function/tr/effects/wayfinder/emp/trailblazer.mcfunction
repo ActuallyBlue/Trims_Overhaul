@@ -1,2 +1,2 @@
-execute as @e[type=marker,tag=blue.tr.wayfinder.trail] at @s run function blue:tr/effects/wayfinder/marker
+execute as @e[type=marker,tag=blue.tr.wayfinder.trail] at @s run function blue:tr/effects/wayfinder/emp/trail
 execute if entity @e[type=marker,tag=blue.tr.wayfinder.trail,limit=1] run schedule function blue:tr/effects/wayfinder/emp/trailblazer 1t

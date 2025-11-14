@@ -1,5 +1,5 @@
 scoreboard players add #.raiser.ambient blue.misc 1
-execute unless score #.60 blue.misc matches 15 run function blue:tr/effects/raiser/check
+execute unless score #.60 blue.misc matches 15 run function blue:tr/effects/raiser/proficiency
 execute as @e[type=experience_orb,tag=!smithed.strict,tag=!blue.tr.raiser_orb,distance=2.5..14.5] facing entity @s eyes positioned as @s run tp ^ ^0.025 ^-0.1
 execute as @e[type=experience_orb,distance=1..15] store result entity @s Air int 1 run scoreboard players get #.20 blue.misc
 execute if entity @s[scores={blue.tr.combat=..400},level=20..,predicate=blue:tr/raiser_charge] anchored eyes positioned ^ ^ ^0.2 positioned ~ ~-0.4 ~ run return run function blue:tr/effects/raiser/piercer/charge

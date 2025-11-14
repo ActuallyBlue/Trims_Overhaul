@@ -1,0 +1,18 @@
+{
+  "display": {
+      "icon": {
+         "item": "minecraft:lapis_lazuli",
+         "id": "minecraft:lapis_lazuli"
+      },
+      "title": [{"translate":"trim_material.minecraft.lapis"},"  "],
+      "description": ["+0.003 ",{"translate":"attribute.name.generic.movement_speed"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/emerald",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

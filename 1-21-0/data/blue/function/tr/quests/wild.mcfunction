@@ -14,8 +14,8 @@ execute if entity @s[advancements={blue:tr/quests/wild_tames={trader_llama=true}
 execute if entity @s[advancements={blue:tr/quests/wild_tames={skeleton_horse=true}}] run scoreboard players add #.temp blue.misc 1
 execute if entity @s[advancements={blue:tr/quests/wild_tames={zombie_horse=true}}] run scoreboard players add #.temp blue.misc 1
 execute if entity @s[advancements={blue:tr/quests/wild_tames={non_vanilla=true}}] run scoreboard players add #.temp blue.misc 1
-execute unless score #.temp blue.misc matches 9.. run return fail
-execute as @e[type=#blue:tr/peaceful,distance=..12] run function blue:tr/quests/wild_tamed
+execute unless score #.temp blue.misc matches 8.. run return fail
+execute as @e[type=#blue:shared/peaceful,distance=..12] run function blue:tr/quests/wild_tamed
 execute unless score #.temp blue.misc matches -3211 run return fail
 execute store success score #.temp blue.misc if entity @e[type=skeleton_horse,tag=blue.tr.tamed,limit=1]
 execute if entity @e[type=zombie_horse,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1

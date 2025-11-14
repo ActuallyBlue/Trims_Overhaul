@@ -13,3 +13,4 @@ execute if score #.eye.scare_charge blue.misc matches 140..159 run playsound ent
 execute if score #.eye.scare_charge blue.misc matches 160..179 run playsound entity.ender_eye.launch player @s ~ ~ ~ 2.3 1.55
 execute if score #.eye.scare_charge blue.misc matches 180..199 run playsound entity.ender_eye.launch player @s ~ ~ ~ 2.5 1.7
 execute if score #.eye.scare_charge blue.misc matches 200..219 run playsound entity.ender_eye.launch player @s ~ ~ ~ 2.9 2
+execute if score #.eye.scare_charge blue.misc matches 200..219 run playsound block.respawn_anchor.charge player @s ~ ~ ~ 0.75 1.25

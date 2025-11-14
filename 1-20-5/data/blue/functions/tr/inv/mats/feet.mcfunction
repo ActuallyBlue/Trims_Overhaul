@@ -1,5 +1,5 @@
-tag @s add blue.tr.feet_mat
-tag @s add blue.tr.indiv_mats
+tag @s add blue.tr.mats.feet
+tag @s add blue.tr.mats.pieces
 execute if data storage blue:data trims.armor.feet{material:"minecraft:netherite"} run function blue:tr/inv/mats/netherite/feet
 execute if data storage blue:data trims.armor.feet{material:"minecraft:redstone"} run attribute @s generic.max_health modifier add b163102f-0-0-0-1 "blue:tr.feet" 1.0 add_value
 execute if data storage blue:data trims.armor.feet{material:"minecraft:quartz"} run attribute @s generic.attack_damage modifier add b163102f-0-0-0-1 "blue:tr.feet" 0.3 add_value

@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "inventory_changed",
+      "trigger": "location",
       "conditions": {
         "player": {
           "slots": {

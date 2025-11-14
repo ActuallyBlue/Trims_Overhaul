@@ -7,7 +7,9 @@ execute positioned ^ ^ ^-1.6 positioned ~ ~1002 ~ summon end_crystal run damage 
 tp @s ~ ~0.5 ~
 execute if score #.temp blue.misc matches -1 run gamemode survival
 execute if score #.temp blue.misc matches -2 run gamemode adventure
-item modify entity @s weapon blue:tr/reduce_durability
+playsound entity.leash_knot.place player @s ~ ~ ~ 2 0.5
+schedule function blue:tr/effects/wayfinder/sound 2t
+item modify entity @s[gamemode=!creative] weapon blue:shared/damage
 execute unless predicate blue:tr/grapple_durability run return 0
 playsound entity.item.break player @a ~ ~ ~ 1 1
 item replace entity @s weapon with air

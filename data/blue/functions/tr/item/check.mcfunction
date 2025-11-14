@@ -8,6 +8,9 @@ execute as b163102f-0-0-0-100000000 unless predicate blue:tr/hold_template run r
 data remove storage blue:data trims.merge.item_data.Owner
 data modify storage blue:data trims.merge.item_data.Owner set from storage blue:data trims.item.Thrower
 data modify entity @s {} merge from storage blue:data trims.merge.item_data
+execute on origin run tag @s add blue.tr.quick_return
+tp @s @a[tag=blue.tr.quick_return,limit=1]
+tag @a[tag=blue.tr.quick_return,limit=1] remove blue.tr.quick_return
 tag @s add blue.tr.return
 execute if data storage blue:data trims.item.Item:{id:"minecraft:wayfinder_armor_trim_smithing_template"} run tag @s add blue.tr.wayfinder_item
 execute if data storage blue:data trims.item.Item:{id:"minecraft:silence_armor_trim_smithing_template"} run tag @s add blue.tr.silence_item

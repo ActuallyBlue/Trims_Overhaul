@@ -1,0 +1,16 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:knowledge_book"
+      },
+      "title": {"translate":"blue.tr.adv.trust.title","fallback":"Trust System"},
+      "description": {"translate":"blue.tr.adv.trust.desc","fallback":"Using the [Trust] button in the main menu, you can toggle your trim's trust for individual players, preventing most ambient effects from affecting them."},
+      "announce_to_chat": false
+  },
+  "parent": "blue:tr/display/guides/ownership",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

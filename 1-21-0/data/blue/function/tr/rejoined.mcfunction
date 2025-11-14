@@ -1,60 +1,62 @@
 tag @s remove blue.tr.coast_delay
-execute if score #.tr.wayfinder_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/wayfinder=false}] only blue:tr/actual/wayfinder
-execute if score #.tr.silence_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/silence=false}] only blue:tr/actual/silence
-execute if score #.tr.shaper_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/shaper=false}] only blue:tr/actual/shaper
-execute if score #.tr.raiser_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/raiser=false}] only blue:tr/actual/raiser
-execute if score #.tr.sentry_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/sentry=false}] only blue:tr/actual/sentry
-execute if score #.tr.spire_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/spire=false}] only blue:tr/actual/spire
-execute if score #.tr.coast_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/coast=false}] only blue:tr/actual/coast
-execute if score #.tr.snout_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/snout=false}] only blue:tr/actual/snout
-execute if score #.tr.ward_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/ward=false}] only blue:tr/actual/ward
-execute if score #.tr.dune_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/dune=false}] only blue:tr/actual/dune
-execute if score #.tr.wild_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/wild=false}] only blue:tr/actual/wild
-execute if score #.tr.tide_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/tide=false}] only blue:tr/actual/tide
-execute if score #.tr.host_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/host=false}] only blue:tr/actual/host
-execute if score #.tr.bolt_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/bolt=false}] only blue:tr/actual/bolt
-execute if score #.tr.flow_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/flow=false}] only blue:tr/actual/flow
-execute if score #.tr.eye_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/eye=false}] only blue:tr/actual/eye
-execute if score #.tr.rib_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/rib=false}] only blue:tr/actual/rib
-execute if score #.tr.vex_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/actual/vex=false}] only blue:tr/actual/vex
-execute if score #.tr.wayfinder_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/wayfinder=true}] only blue:tr/actual/wayfinder
-execute if score #.tr.silence_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/silence=true}] only blue:tr/actual/silence
-execute if score #.tr.shaper_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/shaper=true}] only blue:tr/actual/shaper
-execute if score #.tr.raiser_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/raiser=true}] only blue:tr/actual/raiser
-execute if score #.tr.sentry_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/sentry=true}] only blue:tr/actual/sentry
-execute if score #.tr.spire_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/spire=true}] only blue:tr/actual/spire
-execute if score #.tr.coast_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/coast=true}] only blue:tr/actual/coast
-execute if score #.tr.snout_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/snout=true}] only blue:tr/actual/snout
-execute if score #.tr.ward_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/ward=true}] only blue:tr/actual/ward
-execute if score #.tr.dune_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/dune=true}] only blue:tr/actual/dune
-execute if score #.tr.wild_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/wild=true}] only blue:tr/actual/wild
-execute if score #.tr.tide_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/tide=true}] only blue:tr/actual/tide
-execute if score #.tr.host_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/host=true}] only blue:tr/actual/host
-execute if score #.tr.bolt_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/bolt=true}] only blue:tr/actual/bolt
-execute if score #.tr.flow_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/flow=true}] only blue:tr/actual/flow
-execute if score #.tr.eye_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/eye=true}] only blue:tr/actual/eye
-execute if score #.tr.rib_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/rib=true}] only blue:tr/actual/rib
-execute if score #.tr.vex_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/actual/vex=true}] only blue:tr/actual/vex
-execute if score #.dragon_defeated blue.misc matches 0 run advancement revoke @s[advancements={blue:tr/actual/egg=true}] only blue:tr/actual/egg
+execute if score #.tr.armor_ownership blue.config matches 1 if score @s blue.tr.current_trim matches 1.. run function blue:tr/inv/rejoin_ownership
+execute if score #.tr.wayfinder_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/wayfinder=false}] only blue:tr/display/wayfinder
+execute if score #.tr.silence_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/silence=false}] only blue:tr/display/silence
+execute if score #.tr.shaper_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/shaper=false}] only blue:tr/display/shaper
+execute if score #.tr.raiser_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/raiser=false}] only blue:tr/display/raiser
+execute if score #.tr.sentry_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/sentry=false}] only blue:tr/display/sentry
+execute if score #.tr.spire_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/spire=false}] only blue:tr/display/spire
+execute if score #.tr.coast_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/coast=false}] only blue:tr/display/coast
+execute if score #.tr.snout_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/snout=false}] only blue:tr/display/snout
+execute if score #.tr.ward_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/ward=false}] only blue:tr/display/ward
+execute if score #.tr.dune_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/dune=false}] only blue:tr/display/dune
+execute if score #.tr.wild_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/wild=false}] only blue:tr/display/wild
+execute if score #.tr.tide_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/tide=false}] only blue:tr/display/tide
+execute if score #.tr.host_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/host=false}] only blue:tr/display/host
+execute if score #.tr.bolt_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/bolt=false}] only blue:tr/display/bolt
+execute if score #.tr.flow_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/flow=false}] only blue:tr/display/flow
+execute if score #.tr.eye_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/eye=false}] only blue:tr/display/eye
+execute if score #.tr.rib_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/rib=false}] only blue:tr/display/rib
+execute if score #.tr.vex_completed blue.config matches 1..2 run advancement grant @s[advancements={blue:tr/display/vex=false}] only blue:tr/display/vex
+execute if score #.dragon_defeated blue.misc matches 1 run advancement grant @s[advancements={blue:tr/display/dragon_egg=false}] only blue:tr/display/dragon_egg
+execute if score #.tr.wayfinder_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/wayfinder=true}] only blue:tr/display/wayfinder
+execute if score #.tr.silence_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/silence=true}] only blue:tr/display/silence
+execute if score #.tr.shaper_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/shaper=true}] only blue:tr/display/shaper
+execute if score #.tr.raiser_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/raiser=true}] only blue:tr/display/raiser
+execute if score #.tr.sentry_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/sentry=true}] only blue:tr/display/sentry
+execute if score #.tr.spire_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/spire=true}] only blue:tr/display/spire
+execute if score #.tr.coast_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/coast=true}] only blue:tr/display/coast
+execute if score #.tr.snout_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/snout=true}] only blue:tr/display/snout
+execute if score #.tr.ward_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/ward=true}] only blue:tr/display/ward
+execute if score #.tr.dune_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/dune=true}] only blue:tr/display/dune
+execute if score #.tr.wild_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/wild=true}] only blue:tr/display/wild
+execute if score #.tr.tide_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/tide=true}] only blue:tr/display/tide
+execute if score #.tr.host_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/host=true}] only blue:tr/display/host
+execute if score #.tr.bolt_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/bolt=true}] only blue:tr/display/bolt
+execute if score #.tr.flow_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/flow=true}] only blue:tr/display/flow
+execute if score #.tr.eye_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/eye=true}] only blue:tr/display/eye
+execute if score #.tr.rib_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/rib=true}] only blue:tr/display/rib
+execute if score #.tr.vex_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/vex=true}] only blue:tr/display/vex
+execute if score #.dragon_defeated blue.misc matches 0 run advancement revoke @s[advancements={blue:tr/display/dragon_egg=true}] only blue:tr/display/dragon_egg
 execute if entity @s[advancements={blue:tr/tags={has_trim=false}}] run return fail
-execute if score #.wayfinder_stored blue.misc matches 1.. if entity @s[tag=blue.tr.wayfinder] run function blue:tr/delayed/trims/macro {trim:"wayfinder",translate:"Wayfinder",color:"#F1FFC8"}
-execute if score #.silence_stored blue.misc matches 1.. if entity @s[tag=blue.tr.silence] run function blue:tr/delayed/trims/macro {trim:"silence",translate:"Silence",color:"#3842Cf"}
-execute if score #.shaper_stored blue.misc matches 1.. if entity @s[tag=blue.tr.shaper] run function blue:tr/delayed/trims/macro {trim:"shaper",translate:"Raiser",color:"#95B623"}
-execute if score #.raiser_stored blue.misc matches 1.. if entity @s[tag=blue.tr.raiser] run function blue:tr/delayed/trims/macro {trim:"raiser",translate:"Shaper",color:"#8F8F8F"}
-execute if score #.sentry_stored blue.misc matches 1.. if entity @s[tag=blue.tr.sentry] run function blue:tr/delayed/trims/macro {trim:"sentry",translate:"Sentry",color:"#4B885B"}
-execute if score #.spire_stored blue.misc matches 1.. if entity @s[tag=blue.tr.spire] run function blue:tr/delayed/trims/macro {trim:"spire",translate:"Spire",color:"#BE20C7"}
-execute if score #.coast_stored blue.misc matches 1.. if entity @s[tag=blue.tr.coast] run function blue:tr/delayed/trims/macro {trim:"coast",translate:"Coast",color:"#C1C888"}
-execute if score #.snout_stored blue.misc matches 1.. if entity @s[tag=blue.tr.snout] run function blue:tr/delayed/trims/macro {trim:"snout",translate:"Snout",color:"#F2B01A"}
-execute if score #.ward_stored blue.misc matches 1.. if entity @s[tag=blue.tr.ward] run function blue:tr/delayed/trims/macro {trim:"ward",translate:"Ward",color:"#5C70AE"}
-execute if score #.bolt_stored blue.misc matches 1.. if entity @s[tag=blue.tr.bolt] run function blue:tr/delayed/trims/macro {trim:"bolt",translate:"Bolt",color:"#B65D1A"}
-execute if score #.flow_stored blue.misc matches 1.. if entity @s[tag=blue.tr.flow] run function blue:tr/delayed/trims/macro {trim:"flow",translate:"Flow",color:"#85B2C5"}
-execute if score #.dune_stored blue.misc matches 1.. if entity @s[tag=blue.tr.dune] run function blue:tr/delayed/trims/macro {trim:"dune",translate:"Dune",color:"#E7C547"}
-execute if score #.wild_stored blue.misc matches 1.. if entity @s[tag=blue.tr.wild] run function blue:tr/delayed/trims/macro {trim:"wild",translate:"Wild",color:"#00D529"}
-execute if score #.tide_stored blue.misc matches 1.. if entity @s[tag=blue.tr.tide] run function blue:tr/delayed/trims/macro {trim:"tide",translate:"Tide",color:"#199ADD"}
-execute if score #.host_stored blue.misc matches 1.. if entity @s[tag=blue.tr.host] run function blue:tr/delayed/trims/macro {trim:"host",translate:"Host",color:"#A34646"}
-execute if score #.eye_stored blue.misc matches 1.. if entity @s[tag=blue.tr.eye] run function blue:tr/delayed/trims/macro {trim:"eye",translate:"Eye",color:"#1F8A46"}
-execute if score #.rib_stored blue.misc matches 1.. if entity @s[tag=blue.tr.rib] run function blue:tr/delayed/trims/macro {trim:"rib",translate:"Rib",color:"#E6484B"}
-execute if score #.vex_stored blue.misc matches 1.. if entity @s[tag=blue.tr.vex] run function blue:tr/delayed/trims/macro {trim:"vex",translate:"Vex",color:"#CFC6A5"}
+execute if score #.wayfinder_stored blue.misc matches 1.. if entity @s[tag=blue.tr.wayfinder] run function blue:tr/delayed/return/macro {trim:"wayfinder",translate:"Wayfinder",color:"#F1FFC8"}
+execute if score #.silence_stored blue.misc matches 1.. if entity @s[tag=blue.tr.silence] run function blue:tr/delayed/return/macro {trim:"silence",translate:"Silence",color:"#3842Cf"}
+execute if score #.shaper_stored blue.misc matches 1.. if entity @s[tag=blue.tr.shaper] run function blue:tr/delayed/return/macro {trim:"shaper",translate:"Raiser",color:"#95B623"}
+execute if score #.raiser_stored blue.misc matches 1.. if entity @s[tag=blue.tr.raiser] run function blue:tr/delayed/return/macro {trim:"raiser",translate:"Shaper",color:"#8F8F8F"}
+execute if score #.sentry_stored blue.misc matches 1.. if entity @s[tag=blue.tr.sentry] run function blue:tr/delayed/return/macro {trim:"sentry",translate:"Sentry",color:"#4B885B"}
+execute if score #.spire_stored blue.misc matches 1.. if entity @s[tag=blue.tr.spire] run function blue:tr/delayed/return/macro {trim:"spire",translate:"Spire",color:"#BE20C7"}
+execute if score #.coast_stored blue.misc matches 1.. if entity @s[tag=blue.tr.coast] run function blue:tr/delayed/return/macro {trim:"coast",translate:"Coast",color:"#C1C888"}
+execute if score #.snout_stored blue.misc matches 1.. if entity @s[tag=blue.tr.snout] run function blue:tr/delayed/return/macro {trim:"snout",translate:"Snout",color:"#F2B01A"}
+execute if score #.ward_stored blue.misc matches 1.. if entity @s[tag=blue.tr.ward] run function blue:tr/delayed/return/macro {trim:"ward",translate:"Ward",color:"#5C70AE"}
+execute if score #.bolt_stored blue.misc matches 1.. if entity @s[tag=blue.tr.bolt] run function blue:tr/delayed/return/macro {trim:"bolt",translate:"Bolt",color:"#B65D1A"}
+execute if score #.flow_stored blue.misc matches 1.. if entity @s[tag=blue.tr.flow] run function blue:tr/delayed/return/macro {trim:"flow",translate:"Flow",color:"#85B2C5"}
+execute if score #.dune_stored blue.misc matches 1.. if entity @s[tag=blue.tr.dune] run function blue:tr/delayed/return/macro {trim:"dune",translate:"Dune",color:"#E7C547"}
+execute if score #.wild_stored blue.misc matches 1.. if entity @s[tag=blue.tr.wild] run function blue:tr/delayed/return/macro {trim:"wild",translate:"Wild",color:"#00D529"}
+execute if score #.tide_stored blue.misc matches 1.. if entity @s[tag=blue.tr.tide] run function blue:tr/delayed/return/macro {trim:"tide",translate:"Tide",color:"#199ADD"}
+execute if score #.host_stored blue.misc matches 1.. if entity @s[tag=blue.tr.host] run function blue:tr/delayed/return/macro {trim:"host",translate:"Host",color:"#A34646"}
+execute if score #.eye_stored blue.misc matches 1.. if entity @s[tag=blue.tr.eye] run function blue:tr/delayed/return/macro {trim:"eye",translate:"Eye",color:"#1F8A46"}
+execute if score #.rib_stored blue.misc matches 1.. if entity @s[tag=blue.tr.rib] run function blue:tr/delayed/return/macro {trim:"rib",translate:"Rib",color:"#E6484B"}
+execute if score #.vex_stored blue.misc matches 1.. if entity @s[tag=blue.tr.vex] run function blue:tr/delayed/return/macro {trim:"vex",translate:"Vex",color:"#CFC6A5"}
 execute unless score #.admin_revoke_trim blue.misc matches 1.. run return fail
 execute if score #.revoke_wayfinder blue.misc matches 2.. run tellraw @s[tag=blue.tr.wayfinder] [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.Your","fallback":"Your","color":"gray"}," ",{"translate":"Wayfinder","color":"#F1FFC8"}," ",{"translate":"blue.tr.was_revoked","fallback":"has been revoked","color":"gray"}]
 execute if score #.revoke_wayfinder blue.misc matches 2.. if entity @s[tag=blue.tr.wayfinder] store success score #.revoke_wayfinder blue.misc run tag @s remove blue.tr.wayfinder

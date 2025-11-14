@@ -1,0 +1,7 @@
+execute store success score #.temp blue.misc if entity @s[tag=blue.trim_disabled]
+execute if score #.temp blue.misc matches 1 run tag @s remove blue.trim_disabled
+execute if score #.temp blue.misc matches 1 run playsound block.amethyst_block.resonate player @s 0 -128 0 0 1.5 0.5
+execute if score #.temp blue.misc matches 1 run tellraw @s [{"translate":"blue.tr.trim_abilities","fallback":"Trim Abilities","color":"gray","clickEvent":{"action":"run_command","value":"/trigger Trims_Menu.BLUE set 2"},"hoverEvent":{"action":"show_text","contents":{"translate":"blue.tr.menu.abilities_hover","fallback":"Toggle Trim Ability","color":"gray"}}},{"text":": ","color":"dark_gray"},{"translate":"options.on","color":"dark_green"}]
+execute if score #.temp blue.misc matches 0 run tellraw @s [{"translate":"blue.tr.trim_abilities","fallback":"Trim Abilities","color":"gray","clickEvent":{"action":"run_command","value":"/trigger Trims_Menu.BLUE set 2"},"hoverEvent":{"action":"show_text","contents":{"translate":"blue.tr.menu.abilities_hover","fallback":"Toggle Trim Ability","color":"gray"}}},{"text":": ","color":"dark_gray"},{"translate":"options.off","color":"dark_red"}]
+execute if score #.temp blue.misc matches 0 run playsound block.amethyst_block.resonate player @s 0 -128 0 0 0.5 0.55
+execute if score #.temp blue.misc matches 0 run tag @s add blue.trim_disabled

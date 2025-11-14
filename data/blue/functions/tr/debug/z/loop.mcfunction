@@ -1,5 +1,0 @@
-execute store result score #.temp0 blue.misc run data get storage blue:data trims.telemetry.temp[-1].time
-execute store result storage blue:data trims.telemetry.time int -1 run scoreboard players operation #.temp0 blue.misc -= #.temp blue.misc
-tellraw @s [{"storage":"blue:data","nbt":"trims.telemetry.temp[-1].player"},{"translate":"blue.tr.completed","fallback":" completed ","color":"gray"},{"storage":"blue:data","nbt":"trims.telemetry.temp[-1].type.translate","extra":["'s "]},{"translate":"blue.tr.lower_objective","fallback":"objective","color":"gray"}," ",{"storage":"blue:data","nbt":"trims.telemetry.time"},{"translate":"blue.tr.telemetry_ago","fallback":" minutes ago","color":"gray"}]
-data remove storage blue:data trims.telemetry.temp[-1]
-execute if data storage blue:data trims.telemetry.temp[] run function blue:tr/debug/z/loop

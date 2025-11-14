@@ -5,6 +5,6 @@ schedule clear blue:tr/effects/spire/emp/aperture/find
 scoreboard players reset #.aperture_duration blue.misc
 scoreboard players reset #.aperture_sound blue.misc
 stopsound @a player block.portal.ambient
-forceload remove ~11 ~11 ~-11 ~-11
+forceload remove ~ ~
 forceload add 8 8
 kill

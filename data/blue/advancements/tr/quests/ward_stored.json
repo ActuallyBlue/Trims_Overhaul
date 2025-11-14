@@ -29,6 +29,7 @@
     "pillager":{"trigger":"impossible"},
     "slime":{"trigger":"impossible"},
     "ravager":{"trigger":"impossible"},
-    "stray":{"trigger":"impossible"}
+    "stray":{"trigger":"impossible"},
+    "unknown":{"trigger":"impossible"}
   }
 }

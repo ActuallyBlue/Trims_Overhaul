@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:flow_armor_trim_smithing_template"
+      },
+      "title": {"translate":"trim_pattern.minecraft.flow"},
+      "description": {"translate":"blue.tr.adv.flow.desc","fallback":"The ground seems distant when you're trained at staying off through mastery over wind"},
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/eye",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

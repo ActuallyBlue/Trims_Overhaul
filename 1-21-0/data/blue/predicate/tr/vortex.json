@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "slots": {
+      "contents": {
+        "items": "minecraft:echo_shard",
+        "count": {
+          "min": 32
+        }
+      }
+    }
+  }
+}

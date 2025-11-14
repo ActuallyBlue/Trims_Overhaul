@@ -1,0 +1,17 @@
+{
+  "display": {
+      "icon": {
+          "id": "minecraft:redstone"
+      },
+      "title": {"translate":"trim_material.minecraft.redstone"},
+      "description": ["+1.0 ",{"translate":"attribute.name.generic.max_health"},{"translate":"blue.tr.adv.redstone.desc_info","fallback":" (Half)","color":"dark_gray"}],
+      "announce_to_chat": false,
+      "show_toast": false
+  },
+  "parent": "blue:tr/display/netherite",
+  "criteria": {
+    "req": {
+      "trigger": "impossible"
+    }
+  }
+}

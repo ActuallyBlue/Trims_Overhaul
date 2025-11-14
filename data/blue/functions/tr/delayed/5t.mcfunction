@@ -1,0 +1,4 @@
+schedule function blue:tr/delayed/5t 5t
+execute if score #.tr.owner_finder blue.config matches 1 as @a[tag=!blue.trim_disabled] unless score @s blue.tr.current_trim matches 1.. unless entity @s[tag=!blue.tr.trim.wayfinder,tag=!blue.tr.trim.silence,tag=!blue.tr.trim.sentry,tag=!blue.tr.trim.raiser,tag=!blue.tr.trim.shaper,tag=!blue.tr.trim.spire,tag=!blue.tr.trim.coast,tag=!blue.tr.trim.snout,tag=!blue.tr.trim.dune,tag=!blue.tr.trim.wild,tag=!blue.tr.trim.tide,tag=!blue.tr.trim.host,tag=!blue.tr.trim.bolt,tag=!blue.tr.trim.flow,tag=!blue.tr.trim.ward,tag=!blue.tr.trim.rib,tag=!blue.tr.trim.vex,tag=!blue.tr.trim.eye] at @s run function blue:tr/delayed/track
+execute if score #.tr.objective_type blue.config matches 2 as @a[scores={blue.tr.RTDval=1..}] run function blue:tr/tasks/rtd/main
+execute as @a[scores={Trims_Menu.BLUE=1..}] run function blue:tr/delayed/cmd/trigger

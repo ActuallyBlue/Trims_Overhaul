@@ -1,12 +1,12 @@
 scoreboard players add @s blue.misc 1
 schedule function blue:tr/effects/dune/geyser/loop 1t
-execute if score @s blue.misc matches 2 positioned ~ ~-0.5 ~ run tp @e[type=block_display,tag=blue.tr.dune_geyser,sort=nearest,limit=1] ~ ~0.85 ~
+execute if score @s blue.misc matches 2 run tp @s ~ ~0.37 ~
 execute unless score @s blue.misc matches 12.. run return 0
-execute unless score @s blue.misc matches 150.. run function blue:tr/effects/dune/geyser/vfx
-execute unless score @s blue.misc matches 160.. run return 0
-particle falling_dust sand ~ ~0.3 ~ 0.4 0.2 0.4 0.2 40
+execute unless score @s blue.misc matches 170.. run function blue:tr/effects/dune/geyser/vfx
+execute unless score @s blue.misc matches 180.. run return 0
+particle item suspicious_sand ~ ~ ~ 0.3 0.3 0.3 0.12 48
+particle falling_dust sand ~ ~ ~ 0.6 0.3 0.6 0 40
 playsound block.sand.break player @a ~ ~ ~ 2 0.5
 playsound block.sand.break player @a ~ ~ ~ 2 1
-execute as @e[type=block_display,distance=..0.4,tag=blue.tr.dune_geyser,limit=1] on passengers run kill
-kill @e[type=block_display,distance=..0.4,tag=blue.tr.dune_geyser,limit=1]
+execute on passengers run kill
 kill

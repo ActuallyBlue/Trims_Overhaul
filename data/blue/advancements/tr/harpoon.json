@@ -1,8 +1,13 @@
 {
   "criteria": {
-    "req": {
-      "trigger": "minecraft:player_hurt_entity",
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
       "conditions": {
+        "killing_blow": {
+          "direct_entity": {
+            "type": "minecraft:trident"
+          }
+        },
         "player": [
           {
             "condition": "minecraft:entity_scores",
@@ -11,17 +16,37 @@
               "blue.tr.current_trim": 1
             }
           }
-        ],
+        ]
+      }
+    },
+    "hurt": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
         "damage": {
           "type": {
             "direct_entity": {
               "type": "minecraft:trident"
             }
           }
-        }
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 1
+            }
+          }
+        ]
       }
     }
   },
+  "requirements": [
+    [
+      "kill",
+      "hurt"
+    ]
+  ],
   "rewards": {
     "function": "blue:tr/effects/coast/harpoon/hit"
   }
