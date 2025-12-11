@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "trims_overhaul",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "name": "Trims Overhaul",
   "description": "Give every trim unique powers, obtainable though quests",
   "license": "LicenseRef-Datapack",

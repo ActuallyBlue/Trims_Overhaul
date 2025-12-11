@@ -1,4 +1,4 @@
-execute store result entity @s Air int 1 run scoreboard players get #.20 blue.misc
+execute store result entity @s Air byte 1 run scoreboard players get #.20 blue.misc
 particle mycelium ~ ~0.4 ~ 0.15 0.15 0.15 0 10
 particle sculk_charge_pop ~ ~0.49 ~ 0.175 0.175 0.175 0.01 14
 particle sculk_charge_pop ~ ~0.49 ~ 0.175 0.175 0.175 0.01 6 force

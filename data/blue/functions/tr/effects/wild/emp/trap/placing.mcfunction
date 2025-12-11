@@ -1,4 +1,4 @@
-execute summon area_effect_cloud store success score #.temp blue.misc run data modify storage blue:data trims.wild.Pos set from entity @s Pos
+execute summon area_effect_cloud store success score #.temp blue.misc run data modify storage blue:trims wild.Pos set from entity @s Pos
 execute if score #.temp blue.misc matches 1 run return 0
 scoreboard players add #.wild.charge blue.misc 1
 scoreboard players set #.wild.charging blue.misc 1

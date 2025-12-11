@@ -1,0 +1,1 @@
+execute as @a[tag=blue.tr.host,limit=1] on attacker at @s as @e[type=iron_golem,distance=..32] run damage @s 0 blue:tr/sacrifice by @e[tag=!blue.tr.host,sort=nearest,limit=1,distance=..0.1]

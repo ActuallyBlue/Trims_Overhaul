@@ -3,10 +3,10 @@ advancement grant @s only blue:tr/trust coast
 advancement grant @a only blue:tr/display/coast
 scoreboard players set @s blue.tr.items_fished 0
 scoreboard players set #.tr.coast_completed blue.config 1
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Coast","color":"#C1C888"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Coast","color":"#C1C888"}
 function blue:tr/completion/z/setup
-data modify storage blue:data trims.coast.owner.text set from storage blue:data player_name
-data modify storage blue:data trims.coast.owner.color set value "#C1C888"
+data modify storage blue:trims coast.owner.text set from storage blue:shared player_name
+data modify storage blue:trims coast.owner.color set value "#C1C888"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#C1C888"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Coast","color":"#C1C888"}]
 function blue:tr/delayed/cmd/msg/coast

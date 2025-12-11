@@ -15,8 +15,8 @@ execute if score @s blue.tr.damage_blocked matches 801..1200 run effect give @s 
 execute if score @s blue.tr.damage_blocked matches 1201..1600 run effect give @s slowness 1 2 true
 execute if score @s blue.tr.damage_blocked matches 1601..2000 run effect give @s slowness 1 3 true
 execute if score @s blue.tr.damage_blocked matches 2001.. run effect give @s slowness 1 4 true
-execute store result storage blue:data trims.ward.dmg int 0.0025 run scoreboard players get @s blue.tr.damage_blocked
-execute store success score #.temp blue.misc run data modify storage blue:data trims.ward.pre set from storage blue:data trims.ward.dmg
+execute store result storage blue:trims ward.dmg byte 0.0025 run scoreboard players get @s blue.tr.damage_blocked
+execute store success score #.temp blue.misc run data modify storage blue:trims ward.pre set from storage blue:trims ward.dmg
 execute unless score #.temp blue.misc matches 1 run return fail
 execute if score @s blue.tr.damage_blocked matches 400..800 run playsound item.shield.block player @a ~ ~ ~ 0.7 1.3
 execute if score @s blue.tr.damage_blocked matches 801..1200 run playsound item.shield.block player @a ~ ~ ~ 0.75 1.1

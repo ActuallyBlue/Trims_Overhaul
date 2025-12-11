@@ -1,6 +1,7 @@
-execute unless data storage blue:data trims.fake_inv[{tag:{Trim:{pattern:"minecraft:eye"}}}] unless data storage blue:data trims.fake_inv[{id:"minecraft:eye_armor_trim_smithing_template"}] unless entity @a[tag=blue.tr.killer,tag=blue.tr.trim.eye,limit=1] run return 0
+execute unless data storage blue:trims fake_inv[{tag:{Trim:{pattern:"minecraft:eye"}}}] unless data storage blue:trims fake_inv[{id:"minecraft:eye_armor_trim_smithing_template"}] unless entity @a[tag=blue.tr.killer,tag=blue.tr.trim.eye,limit=1] run return 0
 function blue:shared/get_name
-data modify storage blue:data player_name_temp set from storage blue:data player_name
+data modify storage blue:shared player_name_temp set from storage blue:shared player_name
 execute as @a[tag=blue.tr.killer,limit=1] run function blue:tr/inv/transfer/target/swap/eye
+advancement revoke @s only blue:tr/trust eye
 tellraw @s ["",{"text":"⚠","color":"dark_red"},{"text":" - ","color":"dark_gray"},{"selector":"@a[tag=blue.tr.killer,limit=1]"},{"translate":"blue.tr.stole_ownership","fallback":" has stolen your ownership over ","color":"gray"},{"translate":"Eye","color":"#1F8A46"}," ",{"text":"ℹ","color":"gray","hoverEvent":{"action":"show_text","contents":[{"translate":"blue.tr.stolen_hover_1","fallback":"Dying to a player will transfer trims to them, based on the 'Death Transfer' setting.\n","color":"gray"},{"translate":"blue.tr.stolen_hover_2","fallback":"Click here for a shortcut to the main menu","color":"dark_gray","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger Trims_Menu.BLUE"}}]
 tag @s remove blue.tr.eye

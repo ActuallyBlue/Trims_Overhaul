@@ -1,8 +1,7 @@
-execute store success score #.sneaking blue.misc if predicate blue:shared/is_sneaking
-execute if score #.sneaking blue.misc matches 1 if entity @s[advancements={blue:tr/tags={not_sneaking=true}}] run function blue:tr/effects/spire/sneak
+execute if predicate blue:shared/is_sneaking if entity @s[advancements={blue:tr/tags={not_sneaking=true}}] run function blue:tr/effects/spire/sneak
 execute if score #.20 blue.misc matches 15 run function blue:tr/effects/spire/delay
 execute if dimension overworld if entity @s[y=450,dy=30] in the_end run function blue:tr/effects/spire/to_end
-execute if score #.60 blue.misc matches 50 if score #.spire.no_gravity blue.config matches 1 store success score #.remove_NoGravity blue.misc as @e[distance=..6,type=!#blue:shared/no_effects,type=!warden,type=!enderman,type=!player,tag=!blue.tr.spire.NoGravity,tag=!smithed.strict] at @s run function blue:tr/effects/spire/apply_no_gravity
+execute if score #.60 blue.misc matches 50 if score #.spire.no_gravity blue.config matches 1..2 run function blue:tr/effects/spire/check_setting
 execute if score #.20 blue.misc matches 20 run particle end_rod ~ ~0.8 ~ 0.2 0.3 0.2 0.02 2 normal @a[scores={blue.particles=2..}]
 execute unless entity @s[tag=blue.tr.mats.shulker] run return fail
 execute if score #.20 blue.misc matches 10 run particle end_rod ~ ~0.8 ~ 0.2 0.3 0.2 0.02 2 normal @a[scores={blue.particles=1..}]

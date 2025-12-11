@@ -1,4 +1,4 @@
-execute if items entity @s armor.head *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/head with storage blue:data trims.armor.head
+execute if items entity @s armor.head *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/head with storage blue:trims armor.head
 attribute @s knockback_resistance modifier remove blue:tr.head
 attribute @s armor_toughness modifier remove blue:tr.head
 attribute @s movement_speed modifier remove blue:tr.head

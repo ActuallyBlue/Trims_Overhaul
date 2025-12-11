@@ -2,12 +2,12 @@ item replace block 200600 2 200600 container.7 from entity @a[tag=blue.tr.transf
 item replace block 200600 2 200600 container.6 from entity @a[tag=blue.tr.transfer_user,limit=1] armor.chest
 item replace block 200600 2 200600 container.5 from entity @a[tag=blue.tr.transfer_user,limit=1] armor.legs
 item replace block 200600 2 200600 container.4 from entity @a[tag=blue.tr.transfer_user,limit=1] armor.feet
-data modify storage blue:data trims.inventory set from block 200600 2 200600 Items
-data modify storage blue:data trims.transfer[{Slot:7b}].components."minecraft:trim" set from storage blue:data trims.inventory[{Slot:7b}].components."minecraft:trim"
-data modify storage blue:data trims.transfer[{Slot:6b}].components."minecraft:trim" set from storage blue:data trims.inventory[{Slot:6b}].components."minecraft:trim"
-data modify storage blue:data trims.transfer[{Slot:5b}].components."minecraft:trim" set from storage blue:data trims.inventory[{Slot:5b}].components."minecraft:trim"
-data modify storage blue:data trims.transfer[{Slot:4b}].components."minecraft:trim" set from storage blue:data trims.inventory[{Slot:4b}].components."minecraft:trim"
-data modify block 200600 2 200600 Items set from storage blue:data trims.transfer
+data modify storage blue:trims inventory set from block 200600 2 200600 Items
+data modify storage blue:trims transfer[{Slot:7b}].components."minecraft:trim" set from storage blue:trims inventory[{Slot:7b}].components."minecraft:trim"
+data modify storage blue:trims transfer[{Slot:6b}].components."minecraft:trim" set from storage blue:trims inventory[{Slot:6b}].components."minecraft:trim"
+data modify storage blue:trims transfer[{Slot:5b}].components."minecraft:trim" set from storage blue:trims inventory[{Slot:5b}].components."minecraft:trim"
+data modify storage blue:trims transfer[{Slot:4b}].components."minecraft:trim" set from storage blue:trims inventory[{Slot:4b}].components."minecraft:trim"
+data modify block 200600 2 200600 Items set from storage blue:trims transfer
 item replace entity @s armor.head from block 200600 2 200600 container.7
 item replace entity @s armor.chest from block 200600 2 200600 container.6
 item replace entity @s armor.legs from block 200600 2 200600 container.5

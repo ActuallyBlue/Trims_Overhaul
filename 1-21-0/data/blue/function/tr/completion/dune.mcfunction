@@ -5,10 +5,10 @@ scoreboard players set @s blue.tr.desert_time 0
 scoreboard players set #.tr.dune_completed blue.config 1
 advancement revoke @s only blue:tr/quests/dune
 scoreboard objectives add blue.tr.mined_sand mined:sand
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Dune","color":"#E7C547"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Dune","color":"#E7C547"}
 function blue:tr/completion/z/setup
-data modify storage blue:data trims.dune.owner.text set from storage blue:data player_name
-data modify storage blue:data trims.dune.owner.color set value "#E7C547"
+data modify storage blue:trims dune.owner.text set from storage blue:shared player_name
+data modify storage blue:trims dune.owner.color set value "#E7C547"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#E7C547"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Dune","color":"#E7C547"}]
 function blue:tr/delayed/cmd/msg/dune

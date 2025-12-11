@@ -4,9 +4,25 @@ tag @s remove blue.tr.delete_confirmation
 scoreboard players set #.tr.manual_untrimming blue.config 1
 scoreboard players set #.tr.template_clearing blue.config 0
 execute as @a run function blue:tr/inv/untrim
-data remove storage blue:data trims.inventory
+data remove storage blue:trims inventory
 advancement grant @a only blue:tr/inv_checks
-data remove storage blue:data trims
+data remove storage blue:trims wayfinder
+data remove storage blue:trims silence
+data remove storage blue:trims shaper
+data remove storage blue:trims raiser
+data remove storage blue:trims sentry
+data remove storage blue:trims spire
+data remove storage blue:trims coast
+data remove storage blue:trims snout
+data remove storage blue:trims ward
+data remove storage blue:trims dune
+data remove storage blue:trims wild
+data remove storage blue:trims tide
+data remove storage blue:trims host
+data remove storage blue:trims eye
+data remove storage blue:trims rib
+data remove storage blue:trims vex
+data remove storage blue:trims logs
 execute as @a run function blue:tr/inv/unequip/attributes
 function blue:tr/settings/set_default
 scoreboard players reset #.tr.wayfinder_completed blue.config
@@ -85,9 +101,9 @@ kill b163102f-0-d-0-1
 kill b163102f-0-e-0-1
 tellraw @a {"translate":"blue.tr.delete_success","fallback":"\nYou have disabled ActuallyBlue's %s datapack, and it has removed most of its data from your world.\n\n - Please confirm the datapack is disabled by confirming it doesn't appear in %s\n - If you wish to re-enable the datapack, just run: %s\n\n   (the `trims...` is a placeholder. Fill in whatever looks correct)","color":"gray","with":[{"translate":"blue.tr.trims_overhaul","fallback":"Trims Overhaul","color":"#3aa56a"},{"text":"/datapack disable \"file/trims...\"","color":"white"},{"text":"/datapack enable \"file/trims...\"","color":"white"}]}
 playsound block.bell.use master @a 0 -128 0 0 0.75 1
-datapack disable "file/CUSTOM_trims_overhaul-MOD-v3.1.0.jar"
-datapack disable "file/CUSTOM_trims_overhaul-DP_RP-v3.1.0.zip"
-datapack disable "file/CUSTOM_trims_overhaul-DP-v3.1.0"
-datapack disable "file/trims_overhaul-MOD-v3.1.0.jar"
-datapack disable "file/trims_overhaul-DP_RP-v3.1.0.zip"
-datapack disable "file/trims_overhaul-DP_RP-v3.1.0"
+datapack disable "file/CUSTOM_trims_overhaul-MOD-v3.1.1.jar"
+datapack disable "file/CUSTOM_trims_overhaul-DP_RP-v3.1.1.zip"
+datapack disable "file/CUSTOM_trims_overhaul-DP-v3.1.1"
+datapack disable "file/trims_overhaul-MOD-v3.1.1.jar"
+datapack disable "file/trims_overhaul-DP_RP-v3.1.1.zip"
+datapack disable "file/trims_overhaul-DP_RP-v3.1.1"

@@ -1,3 +1,3 @@
-execute store result score #.temp blue.misc if entity @e[type=!#blue:shared/no_effects,distance=..6,predicate=blue:shared/has_glowing]
+execute store result score #.temp blue.misc if entity @e[type=!#blue:shared/no_ai,distance=..6,predicate=blue:shared/has_glowing]
 execute if score #.temp blue.misc matches 12.. unless entity @e[type=area_effect_cloud,tag=blue.tr.eye_quest,distance=..4,limit=1] run summon area_effect_cloud ~ ~ ~ {Rotation:[0,180],Radius:0,Tags:["blue.tr.eye_quest","smithed.entity","smithed.strict"],Duration:300,custom_particle:{type:"minecraft:block",block_state:"minecraft:air"},Particle:{type:"minecraft:block",block_state:"minecraft:air"}}
 execute unless score #.temp blue.misc matches 12.. positioned ^ ^ ^2.5 if block ~ ~ ~ #blue:shared/transparent if block ^ ^ ^-1 #blue:shared/transparent if block ^ ^ ^-2 #blue:shared/transparent if entity @s[distance=..128] run function blue:tr/quests/eye_cast

@@ -1,0 +1,16 @@
+gamerule elytra_movement_check true
+gamerule player_movement_check true
+gamerule spawn_wandering_traders true
+gamerule spawn_wardens true
+gamerule spawn_patrols true
+gamerule log_admin_commands true
+gamerule advance_time true
+gamerule advance_weather true
+gamerule spread_vines true
+gamerule spawn_mobs true
+gamerule raids true
+gamerule spawn_phantoms true
+gamerule fire_spread_radius_around_player 128
+gamerule random_tick_speed 3
+gamerule respawn_radius 16
+difficulty normal

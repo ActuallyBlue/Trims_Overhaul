@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Trims Overhaul Downloader</title>
 <link rel="icon" href="pack.png" type="image/png" sizes="32x32">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/primer/21.0.9/build.css">
 <style>
 :root{--bg:#0d1117;--card:#161b22;--muted:#8b949e;--accent:#58a6ff;--positive:#238636}
 html{color-scheme:dark}
@@ -72,18 +71,27 @@ button:hover{filter:brightness(1.2)}
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js" crossorigin="anonymous"></script>
-
 <script>
-window.ANALYTICS_ENDPOINT='https://trims.theactuallyblue.workers.dev/collect';
+
+
+window.addEventListener('load', () => {
+  fetch('https://trims.theactuallyblue.workers.dev/api', {
+    method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: 'v=0-00-0&l=none&t=test_ping'})
+    .then(r => r.text().then(t => { if (t !== 'valid') throw 0; }))
+    .catch(() => { const d = document.createElement('div');
+      d.innerText = '"Tracking" blocked - please enable it (for this site) to help me out.\n(Anonymously sends me the selected version, language, and pack type)';
+      d.style = "position:fixed;top:6rem;left:50%;transform:translateX(-50%);z-index:9999;background:var(--card);padding:1rem 1.4rem;border-radius:10px;border:1px solid #30363d;box-shadow:0 6px 18px #0006;white-space:pre-line;text-align:center";
+      requestAnimationFrame(() => document.body.appendChild(d))})}
+    );
+
+
 
 const mcSel=document.getElementById('mcver'), langSel=document.getElementById('lang'), typeSel=document.getElementById('type'),
-      btn=document.getElementById('download'), status=document.getElementById('status'), prog=document.getElementById('progress'),
-      modInfo=document.getElementById('mod-info'),
-      SUPPORTED_VERSIONS=['1.20.0','1.20.1','1.20.2','1.20.3','1.20.4','1.20.5','1.20.6','1.21.0','1.21.1','1.21.2','1.21.3','1.21.4','1.21.5','1.21.6','1.21.7','1.21.8','1.21.9','1.21.10'],
-      DONT_COMPRESS_RE=/\.(nbt|ogg|jar|zip)$/i,
-      TYPE_CODE={data_pack:'DP',resource_pack:'RP',data_resource_pack:'DP_RP',mod:'MOD'};
+btn=document.getElementById('download'), status=document.getElementById('status'), prog=document.getElementById('progress'),
+modInfo=document.getElementById('mod-info'),
+SUPPORTED_VERSIONS=['1.20.0','1.20.1','1.20.2','1.20.3','1.20.4','1.20.5','1.20.6','1.21.0','1.21.1','1.21.2','1.21.3','1.21.4','1.21.5','1.21.6','1.21.7','1.21.8','1.21.9','1.21.10'],
+DONT_COMPRESS_RE=/\.(nbt|ogg|jar|zip)$/i,
+TYPE_CODE={data_pack:'DP',resource_pack:'RP',data_resource_pack:'DP_RP',mod:'MOD'};
 
 (function(list){
   const frag=document.createDocumentFragment();
@@ -113,8 +121,7 @@ async function getTree() {
     const res = await fetch(url, { headers: { Accept: 'application/vnd.github.v3+json' } });
 
     if (res.status === 403) {
-      console.warn("GitHub API rate limit hit — using fallback");
-      setStatus("⚠️ GitHub rate limit reached.\nDownloads may be slower temporarily.", "error");
+      setStatus("GitHub rate limit reached.\nDownloads may be slower temporarily.", "error");
       return [];
     }
 
@@ -122,40 +129,26 @@ async function getTree() {
     return (await res.json()).tree || [];
 
   } catch (e) {
-    console.warn("Tree unavailable:", e);
     setStatus("Could not load repository index.\nFalling back to direct downloads.", "error");
     return [];
   }
 }
 
 async function fetchBuf(url,retries=2){for(let i=0;;i++){try{const r=await fetch(url);if(!r.ok)throw new Error('HTTP '+r.status);return await r.arrayBuffer()}catch(e){if(i>=retries)throw e;await new Promise(s=>setTimeout(s,200*(i+1)))}}};
-let repoTree=[];(async()=>{try{repoTree = await getTree()}catch(e){console.warn('tree unavailable',e)}})();
-
-function _analyticsKey(v,l,t){return `analytics:last:${v}|${l}|${t}`};
-function analyticsAllowed(v,l,t){try{const k=_analyticsKey(v,l,t),r=sessionStorage.getItem(k);if(!r)return true;return(Date.now()-parseInt(r,10))>600000}catch{return true}};
-function markAnalyticsSent(v,l,t){try{sessionStorage.setItem(_analyticsKey(v,l,t),String(Date.now()))}catch{}};
-
-async function sendAnalytics(evt){
-  if(!window.ANALYTICS_ENDPOINT) return;
-  const v=evt.version||'unknown',l=evt.language||'unknown',t=evt.type||'unknown';
-  if(!analyticsAllowed(v,l,t)) return; markAnalyticsSent(v,l,t);
-  const body=JSON.stringify(evt), blob=new Blob([body],{type:'application/json'});
-  if(!(navigator.sendBeacon && navigator.sendBeacon(window.ANALYTICS_ENDPOINT,blob)))
-    try{await fetch(window.ANALYTICS_ENDPOINT,{method:'POST',body,keepalive:true,credentials:'omit',headers:{'Content-Type':'application/json'}})}catch{}
-}
-
+let repoTree=[];
 
 const fileLabel=document.getElementById('current-file');
 
-async function addMany(zip, paths, weightPerFile=1, onFileDone){
+async function addMany(entries, paths, weightPerFile=1, onFileDone){
   if(!paths?.length)return 0;
   const limit=14,pool=new Set();
   for(const p of paths){
     const pr=Promise.resolve().then(async()=>{
-      setStatus(`Collecting ${p.split('/')[0]}…\n${p.split('/').pop()}`);
       try{
+        setStatus(`Collecting ${p.split('/')[0]}…\n${p.split('/').pop()}`);
         const buf=await fetchBuf(raw(p));
-        zip.file(p,buf,DONT_COMPRESS_RE.test(p)?{compression:'STORE'}:{compression:'DEFLATE',compressionOptions:{level:9}});
+        const u=new Uint8Array(buf);
+        entries[p]=DONT_COMPRESS_RE.test(p)?{data:u,compress:false}:u;
       }catch{}finally{onFileDone&&onFileDone(weightPerFile);}
     }).finally(()=>pool.delete(pr));
     pool.add(pr);
@@ -165,32 +158,34 @@ async function addMany(zip, paths, weightPerFile=1, onFileDone){
   return paths.length;
 }
 
-async function addIf(zip,path,dest,packFormat){
+async function addIf(entries,path,dest,packFormat){
   try{
     let content = await fetchBuf(raw(path));
     if (path.endsWith("pack.mcmeta")) {
-    const obj = JSON.parse(new TextDecoder().decode(content));
-    if (packFormat !== undefined) obj.pack.pack_format = packFormat;
-    content = new TextEncoder().encode(JSON.stringify(obj));
+      const obj = JSON.parse(new TextDecoder().decode(content));
+      if (packFormat !== undefined) obj.pack.pack_format = packFormat;
+      content = new TextEncoder().encode(JSON.stringify(obj));
     }
-    zip.file(dest||path,content,DONT_COMPRESS_RE.test(path)?{compression:'STORE'}:{compression:'DEFLATE',compressionOptions:{level:9}});
+    const u=new Uint8Array(content);
+    entries[dest||path]=DONT_COMPRESS_RE.test(path)?{data:u,compress:false}:u;
     return true;
   }catch{return false;}
 }
 
 btn.addEventListener('click',async()=>{
   btn.disabled=true; prog.style.width='0%';
-  const sel=mcSel.value, lang=langSel.value||'en_us', type=typeSel.value, zip=new JSZip();
-  const normalizedSel = sel.replace(/-/g, '.');
+  if(!repoTree.length) repoTree=await getTree();
+  const sel=mcSel.value, lang=langSel.value||'en_us', type=typeSel.value;
+  const entries={};
+  const normalizedSel = sel.replace(/-/g,'.');
   const packFormat = (normalizedSel === '1.20.0' || normalizedSel === '1.20.1') ? 15 : undefined;
   try{
     setStatus('Adding metadata…'); prog.style.width='2%';
-    await addIf(zip,'pack.mcmeta','pack.mcmeta',packFormat);
-    await addIf(zip,'pack.png','pack.png');
+    await addIf(entries,'pack.mcmeta','pack.mcmeta',packFormat);
+    await addIf(entries,'pack.png','pack.png');
 
     const assetsNeeded=type!=='data_pack', dataNeeded=type!=='resource_pack', wantMod=type==='mod';
     const existingRootFolders=new Set(repoTree.map(t=>t.path.split('/')[0])),foldersToInclude=[];
-
 
     if (dataNeeded) {
       const selMaj = +sel.split('-')[1] || 0;
@@ -219,31 +214,61 @@ btn.addEventListener('click',async()=>{
     const updateProg=()=>prog.style.width=Math.min(100,Math.round((doneWeight/totalWeight)*100))+'%';
 
     if(assetsNeeded){
-      await addMany(zip,assetPaths,1,(w)=>{doneWeight+=w;updateProg()});
-      for(const path in zip.files){if(path.startsWith('assets/')&&path.endsWith('.json')){try{const c=await zip.files[path].async('string');zip.file(path,JSON.stringify(JSON.parse(c)))}catch{}}}
-      if(lang==='en_us') zip.file(langPath, JSON.stringify(Object.fromEntries(Object.entries(JSON.parse(new TextDecoder().decode(await fetchBuf(raw(langPath))))).slice(0,18))), {compression:'DEFLATE'});
-      else{let merged={};try{const buf=await fetchBuf(raw(langPath));merged=JSON.parse(new TextDecoder().decode(buf))}catch{}for(const[k,v]of Object.entries({"blue.gap.1":"\uE99A","blue.gap.2":"\uE99B","blue.gap.3":"\uE99C","blue.gap.5":"\uE99D"}))merged[k]=v;zip.file(langPath,JSON.stringify(merged));doneWeight+=0.5;updateProg()}
+      await addMany(entries,assetPaths,1,(w)=>{doneWeight+=w;updateProg()});
+      for(const path in entries){
+        if(path.startsWith('assets/')&&path.endsWith('.json')){
+          try{
+            const c=new TextDecoder().decode(entries[path] instanceof Uint8Array?entries[path]:entries[path].data);
+            entries[path]=new TextEncoder().encode(JSON.stringify(JSON.parse(c)));
+          }catch{}
+        }
+      }
+      if(lang==='en_us') try{
+        const buf=await fetchBuf(raw(langPath));
+        entries[langPath]=new TextEncoder().encode(JSON.stringify(Object.fromEntries(Object.entries(JSON.parse(new TextDecoder().decode(buf))).slice(0,18))));
+      }catch{}
+      else{let merged={};try{const buf=await fetchBuf(raw(langPath));merged=JSON.parse(new TextDecoder().decode(buf))}catch{}for(const[k,v]of Object.entries({"blue.gap.1":"\uE99A","blue.gap.2":"\uE99B","blue.gap.3":"\uE99C","blue.gap.5":"\uE99D"}))merged[k]=v;entries[langPath]=new TextEncoder().encode(JSON.stringify(merged));doneWeight+=0.5;updateProg()}
     }
 
-    if(dataNeeded) await addMany(zip,dataPaths,3,(w)=>{doneWeight+=w;updateProg()});
-    if (wantMod) await addMany(zip, modPaths.filter(p => p !== 'pack.mcmeta'), 1, w=>{doneWeight+=w;updateProg()});
+    if(dataNeeded) await addMany(entries,dataPaths,3,(w)=>{doneWeight+=w;updateProg()});
+    if (wantMod) await addMany(entries, modPaths.filter(p => p !== 'pack.mcmeta'), 1, w=>{doneWeight+=w;updateProg()});
 
     setStatus('Compressing archive…');
     const base=Math.min(95,Math.round((doneWeight/totalWeight)*100));
-    const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:9},onUpdate:meta=>{const pct=Math.max(0,Math.min(100,meta.percent||0)),mapped=base+Math.round((100-base)*(pct/100));prog.style.width=mapped+'%'}});
-
+    const { zipSync } = await import("https://unpkg.com/fflate@0.8.2/esm/browser.js");
+    const zipBytes = zipSync(entries,{level:9});
     const ext = wantMod ? 'jar' : 'zip',
       code = TYPE_CODE[type] || 'DP',
       fname = `CUSTOM_trims_overhaul-${code}-v${
         JSON.parse(new TextDecoder().decode(await fetchBuf(raw("pack.mcmeta"))))
             .pack.description?.[0]?.with?.[0]
       }.${ext}`;
-
-    saveAs(blob,fname); setStatus(`Downloaded ${fname}`,'success'); prog.style.width='100%';
-  sendAnalytics({version:sel, language:lang, type});
+    const blob=new Blob([zipBytes]);
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url;a.download=fname;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),600000);
+    setStatus(`Downloaded ${fname}`,'success'); prog.style.width='100%';
   }catch(e){console.error(e);setStatus('Error: '+(e&&e.message?e.message:e),'error')}
 
-  finally{btn.disabled=!mcSel.value}
+finally {
+  const v = sel || 'unknown', l = lang || 'unknown', t = type || 'unknown';
+  const key = `limit:${v}|${l}|${t}`;
+  const API_ENDPOINT = 'https://trims.theactuallyblue.workers.dev/api';
+  try {
+    const r = sessionStorage.getItem(key);
+    if (!r || (Date.now() - parseInt(r, 10)) > 60000) {
+      sessionStorage.setItem(key, String(Date.now()));
+      const body = `v=${v}&l=${l}&t=${TYPE_CODE[type]}`;
+      const blob = new Blob([body], { type: 'text/plain' });
+      if (!(navigator.sendBeacon && navigator.sendBeacon(API_ENDPOINT, blob))) {
+        await fetch(API_ENDPOINT, { method: 'POST', body: blob, keepalive: true, credentials: 'omit', headers: { 'Content-Type': 'text/plain' } }); // Simplified header
+      }
+    }
+  } catch {}
+  btn.disabled = !mcSel.value;
+}
+
 });
 
 function setStatus(t,c=''){status.textContent=t;status.className=c?`status ${c}`:'status'}

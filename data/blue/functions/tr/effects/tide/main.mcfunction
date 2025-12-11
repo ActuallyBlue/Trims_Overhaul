@@ -5,9 +5,8 @@ execute unless score #.swimming blue.misc matches 1 if score #.tide.ambient blue
 execute unless score #.swimming blue.misc matches 1 if score #.tide.ambient blue.misc matches 1 run particle dolphin ~ ~0.9 ~ 0.22 0.4 0.22 0 1 normal @a[scores={blue.particles=2..}]
 execute if score #.swimming blue.misc matches 1 run particle dolphin ~ ~0.2 ~ 0.15 0.15 0.15 0 1 normal @a[scores={blue.particles=1..}]
 execute if predicate blue:shared/in_water run function blue:tr/effects/tide/in_water
-scoreboard players set #.temp blue.misc 0
 execute if predicate blue:shared/raining unless biome ~ ~ ~ #blue:no_rain positioned over ocean_floor at @s[dy=100] run function blue:tr/effects/tide/in_rain
-execute unless score #.tide.speed_status blue.misc = #.temp blue.misc run function blue:tr/effects/tide/speed
+execute if score #.tide.in_rain blue.misc matches 1 unless predicate blue:shared/raining run function blue:tr/effects/tide/speed
 execute if predicate blue:tr/holding_conduit run function blue:tr/effects/tide/conduit
 execute store success score #.temp blue.misc if predicate blue:tr/hold_trident
 execute unless score #.temp blue.misc = #.tide.technique blue.misc run function blue:tr/effects/tide/technique

@@ -4,7 +4,10 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "items": ["minecraft:crossbow"]
+        "items": [
+          "minecraft:crossbow"
+        ],
+        "nbt": "{ChargedProjectiles:[{}]}"
       }
     },
     "flags": {

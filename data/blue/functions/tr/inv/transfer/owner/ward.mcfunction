@@ -9,7 +9,7 @@ execute if entity @s[tag=blue.tr.trim.ward] unless entity @s[tag=blue.tr.ward] r
 execute if entity @s[tag=blue.tr.ward] run function blue:tr/inv/transfer/owner/fail
 execute if entity @s[tag=blue.tr.ward] run return 0
 execute as @a[tag=blue.tr.transfer_target,limit=1] facing entity @s feet run function blue:tr/inv/transfer/raycast/ward
-data modify storage blue:data trims.logs.append.target set from storage blue:data player_name
+data modify storage blue:trims logs.append.target set from storage blue:shared player_name
 function blue:shared/get_name
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Ward","color":"#5C70AE"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Ward","color":"#5C70AE"}
 function blue:tr/inv/transfer/log

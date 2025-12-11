@@ -1,3 +1,3 @@
-execute if entity @s[tag=blue.tr.tide] unless score #.tr.allow_empowerment blue.config matches 0 if data storage blue:data trims.armor{feet:{material:"minecraft:heart_of_the_sea"},legs:{material:"minecraft:heart_of_the_sea"},chest:{material:"minecraft:heart_of_the_sea"},head:{material:"minecraft:heart_of_the_sea"}} run function blue:tr/inv/equip/heart
+execute if entity @s[tag=blue.tr.tide] unless score #.tr.allow_empowerment blue.config matches 0 if data storage blue:trims armor{feet:{material:"minecraft:heart_of_the_sea"},legs:{material:"minecraft:heart_of_the_sea"},chest:{material:"minecraft:heart_of_the_sea"},head:{material:"minecraft:heart_of_the_sea"}} run function blue:tr/inv/equip/heart
 scoreboard players set @s[tag=blue.tr.tide] blue.tr.current_trim 12
 tag @s add blue.tr.trim.tide

@@ -1,2 +1,2 @@
-data modify storage blue:data global.minecraft set value "1.2"
+data modify storage blue:shared server_version set value "1.2"
 function blue:tr/debug/z/last

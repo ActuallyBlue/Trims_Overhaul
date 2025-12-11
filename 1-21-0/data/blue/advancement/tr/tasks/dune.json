@@ -7,7 +7,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#blue:deserts"
+              "biomes": "#blue:sandy"
             }
           },
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},

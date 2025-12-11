@@ -5,10 +5,6 @@
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:reference",
-            "name": "blue:shared/in_structure"
-          },
-          {
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
@@ -25,6 +21,21 @@
               }
             }
           },
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:reference",
+                "name": "blue:shared/in_structure"
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biomes": "minecraft:mushroom_fields"
+                }
+              }
+            ]
+          },
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":1}
         ]
@@ -34,10 +45,6 @@
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "blue:shared/in_structure"
-          },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
@@ -51,6 +58,21 @@
                 }
               }
             }
+          },
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:reference",
+                "name": "blue:shared/in_structure"
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biomes": "minecraft:mushroom_fields"
+                }
+              }
+            ]
           },
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":0}

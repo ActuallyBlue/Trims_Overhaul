@@ -4,10 +4,10 @@ advancement grant @a only blue:tr/display/sentry
 scoreboard players set @s blue.tr.raids_won 0
 scoreboard players set #.tr.sentry_completed blue.config 1
 advancement revoke @s only blue:tr/quests/sentry
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Sentry","color":"#4B885B"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Sentry","color":"#4B885B"}
 function blue:tr/completion/z/setup
-data modify storage blue:data trims.sentry.owner.text set from storage blue:data player_name
-data modify storage blue:data trims.sentry.owner.color set value "#4B885B"
+data modify storage blue:trims sentry.owner.text set from storage blue:shared player_name
+data modify storage blue:trims sentry.owner.color set value "#4B885B"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#4B885B"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Sentry","color":"#4B885B"}]
 function blue:tr/delayed/cmd/msg/sentry

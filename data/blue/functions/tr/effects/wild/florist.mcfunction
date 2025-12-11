@@ -8,22 +8,22 @@ schedule function blue:tr/effects/wild/florist_cooldown 30t
 kill @e[type=interaction,tag=blue.tr.wild_florist_hitbox,limit=1]
 item modify entity @s[gamemode=!creative] weapon blue:shared/reduce_count
 item replace entity b163102f-0-0-0-100000000 weapon from entity @s weapon
-data modify storage blue:data trims.item set from entity b163102f-0-0-0-100000000 HandItems[0].id
+data modify storage blue:trims item set from entity b163102f-0-0-0-100000000 HandItems[0].id
 effect give @s saturation 1 0
-execute if data storage blue:data trims{item:"minecraft:allium"} run effect give @s fire_resistance 3 0
-execute if data storage blue:data trims{item:"minecraft:azure_bluet"} run effect give @s blindness 11 0
-execute if data storage blue:data trims{item:"minecraft:blue_orchid"} run effect give @s saturation 4 0
-execute if data storage blue:data trims{item:"minecraft:dandelion"} run effect give @s saturation 3 0
-execute if data storage blue:data trims{item:"minecraft:cornflower"} run effect give @s jump_boost 5 0
-execute if data storage blue:data trims{item:"minecraft:lily_of_the_valley"} run effect give @s poison 11 0
-execute if data storage blue:data trims{item:"minecraft:oxeye_daisy"} run effect give @s regeneration 7 0
-execute if data storage blue:data trims{item:"minecraft:poppy"} run effect give @s night_vision 5 0
-execute if data storage blue:data trims{item:"minecraft:torchflower"} run effect give @s night_vision 5 0
-execute if data storage blue:data trims{item:"minecraft:red_tulip"} run effect give @s weakness 7 0
-execute if data storage blue:data trims{item:"minecraft:orange_tulip"} run effect give @s weakness 7 0
-execute if data storage blue:data trims{item:"minecraft:white_tulip"} run effect give @s weakness 7 0
-execute if data storage blue:data trims{item:"minecraft:pink_tulip"} run effect give @s weakness 7 0
-execute if data storage blue:data trims{item:"minecraft:wither_rose"} run effect give @s night_vision 7 0
+execute if data storage blue:trims {item:"minecraft:allium"} run effect give @s fire_resistance 3 0
+execute if data storage blue:trims {item:"minecraft:azure_bluet"} run effect give @s blindness 11 0
+execute if data storage blue:trims {item:"minecraft:blue_orchid"} run effect give @s saturation 4 0
+execute if data storage blue:trims {item:"minecraft:dandelion"} run effect give @s saturation 3 0
+execute if data storage blue:trims {item:"minecraft:cornflower"} run effect give @s jump_boost 5 0
+execute if data storage blue:trims {item:"minecraft:lily_of_the_valley"} run effect give @s poison 11 0
+execute if data storage blue:trims {item:"minecraft:oxeye_daisy"} run effect give @s regeneration 7 0
+execute if data storage blue:trims {item:"minecraft:poppy"} run effect give @s night_vision 5 0
+execute if data storage blue:trims {item:"minecraft:torchflower"} run effect give @s night_vision 5 0
+execute if data storage blue:trims {item:"minecraft:red_tulip"} run effect give @s weakness 7 0
+execute if data storage blue:trims {item:"minecraft:orange_tulip"} run effect give @s weakness 7 0
+execute if data storage blue:trims {item:"minecraft:white_tulip"} run effect give @s weakness 7 0
+execute if data storage blue:trims {item:"minecraft:pink_tulip"} run effect give @s weakness 7 0
+execute if data storage blue:trims {item:"minecraft:wither_rose"} run effect give @s night_vision 7 0
 playsound block.flowering_azalea.break player @a ~ ~ ~ 0.75 0.5
 playsound block.flowering_azalea.break player @a ~ ~ ~ 0.75 0.5
 playsound block.flowering_azalea.break player @a ~ ~ ~ 0.75 0.5

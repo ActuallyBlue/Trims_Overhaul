@@ -14,7 +14,7 @@ execute if entity @s[advancements={blue:tr/quests/wild_tames={trader_llama=true}
 execute if entity @s[advancements={blue:tr/quests/wild_tames={skeleton_horse=true}}] run scoreboard players add #.temp blue.misc 1
 execute if entity @s[advancements={blue:tr/quests/wild_tames={zombie_horse=true}}] run scoreboard players add #.temp blue.misc 1
 execute if entity @s[advancements={blue:tr/quests/wild_tames={non_vanilla=true}}] run scoreboard players add #.temp blue.misc 1
-execute unless score #.temp blue.misc matches 8.. run return fail
+execute unless score #.temp blue.misc >= #.tr.wild_quest_tames blue.config run return fail
 execute as @e[type=#blue:shared/peaceful,distance=..12] run function blue:tr/quests/wild_tamed
 execute unless score #.temp blue.misc matches -3211 run return fail
 execute store success score #.temp blue.misc if entity @e[type=skeleton_horse,tag=blue.tr.tamed,limit=1]
@@ -30,4 +30,4 @@ execute if entity @e[type=wolf,tag=blue.tr.tamed,limit=1] run scoreboard players
 execute if entity @e[type=mule,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
 execute if entity @e[type=cat,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
 tag @e[tag=blue.tr.tamed] remove blue.tr.tamed
-execute if score #.temp blue.misc matches 6.. run function blue:tr/completion/wild
+execute if score #.temp blue.misc >= #.tr.wild_quest_cave blue.config run function blue:tr/completion/wild

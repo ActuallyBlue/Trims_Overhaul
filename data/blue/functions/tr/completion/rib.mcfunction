@@ -5,10 +5,10 @@ scoreboard players set @s blue.tr.lava_seconds 0
 scoreboard players set #.tr.rib_completed blue.config 1
 advancement revoke @s only blue:tr/quests/rib_complete
 team add blue.tr.rib
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Rib","color":"#E6484B"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Rib","color":"#E6484B"}
 function blue:tr/completion/z/setup
-data modify storage blue:data trims.rib.owner.text set from storage blue:data player_name
-data modify storage blue:data trims.rib.owner.color set value "#E6484B"
+data modify storage blue:trims rib.owner.text set from storage blue:shared player_name
+data modify storage blue:trims rib.owner.color set value "#E6484B"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#E6484B"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Rib","color":"#E6484B"}]
 function blue:tr/delayed/cmd/msg/rib

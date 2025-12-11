@@ -1,4 +1,4 @@
-execute if entity @s[tag=blue.tr.dune_tossed] store result entity @s Air int 1 run scoreboard players get #.20 blue.misc
+execute if entity @s[tag=blue.tr.dune_tossed] store result entity @s Air byte 1 run scoreboard players get #.20 blue.misc
 particle falling_dust{block_state:{Name:sand}} ~ ~0.5 ~ 0.25 0.2 0.25 0 1
 particle falling_dust{block_state:{Name:sand}} ~ ~0.5 ~ 0.25 0.2 0.25 0 1 normal @a[scores={blue.particles=1..}]
 schedule function blue:tr/effects/dune/raisure/loop 1t

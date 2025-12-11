@@ -1,7 +1,7 @@
 effect clear @s darkness
 effect clear @s blindness
 scoreboard players add #.silence.ambient blue.misc 1
-execute if score #.60 blue.misc matches 30 as @e[type=!#blue:shared/no_effects,type=!warden,type=!player,tag=!blue.tr.silence.Silent,tag=!smithed.strict,distance=0.01..16] at @s run function blue:tr/effects/silence/entity
+execute if score #.60 blue.misc matches 30 as @e[type=!#blue:shared/no_ai,type=!warden,type=!player,tag=!blue.tr.silence.Silent,tag=!smithed.strict,distance=0.01..16] at @s run function blue:tr/effects/silence/entity
 execute if score #.60 blue.misc matches 40 as @a[distance=..9,advancements={blue:tr/trust={silence=false}},gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/silence/darkness
 execute as @a[distance=0.01..,predicate=blue:tr/muffled,tag=!blue.tr.trim.ward] run function blue:tr/effects/silence/muffled
 execute if score #.silence.ambient blue.misc matches 11.. store success score #.silence.ambient blue.misc run particle sculk_soul ~ ~0.8 ~ 0.2 0.35 0.2 0.01 1 normal @a[scores={blue.particles=1..}]

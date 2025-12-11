@@ -1,20 +1,38 @@
-{
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "items": "minecraft:crossbow"
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type_specific": {
+        "type": "minecraft:player",
+        "input": {
+          "sneak": true
+        }
+      },
+      "flags": {
+        "is_sneaking": true
+      },
+      "equipment": {
+        "mainhand": {
+          "items": "minecraft:crossbow"
+        }
       }
-    },
-    "type_specific": {
-      "type": "player",
-      "input": {
-        "sneak": true
+    }
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "components": {
+              "minecraft:charged_projectiles": []
+            }
+          }
+        }
       }
-    },
-    "flags": {
-      "is_sneaking": true
     }
   }
-}
+]

@@ -9,7 +9,7 @@ execute positioned ~ ~0.75 ~ as @e[type=#blue:shared/projectiles,distance=..3,ta
 execute as b163102f-0-4-0-1 at @s run function blue:tr/effects/flow/emp/trail
 execute if entity @s[advancements={blue:tr/tags={tutorial_barrage=false}}] if items entity @e[type=item,tag=!blue.tr.checked,distance=..3] contents wind_charge[count=1] run function blue:tr/effects/flow/emp/barrage/tutorial
 execute as @e[type=item,tag=!blue.tr.checked,predicate=blue:tr/barrage,distance=..6] if function blue:tr/effects/flow/emp/own run function blue:tr/effects/flow/emp/barrage/dropped
-execute as @e[type=breeze_wind_charge,tag=blue.tr.flow_proj] store result entity @s Air int 1 run scoreboard players get #.20 blue.misc
+execute as @e[type=breeze_wind_charge,tag=blue.tr.flow_proj] store result entity @s Air byte 1 run scoreboard players get #.20 blue.misc
 execute if score #.barrage_time blue.misc matches 1.. run return run function blue:tr/effects/flow/emp/barrage/loop
 attribute @s generic.gravity modifier remove blue:tr.trim
 execute if score #.flow.chamber blue.misc matches 0 if entity @s[x_rotation=-90..-12,predicate=!blue:shared/is_sneaking] run return run attribute @s generic.gravity modifier add blue:tr.trim -0.05 add_value

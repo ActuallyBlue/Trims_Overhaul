@@ -1,4 +1,4 @@
-execute store result entity @s Air int 1 run scoreboard players get #.20 blue.misc
+execute store result entity @s Air byte 1 run scoreboard players get #.20 blue.misc
 scoreboard players add @s blue.misc 1
 kill @s[scores={blue.misc=50..}]
 summon area_effect_cloud ~ ~ ~ {Rotation:[0,180],Tags:["blue.tr.rib_skull"],Duration:25}

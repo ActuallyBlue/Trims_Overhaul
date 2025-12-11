@@ -1,6 +1,6 @@
 {
   "values": [
-    "#blue:shared/no_effects",
+    "#blue:shared/no_ai",
     "minecraft:wandering_trader",
     "minecraft:skeleton_horse",
     "minecraft:tropical_fish",
@@ -38,6 +38,7 @@
     "minecraft:cat",
     "minecraft:pig",
     "minecraft:cow",
+    {"id":"minecraft:nautilus","required":false},
     {"id":"minecraft:happy_ghast","required":false},
     {"id":"minecraft:copper_golem","required":false},
     {"id":"#alexsmobs:passive_land_animals","required":false},

@@ -4,12 +4,14 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
+        "structures": "minecraft:shipwreck",
         "structure": "minecraft:shipwreck"
       }
     },
     {
       "condition": "minecraft:location_check",
       "predicate": {
+        "structures": "minecraft:shipwreck_beached",
         "structure": "minecraft:shipwreck_beached"
       }
     }

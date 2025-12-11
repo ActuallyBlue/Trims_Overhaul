@@ -2,7 +2,7 @@
 
 > #### Lightweight datapack that gives every trim unique powers, obtainable through one-time objectives.
 
-### Join the [Discord](https://discord.gg/3Pj7GszXPM) for any help or issues - Check out the [Wiki](https://github.com/ActuallyBlue/Trims_Overhaul/wiki) for more information whenever
+### Join the [Discord](https://discord.gg/TsC8AnaZeV) for any help or issues - Check out the [Wiki](https://github.com/ActuallyBlue/Trims_Overhaul/wiki) for more information whenever
 
 #### Supports translations in: English, Español, Français, Deutsch, Polski, Italiano, Português, Türkçe, Русский, 한국어, 日本語, and 简体中文 ⁽ᴺᵒᵗ ᴾᵉʳᶠᵉᶜᵗ⁾
 

@@ -1,5 +1,6 @@
 {
   "criteria": {
+    "mushroom_fields":{"trigger":"location","conditions":{"player":{"location":{"biomes":"mushroom_fields"}}}},
     "ancient_city":{"trigger":"location","conditions":{"player":{"location":{"structures":"ancient_city"}}}},
     "bastion_remnant":{"trigger":"location","conditions":{"player":{"location":{"structures":"bastion_remnant"}}}},
     "buried_treasure":{"trigger":"location","conditions":{"player":{"location":{"structures":"buried_treasure"}}}},

@@ -10,16 +10,16 @@ execute unless score #.reversal_charge blue.misc matches ..-600 run return fail
 execute if entity @s[gamemode=!creative,predicate=blue:tr/elytra,nbt={FallFlying:1b}] run function blue:tr/effects/spire/emp/plunge/end
 effect give @s resistance 1 10 true
 particle dragon_breath ~ ~0.7 ~ 0.3 0.3 0.3 0.02 3 force
-execute if score #.last_reversal_charge blue.misc matches 40.. run particle dragon_breath ~ ~0.7 ~ 0.35 0.35 0.35 0.02 4 normal @a[scores={blue.particles=1..}]
-execute if score #.last_reversal_charge blue.misc matches 50.. run particle dragon_breath ~ ~0.7 ~ 0.4 0.4 0.4 0.02 6 normal @a[scores={blue.particles=1..}]
-execute if score #.last_reversal_charge blue.misc matches 50.. run particle dragon_breath ~ ~0.7 ~ 0.4 0.4 0.4 0.02 4 normal @a[scores={blue.particles=2..}]
-execute if score #.last_reversal_charge blue.misc matches 70.. run particle dragon_breath ~ ~0.7 ~ 0.45 0.45 0.45 0.02 6
-execute if score #.last_reversal_charge blue.misc matches 70.. run particle dragon_breath ~ ~0.7 ~ 0.45 0.45 0.45 0.02 4 force
+execute if score #.spire.last_reversal_charge blue.misc matches 40.. run particle dragon_breath ~ ~0.7 ~ 0.35 0.35 0.35 0.02 4 normal @a[scores={blue.particles=1..}]
+execute if score #.spire.last_reversal_charge blue.misc matches 50.. run particle dragon_breath ~ ~0.7 ~ 0.4 0.4 0.4 0.02 6 normal @a[scores={blue.particles=1..}]
+execute if score #.spire.last_reversal_charge blue.misc matches 50.. run particle dragon_breath ~ ~0.7 ~ 0.4 0.4 0.4 0.02 4 normal @a[scores={blue.particles=2..}]
+execute if score #.spire.last_reversal_charge blue.misc matches 70.. run particle dragon_breath ~ ~0.7 ~ 0.45 0.45 0.45 0.02 6
+execute if score #.spire.last_reversal_charge blue.misc matches 70.. run particle dragon_breath ~ ~0.7 ~ 0.45 0.45 0.45 0.02 4 force
 particle end_rod ~ ~0.7 ~ 0.4 0.4 0.4 0.02 1
 execute if block ~ ~-1 ~ #blue:shared/passable run return fail
 execute unless predicate blue:shared/void run return fail
 function blue:tr/effects/spire/emp/plunge/end
-execute if score #.last_reversal_charge blue.misc matches ..54 run return fail
+execute if score #.spire.last_reversal_charge blue.misc matches ..54 run return fail
 execute as @e[type=!#blue:shared/peaceful,distance=0.01..24] run damage @s 7 magic by @a[tag=blue.tr.spire,limit=1]
 summon area_effect_cloud ~ ~ ~ {Rotation:[0,180],Tags:["blue.tr.plunge_aec"],Particle:{type:"witch"},Duration:30,Radius:3,RadiusPerTick:0.5}
 playsound entity.ender_dragon.shoot player @a[x=0] ~ ~ ~ 3 0.5

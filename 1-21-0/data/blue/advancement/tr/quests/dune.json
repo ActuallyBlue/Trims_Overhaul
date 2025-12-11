@@ -7,7 +7,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#blue:deserts"
+              "biomes": "#blue:sandy"
             }
           },
           {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.dune_completed"},"score":"blue.config"},"range":1}},

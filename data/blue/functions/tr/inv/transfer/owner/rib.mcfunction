@@ -9,7 +9,7 @@ execute if entity @s[tag=blue.tr.trim.rib] unless entity @s[tag=blue.tr.rib] run
 execute if entity @s[tag=blue.tr.rib] run function blue:tr/inv/transfer/owner/fail
 execute if entity @s[tag=blue.tr.rib] run return 0
 execute as @a[tag=blue.tr.transfer_target,limit=1] facing entity @s feet run function blue:tr/inv/transfer/raycast/rib
-data modify storage blue:data trims.logs.append.target set from storage blue:data player_name
+data modify storage blue:trims logs.append.target set from storage blue:shared player_name
 function blue:shared/get_name
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Rib","color":"#E6484B"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Rib","color":"#E6484B"}
 function blue:tr/inv/transfer/log

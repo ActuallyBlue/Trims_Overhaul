@@ -1,4 +1,4 @@
-execute if items entity @s armor.legs *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/legs with storage blue:data trims.armor.legs
+execute if items entity @s armor.legs *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/legs with storage blue:trims armor.legs
 attribute @s knockback_resistance modifier remove blue:tr.legs
 attribute @s armor_toughness modifier remove blue:tr.legs
 attribute @s movement_speed modifier remove blue:tr.legs

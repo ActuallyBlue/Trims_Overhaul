@@ -8,9 +8,6 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-              "location": {
-                "structures": "#blue:all_structures"
-              },
               "type_specific": {
                 "type": "player",
                 "advancements": {
@@ -23,6 +20,23 @@
                 }
               }
             }
+          },
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "structures": "#blue:all_structures"
+                }
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biomes": "minecraft:mushroom_fields"
+                }
+              }
+            ]
           },
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":1}
@@ -37,9 +51,6 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "location": {
-                "structures": "#blue:all_structures"
-              },
               "type_specific": {
                 "type": "player",
                 "advancements": {
@@ -49,6 +60,23 @@
                 }
               }
             }
+          },
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "structures": "#blue:all_structures"
+                }
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biomes": "minecraft:mushroom_fields"
+                }
+              }
+            ]
           },
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.require_unlock"},"score":"blue.config"},"range":0}

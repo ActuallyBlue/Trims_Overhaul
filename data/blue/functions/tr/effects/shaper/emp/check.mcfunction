@@ -6,7 +6,7 @@ execute if score #.shaper.throw_cooldown blue.misc matches 1.. run function blue
 execute if score #.shaper.throw_cooldown blue.misc matches 1.. run return 0
 execute on origin at @s[tag=blue.tr.shaper] anchored eyes positioned ^ ^ ^0.5 positioned ~ ~-0.5 ~ run function blue:tr/effects/shaper/emp/throw
 execute if score #.difficulty blue.misc matches ..2 if score #.temp blue.misc matches -1 store success score #.temp blue.misc run kill @s[predicate=!blue:r/20c]
-execute if score #.difficulty blue.misc matches 3 if score #.temp blue.misc matches -1 run kill
+execute if score #.difficulty blue.misc matches 3.. if score #.temp blue.misc matches -1 run kill
 execute if score #.temp blue.misc matches 0 run function blue:tr/item/quick_return
 scoreboard players operation #.shaper.throw_cooldown blue.misc = #.shaper.throw_cooldown blue.config
 scoreboard players reset #.temp blue.misc

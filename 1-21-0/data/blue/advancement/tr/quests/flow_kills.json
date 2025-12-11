@@ -5,5 +5,9 @@
   "4":{"trigger":"player_killed_entity","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/quests/flow_kills":{"3":true}}}}}},
   "3":{"trigger":"player_killed_entity","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/quests/flow_kills":{"2":true}}}}}},
   "2":{"trigger":"player_killed_entity","conditions":{"player":{"type_specific":{"type":"player","advancements":{"blue:tr/quests/flow_kills":{"1":true}}}}}},
-  "1":{"trigger":"player_killed_entity","conditions":{"player":[{"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.flow_completed"},"score":"blue.config"},"range":1}},{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},{"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"flow":false}}}}}]}}}
+  "1":{"trigger":"player_killed_entity","conditions":{"player":[{"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.flow_completed"},"score":"blue.config"},"range":1}},{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},{"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"flow":false}}}}}]}}
+  },
+  "rewards": {
+    "function": "blue:tr/quests/flow_notify"
+  }
 }

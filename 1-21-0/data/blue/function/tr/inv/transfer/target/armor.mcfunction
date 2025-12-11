@@ -7,7 +7,7 @@ $advancement grant @s only blue:tr/trust $(trim)
 tag @s add blue.tr.ignore_first
 function blue:tr/inv/transfer/target/change
 function blue:shared/get_name
-$data modify storage blue:data trims.$(trim).owner.text set from storage blue:data player_name
+$data modify storage blue:trims $(trim).owner.text set from storage blue:shared player_name
 advancement grant @s[advancements={blue:tr/tags={has_trim=false}}] only blue:tr/tags has_trim
 advancement grant @s[advancements={blue:tr/display/guides/ownership=false}] only blue:tr/display/guides/ownership
 $tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.given_ownership","fallback":"You've been given ownership over ","color":"gray"},{"translate":"$(translate)","color":"$(color)"}," ",{"text":"ℹ","hoverEvent":{"action":"show_text","value":{"translate":"blue.tr.info_shortcut","fallback":"Click here for a shortcut to the info menu","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger Trims_Menu.BLUE set 50"},"click_event":{"action":"run_command","command":"/trigger Trims_Menu.BLUE set 50"},"color":"gray"}]

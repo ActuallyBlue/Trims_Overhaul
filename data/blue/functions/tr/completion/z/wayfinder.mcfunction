@@ -12,10 +12,10 @@ tag @s add blue.tr.wayfinder
 advancement grant @s only blue:tr/trust wayfinder
 advancement grant @a only blue:tr/display/wayfinder
 scoreboard players set #.tr.wayfinder_completed blue.config 1
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Wayfinder","color":"#F1FFC8"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Wayfinder","color":"#F1FFC8"}
 function blue:tr/completion/z/setup
-data modify storage blue:data trims.wayfinder.owner.text set from storage blue:data player_name
-data modify storage blue:data trims.wayfinder.owner.color set value "#F1FFC8"
+data modify storage blue:trims wayfinder.owner.text set from storage blue:shared player_name
+data modify storage blue:trims wayfinder.owner.color set value "#F1FFC8"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#F1FFC8"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Wayfinder","color":"#F1FFC8"}]
 function blue:tr/delayed/cmd/msg/wayfinder

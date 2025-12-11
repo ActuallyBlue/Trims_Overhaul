@@ -1,0 +1,21 @@
+gamerule elytra_movement_check false
+gamerule player_movement_check false
+gamerule locator_bar false
+gamerule command_blocks_work true
+gamerule command_block_output false
+gamerule immediate_respawn true
+gamerule spawn_wandering_traders false
+gamerule spawn_wardens false
+gamerule spawn_patrols false
+gamerule log_admin_commands false
+gamerule advance_time false
+gamerule advance_weather false
+gamerule spread_vines false
+gamerule spawn_mobs false
+gamerule raids false
+gamerule spawn_phantoms false
+gamerule fire_spread_radius_around_player 0
+gamerule random_tick_speed 0
+gamerule respawn_radius
+difficulty peaceful
+kill @e[type=item]

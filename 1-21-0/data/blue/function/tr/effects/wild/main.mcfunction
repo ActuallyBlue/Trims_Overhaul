@@ -1,6 +1,6 @@
 execute as @e[type=tnt,distance=..8,tag=blue.tr.shaper.tnt,limit=1] unless entity @a[tag=blue.tr.shaper,advancements={blue:tr/trust={wild=true}},limit=1] at @s run function blue:tr/effects/wild/nature_war
 execute if score #.20 blue.misc matches 7 unless score #.wild.charging blue.misc matches 1 run particle spore_blossom_air ~ ~0.9 ~ 0.1 0.3 0.1 0 1 normal @a[scores={blue.particles=1..}]
-execute if score #.20 blue.misc matches 15 run function blue:tr/effects/wild/delay
+execute if score #.20 blue.misc matches 15 run function blue:tr/effects/wild/zoologist
 execute unless score #.wild.florist_cooldown blue.misc matches 1 if predicate blue:tr/florist anchored eyes run function blue:tr/effects/wild/florist
 execute if score #.wild.florist_active blue.misc matches -1 unless predicate blue:tr/florist store success score #.wild.florist_active blue.misc run kill @e[type=interaction,tag=blue.tr.wild_florist_hitbox,limit=1]
 execute unless entity @s[tag=blue.tr.mats.naut] run return fail

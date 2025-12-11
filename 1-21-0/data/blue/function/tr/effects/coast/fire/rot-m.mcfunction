@@ -1,1 +1,1 @@
-$tp @s ~ ~ ~ ~$(r1) ~$(r2)
+$execute rotated ~$(r1) ~$(r2) run function blue:tr/effects/coast/fire/tp

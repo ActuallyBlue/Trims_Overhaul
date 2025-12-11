@@ -1,8 +1,8 @@
 execute on origin if entity @s[gamemode=creative] run return fail
 execute if data entity @s {Age:5999s} run return run kill
-data remove storage blue:data trims.merge.item_data.Owner
-data modify storage blue:data trims.merge.item_data.Owner set from storage blue:data trims.item.Thrower
-data modify entity @s {} merge from storage blue:data trims.merge.item_data
+data remove storage blue:trims merge.item_data.Owner
+data modify storage blue:trims merge.item_data.Owner set from storage blue:trims item.Thrower
+data modify entity @s {} merge from storage blue:trims merge.item_data
 execute on origin run tag @s add blue.tr.quick_return
 tp @s @a[tag=blue.tr.quick_return,limit=1]
 tag @a[tag=blue.tr.quick_return,limit=1] remove blue.tr.quick_return

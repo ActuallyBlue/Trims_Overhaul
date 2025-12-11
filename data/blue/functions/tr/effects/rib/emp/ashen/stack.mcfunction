@@ -1,4 +1,5 @@
 advancement revoke @s only blue:tr/stack_ashen
+execute unless entity @s[tag=blue.tr.mats.blaze] run return 0
 execute if score #.rib.ashen_active blue.misc matches 1.. rotated ~ 0 positioned ^ ^ ^2 run function blue:tr/effects/rib/emp/ashen/spawn
 execute if score #.rib.ashen_active blue.misc matches 1.. run return 0
 execute unless score #.rib.strict_ashen blue.config matches 0 unless dimension the_nether run return 0

@@ -4,10 +4,10 @@ advancement grant @a only blue:tr/display/shaper
 scoreboard players set @s blue.tr.explosions_survived 0
 scoreboard players set #.tr.shaper_completed blue.config 1
 advancement revoke @s only blue:tr/quests/shaper_kill
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Shaper","color":"#8F8F8F"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Shaper","color":"#8F8F8F"}
 function blue:tr/completion/z/setup
-data modify storage blue:data trims.shaper.owner.text set from storage blue:data player_name
-data modify storage blue:data trims.shaper.owner.color set value "#8F8F8F"
+data modify storage blue:trims shaper.owner.text set from storage blue:shared player_name
+data modify storage blue:trims shaper.owner.color set value "#8F8F8F"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#8F8F8F"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Shaper","color":"#8F8F8F"}]
 function blue:tr/delayed/cmd/msg/shaper

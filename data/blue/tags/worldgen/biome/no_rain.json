@@ -1,7 +1,7 @@
 {
   "values": [
     "#minecraft:is_savanna",
-    "#blue:deserts",
+    "#blue:sandy",
     {"id":"#c:is_dry/overworld","required":false},
     {"id":"#c:climate_dry","required":false}
   ]

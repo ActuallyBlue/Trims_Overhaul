@@ -5,10 +5,10 @@ scoreboard players set @s blue.tr.damage_blocked 0
 scoreboard players set #.tr.ward_completed blue.config 1
 advancement revoke @s only blue:tr/quests/ward_stored
 scoreboard objectives add blue.tr.damage_blocked custom:damage_blocked_by_shield
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Ward","color":"#5C70AE"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Ward","color":"#5C70AE"}
 function blue:tr/completion/z/setup
-data modify storage blue:data trims.ward.owner.text set from storage blue:data player_name
-data modify storage blue:data trims.ward.owner.color set value "#5C70AE"
+data modify storage blue:trims ward.owner.text set from storage blue:shared player_name
+data modify storage blue:trims ward.owner.color set value "#5C70AE"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#5C70AE"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Ward","color":"#5C70AE"}]
 function blue:tr/delayed/cmd/msg/ward

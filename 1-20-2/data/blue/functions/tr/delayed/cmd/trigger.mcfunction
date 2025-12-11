@@ -1,10 +1,10 @@
 schedule function blue:tr/delayed/cmd/loop 1t
 scoreboard players set #.tr.trigger_loop blue.misc 400
 scoreboard players operation #.temp Trims_Menu.BLUE = @s Trims_Menu.BLUE
-data modify storage blue:data trims.temp.menu set value {"strikethrough":"false","color":"gray"}
-execute if entity @s[tag=blue.trim_disabled] run data modify storage blue:data trims.temp.menu.color set value "dark_red"
-execute if score #.tr.manual_transferring blue.config matches 0 run data modify storage blue:data trims.temp.menu.strikethrough set value "true"
-execute if score #.temp Trims_Menu.BLUE matches 1 run function blue:tr/delayed/cmd/main_menu with storage blue:data trims.temp.menu
+data modify storage blue:trims temp.menu set value {"strikethrough":"false","color":"gray"}
+execute if entity @s[tag=blue.trim_disabled] run data modify storage blue:trims temp.menu.color set value "dark_red"
+execute if score #.tr.manual_transferring blue.config matches 0 run data modify storage blue:trims temp.menu.strikethrough set value "true"
+execute if score #.temp Trims_Menu.BLUE matches 1 run function blue:tr/delayed/cmd/main_menu with storage blue:trims temp.menu
 execute if score #.temp Trims_Menu.BLUE matches 2 run function blue:tr/delayed/cmd/ability
 execute if score #.temp Trims_Menu.BLUE matches 3 run function blue:tr/delayed/cmd/all_owners
 execute if score #.temp Trims_Menu.BLUE matches 4 run function blue:tr/delayed/cmd/check_owned

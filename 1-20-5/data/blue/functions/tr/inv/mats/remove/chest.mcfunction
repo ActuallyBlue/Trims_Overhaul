@@ -1,4 +1,4 @@
-execute if items entity @s armor.chest *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/chest with storage blue:data trims.armor.chest
+execute if items entity @s armor.chest *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/chest with storage blue:trims armor.chest
 attribute @s generic.knockback_resistance modifier remove b163102f-0-2-0-1
 attribute @s generic.armor_toughness modifier remove b163102f-0-2-0-1
 attribute @s generic.movement_speed modifier remove b163102f-0-2-0-1

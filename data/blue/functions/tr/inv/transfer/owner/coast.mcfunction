@@ -9,7 +9,7 @@ execute if entity @s[tag=blue.tr.trim.coast] unless entity @s[tag=blue.tr.coast]
 execute if entity @s[tag=blue.tr.coast] run function blue:tr/inv/transfer/owner/fail
 execute if entity @s[tag=blue.tr.coast] run return 0
 execute as @a[tag=blue.tr.transfer_target,limit=1] facing entity @s feet run function blue:tr/inv/transfer/raycast/coast
-data modify storage blue:data trims.logs.append.target set from storage blue:data player_name
+data modify storage blue:trims logs.append.target set from storage blue:shared player_name
 function blue:shared/get_name
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Coast","color":"#C1C888"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Coast","color":"#C1C888"}
 function blue:tr/inv/transfer/log

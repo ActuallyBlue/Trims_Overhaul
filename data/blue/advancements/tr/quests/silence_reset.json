@@ -11,9 +11,7 @@
               "type_specific": {
                 "type": "player",
                 "advancements": {
-                  "blue:tr/quests/silence": {
-                    "first": true
-                  }
+                  "blue:tr/quests/silence_down": true
                 }
               }
             }

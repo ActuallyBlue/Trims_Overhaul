@@ -1,9 +1,10 @@
 execute as @a[scores={blue.tr.fear=1..}] run function blue:tr/effects/eye/emp/fear/player
 execute if predicate blue:shared/in_stronghold run function blue:tr/effects/eye/in_stronghold
-execute if score @s blue.tr.combat matches 0.. unless score #.eye.watching blue.misc matches 0.. if items entity @s weapon.* ender_eye if score #.eye.alarm_placed blue.misc matches 1 anchored eyes positioned ^ ^ ^2.5 run function blue:tr/effects/eye/alarm/macro with storage blue:data trims.eye
+execute if score @s blue.tr.combat matches 0.. unless score #.eye.watching blue.misc matches 0.. if items entity @s weapon.* ender_eye if score #.eye.alarm_placed blue.misc matches 1 anchored eyes positioned ^ ^ ^2.5 run function blue:tr/effects/eye/alarm/macro with storage blue:trims eye
 execute if score @s blue.tr.combat matches 0.. if items entity @s weapon.* ender_eye unless score #.eye.alarm_placed blue.misc matches 1 unless score #.eye.view_fear blue.misc matches 0.. unless score #.eye.watching blue.misc matches 0.. run title @s actionbar {"translate":"blue.tr.no_stronghold","fallback":"You need to enter a stronghold to select it (Cannot be undone)","color":"gray"}
-execute if score #.sneaking blue.misc matches 1 unless score #.eye.grand_reveal blue.misc matches 1.. run effect give @e[type=!#blue:shared/no_effects,distance=3..32,limit=4,sort=random,tag=!smithed.strict,predicate=!blue:shared/has_glowing] glowing 2 0 true
-execute if score #.sneaking blue.misc matches 0 unless score #.eye.grand_reveal blue.misc matches 1.. run effect give @e[type=!#blue:shared/no_effects,distance=2..24,limit=4,sort=random,tag=!smithed.strict,predicate=!blue:shared/has_glowing] glowing 2 0 true
+execute store success score #.sneaking blue.misc if predicate blue:shared/is_sneaking
+execute if score #.sneaking blue.misc matches 1 unless score #.eye.grand_reveal blue.misc matches 1.. run effect give @e[type=!#blue:shared/no_ai,distance=3..32,limit=4,sort=random,tag=!smithed.strict,predicate=!blue:shared/has_glowing] glowing 2 0 true
+execute if score #.sneaking blue.misc matches 0 unless score #.eye.grand_reveal blue.misc matches 1.. run effect give @e[type=!#blue:shared/no_ai,distance=2..24,limit=4,sort=random,tag=!smithed.strict,predicate=!blue:shared/has_glowing] glowing 2 0 true
 execute unless entity @s[tag=blue.tr.mats.eye] run return fail
 execute as @a[distance=0.01..32,advancements={blue:tr/trust={eye=false}},predicate=blue:shared/has_glowing] unless score @s blue.tr.fear matches 200.. run scoreboard players add @s blue.tr.fear 10
 execute at b163102f-0-1-0-1 as @a[distance=..300,advancements={blue:tr/trust={eye=false}},predicate=blue:shared/in_stronghold,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/eye/alarm/debuff

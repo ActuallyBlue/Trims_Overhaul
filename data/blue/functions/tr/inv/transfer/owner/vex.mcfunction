@@ -9,7 +9,7 @@ execute if entity @s[tag=blue.tr.trim.vex] unless entity @s[tag=blue.tr.vex] run
 execute if entity @s[tag=blue.tr.vex] run function blue:tr/inv/transfer/owner/fail
 execute if entity @s[tag=blue.tr.vex] run return 0
 execute as @a[tag=blue.tr.transfer_target,limit=1] facing entity @s feet run function blue:tr/inv/transfer/raycast/vex
-data modify storage blue:data trims.logs.append.target set from storage blue:data player_name
+data modify storage blue:trims logs.append.target set from storage blue:shared player_name
 function blue:shared/get_name
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Vex","color":"#CFC6A5"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Vex","color":"#CFC6A5"}
 function blue:tr/inv/transfer/log

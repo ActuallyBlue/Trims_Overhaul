@@ -46,6 +46,18 @@
                 }
               }
             }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -2,
+              "predicate": {
+                "block": {
+                  "blocks": "#blue:shared/passable"
+                }
+              }
+            }
           }
         ]
       }

@@ -9,7 +9,7 @@ execute if entity @s[tag=blue.tr.trim.shaper] unless entity @s[tag=blue.tr.shape
 execute if entity @s[tag=blue.tr.shaper] run function blue:tr/inv/transfer/owner/fail
 execute if entity @s[tag=blue.tr.shaper] run return 0
 execute as @a[tag=blue.tr.transfer_target,limit=1] facing entity @s feet run function blue:tr/inv/transfer/raycast/shaper
-data modify storage blue:data trims.logs.append.target set from storage blue:data player_name
+data modify storage blue:trims logs.append.target set from storage blue:shared player_name
 function blue:shared/get_name
-data modify storage blue:data trims.logs.append.trim set value {"translate":"Shaper","color":"#8F8F8F"}
+data modify storage blue:trims logs.append.trim set value {"translate":"Shaper","color":"#8F8F8F"}
 function blue:tr/inv/transfer/log

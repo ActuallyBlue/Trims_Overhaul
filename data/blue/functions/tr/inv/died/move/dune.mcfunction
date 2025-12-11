@@ -1,6 +1,7 @@
-execute unless data storage blue:data trims.fake_inv[{tag:{Trim:{pattern:"minecraft:dune"}}}] unless data storage blue:data trims.fake_inv[{id:"minecraft:dune_armor_trim_smithing_template"}] unless entity @a[tag=blue.tr.killer,tag=blue.tr.trim.dune,limit=1] run return 0
+execute unless data storage blue:trims fake_inv[{tag:{Trim:{pattern:"minecraft:dune"}}}] unless data storage blue:trims fake_inv[{id:"minecraft:dune_armor_trim_smithing_template"}] unless entity @a[tag=blue.tr.killer,tag=blue.tr.trim.dune,limit=1] run return 0
 function blue:shared/get_name
-data modify storage blue:data player_name_temp set from storage blue:data player_name
+data modify storage blue:shared player_name_temp set from storage blue:shared player_name
 execute as @a[tag=blue.tr.killer,limit=1] run function blue:tr/inv/transfer/target/swap/dune
+advancement revoke @s only blue:tr/trust dune
 tellraw @s ["",{"text":"⚠","color":"dark_red"},{"text":" - ","color":"dark_gray"},{"selector":"@a[tag=blue.tr.killer,limit=1]"},{"translate":"blue.tr.stole_ownership","fallback":" has stolen your ownership over ","color":"gray"},{"translate":"Dune","color":"#E7C547"}," ",{"text":"ℹ","color":"gray","hoverEvent":{"action":"show_text","contents":[{"translate":"blue.tr.stolen_hover_1","fallback":"Dying to a player will transfer trims to them, based on the 'Death Transfer' setting.\n","color":"gray"},{"translate":"blue.tr.stolen_hover_2","fallback":"Click here for a shortcut to the main menu","color":"dark_gray","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger Trims_Menu.BLUE"}}]
 tag @s remove blue.tr.dune

@@ -13,5 +13,5 @@ execute if items entity @s armor.feet copper_boots run scoreboard players add #.
 execute if predicate {"condition":"entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"items":["copper_sword","copper_axe","copper_pickaxe","copper_shovel","copper_hoe"]}}}} run scoreboard players add #.temp blue.misc 1
 execute if predicate {"condition":"entity_properties","entity":"this","predicate":{"equipment":{"offhand":{"items":["copper_sword","copper_axe","copper_pickaxe","copper_shovel","copper_hoe"]}}}} run scoreboard players add #.temp blue.misc 1
 execute unless score #.temp blue.misc matches 1.. run return fail
-execute store result storage blue:data trims.temp.copper float 0.1 run scoreboard players get #.temp blue.misc
-function blue:tr/effects/bolt/break_speed with storage blue:data trims.temp
+execute store result storage blue:trims temp.copper float 0.1 run scoreboard players get #.temp blue.misc
+function blue:tr/effects/bolt/break_speed with storage blue:trims temp

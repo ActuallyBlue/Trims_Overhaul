@@ -1,6 +1,6 @@
 execute unless entity @s[tag=blue.tr.ground] run function blue:tr/effects/snout/gamble/item/ground
 execute unless entity @s[tag=blue.tr.ground] run return 0
-execute if score #.snout.slow_gamble blue.misc matches 1.. if predicate blue:r/60c run scoreboard players remove @s[scores={blue.misc=..49}] blue.misc 1
+execute if score #.snout.withdrawal blue.misc matches 1.. if predicate blue:r/60c run scoreboard players remove @s[scores={blue.misc=..49}] blue.misc 1
 execute store result score #.gamble blue.misc run scoreboard players add @s blue.misc 1
 execute if score #.gamble blue.misc matches ..8 run playsound block.lever.click player @a ~ ~ ~ 0.7 1.6
 execute if score #.gamble blue.misc matches 9..16 run playsound block.lever.click player @a ~ ~ ~ 0.7 1.5

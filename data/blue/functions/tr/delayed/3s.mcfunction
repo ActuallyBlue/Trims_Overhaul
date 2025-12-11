@@ -43,6 +43,6 @@ execute unless score #.18s blue.misc matches 6.. run return 0
     execute unless score #.108s blue.misc matches 3.. run return 0
       scoreboard players reset #.108s blue.misc
       execute store result score #.difficulty blue.misc run difficulty
-      execute if score #.difficulty blue.misc matches ..1 unless data storage blue:data trims.merge.tnt{fuse:30s} run data merge storage blue:data {trims:{merge:{tnt:{Fuse:30s,fuse:30s,explosion_power:3}}}}
-      execute if score #.difficulty blue.misc matches 2 unless data storage blue:data trims.merge.tnt{fuse:40s} run data merge storage blue:data {trims:{merge:{tnt:{Fuse:40s,fuse:40s,explosion_power:2.5}}}}
-      execute if score #.difficulty blue.misc matches 3 unless data storage blue:data trims.merge.tnt{fuse:50s} run data merge storage blue:data {trims:{merge:{tnt:{Fuse:50s,fuse:50s,explosion_power:2}}}}
+      execute if score #.difficulty blue.misc matches ..1 unless data storage blue:trims merge.tnt{fuse:30s} run data merge storage blue:trims {merge:{tnt:{Fuse:30s,fuse:30s,explosion_power:3}}}
+      execute if score #.difficulty blue.misc matches 2 unless data storage blue:trims merge.tnt{fuse:40s} run data merge storage blue:trims {merge:{tnt:{Fuse:40s,fuse:40s,explosion_power:2.5}}}
+      execute if score #.difficulty blue.misc matches 3.. unless data storage blue:trims merge.tnt{fuse:50s} run data merge storage blue:trims {merge:{tnt:{Fuse:50s,fuse:50s,explosion_power:2}}}

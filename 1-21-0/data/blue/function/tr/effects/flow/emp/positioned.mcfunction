@@ -1,2 +1,2 @@
-execute summon breeze_wind_charge run data modify entity @s {} merge from storage blue:data trims.merge.boost
+execute summon breeze_wind_charge run data modify entity @s {} merge from storage blue:trims merge.boost
 execute if entity @s[advancements={blue:tr/flow_gust=true}] run function blue:tr/effects/flow/emp/gust

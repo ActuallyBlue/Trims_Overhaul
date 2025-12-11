@@ -8,6 +8,12 @@
         },
         "player": [
           {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structures": "#shipwreck"
+            }
+          },
+          {
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {

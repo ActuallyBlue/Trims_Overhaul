@@ -1,1 +1,1 @@
-$data modify storage blue:data trims.temp merge from storage blue:data trims.translations[{value:$(score)}]
+$data modify storage blue:trims temp merge from storage blue:trims translations[{value:$(score)}]

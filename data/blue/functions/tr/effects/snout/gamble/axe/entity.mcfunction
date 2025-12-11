@@ -10,7 +10,7 @@ execute if score @s blue.misc matches 30 run particle wax_on ^ ^7.5 ^2 0.1 0 0.1
 execute if score @s blue.misc matches 30 run particle wax_on ^ ^7.5 ^2 0.1 0 0.1 35 128
 execute if score @s blue.misc matches 31 run particle flash ^ ^7.5 ^0.5
 execute unless score @s blue.misc matches 32 run return 0
-execute positioned ^ ^8.5 ^0.5 as @e[type=!#blue:shared/no_effects,type=!player,distance=..10] run damage @s 50 player_attack by @a[tag=blue.tr.snout,limit=1]
+execute positioned ^ ^8.5 ^0.5 as @e[type=!#blue:shared/no_ai,type=!player,distance=..10] run damage @s 50 player_attack by @a[tag=blue.tr.snout,limit=1]
 execute positioned ^ ^8.5 ^0.5 as @a[gamemode=!spectator,tag=!blue.tr.snout,distance=..10] run damage @s 50 player_attack by @a[tag=blue.tr.snout,limit=1]
 playsound entity.lightning_bolt.impact player @a ^ ^7.5 ^0.5 2 0.8
 playsound item.armor.equip_gold player @a ^ ^7.5 ^0.5 2 0.5

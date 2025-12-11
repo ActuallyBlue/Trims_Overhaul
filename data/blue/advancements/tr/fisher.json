@@ -8,6 +8,10 @@
         },
         "player": [
           {
+            "condition": "minecraft:reference",
+            "name": "blue:shared/in_shipwreck"
+          },
+          {
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {

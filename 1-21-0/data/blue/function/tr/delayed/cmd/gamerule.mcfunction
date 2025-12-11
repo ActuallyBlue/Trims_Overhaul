@@ -1,0 +1,1 @@
+execute store result score #.temp blue.misc run gamerule sendCommandFeedback

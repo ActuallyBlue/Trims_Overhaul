@@ -10,6 +10,20 @@
             "scores": {
               "blue.tr.current_trim": 12
             }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "#.tide.stacks"
+              },
+              "score": "blue.misc"
+            },
+            "range": {
+              "max": 9
+            }
           }
         ],
         "item": {
