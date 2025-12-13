@@ -12,8 +12,8 @@ execute if score #.vex.isolation blue.misc matches 1 run function blue:tr/effect
 execute unless score #.vex.isolation blue.misc matches 1 run particle crit ~ ~0.9 ~ 0.25 0.3 0.25 0 1
 effect clear @s strength
 kill @e[type=iron_golem,distance=..5,tag=!smithed.entity,tag=!smithed.strict]
-execute if score #.60 blue.misc matches 40 if score #.vex.sneak blue.misc matches -19.. run playsound minecraft:entity.allay.item_thrown player @a ~ ~ ~ 2 2
-execute if score #.60 blue.misc matches 40 if score #.vex.sneak blue.misc matches -19.. run playsound minecraft:entity.allay.item_thrown player @a ~ ~ ~ 2 2
+execute if score #.60 blue.misc matches 40 if score #.vex.sneak blue.misc matches -19.. run playsound entity.allay.item_thrown player @a ~ ~ ~ 2 2
+execute if score #.60 blue.misc matches 40 if score #.vex.sneak blue.misc matches -19.. run playsound entity.allay.item_thrown player @a ~ ~ ~ 2 2
 execute unless score #.60 blue.misc matches 59 run return 0
 execute if score #.vex.sneak blue.misc matches ..0 run return 0
 scoreboard players set #.vex.sneak blue.misc -120

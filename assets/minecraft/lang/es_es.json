@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "Revelar",
   "blue.tr.reveal_description": "Aleatoriamente da Resplandor a los enemigos cercanos. Mantén agachado para aumentar ligeramente el rango.",
   "blue.tr.stalk_name": "Acecho",
-  "blue.tr.stalk_description": "Marca a los jugadores visibles a través de un Catalejo. Cada jugador acumula una carga con resplandor, que puedes liberar cuando está llena para 'Asustarlos' a todos, infligiendo daño medio con debuffs y un fuerte ruido.",
+  "blue.tr.stalk_description": "Marca a los jugadores visibles a través de un catalejo. Cada jugador acumula una carga que puedes liberar cuando esté llena para “Asustarlos” a todos, causando daño medio con debilitaciones y un ruido fuerte.",
   "blue.tr.alarm_name": "Alarma",
   "blue.tr.alarm_description": "Te alerta cuando los jugadores entran o salen de tu fortaleza. Ganas Velocidad e Invisibilidad mientras estás en ella.",
   "blue.tr.alarm_hover": "Selecciona la primera fortaleza en la que entras con el Ojo equipado, y no se puede mover. Sostener un Ojo de Ender rastreará la fortaleza.",
@@ -836,5 +836,6 @@
   "blue.tr.fisher_description": "Al pescar en biomas de arena o naufragios, obtienes tiradas de botín adicionales basadas en la suerte.",
   "blue.tr.protected_description": "Obtienes inmunidad a algunos efectos negativos mientras tienes Héroe de la Aldea.",
   "blue.tr.ballista_description": "Si tienes Héroe de la Aldea, mantente agachado con una ballesta cargada en tu mano principal para cargar un potente disparo perforador de armadura. Reduce el nivel del efecto con cada uso.",
-  "blue.tr.hostiles": "Hostiles"
+  "blue.tr.hostiles": "Hostiles",
+  "blue.tr.host_untrust": "Golpear a jugadores aliados suficientes veces eliminará la confianza del anfitrión de todos los jugadores cercanos."
 }

@@ -272,7 +272,7 @@
   "blue.tr.reveal_name": "Reveal",
   "blue.tr.reveal_description": "Randomly give Glowing to anything nearby. Hold sneak to slightly increase range.",
   "blue.tr.stalk_name": "Stalk",
-  "blue.tr.stalk_description": "Mark players visible through a Spyglass. Each player builds a charge with glowing, where you can release when it's full to 'Scare' them all, dealing medium damage with debuffs and a loud noise.",
+  "blue.tr.stalk_description": "Mark players visible through a Spyglass. Each player builds a charge, where you can release when it's full to 'Scare' them all, dealing medium damage with debuffs and a loud noise.",
   "blue.tr.alarm_name": "Alarm",
   "blue.tr.alarm_description": "Alerts you when players enter or leave your stronghold. You gain Speed and Invisibility while in it.",
   "blue.tr.alarm_hover": "Selects the first stronghold you enter with Eye equipped, and it cannot be moved. Holding an Eye of Ender will trace the stronghold.",
@@ -349,7 +349,7 @@
   "blue.tr.sharpshooter_name": "Sharpshooter",
   "blue.tr.sharpshooter_description": "Plain arrows deal more damage, doubled if inside a village.",
   "blue.tr.defender_name": "Defender",
-  "blue.tr.defender_description": "Gain buffs based on nearby Raiders. One will always be targeted with Glowing, and killing them will improve the buffs and drop bonus emeralds based on luck.",
+  "blue.tr.defender_description": "Gain buffs based on nearby Raiders. One will always be targeted, and killing them will improve the buffs and drop bonus emeralds based on luck.",
   "blue.tr.defender_hover": "Killing the targeted Raider will give the same ambient effects except longer and higher level, but the level reduces over time, meaning you can \"chain\" kills easier.",
   "blue.tr.protected_name": "Protected",
   "blue.tr.shaper_title": "Shaper Trim • The Demolitionist",
@@ -842,5 +842,6 @@
   "blue.tr.fisher_description": "When fishing in sandy biomes or shipwrecks, gain additional loot rolls based on luck.",
   "blue.tr.protected_description": "Gain immunity to some negative effects while you have Hero of the Village.",
   "blue.tr.ballista_description": "If you have Hero of the Village, hold sneak with a charged Crossbow in your mainhand to charge a powerful, armor-piercing shot. Reduces the effect level each use.",
-  "blue.tr.hostiles": "Hostiles"
+  "blue.tr.hostiles": "Hostiles",
+  "blue.tr.host_untrust": "Hitting allied players enough times will remove Host's trust from all nearby players"
 }

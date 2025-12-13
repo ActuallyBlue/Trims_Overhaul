@@ -6,7 +6,8 @@ execute if score #.temp blue.misc matches 0 unless score @s blue.tr.current_trim
 execute if score #.temp blue.misc matches 0 unless score @s blue.tr.current_trim matches 1.. run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.not_trim_owner","fallback":"You aren't the owner of this trim","color":"gray"}]
 execute if score #.temp blue.misc matches 0 unless score @s blue.tr.current_trim matches 1.. run return 0
 advancement grant @s[advancements={blue:tr/display/guides/trust=false}] only blue:tr/display/guides/trust
-tellraw @s[scores={blue.tr.current_trim=1..}] {"text":"-- -- -- -- -- -- -- -- -- -- -- -- -- --","color":"gray"}
+execute if score @s blue.tr.current_trim matches 4 run tellraw @s[scores={blue.tr.current_trim=1..}] [{"text":"-- -- -- -- -- -- -- ","color":"gray"},{"text":"ℹ","hoverEvent":{"action":"show_text","contents":{"translate":"blue.tr.host_untrust","fallback":"Hitting allied players enough times will remove Host's trust from all nearby players","color":"gray"}}}," -- -- -- -- -- -- --\n"]
+execute unless score @s blue.tr.current_trim matches 4 run tellraw @s[scores={blue.tr.current_trim=1..}] {"text":"-- -- -- -- -- -- -- -- -- -- -- -- -- --","color":"gray"}
 scoreboard players operation #.temp blue.tr.current_trim = @s blue.tr.current_trim
 scoreboard players operation #.temp blue.misc = @s Trims_Menu.BLUE
 execute if score @s Trims_Menu.BLUE matches 1001.. store result score #.link blue.id run scoreboard players remove #.temp blue.misc 1000

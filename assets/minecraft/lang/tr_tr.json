@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "Ortaya Çıkar",
   "blue.tr.reveal_description": "Yakındaki herhangi bir şeye rastgele Parlama verin. Menzili biraz artırmak için eğilmeyi basılı tutun.",
   "blue.tr.stalk_name": "Takip",
-  "blue.tr.stalk_description": "Dürbünle görülebilen oyuncuları işaretleyin. Her oyuncu parlamayla bir yük oluşturur, dolduğunda hepsini 'Korkutmak' için serbest bırakabilirsiniz, orta düzeyde hasar, zayıflatmalar ve yüksek bir sesle.",
+  "blue.tr.stalk_description": "Dürbünle görülebilen oyuncuları işaretler. Her oyuncu bir yük biriktirir; yük maksimuma ulaştığında serbest bırakılarak herkes “Korkutulur”, orta düzeyde hasar verilir, zayıflatıcı etkiler uygulanır ve yüksek bir ses çıkar.",
   "blue.tr.alarm_name": "Alarm",
   "blue.tr.alarm_description": "Oyuncular kalenize girdiğinde veya çıktığında sizi uyarır. İçindeyken Hız ve Görünmezlik kazanırsınız.",
   "blue.tr.alarm_hover": "Göz takılıyken girdiğiniz ilk kaleyi seçer ve taşınamaz. Bir Ender Gözü tutmak kalenin izini sürer.",
@@ -836,5 +836,6 @@
   "blue.tr.fisher_description": "Kum biyomlarında veya gemi enkazlarında balık tutarken, şansa bağlı olarak ek ganimet çekilişleri kazanın.",
   "blue.tr.protected_description": "Köy Kahramanı etkisine sahip olduğunuz sürece bazı olumsuz etkilere karşı bağışıklık kazanın.",
   "blue.tr.ballista_description": "Köy Kahramanı etkisine sahipseniz, ana elinizde yüklü bir Arbalet ile eğilmeyi basılı tutarak güçlü, zırh delici bir atış yükleyin. Her kullanımda etki seviyesini azaltır.",
-  "blue.tr.hostiles": "Düşmanlar"
+  "blue.tr.hostiles": "Düşmanlar",
+  "blue.tr.host_untrust": "Dost oyunculara yeterince kez vurmak, yakındaki tüm oyunculardan sunucu sahibinin güvenini kaldırır."
 }

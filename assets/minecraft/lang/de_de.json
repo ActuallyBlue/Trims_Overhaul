@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "Enthüllen",
   "blue.tr.reveal_description": "Gibt zufällig nahen Feinden Leuchten. Ducke dich, um die Reichweite leicht zu erhöhen.",
   "blue.tr.stalk_name": "Anpirschen",
-  "blue.tr.stalk_description": "Markiere Spieler, die durch ein Fernglas sichtbar sind. Jeder Spieler sammelt eine Ladung mit Leuchten, die du freisetzen kannst, wenn sie voll ist, um sie alle zu 'erschrecken', was mittleren Schaden mit Debuffs und einem lauten Geräusch zufügt",
+  "blue.tr.stalk_description": "Markiere Spieler, die durch ein Fernglas sichtbar sind. Jeder Spieler baut eine Aufladung auf, die du bei voller Ladung auslösen kannst, um sie alle zu „Erschrecken“. Dies verursacht mittleren Schaden mit Debuffs und einem lauten Geräusch.",
   "blue.tr.alarm_name": "Alarm",
   "blue.tr.alarm_description": "Warnt dich, wenn Spieler deine Festung betreten oder verlassen. Du gewinnst Geschwindigkeit und Unsichtbarkeit, während du darin bist.",
   "blue.tr.alarm_hover": "Wählt die erste Festung aus, die du mit dem ausgerüsteten Auge betrittst, und kann nicht verschoben werden. Das Halten eines Enderauges verfolgt die Festung.",
@@ -836,5 +836,6 @@
   "blue.tr.fisher_description": "Beim Angeln in Sandbiomen oder Schiffswracks erhältst du basierend auf Glück zusätzliche Beutewürfe.",
   "blue.tr.protected_description": "Du erhältst Immunität gegen einige negative Effekte, solange du den Dorfhheld-Effekt hast.",
   "blue.tr.ballista_description": "Wenn du den Dorfhheld-Effekt hast, halte dich geduckt, während du eine geladene Armbrust in der Haupthand hältst, um einen mächtigen, panzerbrechenden Schuss aufzuladen. Reduziert die Effektstufe bei jeder Verwendung.",
-  "blue.tr.hostiles": "Feindlich"
+  "blue.tr.hostiles": "Feindlich",
+  "blue.tr.host_untrust": "Das wiederholte Angreifen verbündeter Spieler entzieht allen Spielern in der Nähe das Vertrauen des Hosts."
 }

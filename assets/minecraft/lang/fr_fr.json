@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "Révélation",
   "blue.tr.reveal_description": "Donne aléatoirement du Resplendissement aux ennemis proches. Maintenez accroupi pour augmenter légèrement la portée.",
   "blue.tr.stalk_name": "Traque",
-  "blue.tr.stalk_description": "Marquez les joueurs visibles à travers une Longue-vue. Chaque joueur accumule une charge avec du resplendissement, que vous pouvez libérer lorsqu'elle est pleine pour les 'effrayer' tous, infligeant des dégâts moyens avec des débuffs et un son fort",
+  "blue.tr.stalk_description": "Marque les joueurs visibles à travers une longue-vue. Chaque joueur accumule une charge que vous pouvez libérer lorsqu’elle est pleine pour tous les « Effrayer », infligeant des dégâts moyens avec des affaiblissements et un bruit fort.",
   "blue.tr.alarm_name": "Alarme",
   "blue.tr.alarm_description": "Vous alerte lorsque les joueurs entrent ou sortent de votre forteresse. Vous gagnez de la Vitesse et de l'Invisibilité pendant que vous y êtes.",
   "blue.tr.alarm_hover": "Sélectionne la première forteresse dans laquelle vous entrez avec l'Œil équipé, et ne peut pas être déplacé. Tenir un Œil d'Ender tracera la forteresse.",
@@ -836,5 +836,6 @@
   "blue.tr.fisher_description": "Lorsque vous pêchez dans des biomes sablonneux ou des épaves, vous obtenez des lancers de butin supplémentaires basés sur la chance.",
   "blue.tr.protected_description": "Obtenez l'immunité contre certains effets négatifs tant que vous avez Héros du village.",
   "blue.tr.ballista_description": "Si vous avez Héros du village, accroupissez-vous avec une arbalète chargée dans votre main principale pour charger un tir puissant et perforant. Réduit le niveau de l'effet à chaque utilisation.",
-  "blue.tr.hostiles": "Hostiles"
+  "blue.tr.hostiles": "Hostiles",
+  "blue.tr.host_untrust": "Frapper des joueurs alliés à plusieurs reprises retirera la confiance de l’hôte à tous les joueurs à proximité."
 }

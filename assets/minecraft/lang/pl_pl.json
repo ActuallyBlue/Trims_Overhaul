@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "Ujawnienie",
   "blue.tr.reveal_description": "Losowo nadaj pobliskim wrogom efekt świecenia. Przytrzymaj skradanie, aby nieznacznie zwiększyć zasięg.",
   "blue.tr.stalk_name": "Śledzenie",
-  "blue.tr.stalk_description": "Oznacz graczy widocznych przez lunetę. Każdy gracz buduje ładunek świeceniem, a gdy jest pełny, możesz go uwolnić, aby ich wszystkich 'przestraszyć', zadając średnie obrażenia z negatywnymi efektami i głośnym dźwiękiem.",
+  "blue.tr.stalk_description": "Oznacza graczy widocznych przez lunetę. Każdy gracz gromadzi ładunek, który po naładowaniu do maksimum można uwolnić, aby „Przestraszyć” wszystkich, zadając średnie obrażenia, nakładając osłabienia i powodując głośny hałas.",
   "blue.tr.alarm_name": "Alarm",
   "blue.tr.alarm_description": "Ostrzega cię, gdy gracze wchodzą lub opuszczają twoją twierdzę. Zyskujesz szybkość i niewidzialność, będąc w niej.",
   "blue.tr.alarm_hover": "Wybiera pierwszą twierdzę, do której wejdziesz z założonym zdobieniem oka, i nie można jej przenieść. Trzymanie oka endera wskaże drogę do twierdzy.",
@@ -836,5 +836,6 @@
   "blue.tr.fisher_description": "Podczas łowienia w biomach piaszczystych lub wrakach, zyskaj dodatkowe rzuty na łup w zależności od szczęścia.",
   "blue.tr.protected_description": "Zyskaj odporność na niektóre negatywne efekty, gdy masz Efekt Bohatera Wioski.",
   "blue.tr.ballista_description": "Jeśli masz Efekt Bohatera Wioski, przytrzymaj skradanie się z naładowaną Kuszą w głównej ręce, aby naładować potężny, przebijający pancerz strzał. Zmniejsza poziom efektu przy każdym użyciu.",
-  "blue.tr.hostiles": "Wrogowie"
+  "blue.tr.hostiles": "Wrogowie",
+  "blue.tr.host_untrust": "Wielokrotne atakowanie sojuszniczych graczy spowoduje usunięcie zaufania gospodarza u wszystkich pobliskich graczy."
 }

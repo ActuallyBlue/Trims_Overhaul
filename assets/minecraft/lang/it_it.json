@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "Rivelare",
   "blue.tr.reveal_description": "Dà casualmente Brillare a qualunque cosa nelle vicinanze. Tieni premuto accovacciamento per aumentare leggermente la portata.",
   "blue.tr.stalk_name": "Pedinamento",
-  "blue.tr.stalk_description": "Marca i giocatori visibili attraverso uno Spyglass. Ogni giocatore costruisce una carica con brillare; quando è piena puoi rilasciare per 'Spaventarli' tutti, infliggendo danno medio con debuff e un forte rumore.",
+  "blue.tr.stalk_description": "Segna i giocatori visibili attraverso un cannocchiale. Ogni giocatore accumula una carica che puoi rilasciare quando è piena per “Spaventarli” tutti, infliggendo danni medi con penalità e un forte rumore.",
   "blue.tr.alarm_name": "Allarme",
   "blue.tr.alarm_description": "Ti avvisa quando i giocatori entrano o escono dalla tua roccaforte. Ottieni Velocità e Invisibilità mentre ci sei.",
   "blue.tr.alarm_hover": "Seleziona la prima roccaforte che entri con Eye equipaggiato, e non può essere spostata. Tenere un Occhio dell'Ender traccerà la roccaforte.",
@@ -835,5 +835,6 @@
   "blue.tr.fisher_description": "Quando peschi in biomi sabbiosi o relitti, ottieni tiri di bottino aggiuntivi in base alla fortuna.",
   "blue.tr.protected_description": "Ottieni immunità ad alcuni effetti negativi mentre hai Eroe del villaggio.",
   "blue.tr.ballista_description": "Se hai Eroe del villaggio, tieni premuto il tasto per accovacciarti con una balestra carica nella mano principale per caricare un colpo potente e perforante. Riduce il livello dell'effetto ad ogni utilizzo.",
-  "blue.tr.hostiles": "Ostili"
+  "blue.tr.hostiles": "Ostili",
+  "blue.tr.host_untrust": "Colpire ripetutamente i giocatori alleati rimuoverà la fiducia dell’host da tutti i giocatori nelle vicinanze."
 }

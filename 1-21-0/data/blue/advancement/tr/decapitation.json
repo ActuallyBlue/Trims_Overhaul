@@ -16,9 +16,25 @@
             "chance": 0.1
           }
         ],
-          "entity": {
-          "type": "minecraft:wither_skeleton"
-        }
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:wither_skeleton"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "blue.tr.rib"
+              }
+            }
+          }
+        ]
       }
     }
   },

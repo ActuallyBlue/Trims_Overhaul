@@ -1,11 +1,11 @@
 {
   "criteria":{
-  "iron_boots_1":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"iron_boots","predicates":{"minecraft:enchantments":[{"enchantments":"minecraft:soul_speed","levels":1}]}}}},
-  "iron_boots_2":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"iron_boots","predicates":{"minecraft:enchantments":[{"enchantments":"minecraft:soul_speed","levels":2}]}}}},
-  "iron_boots_3":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"iron_boots","predicates":{"minecraft:enchantments":[{"enchantments":"minecraft:soul_speed","levels":3}]}}}},
-  "enchanted_book_1":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"enchanted_book","predicates":{"minecraft:stored_enchantments":[{"enchantments":"minecraft:soul_speed","levels":1}]}}}},
-  "enchanted_book_2":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"enchanted_book","predicates":{"minecraft:stored_enchantments":[{"enchantments":"minecraft:soul_speed","levels":2}]}}}},
-  "enchanted_book_3":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"enchanted_book","predicates":{"minecraft:stored_enchantments":[{"enchantments":"minecraft:soul_speed","levels":3}]}}}},
+  "iron_boots_1":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"iron_boots","predicates":{"minecraft:enchantments":[{"enchantment":"minecraft:soul_speed","levels":1}]}}}},
+  "iron_boots_2":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"iron_boots","predicates":{"minecraft:enchantments":[{"enchantment":"minecraft:soul_speed","levels":2}]}}}},
+  "iron_boots_3":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"iron_boots","predicates":{"minecraft:enchantments":[{"enchantment":"minecraft:soul_speed","levels":3}]}}}},
+  "enchanted_book_1":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"enchanted_book","predicates":{"minecraft:stored_enchantments":[{"enchantment":"minecraft:soul_speed","levels":1}]}}}},
+  "enchanted_book_2":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"enchanted_book","predicates":{"minecraft:stored_enchantments":[{"enchantment":"minecraft:soul_speed","levels":2}]}}}},
+  "enchanted_book_3":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"enchanted_book","predicates":{"minecraft:stored_enchantments":[{"enchantment":"minecraft:soul_speed","levels":3}]}}}},
   "fire_potion":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"potion","components":{"potion_contents":{"potion":"minecraft:fire_resistance"}}}}},
   "potion":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"potion","components":{"potion_contents":{"potion":"minecraft:water"}}}}},
   "splash_potion":{"trigger":"thrown_item_picked_up_by_player","conditions":{"entity":{"type":"piglin"},"item":{"items":"splash_potion"}}},

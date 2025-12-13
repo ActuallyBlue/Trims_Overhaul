@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "Revelação",
   "blue.tr.reveal_description": "Aleatoriamente dá um efeito Brilho a inimigos próximos. Segure agachado para aumentar ligeiramente o alcance.",
   "blue.tr.stalk_name": "Perseguição",
-  "blue.tr.stalk_description": "Marca jogadores visíveis através de uma Luneta. Cada jogador acumula uma carga com um efeito de brilho, que você pode liberar quando estiver cheia para 'Assustar' todos eles, infligindo dano médio com debuffs e um som alto.",
+  "blue.tr.stalk_description": "Marca jogadores visíveis pela luneta. Cada jogador acumula uma carga que, ao atingir o máximo, pode ser liberada para “Assustar” todos, causando dano médio, aplicando efeitos negativos e emitindo um som alto.",
   "blue.tr.alarm_name": "Alarme",
   "blue.tr.alarm_description": "Avisa quando jogadores entram ou saem da sua fortaleza. Você ganha Velocidade e Invisibilidade dentro dela.",
   "blue.tr.alarm_hover": "Seleciona a primeira fortaleza em que você entra com o Olho equipado, e ela não pode ser movida. Segurar um Olho do Ender rastreará a fortaleza.",
@@ -836,5 +836,6 @@
   "blue.tr.fisher_description": "Ao pescar em biomas de areia ou naufrágios, ganhe rolagens de saque adicionais com base na sorte.",
   "blue.tr.protected_description": "Ganhe imunidade a alguns efeitos negativos enquanto tiver o Efeito Herói da Vila.",
   "blue.tr.ballista_description": "Se você tiver o Efeito Herói da Vila, segure o 'Sneak' (agachar) com uma Besta carregada na mão principal para carregar um tiro poderoso e perfurante de armadura. Reduz o nível do efeito a cada uso.",
-  "blue.tr.hostiles": "Hostis"
+  "blue.tr.hostiles": "Hostis",
+  "blue.tr.host_untrust": "Atingir jogadores aliados várias vezes removerá a confiança do anfitrião de todos os jogadores próximos."
 }

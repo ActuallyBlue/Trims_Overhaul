@@ -1,5 +1,4 @@
 tag @s add blue.tr.stalk_limit
-effect give @s glowing 1 0 true
 execute unless score #.eye.scare_cooldown blue.misc matches 1 unless score #.eye.scare_cooldown blue.misc matches 200.. run scoreboard players add #.eye.scare_charge blue.misc 1
 execute if score #.eye.watching blue.misc matches 0.. run return 0
 execute if entity @a[tag=blue.tr.mats.eye,limit=1] run scoreboard players add @s blue.tr.fear 600

@@ -18,7 +18,7 @@ execute if score #.eye.scare_charge blue.misc matches 180..199 run title @s acti
 execute if score #.eye.scare_charge blue.misc matches 200.. run title @s actionbar {"text":"- 👁👁👁👁👁👁👁👁👁👁 -","color":"green","bold":true}
 scoreboard players operation #.temp blue.misc = #.eye.scare_charge blue.misc
 scoreboard players operation #.temp blue.misc /= #20 blue.misc
-execute unless score #.temp blue.misc > #.eye.scare_charge_old blue.misc run return 0
+execute unless score #.temp blue.misc > #.eye.scare_charge_old blue.misc run return fail
 scoreboard players operation #.eye.scare_charge_old blue.misc = #.temp blue.misc
 execute if score #.eye.scare_charge blue.misc matches ..119 run function blue:tr/effects/eye/stalk/sound_low
 execute if score #.eye.scare_charge blue.misc matches 120..219 run function blue:tr/effects/eye/stalk/sound_high

@@ -266,7 +266,7 @@
   "blue.tr.reveal_name": "揭示",
   "blue.tr.reveal_description": "随机令附近敌人发光。按住潜行可略微提高范围。",
   "blue.tr.stalk_name": "跟踪",
-  "blue.tr.stalk_description": "用望远镜标记可见玩家。每名玩家会蓄积一层发光的“电荷”，电满后可一并释放“惊惧”，造成中等伤害并附加减益与巨响。",
+  "blue.tr.stalk_description": "标记通过望远镜可见的玩家。每名玩家都会积累充能，充能达到最大时可释放，使所有玩家进入“恐惧”状态，造成中等伤害，施加负面效果，并产生巨大的声响。",
   "blue.tr.alarm_name": "警报",
   "blue.tr.alarm_description": "当玩家进入或离开你的要塞时提醒你；在要塞内你获得速度与隐身。",
   "blue.tr.alarm_hover": "进入要塞且装备“之眼”后会选定第一个要塞，无法更改。手持末影之眼可追踪要塞方向。",
@@ -836,5 +836,6 @@
   "blue.tr.fisher_description": "在沙滩生物群系或沉船中钓鱼时，根据运气获得额外的战利品抽取次数。",
   "blue.tr.protected_description": "当您拥有“村庄英雄”效果时，获得对某些负面效果的免疫。",
   "blue.tr.ballista_description": "如果您拥有“村庄英雄”效果，在主手拿着已装填的弩时按住潜行，以充能一次强大的、穿透护甲的射击。每次使用都会降低效果等级。",
-  "blue.tr.hostiles": "敌对生物"
+  "blue.tr.hostiles": "敌对生物",
+  "blue.tr.host_untrust": "多次攻击友方玩家将使附近的所有玩家失去主机的信任"
 }

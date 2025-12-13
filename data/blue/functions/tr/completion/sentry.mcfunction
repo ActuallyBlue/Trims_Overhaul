@@ -16,7 +16,7 @@ scoreboard players reset #.sentry_stored blue.misc
 execute store result score #.temp blue.misc run clear @s sentry_armor_trim_smithing_template 0
 execute if score #.temp blue.misc matches 0 run scoreboard players set #.sentry_stored blue.misc 4
 playsound item.goat_horn.sound.0 player @a ~ ~ ~ 1.5 0.9
-playsound minecraft:block.anvil.destroy player @a ~ ~ ~ 1.6 1.5
+playsound block.anvil.destroy player @a ~ ~ ~ 1.6 1.5
 playsound entity.dragon_fireball.explode player @a ^ ^ ^2 1.5 1.5
 playsound entity.firework_rocket.blast player @a ^ ^ ^2 1.5 0.5
 playsound entity.firework_rocket.launch player @a ^ ^ ^5 1 1.4
