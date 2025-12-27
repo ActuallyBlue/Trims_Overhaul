@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "“静默”的“漩涡”可破坏方块（离开, 在）",
   "blue.tr.death_transfer_amount_hover": "玩家间死亡转移的纹饰数量（1, 2, 3, 4, 所有的, 硬核, 0）",
   "blue.tr.hardcore_hover": "死亡不再转移纹饰，但玩家在任意死亡时所穿纹饰将被完全“撤销”，仿佛其目标从未完成。忽略 keepInventory。",
-  "blue.tr.limit_owned_trims_hover": "玩家同一时间仅能拥有 1 种纹饰（离开, 在）",
+  "blue.tr.limit_owned_trims_hover": "将玩家可拥有的饰纹数量限制为指定数值（关闭，1，2，3，4）",
   "blue.tr.manual_transferring_hover": "转移命令（在, 离开）",
   "blue.tr.manual_untrimming_hover": "玩家是否可用锻造台移除护甲纹饰（在, 离开）",
   "blue.tr.objective_announcements_hover": "向所有在线玩家通告已完成的目标（在, 离开）",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "当您拥有“村庄英雄”效果时，获得对某些负面效果的免疫。",
   "blue.tr.ballista_description": "如果您拥有“村庄英雄”效果，在主手拿着已装填的弩时按住潜行，以充能一次强大的、穿透护甲的射击。每次使用都会降低效果等级。",
   "blue.tr.hostiles": "敌对生物",
-  "blue.tr.host_untrust": "多次攻击友方玩家将使附近的所有玩家失去主机的信任"
+  "blue.tr.host_untrust": "多次攻击友方玩家将使附近的所有玩家失去主机的信任",
+  "blue.mcmeta_info": "v%s - 作者：ActuallyBlue",
+  "blue.all_versions": "支持所有版本"
 }

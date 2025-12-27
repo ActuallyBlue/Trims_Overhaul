@@ -1,7 +1,7 @@
 advancement revoke @s only blue:tr/quests/wild
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_wild=false}}] run return 0
 execute if score #.tr.wild_completed blue.config matches 2 unless entity @s[tag=blue.tr.wild] run return 0
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return 0
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run return 0
 execute store success score #.temp blue.misc if entity @s[advancements={blue:tr/quests/wild_tames={cat=true}}]
 execute if entity @s[advancements={blue:tr/quests/wild_tames={wolf=true}}] run scoreboard players add #.temp blue.misc 1
 execute if entity @s[advancements={blue:tr/quests/wild_tames={parrot=true}}] run scoreboard players add #.temp blue.misc 1

@@ -1,20 +1,20 @@
 data modify storage blue:trims inventory set from entity @s Inventory
-execute if data storage blue:trims inventory[{id:"minecraft:wayfinder_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.wayfinder] run function blue:tr/inv/templates/wayfinder
-execute if data storage blue:trims inventory[{id:"minecraft:silence_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.silence] run function blue:tr/inv/templates/silence
-execute if data storage blue:trims inventory[{id:"minecraft:shaper_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.shaper] run function blue:tr/inv/templates/shaper
-execute if data storage blue:trims inventory[{id:"minecraft:raiser_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.raiser] run function blue:tr/inv/templates/raiser
-execute if data storage blue:trims inventory[{id:"minecraft:sentry_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.sentry] run function blue:tr/inv/templates/sentry
-execute if data storage blue:trims inventory[{id:"minecraft:spire_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.spire] run function blue:tr/inv/templates/spire
-execute if data storage blue:trims inventory[{id:"minecraft:coast_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.coast] run function blue:tr/inv/templates/coast
-execute if data storage blue:trims inventory[{id:"minecraft:snout_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.snout] run function blue:tr/inv/templates/snout
-execute if data storage blue:trims inventory[{id:"minecraft:ward_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.ward] run function blue:tr/inv/templates/ward
-execute if data storage blue:trims inventory[{id:"minecraft:dune_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.dune] run function blue:tr/inv/templates/dune
-execute if data storage blue:trims inventory[{id:"minecraft:wild_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.wild] run function blue:tr/inv/templates/wild
-execute if data storage blue:trims inventory[{id:"minecraft:tide_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.tide] run function blue:tr/inv/templates/tide
-execute if data storage blue:trims inventory[{id:"minecraft:host_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.host] run function blue:tr/inv/templates/host
-execute if data storage blue:trims inventory[{id:"minecraft:eye_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.eye] run function blue:tr/inv/templates/eye
-execute if data storage blue:trims inventory[{id:"minecraft:rib_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.rib] run function blue:tr/inv/templates/rib
-execute if data storage blue:trims inventory[{id:"minecraft:vex_armor_trim_smithing_template"}] unless entity @s[tag=blue.tr.vex] run function blue:tr/inv/templates/vex
+execute if data storage blue:trims inventory[{id:"minecraft:wayfinder_armor_trim_smithing_template"}] run function blue:tr/inv/templates/wayfinder
+execute if data storage blue:trims inventory[{id:"minecraft:silence_armor_trim_smithing_template"}] run function blue:tr/inv/templates/silence
+execute if data storage blue:trims inventory[{id:"minecraft:shaper_armor_trim_smithing_template"}] run function blue:tr/inv/templates/shaper
+execute if data storage blue:trims inventory[{id:"minecraft:raiser_armor_trim_smithing_template"}] run function blue:tr/inv/templates/raiser
+execute if data storage blue:trims inventory[{id:"minecraft:sentry_armor_trim_smithing_template"}] run function blue:tr/inv/templates/sentry
+execute if data storage blue:trims inventory[{id:"minecraft:spire_armor_trim_smithing_template"}] run function blue:tr/inv/templates/spire
+execute if data storage blue:trims inventory[{id:"minecraft:coast_armor_trim_smithing_template"}] run function blue:tr/inv/templates/coast
+execute if data storage blue:trims inventory[{id:"minecraft:snout_armor_trim_smithing_template"}] run function blue:tr/inv/templates/snout
+execute if data storage blue:trims inventory[{id:"minecraft:ward_armor_trim_smithing_template"}] run function blue:tr/inv/templates/ward
+execute if data storage blue:trims inventory[{id:"minecraft:dune_armor_trim_smithing_template"}] run function blue:tr/inv/templates/dune
+execute if data storage blue:trims inventory[{id:"minecraft:wild_armor_trim_smithing_template"}] run function blue:tr/inv/templates/wild
+execute if data storage blue:trims inventory[{id:"minecraft:tide_armor_trim_smithing_template"}] run function blue:tr/inv/templates/tide
+execute if data storage blue:trims inventory[{id:"minecraft:host_armor_trim_smithing_template"}] run function blue:tr/inv/templates/host
+execute if data storage blue:trims inventory[{id:"minecraft:eye_armor_trim_smithing_template"}] run function blue:tr/inv/templates/eye
+execute if data storage blue:trims inventory[{id:"minecraft:rib_armor_trim_smithing_template"}] run function blue:tr/inv/templates/rib
+execute if data storage blue:trims inventory[{id:"minecraft:vex_armor_trim_smithing_template"}] run function blue:tr/inv/templates/vex
 execute if score #.tr.template_clearing blue.config matches 0 run advancement revoke @s only blue:tr/has_template
 execute if score #.tr.template_clearing blue.config matches 0 run return 0
 data remove storage blue:trims inventory[{tag:{blue:trim}}]

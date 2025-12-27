@@ -1,5 +1,6 @@
-execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
 advancement grant @s only blue:tr/tags unlocked_dune
+execute if entity @s[tag=blue.tr.dune] run return fail
+execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
 scoreboard players add @s blue.tr.desert_time 0
 function blue:shared/get_name
 data modify storage blue:trims logs.append.trim set value {"translate":"Dune","color":"#E7C547"}

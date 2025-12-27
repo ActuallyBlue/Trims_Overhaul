@@ -2,6 +2,7 @@ scoreboard objectives add Set_Trim trigger
 scoreboard players reset #st blue.misc
 scoreboard players operation #st blue.misc = @s Set_Trim
 execute unless score #st blue.misc matches 1.. if entity @s store success score enabled Set_Trim run schedule clear blue:tr/debug/z/toggle_test_world
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run tellraw @a [{"text":"trims.toggle_test_world","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"addServer.resourcePack.enabled","fallback":"%s","with":[{"translate":"manageServer.resourcePack.enabled","fallback":"Enabled"}],"color":"dark_green"}]
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run tellraw @a [{"text":"\n'/trigger Set_Trim'","color":"white","clickEvent":{"action":"run_command","value":"/trigger Set_Trim"},"click_event":{"action":"run_command","command":"/trigger Set_Trim"}},{"translate":"blue.tr.test_world_guide","fallback":" to change trims and give yourself items","color":"gray"}]
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run tellraw @s [{"translate":"blue.tr.test_world_warn","fallback":"Also ask yourself: \"Is this world important?\" before using this. If the answer is yes, run this function again.\n"}]
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run team add blue.tr.silence
@@ -10,6 +11,7 @@ execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.fear dummy
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.damage_blocked custom:damage_blocked_by_shield
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run return run schedule function blue:tr/debug/z/toggle_test_world 1t
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run tellraw @a [{"text":"trims.toggle_test_world","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"addServer.resourcePack.disabled","fallback":"%s","with":[{"translate":"manageServer.resourcePack.disabled","fallback":"Disabled"}],"color":"dark_red"}]
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run return run scoreboard objectives remove Set_Trim
 execute unless score #st blue.misc matches 1.. unless entity @s run scoreboard players enable @a Set_Trim
 execute unless score #st blue.misc matches 1.. unless entity @s run schedule function blue:tr/debug/z/toggle_test_world 1t

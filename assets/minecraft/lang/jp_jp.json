@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "サイレンスの「ヴォルテックス」アビリティはブロックにダメージを与える (オフ, オン)",
   "blue.tr.death_transfer_amount_hover": "死亡時にプレイヤー間で譲渡される装飾の数 (1, 2, 3, 4, すべて, ハードコア, 0)",
   "blue.tr.hardcore_hover": "死亡時に装飾は譲渡されませんが、死亡時にプレイヤーが着用していた装飾は、目標が完了していなかったかのように完全に剥奪されます。keepInventoryをバイパスします。",
-  "blue.tr.limit_owned_trims_hover": "プレイヤーは一度に1つの装飾しか所有できない (オフ, オン)",
+  "blue.tr.limit_owned_trims_hover": "プレイヤーが所有できるトリムの数を特定の数に制限します（オフ、1、2、3、4）",
   "blue.tr.manual_transferring_hover": "譲渡コマンド (オン, オフ)",
   "blue.tr.manual_untrimming_hover": "プレイヤーが鍛冶台で防具の装飾を解除できるかどうか (オン, オフ)",
   "blue.tr.objective_announcements_hover": "完了した目標をすべてのオンラインプレイヤーにアナウンスする (オン, オフ)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "村の英雄を持っている間、一部の負のステータス効果に対する耐性を得る。",
   "blue.tr.ballista_description": "村の英雄を持っている場合、メインハンドにチャージされたクロスボウを持ってスニークし続けると、強力な、装甲貫通ショットをチャージする。使用ごとに効果レベルが減少する。",
   "blue.tr.hostiles": "敵対的",
-  "blue.tr.host_untrust": "味方プレイヤーを一定回数攻撃すると、周囲のすべてのプレイヤーからホストの信頼が失われる。"
+  "blue.tr.host_untrust": "味方プレイヤーを一定回数攻撃すると、周囲のすべてのプレイヤーからホストの信頼が失われる。",
+  "blue.mcmeta_info": "v%s - ActuallyBlue 作",
+  "blue.all_versions": "すべてのバージョンに対応"
 }

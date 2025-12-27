@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "La capacité 'Vortex' du Silence endommage les blocs (DÉSACTIVÉ, SUR)",
   "blue.tr.death_transfer_amount_hover": "Quantité de ornements transférées entre les joueurs à la mort (1, 2, 3, 4, Toutes, Extrême, 0)",
   "blue.tr.hardcore_hover": "Aucune ornement n'est transférée à la mort, MAIS, la ornement qu'un joueur porte à n'importe quelle mort sera complètement RÉVOQUÉE comme si son objectif n'avait jamais été complété. Contourne l'inventaire gardé.",
-  "blue.tr.limit_owned_trims_hover": "Les joueurs ne peuvent posséder qu'une seule ornement à la fois (DÉSACTIVÉ, SUR)",
+  "blue.tr.limit_owned_trims_hover": "Limite le nombre d’ornements qu’un joueur peut posséder à une quantité spécifique (DÉSACTIVÉ, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Commande de transfert (SUR, DÉSACTIVÉ)",
   "blue.tr.manual_untrimming_hover": "Si les joueurs peuvent démonter leur armure avec des tables de forge (SUR, DÉSACTIVÉ)",
   "blue.tr.objective_announcements_hover": "Annoncer les objectifs complétés à tous les joueurs en ligne (SUR, DÉSACTIVÉ)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "Obtenez l'immunité contre certains effets négatifs tant que vous avez Héros du village.",
   "blue.tr.ballista_description": "Si vous avez Héros du village, accroupissez-vous avec une arbalète chargée dans votre main principale pour charger un tir puissant et perforant. Réduit le niveau de l'effet à chaque utilisation.",
   "blue.tr.hostiles": "Hostiles",
-  "blue.tr.host_untrust": "Frapper des joueurs alliés à plusieurs reprises retirera la confiance de l’hôte à tous les joueurs à proximité."
+  "blue.tr.host_untrust": "Frapper des joueurs alliés à plusieurs reprises retirera la confiance de l’hôte à tous les joueurs à proximité.",
+  "blue.mcmeta_info": "v%s - Par ActuallyBlue",
+  "blue.all_versions": "Compatible avec toutes les versions"
 }

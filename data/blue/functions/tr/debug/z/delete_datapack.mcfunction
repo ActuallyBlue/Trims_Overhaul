@@ -101,9 +101,9 @@ kill b163102f-0-d-0-1
 kill b163102f-0-e-0-1
 tellraw @a {"translate":"blue.tr.delete_success","fallback":"\nYou have disabled ActuallyBlue's %s datapack, and it has removed most of its data from your world.\n\n - Please confirm the datapack is disabled by confirming it doesn't appear in %s\n - If you wish to re-enable the datapack, just run: %s\n\n   (the `trims...` is a placeholder. Fill in whatever looks correct)","color":"gray","with":[{"translate":"blue.tr.trims_overhaul","fallback":"Trims Overhaul","color":"#3aa56a"},{"text":"/datapack disable \"file/trims...\"","color":"white"},{"text":"/datapack enable \"file/trims...\"","color":"white"}]}
 playsound block.bell.use master @a 0 -128 0 0 0.75 1
-datapack disable "file/CUSTOM_trims_overhaul-MOD-v3.1.2.jar"
-datapack disable "file/CUSTOM_trims_overhaul-DP_RP-v3.1.2.zip"
-datapack disable "file/CUSTOM_trims_overhaul-DP-v3.1.2"
-datapack disable "file/trims_overhaul-MOD-v3.1.2.jar"
-datapack disable "file/trims_overhaul-DP_RP-v3.1.2.zip"
-datapack disable "file/trims_overhaul-DP_RP-v3.1.2"
+datapack disable "file/CUSTOM_trims_overhaul-MOD-v3.1.3.jar"
+datapack disable "file/CUSTOM_trims_overhaul-DP_RP-v3.1.3.zip"
+datapack disable "file/CUSTOM_trims_overhaul-DP-v3.1.3"
+datapack disable "file/trims_overhaul-MOD-v3.1.3.jar"
+datapack disable "file/trims_overhaul-DP_RP-v3.1.3.zip"
+datapack disable "file/trims_overhaul-DP_RP-v3.1.3"

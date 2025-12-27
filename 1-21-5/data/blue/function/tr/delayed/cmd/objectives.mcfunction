@@ -49,11 +49,15 @@ execute if entity @s[advancements={blue:tr/quests/raiser={sharpness=true}}] run 
 execute if entity @s[advancements={blue:tr/quests/raiser={smite=true}}] run data modify storage blue:trims temp.raiser append value {"translate":"enchantment.minecraft.smite","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/raiser={bane_of_arthropods=true}}] run data modify storage blue:trims temp.raiser append value {"translate":"enchantment.minecraft.bane_of_arthropods","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/raiser={fire_aspect=true}}] run data modify storage blue:trims temp.raiser append value {"translate":"enchantment.minecraft.fire_aspect","extra":[{"text":", ","color":"gray"}]}
-execute if entity @s[advancements={blue:tr/quests/raiser={thorns=true}}] run data modify storage blue:trims temp.raiser append value {"translate":"enchantment.minecraft.thorns"}
-execute if entity @s[advancements={blue:tr/quests/snout={enchanted_book=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.enchanted_book","extra":[{"text":", ","color":"gray"}]}
-execute if entity @s[advancements={blue:tr/quests/snout={iron_boots=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.iron_boots","extra":[{"text":", ","color":"gray"}]}
-execute if entity @s[advancements={blue:tr/quests/snout={splash_potion=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.splash_potion","extra":[{"text":", ","color":"gray"}]}
-execute if entity @s[advancements={blue:tr/quests/snout={potion=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.potion","extra":[{"text":", ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={enchanted_book_1=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.enchanted_book","extra":[{"text":"1 , ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={enchanted_book_2=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.enchanted_book","extra":[{"text":"2 , ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={enchanted_book_3=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.enchanted_book","extra":[{"text":"3 , ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={iron_boots_1=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.iron_boots","extra":[{"text":"1 , ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={iron_boots_2=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.iron_boots","extra":[{"text":"2 , ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={iron_boots_3=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.iron_boots","extra":[{"text":"3 , ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={splash_potion=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.splash_potion.effect.fire_resistance","extra":[{"text":", ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={fire_potion=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.potion.effect.fire_resistance","extra":[{"text":", ","color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/snout={potion=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.potion.effect.water","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/snout={iron_nugget=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.iron_nugget","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/snout={ender_pearl=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.ender_pearl","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/snout={string=true}}] run data modify storage blue:trims temp.snout append value {"translate":"item.minecraft.string","extra":[{"text":", ","color":"gray"}]}
@@ -99,7 +103,8 @@ execute if entity @s[advancements={blue:tr/quests/ward_stored={stray=true}}] run
 execute if entity @s[advancements={blue:tr/quests/ward_stored={unknown=true}}] run data modify storage blue:trims temp.ward append value {"translate":"mco.configure.world.subscription.unknown","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/tags={unlocked_ward=true}}] run function blue:tr/quests/ward_store
 data modify storage blue:trims temp.ward append value {"text":""}
-data modify storage blue:trims temp.ward append value {"text":"- ","color":"dark_gray","extra":[{"score":{"name":"#.temp","objective":"blue.misc"},"extra":["/12"],"color":"gray"}]}
+data modify storage blue:trims temp.ward append value {"text":"- ","color":"dark_gray","extra":[{"score":{"name":"#.temp","objective":"blue.misc"},"extra":[{"text":"/"},{"score":{"objective":"blue.config","name":"#.tr.ward_quest"}}],"color":"gray"}]}
+execute if entity @s[advancements={blue:tr/quests/wild_tames={cat=true}}] run data modify storage blue:trims temp.wild append value {"translate":"entity.minecraft.cat","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/wild_tames={wolf=true}}] run data modify storage blue:trims temp.wild append value {"translate":"entity.minecraft.wolf","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/wild_tames={parrot=true}}] run data modify storage blue:trims temp.wild append value {"translate":"entity.minecraft.parrot","extra":[{"text":", ","color":"gray"}]}
 execute if entity @s[advancements={blue:tr/quests/wild_tames={horse=true}}] run data modify storage blue:trims temp.wild append value {"translate":"entity.minecraft.horse","extra":[{"text":", ","color":"gray"}]}
@@ -178,6 +183,8 @@ execute if score #.tr.spire_completed blue.config matches 1.. run data modify st
 execute if score #.tr.coast_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Coast","color":"#C1C888"},{"text":", ","color":"dark_gray"}]
 execute if score #.tr.snout_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Snout","color":"#F2B01A"},{"text":", ","color":"dark_gray"}]
 execute if score #.tr.ward_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Ward","color":"#5C70AE"},{"text":", ","color":"dark_gray"}]
+execute if score #.tr.bolt_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Bolt","color":"#B65D1A"},{"text":", ","color":"dark_gray"}]
+execute if score #.tr.flow_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Flow","color":"#85B2C5"},{"text":", ","color":"dark_gray"}]
 execute if score #.tr.dune_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Dune","color":"#E7C547"},{"text":", ","color":"dark_gray"}]
 execute if score #.tr.wild_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Wild","color":"#00D529"},{"text":", ","color":"dark_gray"}]
 execute if score #.tr.tide_completed blue.config matches 1.. run data modify storage blue:trims display append value [{"translate":"Tide","color":"#199ADD"},{"text":", ","color":"dark_gray"}]
@@ -201,6 +208,8 @@ execute if entity @s[advancements={blue:tr/blacklist={spire=true}}] run data mod
 execute if entity @s[advancements={blue:tr/blacklist={coast=true}}] run data modify storage blue:trims display append value [{"translate":"Coast","color":"#C1C888"},{"text":", ","color":"dark_gray"}]
 execute if entity @s[advancements={blue:tr/blacklist={snout=true}}] run data modify storage blue:trims display append value [{"translate":"Snout","color":"#F2B01A"},{"text":", ","color":"dark_gray"}]
 execute if entity @s[advancements={blue:tr/blacklist={ward=true}}] run data modify storage blue:trims display append value [{"translate":"Ward","color":"#5C70AE"},{"text":", ","color":"dark_gray"}]
+execute if entity @s[advancements={blue:tr/blacklist={bolt=true}}] run data modify storage blue:trims display append value [{"translate":"Bolt","color":"#B65D1A"},{"text":", ","color":"dark_gray"}]
+execute if entity @s[advancements={blue:tr/blacklist={flow=true}}] run data modify storage blue:trims display append value [{"translate":"Flow","color":"#85B2C5"},{"text":", ","color":"dark_gray"}]
 execute if entity @s[advancements={blue:tr/blacklist={dune=true}}] run data modify storage blue:trims display append value [{"translate":"Dune","color":"#E7C547"},{"text":", ","color":"dark_gray"}]
 execute if entity @s[advancements={blue:tr/blacklist={wild=true}}] run data modify storage blue:trims display append value [{"translate":"Wild","color":"#00D529"},{"text":", ","color":"dark_gray"}]
 execute if entity @s[advancements={blue:tr/blacklist={tide=true}}] run data modify storage blue:trims display append value [{"translate":"Tide","color":"#199ADD"},{"text":", ","color":"dark_gray"}]

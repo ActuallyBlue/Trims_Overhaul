@@ -2,13 +2,13 @@
   "id": "trims-overhaul",
   "1.20.1_support": "Change '16' to '15' if you want 1.20.1 to APPEAR as compatible. Change it back for 1.21.9+.",
     "pack": {
-      "pack_format": 94,
-      "supported_formats": [16,94],
+      "pack_format": 16,
+      "supported_formats": [16,95],
       "min_format": 16,
-      "max_format": 94,
+      "max_format": 95,
       "description": [
-        {"translate":"blue.pack_info","fallback": "v%s - MC %s\n","with":["3.1.2","1.20.0+"],"color":"#0a9add"},
-        {"translate":"blue.pack_credit","fallback": "By ActuallyBlue","color":"#39828f","italic":true}
+        {"translate":"blue.mcmeta_info","fallback": "v%s - By ActuallyBlue\n","with":["3.1.3"],"color":"#0a9add"},
+        {"translate":"blue.all_versions","fallback": "Supports every version","color":"#39828f","italic":true}
       ]
     },
     "filter": {

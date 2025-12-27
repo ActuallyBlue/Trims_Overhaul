@@ -1,5 +1,10 @@
-execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
+execute store result score #.clear_temp blue.misc run clear @s silence_armor_trim_smithing_template{blue:trim} 0
+execute store result score #.clear_temp0 blue.misc run clear @s silence_armor_trim_smithing_template 0
+scoreboard players operation #.clear_temp0 blue.misc -= #.clear_temp blue.misc
+execute unless score #.clear_temp0 blue.misc matches 1.. run return 0
 advancement grant @s only blue:tr/tags unlocked_silence
+execute if entity @s[tag=blue.tr.silence] run return 0
+execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
 function blue:shared/get_name
 data modify storage blue:trims logs.append.trim set value {"translate":"Silence","color":"#3842Cf"}
 data modify storage blue:trims logs.unlock append from storage blue:trims logs.append

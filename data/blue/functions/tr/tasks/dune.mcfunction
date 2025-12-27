@@ -1,7 +1,7 @@
 advancement revoke @s only blue:tr/tasks/dune req
 execute if score #.tr.dune_completed blue.config matches 2 unless entity @s[tag=blue.tr.dune] run return 0
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_dune=false}}] run return 0
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return 0
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run return 0
 execute store result score #.temp blue.misc run scoreboard players add @s blue.tr.desert_time 1
 scoreboard players operation #.temp blue.misc /= #60 blue.misc
 title @s[scores={blue.tr.combat=100..}] actionbar [{"score":{"name":"#.temp","objective":"blue.misc"},"color":"#E7C547"},{"text":"/","color":"gray"},{"score":{"name":"#.tr.dune_task","objective":"blue.config"}}," ",{"translate":"blue.tr.minutes_in_deserts","fallback":"Minutes in Deserts"}]

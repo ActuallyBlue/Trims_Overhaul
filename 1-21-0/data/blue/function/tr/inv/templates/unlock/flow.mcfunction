@@ -1,5 +1,6 @@
-execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
 advancement grant @s only blue:tr/tags unlocked_flow
+execute if entity @s[tag=blue.tr.flow] run return fail
+execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
 scoreboard players add @s blue.tr.ominous_vault 0
 function blue:shared/get_name
 data modify storage blue:trims logs.append.trim set value {"translate":"Flow","color":"#85B2C5"}

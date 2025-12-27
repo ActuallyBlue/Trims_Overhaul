@@ -1,0 +1,12 @@
+[
+  {"function":"filtered","item_filter":{"items":"gunpowder"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"gunpowder"}}},
+  {"function":"filtered","item_filter":{"items":"nautilus_shell"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"nautilus_shell"}}},
+  {"function":"filtered","item_filter":{"items":"blaze_powder"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"blaze_powder"}}},
+  {"function":"filtered","item_filter":{"items":"ender_eye"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"ender_eye"}}},
+  {"function":"filtered","item_filter":{"items":"echo_shard"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"echo_shard"}}},
+  {"function":"filtered","item_filter":{"items":"heart_of_the_sea"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"heart_of_the_sea"}}},
+  {"function":"filtered","item_filter":{"items":"shulker_shell"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"shulker_shell"}}},
+  {"function":"filtered","item_filter":{"items":"wind_charge"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"wind_charge"}}},
+  {"function":"filtered","item_filter":{"items":"nether_star"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"nether_star"}}},
+  {"function":"filtered","item_filter":{"items":"dragon_egg"},"on_pass":{"function":"set_components","components":{"provides_trim_material":"dragon_egg"}}}
+]

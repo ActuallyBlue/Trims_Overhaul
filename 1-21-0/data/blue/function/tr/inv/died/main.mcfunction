@@ -8,7 +8,7 @@ scoreboard players set @s blue.tr.combat 0
 scoreboard players add #.tr.respawning blue.misc 1
 scoreboard players operation #.link blue.id = @s blue.id
 scoreboard players reset #.player blue.tr.died
-execute if score #.tr.limit_owned_trims blue.config matches 1 store success score #.player blue.tr.died if score #.tr.death_transfer_amount blue.config matches 1.. on attacker run tag @s[type=player,advancements={blue:tr/blacklist=false,blue:tr/tags={has_trim=false}},tag=!blue.tr.respawn] add blue.tr.killer
+execute if score #.tr.limit_owned_trims blue.config matches 1 store success score #.player blue.tr.died if score #.tr.death_transfer_amount blue.config matches 1.. on attacker run tag @s[type=player,advancements={blue:tr/blacklist=false,blue:tr/tags={trim_limit=false}},tag=!blue.tr.respawn] add blue.tr.killer
 execute unless score #.tr.limit_owned_trims blue.config matches 1 store success score #.player blue.tr.died if score #.tr.death_transfer_amount blue.config matches 1.. on attacker run tag @s[type=player,advancements={blue:tr/blacklist=false},tag=!blue.tr.respawn] add blue.tr.killer
 data modify storage blue:trims merge.return_item.Owner set from entity @s UUID
 execute if score #.player blue.tr.died matches 1 run data modify storage blue:trims merge.item_data.Owner set from entity @a[tag=blue.tr.killer,limit=1] UUID

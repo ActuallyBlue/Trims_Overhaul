@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "Zdolność 'Wir' ciszy niszczy bloki (WYŁ, WŁ)",
   "blue.tr.death_transfer_amount_hover": "Ilość zdobień przekazywanych między graczami po śmierci (1, 2, 3, 4, Wszystkie, Hardcore, 0)",
   "blue.tr.hardcore_hover": "Żadne zdobienia nie są przekazywane po śmierci, ALE zdobienie, które gracz nosi podczas jakiejkolwiek śmierci, zostanie całkowicie ODEBRANE, tak jakby jego cel nigdy nie został ukończony. Omija zachowanie ekwipunku.",
-  "blue.tr.limit_owned_trims_hover": "Gracze mogą posiadać tylko 1 zdobienie na raz (WYŁ, WŁ)",
+  "blue.tr.limit_owned_trims_hover": "Ogranicza liczbę zdobień, które gracz może posiadać, do określonej ilości (WYŁ., 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Polecenie przekazywania (WŁ, WYŁ)",
   "blue.tr.manual_untrimming_hover": "Czy gracze mogą usuwać zdobienia ze swojego pancerza za pomocą stołów kowalskich (WŁ, WYŁ)",
   "blue.tr.objective_announcements_hover": "Ogłaszaj ukończone cele wszystkim graczom online (WŁ, WYŁ)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "Zyskaj odporność na niektóre negatywne efekty, gdy masz Efekt Bohatera Wioski.",
   "blue.tr.ballista_description": "Jeśli masz Efekt Bohatera Wioski, przytrzymaj skradanie się z naładowaną Kuszą w głównej ręce, aby naładować potężny, przebijający pancerz strzał. Zmniejsza poziom efektu przy każdym użyciu.",
   "blue.tr.hostiles": "Wrogowie",
-  "blue.tr.host_untrust": "Wielokrotne atakowanie sojuszniczych graczy spowoduje usunięcie zaufania gospodarza u wszystkich pobliskich graczy."
+  "blue.tr.host_untrust": "Wielokrotne atakowanie sojuszniczych graczy spowoduje usunięcie zaufania gospodarza u wszystkich pobliskich graczy.",
+  "blue.mcmeta_info": "v%s - Autor: ActuallyBlue",
+  "blue.all_versions": "Obsługuje wszystkie wersje"
 }

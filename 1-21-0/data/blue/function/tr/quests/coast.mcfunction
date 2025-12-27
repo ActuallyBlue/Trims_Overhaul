@@ -6,7 +6,7 @@ execute unless score #.tr.objective_type blue.config matches 1 run scoreboard pl
 execute if entity @s[advancements={blue:tr/blacklist={coast=true}}] run scoreboard players set #.temp blue.misc -1
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_coast=false}}] run scoreboard players set #.temp blue.misc -1
 execute if score #.tr.coast_completed blue.config matches 2 unless entity @s[tag=blue.tr.coast] run scoreboard players set #.temp blue.misc -1
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run scoreboard players set #.temp blue.misc -1
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run scoreboard players set #.temp blue.misc -1
 clear @s coast_armor_trim_smithing_template
 execute if score #.temp blue.misc matches 1 run function blue:tr/completion/coast
 execute unless score #.temp blue.misc matches -1 run return fail

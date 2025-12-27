@@ -1,6 +1,6 @@
 advancement revoke @s only blue:tr/quests/wayfinder_display
 execute if score #.tr.wayfinder_completed blue.config matches 1.. unless entity @s[tag=blue.tr.wayfinder] run return 0
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return 0
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run return 0
 scoreboard players operation #.temp blue.misc = @s blue.tr.structures
 scoreboard players set @s blue.tr.structures 0
 scoreboard players add @s[advancements={blue:tr/quests/wayfinder={mushroom_fields=true}}] blue.tr.structures 1

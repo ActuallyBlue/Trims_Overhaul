@@ -15,5 +15,5 @@ advancement revoke @s only blue:tr/quests/sentry
 execute unless score #.temp blue.misc matches 1 run return 0
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_sentry=false}}] run return 0
 execute if score #.tr.sentry_completed blue.config matches 2 unless entity @s[tag=blue.tr.sentry] run return 0
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return 0
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run return 0
 execute if entity @e[type=area_effect_cloud,tag=blue.tr.sentry_quest,distance=..100,limit=1] run function blue:tr/completion/sentry

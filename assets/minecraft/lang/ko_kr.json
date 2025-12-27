@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "고요 장식의 '소용돌이' 능력은 블록에 피해를 줍니다 (꺼져, 에)",
   "blue.tr.death_transfer_amount_hover": "사망 시 플레이어 간에 양도되는 장식의 수 (1, 2, 3, 4, 모두, 하드코어, 0)",
   "blue.tr.hardcore_hover": "사망 시 장식이 양도되지 않지만, 사망 시 착용하고 있던 장식은 목표가 완료되지 않은 것처럼 완전히 철회됩니다. 인벤토리 유지를 무시합니다.",
-  "blue.tr.limit_owned_trims_hover": "플레이어는 한 번에 하나의 장식만 소유할 수 있습니다 (꺼져, 에)",
+  "blue.tr.limit_owned_trims_hover": "플레이어가 보유할 수 있는 트림 수를 특정 개수로 제한합니다 (끔, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "양도 명령어 (에, 꺼져)",
   "blue.tr.manual_untrimming_hover": "플레이어가 대장장이 작업대로 갑옷 장식을 해제할 수 있는지 여부 (에, 꺼져)",
   "blue.tr.objective_announcements_hover": "완료된 목표를 모든 온라인 플레이어에게 알립니다 (에, 꺼져)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "마을의 영웅 효과를 가지고 있는 동안 일부 부정적인 효과에 대한 면역을 얻습니다.",
   "blue.tr.ballista_description": "마을의 영웅 효과를 가지고 있다면, 주 손에 장전된 쇠뇌를 들고 웅크리기를 유지하여 강력한 방어구 관통 사격을 장전합니다. 사용할 때마다 효과 레벨이 감소합니다.",
   "blue.tr.hostiles": "적대적",
-  "blue.tr.host_untrust": "아군 플레이어를 여러 번 공격하면 주변의 모든 플레이어에게서 호스트의 신뢰가 제거됩니다."
+  "blue.tr.host_untrust": "아군 플레이어를 여러 번 공격하면 주변의 모든 플레이어에게서 호스트의 신뢰가 제거됩니다.",
+  "blue.mcmeta_info": "v%s - ActuallyBlue 제작",
+  "blue.all_versions": "모든 버전 지원"
 }

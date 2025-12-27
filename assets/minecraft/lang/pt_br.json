@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "A habilidade 'Vórtex' do Silêncio causa dano aos blocos (DESLIGADO, LIGADO)",
   "blue.tr.death_transfer_amount_hover": "Quantidade de ornamentos transferidos entre jogadores ao morrer (1, 2, 3, 4, Todos, Extremo, 0)",
   "blue.tr.hardcore_hover": "Nenhum ornamento é transferido ao morrer, MAS, o ornamento que um jogador estiver usando em qualquer morte será completamente REVOGADO como se seu objetivo nunca tivesse sido completado. Ignora o inventário mantido.",
-  "blue.tr.limit_owned_trims_hover": "Jogadores só podem possuir um ornamento de cada vez (DESLIGADO, LIGADO)",
+  "blue.tr.limit_owned_trims_hover": "Limita a quantidade de acabamentos que um jogador pode possuir a um valor específico (DESLIGADO, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Comando de transferência (LIGADO, DESLIGADO)",
   "blue.tr.manual_untrimming_hover": "Se os jogadores podem desmontar sua armadura com mesas de ferreiro (LIGADO, DESLIGADO)",
   "blue.tr.objective_announcements_hover": "Anunciar objetivos completados para todos os jogadores online (LIGADO, DESLIGADO)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "Ganhe imunidade a alguns efeitos negativos enquanto tiver o Efeito Herói da Vila.",
   "blue.tr.ballista_description": "Se você tiver o Efeito Herói da Vila, segure o 'Sneak' (agachar) com uma Besta carregada na mão principal para carregar um tiro poderoso e perfurante de armadura. Reduz o nível do efeito a cada uso.",
   "blue.tr.hostiles": "Hostis",
-  "blue.tr.host_untrust": "Atingir jogadores aliados várias vezes removerá a confiança do anfitrião de todos os jogadores próximos."
+  "blue.tr.host_untrust": "Atingir jogadores aliados várias vezes removerá a confiança do anfitrião de todos os jogadores próximos.",
+  "blue.mcmeta_info": "v%s - Por ActuallyBlue",
+  "blue.all_versions": "Compatível com todas as versões"
 }

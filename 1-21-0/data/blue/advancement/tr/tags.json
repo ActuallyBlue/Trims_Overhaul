@@ -28,7 +28,7 @@
         }
       }
     },
-    "has_trim": {
+    "trim_limit": {
       "trigger": "minecraft:impossible"
     },
     "unlocked_wayfinder": {

@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "Sessizlik'in 'Girdap' yeteneği bloklara hasar verir (KAPALI, AÇIK)",
   "blue.tr.death_transfer_amount_hover": "Ölümde oyuncular arasında aktarılan süsleme miktarı (1, 2, 3, 4, Tümü, Zorlu, 0)",
   "blue.tr.hardcore_hover": "Ölümde hiçbir süsleme aktarılmaz, ANCAK, bir oyuncunun herhangi bir ölümde giydiği süsleme, görevi hiç tamamlanmamış gibi tamamen GERİ ALINIR. keepInventory'yi atlar.",
-  "blue.tr.limit_owned_trims_hover": "Oyuncular aynı anda sadece 1 süslemeye sahip olabilir (KAPALI, AÇIK)",
+  "blue.tr.limit_owned_trims_hover": "Bir oyuncunun sahip olabileceği süsleme sayısını belirli bir miktarla sınırlar (KAPALI, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Aktarma komutu (AÇIK, KAPALI)",
   "blue.tr.manual_untrimming_hover": "Oyuncuların demircilik masalarıyla zırhlarının süslemesini kaldırıp kaldıramayacağı (AÇIK, KAPALI)",
   "blue.tr.objective_announcements_hover": "Tamamlanan görevleri tüm çevrimiçi oyunculara duyur (AÇIK, KAPALI)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "Köy Kahramanı etkisine sahip olduğunuz sürece bazı olumsuz etkilere karşı bağışıklık kazanın.",
   "blue.tr.ballista_description": "Köy Kahramanı etkisine sahipseniz, ana elinizde yüklü bir Arbalet ile eğilmeyi basılı tutarak güçlü, zırh delici bir atış yükleyin. Her kullanımda etki seviyesini azaltır.",
   "blue.tr.hostiles": "Düşmanlar",
-  "blue.tr.host_untrust": "Dost oyunculara yeterince kez vurmak, yakındaki tüm oyunculardan sunucu sahibinin güvenini kaldırır."
+  "blue.tr.host_untrust": "Dost oyunculara yeterince kez vurmak, yakındaki tüm oyunculardan sunucu sahibinin güvenini kaldırır.",
+  "blue.mcmeta_info": "v%s - ActuallyBlue tarafından",
+  "blue.all_versions": "Tüm sürümleri destekler"
 }

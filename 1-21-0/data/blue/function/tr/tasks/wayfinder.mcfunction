@@ -1,6 +1,6 @@
 scoreboard players operation @s blue.tr.walk /= #100 blue.misc
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_wayfinder=false}}] run return fail
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[tag=!blue.tr.wayfinder,advancements={blue:tr/tags={has_trim=true}}] run return fail
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[tag=!blue.tr.wayfinder,advancements={blue:tr/tags={trim_limit=true}}] run return fail
 scoreboard players operation @s blue.tr.blocks_walked += @s blue.tr.walk
 scoreboard players operation #.temp blue.misc = #.tr.wayfinder_task blue.config
 scoreboard players operation #.temp0 blue.misc = @s blue.tr.structures

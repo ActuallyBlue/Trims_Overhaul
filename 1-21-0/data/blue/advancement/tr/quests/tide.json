@@ -6,8 +6,16 @@
         "entity": {
           "type": "minecraft:drowned",
           "equipment": {
-            "mainhand": {},
-            "offhand": {}
+            "mainhand": {
+              "count": {
+                "min": 1
+              }
+            },
+            "offhand": {
+              "count": {
+                "min": 1
+              }
+            }
           }
         },
         "player": [
@@ -23,7 +31,11 @@
         "entity": {
           "type": "minecraft:drowned",
           "equipment": {
-            "mainhand": {}
+            "mainhand": {
+              "count": {
+                "min": 1
+              }
+            }
           }
         },
         "player": [

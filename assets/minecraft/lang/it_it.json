@@ -618,7 +618,7 @@
   "blue.tr.sm.vortex_hover": "La 'Vortex' di Silence danneggia i blocchi (OFF, ON)",
   "blue.tr.death_transfer_amount_hover": "Quantità di trim trasferiti alla morte (1, 2, 3, 4, All, Hardcore, 0)",
   "blue.tr.hardcore_hover": "Nessun trim viene trasferito alla morte, MA, il trim che un giocatore indossa a qualsiasi morte verrà completamente REVOCATO come se il suo obiettivo non fosse mai stato completato. Ignora keepInventory.",
-  "blue.tr.limit_owned_trims_hover": "I giocatori possono possedere solo 1 trim alla volta (OFF, ON)",
+  "blue.tr.limit_owned_trims_hover": "Limita il numero di rifiniture che un giocatore può possedere a una quantità specifica (DISATTIVATO, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Comando di trasferimento (ON, OFF)",
   "blue.tr.manual_untrimming_hover": "Se i giocatori possono rimuovere i trim dall'armatura con smithing table (ON, OFF)",
   "blue.tr.objective_announcements_hover": "Annuncia gli obiettivi completati a tutti i giocatori online (ON, OFF)",
@@ -836,5 +836,7 @@
   "blue.tr.protected_description": "Ottieni immunità ad alcuni effetti negativi mentre hai Eroe del villaggio.",
   "blue.tr.ballista_description": "Se hai Eroe del villaggio, tieni premuto il tasto per accovacciarti con una balestra carica nella mano principale per caricare un colpo potente e perforante. Riduce il livello dell'effetto ad ogni utilizzo.",
   "blue.tr.hostiles": "Ostili",
-  "blue.tr.host_untrust": "Colpire ripetutamente i giocatori alleati rimuoverà la fiducia dell’host da tutti i giocatori nelle vicinanze."
+  "blue.tr.host_untrust": "Colpire ripetutamente i giocatori alleati rimuoverà la fiducia dell’host da tutti i giocatori nelle vicinanze.",
+  "blue.mcmeta_info": "v%s - Di ActuallyBlue",
+  "blue.all_versions": "Supporta tutte le versioni"
 }

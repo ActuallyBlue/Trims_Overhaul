@@ -27,8 +27,7 @@ execute unless score #.18s blue.misc matches 6.. run return 0
   tag @a[tag=blue.tr.wild.cd] remove blue.tr.wild.cd
   scoreboard players add #.36s blue.misc 1
   execute unless score #.36s blue.misc matches 2.. run return 0
-    execute as @a[advancements={blue:tr/tags={has_trim=false}}] unless entity @s[tag=!blue.tr.wayfinder,tag=!blue.tr.silence,tag=!blue.tr.shaper,tag=!blue.tr.raiser,tag=!blue.tr.sentry,tag=!blue.tr.spire,tag=!blue.tr.coast,tag=!blue.tr.snout,tag=!blue.tr.ward,tag=!blue.tr.dune,tag=!blue.tr.wild,tag=!blue.tr.tide,tag=!blue.tr.host,tag=!blue.tr.eye,tag=!blue.tr.rib,tag=!blue.tr.vex] run advancement grant @s only blue:tr/tags has_trim
-    advancement revoke @a[advancements={blue:tr/tags={has_trim=true}},tag=!blue.tr.wayfinder,tag=!blue.tr.silence,tag=!blue.tr.shaper,tag=!blue.tr.raiser,tag=!blue.tr.sentry,tag=!blue.tr.spire,tag=!blue.tr.coast,tag=!blue.tr.snout,tag=!blue.tr.ward,tag=!blue.tr.dune,tag=!blue.tr.wild,tag=!blue.tr.tide,tag=!blue.tr.host,tag=!blue.tr.eye,tag=!blue.tr.rib,tag=!blue.tr.vex] only blue:tr/tags has_trim
+    execute if score #.tr.limit_owned_trims blue.config matches 1.. as @a run function blue:tr/delayed/trim_limit
     execute if entity @a[scores={color=0},limit=1] run schedule function blue:tr/delayed/color_compat 3t
     scoreboard players reset #.36s blue.misc
     execute as @a[gamemode=creative,advancements={blue:tr/tags={tutorial_creative=false}}] at @s run function blue:tr/delayed/creative_guide

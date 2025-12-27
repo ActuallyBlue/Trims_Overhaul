@@ -1,7 +1,7 @@
 advancement revoke @s only blue:tr/tasks/silence req
 execute if score #.tr.silence_completed blue.config matches 2 unless entity @s[tag=blue.tr.silence] run return fail
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_silence=false}}] run return fail
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return fail
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run return fail
 scoreboard players operation #.temp blue.misc = #.tr.silence_task blue.config
 execute if entity @a[distance=0.01..16,limit=1] run scoreboard players operation #.temp blue.misc /= #4 blue.misc
 title @s actionbar [{"translate":"blue.tr.kill_wardens","fallback":"Kill Wardens","color":"#3842Cf"},{"text":" • ","color":"dark_gray"},{"score":{"name":"#.temp","objective":"blue.misc"}},{"text":"%"}]

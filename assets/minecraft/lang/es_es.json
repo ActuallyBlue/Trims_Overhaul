@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "La habilidad 'Vórtice' del Silencio daña los bloques (APAGADO, ENCENDIDO)",
   "blue.tr.death_transfer_amount_hover": "Cantidad de recortes transferidos entre jugadores al morir (1, 2, 3, 4, Todos, Hardcore, 0)",
   "blue.tr.hardcore_hover": "No se transfieren recortes al morir, PERO, el recorte que un jugador lleva puesto en cualquier muerte será completamente REVOCADO como si su objetivo nunca se hubiera completado. Evita el Mantener Inventario.",
-  "blue.tr.limit_owned_trims_hover": "Los jugadores solo pueden poseer 1 recorte a la vez (APAGADO, ENCENDIDO)",
+  "blue.tr.limit_owned_trims_hover": "Limita la cantidad de adornos que un jugador puede poseer a una cantidad específica (APAGADO, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Comando de transferencia (ENCENDIDO, APAGADO)",
   "blue.tr.manual_untrimming_hover": "Si los jugadores pueden quitar el recorte de su armadura con mesas de herrería (ENCENDIDO, APAGADO)",
   "blue.tr.objective_announcements_hover": "Anunciar objetivos completados a todos los jugadores en línea (ENCENDIDO, APAGADO)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "Obtienes inmunidad a algunos efectos negativos mientras tienes Héroe de la Aldea.",
   "blue.tr.ballista_description": "Si tienes Héroe de la Aldea, mantente agachado con una ballesta cargada en tu mano principal para cargar un potente disparo perforador de armadura. Reduce el nivel del efecto con cada uso.",
   "blue.tr.hostiles": "Hostiles",
-  "blue.tr.host_untrust": "Golpear a jugadores aliados suficientes veces eliminará la confianza del anfitrión de todos los jugadores cercanos."
+  "blue.tr.host_untrust": "Golpear a jugadores aliados suficientes veces eliminará la confianza del anfitrión de todos los jugadores cercanos.",
+  "blue.mcmeta_info": "v%s - Por ActuallyBlue",
+  "blue.all_versions": "Compatible con todas las versiones"
 }

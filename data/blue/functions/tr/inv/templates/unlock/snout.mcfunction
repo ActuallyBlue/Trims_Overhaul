@@ -1,5 +1,10 @@
-execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
+execute store result score #.clear_temp blue.misc run clear @s snout_armor_trim_smithing_template{blue:trim} 0
+execute store result score #.clear_temp0 blue.misc run clear @s snout_armor_trim_smithing_template 0
+scoreboard players operation #.clear_temp0 blue.misc -= #.clear_temp blue.misc
+execute unless score #.clear_temp0 blue.misc matches 1.. run return 0
 advancement grant @s only blue:tr/tags unlocked_snout
+execute if entity @s[tag=blue.tr.snout] run return 0
+execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
 scoreboard players add @s blue.tr.piglin_trades 0
 execute if score #.tr.objective_type blue.config matches 1 if entity @s[advancements={blue:tr/quests/snout=true}] run function blue:tr/quests/snout
 function blue:shared/get_name

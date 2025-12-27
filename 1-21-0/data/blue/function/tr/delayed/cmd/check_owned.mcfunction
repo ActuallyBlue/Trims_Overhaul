@@ -1,7 +1,7 @@
 playsound ui.button.click player @s 0 -128 0 0 2 0.75
 scoreboard players reset #.check_owned Trims_Menu.BLUE
 execute if entity @s[tag=blue.tr.eye,tag=blue.tr.rib,tag=blue.tr.vex,tag=blue.tr.tide,tag=blue.tr.ward,tag=blue.tr.dune,tag=blue.tr.wild,tag=blue.tr.host,tag=blue.tr.snout,tag=blue.tr.coast,tag=blue.tr.spire,tag=blue.tr.sentry,tag=blue.tr.shaper,tag=blue.tr.raiser,tag=blue.tr.silence,tag=blue.tr.wayfinder,tag=blue.tr.flow,tag=blue.tr.bolt] run scoreboard players set #.check_owned Trims_Menu.BLUE 2
-execute if entity @s[advancements={blue:tr/tags={has_trim=false}}] run scoreboard players set #.check_owned Trims_Menu.BLUE 1
+execute if entity @s[tag=!blue.tr.wayfinder,tag=!blue.tr.silence,tag=!blue.tr.shaper,tag=!blue.tr.raiser,tag=!blue.tr.sentry,tag=!blue.tr.flow,tag=!blue.tr.bolt,tag=!blue.tr.spire,tag=!blue.tr.coast,tag=!blue.tr.snout,tag=!blue.tr.ward,tag=!blue.tr.dune,tag=!blue.tr.wild,tag=!blue.tr.tide,tag=!blue.tr.host,tag=!blue.tr.eye,tag=!blue.tr.rib,tag=!blue.tr.vex] run scoreboard players set #.check_owned Trims_Menu.BLUE 1
 execute if score #.check_owned Trims_Menu.BLUE matches 2 run tellraw @s [{"translate":"blue.tr.you_own","fallback":"Owned Trims","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"gui.all","color":"dark_green","extra":[".."]}]
 execute if score #.check_owned Trims_Menu.BLUE matches 1 run tellraw @s [{"translate":"blue.tr.you_own","fallback":"Owned Trims","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"gui.none","color":"dark_red"}]
 execute if score #.check_owned Trims_Menu.BLUE matches 1.. run return fail

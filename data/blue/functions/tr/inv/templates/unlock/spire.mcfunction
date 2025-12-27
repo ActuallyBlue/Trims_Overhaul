@@ -1,5 +1,10 @@
-execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
+execute store result score #.clear_temp blue.misc run clear @s spire_armor_trim_smithing_template{blue:trim} 0
+execute store result score #.clear_temp0 blue.misc run clear @s spire_armor_trim_smithing_template 0
+scoreboard players operation #.clear_temp0 blue.misc -= #.clear_temp blue.misc
+execute unless score #.clear_temp0 blue.misc matches 1.. run return 0
 advancement grant @s only blue:tr/tags unlocked_spire
+execute if entity @s[tag=blue.tr.spire] run return 0
+execute if entity @s[advancements={blue:tr/tags={tutorial_pickup_trim=false}}] run function blue:tr/inv/templates/unlock/tutorial
 scoreboard players add @s blue.tr.dragons_killed 0
 function blue:shared/get_name
 data modify storage blue:trims logs.append.trim set value {"translate":"Spire","color":"#BE20C7"}

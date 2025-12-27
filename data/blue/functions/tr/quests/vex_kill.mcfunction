@@ -4,5 +4,5 @@ execute unless predicate blue:shared/id_link run return 0
 kill @e[type=marker,tag=blue.tr.vex_passenger,predicate=blue:shared/id_link]
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_vex=false}}] run return 0
 execute if score #.tr.vex_completed blue.config matches 2 unless entity @s[tag=blue.tr.vex] run return 0
-execute if score #.tr.limit_owned_trims blue.config matches 1 if entity @s[advancements={blue:tr/tags={has_trim=true}}] run return 0
+execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run return 0
 function blue:tr/completion/vex

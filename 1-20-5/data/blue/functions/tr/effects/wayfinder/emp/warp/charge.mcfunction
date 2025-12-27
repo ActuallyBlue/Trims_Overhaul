@@ -1,5 +1,5 @@
 execute summon area_effect_cloud store success score #.temp blue.misc run data modify storage blue:trims wayfinder.Pos set from entity @s Pos
-execute if score #.temp blue.misc matches 1 run return 0
+execute if score #.temp blue.misc matches 1 run return fail
 scoreboard players set #.warp_charging blue.misc 1
 item replace entity b163102f-0-0-0-100000000 weapon from entity @s weapon.offhand
 execute store success score #.temp blue.misc run data modify storage blue:trims compass set from entity b163102f-0-0-0-100000000 HandItems[0]

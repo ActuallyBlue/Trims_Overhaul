@@ -34,7 +34,7 @@ execute if score #.tr.eye_completed blue.config matches 0 run advancement revoke
 execute if score #.tr.rib_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/rib=true}] only blue:tr/display/rib
 execute if score #.tr.vex_completed blue.config matches 0 run advancement revoke @s[advancements={blue:tr/display/vex=true}] only blue:tr/display/vex
 execute if score #.dragon_defeated blue.misc matches 0 run advancement revoke @s[advancements={blue:tr/display/dragon_egg=true}] only blue:tr/display/dragon_egg
-execute if entity @s[advancements={blue:tr/tags={has_trim=false}}] run return 0
+execute if entity @s[tag=!blue.tr.wayfinder,tag=!blue.tr.silence,tag=!blue.tr.shaper,tag=!blue.tr.raiser,tag=!blue.tr.sentry,tag=!blue.tr.spire,tag=!blue.tr.coast,tag=!blue.tr.snout,tag=!blue.tr.ward,tag=!blue.tr.dune,tag=!blue.tr.wild,tag=!blue.tr.tide,tag=!blue.tr.host,tag=!blue.tr.eye,tag=!blue.tr.rib,tag=!blue.tr.vex] run return 0
 execute if score #.wayfinder_stored blue.misc matches 1.. if entity @s[tag=blue.tr.wayfinder] run function blue:tr/delayed/return/wayfinder
 execute if score #.silence_stored blue.misc matches 1.. if entity @s[tag=blue.tr.silence] run function blue:tr/delayed/return/silence
 execute if score #.shaper_stored blue.misc matches 1.. if entity @s[tag=blue.tr.shaper] run function blue:tr/delayed/return/shaper

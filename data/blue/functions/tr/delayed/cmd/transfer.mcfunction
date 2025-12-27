@@ -2,8 +2,9 @@ playsound ui.button.click player @s 0 -128 0 0 2 0.75
 scoreboard objectives add blue.tr.transfer dummy
 execute if score #.tr.manual_transferring blue.config matches 0 unless entity @s[gamemode=creative] run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.manual_transferring","fallback":"Manual Transferring","color":"white","hoverEvent":{"action":"show_text","contents":{"translate":"blue.tr.manual_transferring_hover","fallback":"Transfer command (ON, OFF)","color":"gray"}},"italic":true},{"translate":"blue.tr.is_disabled","fallback":" is disabled on this server","color":"gray"}]
 execute if score #.tr.manual_transferring blue.config matches 0 unless entity @s[gamemode=creative] run return 0
-execute if entity @s[advancements={blue:tr/tags={has_trim=false}}] run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.no_owned_trims","fallback":"You don't own any trims.","color":"gray"}]
-execute if entity @s[advancements={blue:tr/tags={has_trim=false}}] run return 0
+execute store success score #.temp0 blue.misc if entity @s[tag=!blue.tr.wayfinder,tag=!blue.tr.silence,tag=!blue.tr.shaper,tag=!blue.tr.raiser,tag=!blue.tr.sentry,tag=!blue.tr.spire,tag=!blue.tr.coast,tag=!blue.tr.snout,tag=!blue.tr.ward,tag=!blue.tr.dune,tag=!blue.tr.wild,tag=!blue.tr.tide,tag=!blue.tr.host,tag=!blue.tr.eye,tag=!blue.tr.rib,tag=!blue.tr.vex]
+execute if score #.temp0 blue.misc matches 1 run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.no_owned_trims","fallback":"You don't own any trims.","color":"gray"}]
+execute if score #.temp0 blue.misc matches 1 run return 0
 execute if score #.temp Trims_Menu.BLUE matches 20 run function blue:tr/inv/transfer/msg
 execute if score #.temp Trims_Menu.BLUE matches 20 run return 0
 tag @s add blue.tr.temp

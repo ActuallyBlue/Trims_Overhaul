@@ -39,6 +39,7 @@
     "minecraft:pig",
     "minecraft:cow",
     {"id":"minecraft:nautilus","required":false},
+    {"id":"minecraft:zombie_nautilus","required":false},
     {"id":"minecraft:happy_ghast","required":false},
     {"id":"minecraft:copper_golem","required":false},
     {"id":"#alexsmobs:passive_land_animals","required":false},

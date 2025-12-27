@@ -625,7 +625,7 @@
   "blue.tr.sm.vortex_hover": "Silence's 'Vortex' ability damages blocks (OFF, ON)",
   "blue.tr.death_transfer_amount_hover": "Amount of trims transferred between players on death (1, 2, 3, 4, All, Hardcore, 0)",
   "blue.tr.hardcore_hover": "No trims are transferred on death, BUT, the trim a player is wearing on any death will become completely REVOKED as if its objective was never completed. Bypasses keepInventory.",
-  "blue.tr.limit_owned_trims_hover": "Players can only own 1 trim at a time (OFF, ON)",
+  "blue.tr.limit_owned_trims_hover": "Limit the amount of trims a player can own to a specific amount (OFF, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Transfer command (ON, OFF)",
   "blue.tr.manual_untrimming_hover": "If players can un-trim their armor with smithing tables (ON, OFF)",
   "blue.tr.objective_announcements_hover": "Announce completed objectives to all online players (ON, OFF)",
@@ -843,5 +843,7 @@
   "blue.tr.protected_description": "Gain immunity to some negative effects while you have Hero of the Village.",
   "blue.tr.ballista_description": "If you have Hero of the Village, hold sneak with a charged Crossbow in your mainhand to charge a powerful, armor-piercing shot. Reduces the effect level each use.",
   "blue.tr.hostiles": "Hostiles",
-  "blue.tr.host_untrust": "Hitting allied players enough times will remove Host's trust from all nearby players"
+  "blue.tr.host_untrust": "Hitting allied players enough times will remove Host's trust from all nearby players",
+  "blue.mcmeta_info": "v%s - By ActuallyBlue\n",
+  "blue.all_versions": "Supports every version"
 }

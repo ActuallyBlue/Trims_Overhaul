@@ -619,7 +619,7 @@
   "blue.tr.sm.vortex_hover": "Die 'Wirbel'-Fähigkeit der Stille schädigt Blöcke (AUS, AN)",
   "blue.tr.death_transfer_amount_hover": "Anzahl der Rüstungsbesatze, die beim Tod zwischen Spielern übertragen werden (1, 2, 3, 4, Alle, Hardcore, 0)",
   "blue.tr.hardcore_hover": "Es werden keine Rüstungsbesatze beim Tod übertragen, ABER, der rüstungsbesatz, den ein Spieler bei jedem Tod trägt, wird vollständig ENTZOGEN, als ob sein Ziel nie abgeschlossen wurde. Umgeht Inventar behalten.",
-  "blue.tr.limit_owned_trims_hover": "Spieler können nur 1 rüstungsbesatz gleichzeitig besitzen (AUS, AN)",
+  "blue.tr.limit_owned_trims_hover": "Begrenzt die Anzahl der Zierelemente, die ein Spieler besitzen kann, auf eine bestimmte Menge (AUS, 1, 2, 3, 4)",
   "blue.tr.manual_transferring_hover": "Übertragungsbefehl (AN, AUS)",
   "blue.tr.manual_untrimming_hover": "Ob Spieler den rüstungsbesatz mit Schmiedetischen von ihrer Rüstung entfernen können (AN, AUS)",
   "blue.tr.objective_announcements_hover": "Abgeschlossene Ziele an alle Online-Spieler ankündigen (AN, AUS)",
@@ -837,5 +837,7 @@
   "blue.tr.protected_description": "Du erhältst Immunität gegen einige negative Effekte, solange du den Dorfhheld-Effekt hast.",
   "blue.tr.ballista_description": "Wenn du den Dorfhheld-Effekt hast, halte dich geduckt, während du eine geladene Armbrust in der Haupthand hältst, um einen mächtigen, panzerbrechenden Schuss aufzuladen. Reduziert die Effektstufe bei jeder Verwendung.",
   "blue.tr.hostiles": "Feindlich",
-  "blue.tr.host_untrust": "Das wiederholte Angreifen verbündeter Spieler entzieht allen Spielern in der Nähe das Vertrauen des Hosts."
+  "blue.tr.host_untrust": "Das wiederholte Angreifen verbündeter Spieler entzieht allen Spielern in der Nähe das Vertrauen des Hosts.",
+  "blue.mcmeta_info": "v%s - Von ActuallyBlue",
+  "blue.all_versions": "Unterstützt alle Versionen"
 }
