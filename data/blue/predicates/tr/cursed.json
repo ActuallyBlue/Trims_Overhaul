@@ -1,0 +1,11 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "effects": {
+      "minecraft:nausea": {
+        "amplifier": 17
+      }
+    }
+  }
+}

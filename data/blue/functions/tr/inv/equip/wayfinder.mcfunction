@@ -1,3 +1,3 @@
-execute if entity @s[tag=blue.tr.wayfinder,scores={blue.tr.structures=22..}] unless score #.tr.allow_empowerment blue.config matches 0 if data storage blue:trims armor{feet:{material:"minecraft:nether_star"},legs:{material:"minecraft:nether_star"},chest:{material:"minecraft:nether_star"},head:{material:"minecraft:nether_star"}} run function blue:tr/inv/equip/star
+execute if entity @s[tag=blue.tr.wayfinder,scores={blue.tr.structures=22..}] if data storage blue:trims armor{feet:{material:"minecraft:nether_star"},legs:{material:"minecraft:nether_star"},chest:{material:"minecraft:nether_star"},head:{material:"minecraft:nether_star"}} run function blue:tr/inv/equip/star
 scoreboard players set @s[tag=blue.tr.wayfinder] blue.tr.current_trim 15
 tag @s add blue.tr.trim.wayfinder

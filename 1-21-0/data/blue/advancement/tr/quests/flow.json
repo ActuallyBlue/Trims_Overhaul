@@ -1,16 +1,24 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "player_hurt_entity",
       "conditions": {
         "damage": {
           "dealt": {
             "min": 200
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "blue:tr/flow_ignores",
+                "expected": false
+              }
+            ]
           }
         },
        "player": [
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "entity_properties",
             "entity": "this",
             "predicate": {
               "type_specific": {

@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:shaper_armor_trim_smithing_template",
-         "id": "minecraft:shaper_armor_trim_smithing_template"
+         "item": "shaper_armor_trim_smithing_template",
+         "id": "shaper_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.shaper"},
       "description": {"translate":"blue.tr.adv.shaper.desc","fallback":"The survival of countless explosions tends to be redirected to the power of true demolition"},

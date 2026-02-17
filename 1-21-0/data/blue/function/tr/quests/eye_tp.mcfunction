@@ -5,7 +5,7 @@ execute if score #.temp blue.misc matches 1 run return fail
 execute if score #.tr.require_unlock blue.config matches 1 if entity @s[advancements={blue:tr/tags={unlocked_eye=false}}] run return fail
 execute if score #.tr.eye_completed blue.config matches 2 unless entity @s[tag=blue.tr.eye] run return fail
 execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[advancements={blue:tr/tags={trim_limit=true}}] run return fail
-execute unless entity @e[type=area_effect_cloud,tag=blue.tr.eye_quest,distance=..20,limit=1] run return fail
+execute unless entity @e[tag=blue.tr.eye_quest,distance=..20,limit=1,type=area_effect_cloud] run return fail
 function blue:tr/completion/eye
-kill @e[type=area_effect_cloud,tag=blue.tr.eye_quest]
+kill @e[tag=blue.tr.eye_quest,type=area_effect_cloud]
 scoreboard objectives remove blue.tr.used_pearl

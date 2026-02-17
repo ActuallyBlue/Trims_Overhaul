@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:blaze_powder",
-         "id": "minecraft:blaze_powder"
+         "item": "blaze_powder",
+         "id": "blaze_powder"
       },
       "title": [{"translate":"item.minecraft.blaze_powder"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
       "description": "",

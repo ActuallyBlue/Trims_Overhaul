@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:emerald"
+          "id": "emerald"
       },
       "title": {"translate":"trim_material.minecraft.emerald"},
       "description": ["+0.5 ",{"translate":"attribute.name.generic.luck"}],

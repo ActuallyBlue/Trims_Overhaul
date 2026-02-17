@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:hero_of_the_village",
+      "trigger": "hero_of_the_village",
       "conditions": {
         "player": [
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},

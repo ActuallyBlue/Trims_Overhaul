@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:fishing_rod_hooked",
+      "trigger": "fishing_rod_hooked",
       "conditions": {
         "entity": {
           "type": "fishing_bobber"
@@ -12,7 +12,7 @@
             "name": "blue:shared/in_shipwreck"
           },
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.current_trim": 1

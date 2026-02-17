@@ -1,7 +1,7 @@
 {
   "values": [
-    "minecraft:beach",
-    "minecraft:desert",
+    "beach",
+    "desert",
     "#minecraft:is_badlands",
     {"id":"#c:is_sandy","required":false},
     {"id":"#c:desert","required":false}

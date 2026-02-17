@@ -1,7 +1,7 @@
 execute store success score #.temp blue.misc if predicate blue:tr/moving
 execute if score #.temp blue.misc matches 1 if score #.eye.grand_reveal blue.misc matches 1.. run function blue:tr/effects/eye/emp/end_reveal
 execute unless score #.temp blue.misc matches 0 run return fail
-scoreboard players add #.eye.grand_reveal blue.misc 1
+execute unless score #.eye.disfigure_time blue.misc matches 1.. run scoreboard players add #.eye.grand_reveal blue.misc 1
 execute if score #.eye.grand_reveal blue.misc matches 43 run effect give @s darkness 2 0 true
 execute if score #.eye.grand_reveal blue.misc matches 20.. run particle reverse_portal ~ ~0.5 ~ 0.2 0.2 0.2 2 1
 execute unless score #.eye.grand_reveal blue.misc matches 60.. run return fail

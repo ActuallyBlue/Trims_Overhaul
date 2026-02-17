@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:echo_shard"
+          "id": "echo_shard"
       },
       "title": [{"translate":"item.minecraft.echo_shard"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
       "description": "",

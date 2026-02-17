@@ -4,14 +4,18 @@ execute if score #.aperture_sound blue.misc matches 100 store success score #.ap
 execute positioned ~-9 ~-1.5 ~-9 as @e[dx=18,dy=-40,dz=18,type=!marker,tag=!blue.tr.mats.shulker] at @s run function blue:tr/effects/spire/emp/aperture/entity
 execute if score #.aperture_duration blue.misc matches 900.. run function blue:tr/effects/spire/emp/aperture/kill
 execute unless score #.aperture_duration blue.misc matches ..850 run return fail
-particle end_rod ^-1.4 ^1.1 ^-1.1 ^-2000000 ^800000 ^-390000 0.0000004 0 force @a[scores={blue.particles=1..}]
-particle end_rod ^-1.1 ^1.1 ^-1.4 ^-760000 ^800000 ^-1800000 0.0000004 0 force
-particle end_rod ^-1.1 ^1.1 ^1.4 ^-390000 ^800000 ^2000000 0.0000004 0 force @a[scores={blue.particles=1..}]
-particle end_rod ^-1.4 ^1.1 ^1.1 ^-1800000 ^800000 ^760000 0.0000004 0 force
-particle end_rod ^1.1 ^1.1 ^-1.4 ^390000 ^800000 ^-2000000 0.0000004 0 force @a[scores={blue.particles=1..}]
-particle end_rod ^1.4 ^1.1 ^-1.1 ^1800000 ^800000 ^-760000 0.0000004 0 force
-particle end_rod ^1.4 ^1.1 ^1.1 ^2000000 ^800000 ^390000 0.0000004 0 force @a[scores={blue.particles=1..}]
-particle end_rod ^1.1 ^1.1 ^1.4 ^760000 ^800000 ^1800000 0.0000004 0 force
+execute in overworld positioned ~ 400 ~ run particle firework ^-10 ^4 ^ 0.2 0.1 0.2 0 2 force
+execute in overworld positioned ~ 400 ~ run particle firework ^10 ^4 ^ 0.2 0.1 0.2 0 2 force
+execute in overworld positioned ~ 400 ~ run particle firework ^ ^4 ^-10 0.2 0.1 0.2 0 2 force
+execute in overworld positioned ~ 400 ~ run particle firework ^ ^4 ^10 0.2 0.1 0.2 0 2 force
+particle end_rod ^-1.4 ^1.1 ^-1.1 ^-20000000 ^8000000 ^-3900000 0.00000004 0 force @a[scores={blue.particles=1..}]
+particle end_rod ^-1.1 ^1.1 ^-1.4 ^-7600000 ^8000000 ^-18000000 0.00000004 0 force
+particle end_rod ^-1.1 ^1.1 ^1.4 ^-3900000 ^8000000 ^20000000 0.00000004 0 force @a[scores={blue.particles=1..}]
+particle end_rod ^-1.4 ^1.1 ^1.1 ^-18000000 ^8000000 ^7600000 0.00000004 0 force
+particle end_rod ^1.1 ^1.1 ^-1.4 ^3900000 ^8000000 ^-20000000 0.00000004 0 force @a[scores={blue.particles=1..}]
+particle end_rod ^1.4 ^1.1 ^-1.1 ^18000000 ^8000000 ^-7600000 0.00000004 0 force
+particle end_rod ^1.4 ^1.1 ^1.1 ^20000000 ^8000000 ^3900000 0.00000004 0 force @a[scores={blue.particles=1..}]
+particle end_rod ^1.1 ^1.1 ^1.4 ^7600000 ^8000000 ^18000000 0.00000004 0 force
 particle dragon_breath ~ ~0.6 ~ 5.3 0.3 5.3 0 3 force @a[scores={blue.particles=1..}]
 particle dragon_breath ~ ~0.6 ~ 5.3 0.3 5.3 0 8 force @a[scores={blue.particles=2..}]
 particle dragon_breath ~ ~0.6 ~ 5.3 0.3 5.3 0 7 force

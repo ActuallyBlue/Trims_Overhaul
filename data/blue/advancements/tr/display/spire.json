@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:spire_armor_trim_smithing_template",
-         "id": "minecraft:spire_armor_trim_smithing_template"
+         "item": "spire_armor_trim_smithing_template",
+         "id": "spire_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.spire"},
       "description": {"translate":"blue.tr.adv.spire.desc","fallback":"Endless skies lift the chosen upward, their natural guidance surpassing even the Dragon's"},

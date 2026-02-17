@@ -4,7 +4,7 @@ execute on attacker run scoreboard players set #.temp blue.misc -572
 execute unless score #.temp blue.misc matches -572 run return 0
 execute if score @s blue.misc matches 1.. run data remove entity @s attack
 execute if score @s blue.misc matches 1.. run return 0
-execute on attacker rotated as @s in overworld positioned 0.0 0 0.0 run tp b163102f-0-0-0-200000000 ^ ^ ^1
+execute on attacker rotated as @s positioned 0.0 0 0.0 positioned ^ ^ ^1 summon marker run function blue:shared/shootfacing
 execute on vehicle run function blue:tr/effects/dune/raisure/vehicle
 playsound item.brush.brushing.sand.complete player @a ~ ~ ~ 1.4 1
 playsound entity.iron_golem.step player @a ~ ~ ~ 1.8 1.5

@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:bolt_armor_trim_smithing_template"
+          "id": "bolt_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.bolt"},
       "description": {"translate":"blue.tr.adv.bolt.desc","fallback":"Builders who learn to guide copper and currents alike can shape the world to be their own"},

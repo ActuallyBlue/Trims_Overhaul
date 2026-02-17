@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
@@ -10,7 +10,7 @@
         ],
         "player": [
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "entity_properties",
             "entity": "this",
             "predicate": {
               "type_specific": {

@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": {
           "location": {

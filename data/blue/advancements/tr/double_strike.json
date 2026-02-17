@@ -1,11 +1,11 @@
 {
   "criteria": {
     "main": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "player_hurt_entity",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.current_trim": 13
@@ -32,9 +32,9 @@
         },
         "entity": [
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:entity_properties",
+              "condition": "entity_properties",
               "entity": "this",
               "predicate": {
                 "type": "#blue:shared/peaceful"
@@ -45,11 +45,11 @@
       }
     },
     "fangs": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "player_hurt_entity",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.current_trim": 13
@@ -65,9 +65,9 @@
         },
         "entity": [
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:entity_properties",
+              "condition": "entity_properties",
               "entity": "this",
               "predicate": {
                 "type": "#blue:shared/peaceful"
@@ -76,12 +76,18 @@
           }
         ]
       }
+    },
+    "delay": {
+      "trigger": "location"
     }
   },
   "requirements": [
     [
       "fangs",
       "main"
+    ],
+    [
+      "delay"
     ]
   ],
   "rewards": {

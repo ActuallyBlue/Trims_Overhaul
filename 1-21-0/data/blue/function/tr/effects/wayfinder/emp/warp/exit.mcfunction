@@ -5,6 +5,5 @@ playsound block.respawn_anchor.deplete block @a[distance=..8] ~ ~ ~ 2.3 2
 stopsound @a[distance=..12] player block.portal.travel
 stopsound @a[distance=..12] player block.sculk_shrieker.shriek
 effect clear @s darkness
-execute at b163102f-0-3-0-1 run forceload remove ~ ~
-execute at b163102f-0-3-0-1 run forceload add 8 8
-kill b163102f-0-3-0-1
+execute at @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1] run forceload remove ~ ~
+kill @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1]

@@ -1,7 +1,7 @@
 {
   "criteria": {
     "enter": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": {
           "location": {
@@ -12,13 +12,13 @@
       }
     },
     "exit": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:location_check",
+              "condition": "location_check",
               "predicate": {
                 "structure": "minecraft:stronghold",
                 "structures": "minecraft:stronghold"

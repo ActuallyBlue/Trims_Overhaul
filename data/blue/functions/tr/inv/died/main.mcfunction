@@ -15,7 +15,8 @@ execute if score #.player blue.tr.died matches 1 run data modify storage blue:tr
 scoreboard players set #.drop_temp blue.misc 0
 execute if score #.tr.death_transfer_amount blue.config matches 1000 if score @s blue.tr.current_trim matches 1.. run function blue:tr/inv/died/hardcore
 data remove storage blue:trims fake_inv
-execute as @e[type=item,distance=..3,tag=!blue.tr.checked] run function blue:tr/inv/died/check_keep
+execute as @e[distance=..3,tag=!blue.tr.checked,type=item] run function blue:tr/inv/died/check_keep
+execute if score #.tr.death_untrim blue.config matches 1 as @e[distance=..3,tag=blue.tr.untrim_item,tag=!blue.tr.checked,type=item] run function blue:tr/inv/died/check_keep
 advancement grant @s only blue:tr/inv_checks
 execute unless score #.player blue.tr.died matches 1 run return 0
 execute if entity @s[tag=blue.tr.wayfinder] if entity @a[tag=blue.tr.killer,advancements={blue:tr/blacklist={wayfinder=false}},limit=1] run function blue:tr/inv/died/move/wayfinder

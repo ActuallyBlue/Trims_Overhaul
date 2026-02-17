@@ -5,6 +5,9 @@ execute if data storage blue:trims inventory[].components."minecraft:trim"{mater
 execute if score #.temp blue.misc matches 4 store result score #.valid_slots blue.misc run data modify storage blue:trims inventory[].components."minecraft:trim".material set from storage blue:trims inventory[-1].components."minecraft:trim".material
 execute if score #.valid_slots blue.misc matches 0 store result score #.valid_slots blue.misc run return 2
 execute if score #.valid_slots blue.misc matches 1 if data storage blue:trims armor{has_egg:1b} store result score #.valid_slots blue.misc run return 2
+attribute @s water_movement_efficiency modifier remove blue:tr.set
+attribute @s movement_efficiency modifier remove blue:tr.set
+attribute @s sneaking_speed modifier remove blue:tr.set
 attribute @s knockback_resistance modifier remove blue:tr.set
 attribute @s armor_toughness modifier remove blue:tr.set
 attribute @s movement_speed modifier remove blue:tr.set

@@ -1,0 +1,42 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "location_check",
+      "predicate": {
+        "block": {
+          "blocks": [
+            "minecraft:dirt_path",
+            "minecraft:gravel",
+            "minecraft:coarse_dirt"
+          ]
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "weapon.*": {
+            "items": [
+              "minecraft:filled_map",
+              "map"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "weapon.*": {
+            "items": "#blue:tr/spears"
+          }
+        }
+      }
+    }
+  ]
+}

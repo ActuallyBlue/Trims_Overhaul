@@ -1,4 +1,4 @@
 advancement revoke @s only blue:tr/novelty req
 effect give @s regeneration 5 0 true
-effect give @s saturation 1 0 true
+effect give @s saturation 3 0 true
 effect give @s absorption 1 0

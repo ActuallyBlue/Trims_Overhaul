@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:gunpowder",
-         "id": "minecraft:gunpowder"
+         "item": "gunpowder",
+         "id": "gunpowder"
       },
       "title": [{"translate":"item.minecraft.gunpowder"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
       "description": "",

@@ -1,1 +1,1 @@
-{"providers":[{"type":"bitmap","file":"item/blue/mxsfits_fear.png","ascent":260,"height":399,"chars":["\uEABF"]},{"type":"space","advances":{"\uE99A":1,"\uE99B":2,"\uE99C":3,"\uE99D":5,"\uE99E":-20}}]}
+{"providers":[{"type":"bitmap","file":"item/blue/mxsfits_fear.png","ascent":120,"height":280,"chars":["\uEABF"]},{"type":"space","advances":{"\uE99A":1,"\uE99B":2,"\uE99C":3,"\uE99D":5,"\uE99E":-20}}]}

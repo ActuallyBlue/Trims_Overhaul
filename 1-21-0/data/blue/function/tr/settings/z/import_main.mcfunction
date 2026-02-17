@@ -1,5 +1,5 @@
 playsound block.note_block.chime player @s ~ ~ ~ 1 1.5
-tellraw @s ["\n\n",{"translate":"blue.tr.import_success","fallback":"Settings have been successfully imported.","color":"gray"}]
+tellraw @p ["\n\n",{"translate":"blue.tr.import_success","fallback":"Settings have been successfully imported.","color":"gray"}]
 execute store result storage blue:trims temp.export.objective_type int 1 run scoreboard players get #.tr.objective_type blue.config
 execute store result storage blue:trims temp.export.objective_announcements int 1 run scoreboard players get #.tr.objective_announcements blue.config
 execute store result storage blue:trims temp.export.template_clearing int 1 run scoreboard players get #.tr.template_clearing blue.config
@@ -13,6 +13,9 @@ execute store result storage blue:trims temp.export.owner_finder int 1 run score
 execute store result storage blue:trims temp.export.reload_message int 1 run scoreboard players get #.tr.reload_message blue.config
 execute store result storage blue:trims temp.export.wind_barrage_duration int 1 run scoreboard players get #.flow.wind_barrage_duration blue.config
 execute store result storage blue:trims temp.export.throw_cooldown int 1 run scoreboard players get #.shaper.throw_cooldown blue.config
+execute store result storage blue:trims temp.export.disfigure_time int 1 run scoreboard players get #.eye.disfigure_time blue.config
+execute store result storage blue:trims temp.export.auto_damage int 1 run scoreboard players get #.ward.auto_damage blue.config
+execute store result storage blue:trims temp.export.strict_projectile int 1 run scoreboard players get #.rib.strict_projectile blue.config
 execute store result storage blue:trims temp.export.trap_limit int 1 run scoreboard players get #.wild.trap_limit blue.config
 execute store result storage blue:trims temp.export.gamble_multiplier int 1 run scoreboard players get #.snout.gamble_multiplier blue.config
 execute store result storage blue:trims temp.export.gamble_limit int 1 run scoreboard players get #.snout.gamble_limit blue.config
@@ -27,19 +30,25 @@ execute store result storage blue:trims temp.export.no_gravity int 1 run scorebo
 execute store result storage blue:trims temp.export.bonus_emeralds int 1 run scoreboard players get #.sentry.bonus_emeralds blue.config
 execute store result storage blue:trims temp.export.bonus_shards int 1 run scoreboard players get #.silence.bonus_shards blue.config
 execute store result storage blue:trims temp.export.vortex_griefing int 1 run scoreboard players get #.silence.vortex_griefing blue.config
-execute store result storage blue:trims temp.export.uncap_proficiency int 1 run scoreboard players get #.raiser.uncap_proficiency blue.config
 execute store result storage blue:trims temp.export.tnt_bounce int 1 run scoreboard players get #.shaper.tnt_bounce blue.config
 execute store result storage blue:trims temp.export.warp_type int 1 run scoreboard players get #.wayfinder.warp_type blue.config
 execute store result storage blue:trims temp.export.guidance_range int 1 run scoreboard players get #.spire.guidance_range blue.config
 execute store result storage blue:trims temp.export.limit_plunge int 1 run scoreboard players get #.spire.limit_plunge blue.config
 execute store result storage blue:trims temp.export.armor_ownership int 1 run scoreboard players get #.tr.armor_ownership blue.config
 execute store result storage blue:trims temp.export.egg_bonus int 1 run scoreboard players get #.tr.egg_bonus blue.config
+execute store result storage blue:trims temp.export.gust_strength int 1 run scoreboard players get #.flow.gust_strength blue.config
+execute store result storage blue:trims temp.export.placement_range int 1 run scoreboard players get #.bolt.placement_range blue.config
+execute store result storage blue:trims temp.export.charge_speed int 1 run scoreboard players get #.sentry.charge_speed blue.config
+execute store result storage blue:trims temp.export.limit int 1 run scoreboard players get #.raiser.limit blue.config
+execute store result storage blue:trims temp.export.multiplier int 1 run scoreboard players get #.raiser.multiplier blue.config
+execute store result storage blue:trims temp.export.death_untrim int 1 run scoreboard players get #.tr.death_untrim blue.config
+execute store result storage blue:trims temp.export.trim_locator_bar int 1 run scoreboard players get #.tr.trim_locator_bar blue.config
+execute store result storage blue:trims temp.export.ability_shortcuts int 1 run scoreboard players get #.tr.ability_shortcuts blue.config
 data modify storage blue:trims display set value [[{"text":""}]]
 $execute unless score #.tr.objective_type blue.config matches $(ot) run data modify storage blue:trims display append value [{"translate":"blue.tr.objective_type","fallback":"Objective Type"},{"text":", ","color":"gray"}]
 $execute unless score #.tr.objective_announcements blue.config matches $(oa) run data modify storage blue:trims display append value [{"translate":"blue.tr.objective_announcements","fallback":"Objective Announcements"},{"text":", ","color":"gray"}]
 $execute unless score #.tr.template_clearing blue.config matches $(tc) run data modify storage blue:trims display append value [{"translate":"blue.tr.template_clearing","fallback":"Template Clearing"},{"text":", ","color":"gray"}]
 $execute unless score #.tr.require_unlock blue.config matches $(ru) run data modify storage blue:trims display append value [{"translate":"blue.tr.require_unlock","fallback":"Require Unlock"},{"text":", ","color":"gray"}]
-$execute unless score #.tr.allow_empowerment blue.config matches $(ae) run data modify storage blue:trims display append value [{"translate":"blue.tr.allow_empowerment","fallback":"Allow Empowerment"},{"text":", ","color":"gray"}]
 $execute unless score #.tr.limit_owned_trims blue.config matches $(lot) run data modify storage blue:trims display append value [{"translate":"blue.tr.limit_owned_trims","fallback":"Limit Owned Trims"},{"text":", ","color":"gray"}]
 $execute unless score #.tr.random_task_defender blue.config matches $(rtd) run data modify storage blue:trims display append value [{"translate":"blue.tr.random_task_defender","fallback":"Random Task Defender"},{"text":", ","color":"gray"}]
 $execute unless score #.tr.death_transfer_amount blue.config matches $(dta) run data modify storage blue:trims display append value [{"translate":"blue.tr.death_transfer_amount","fallback":"Death Transfer Amount"},{"text":", ","color":"gray"}]
@@ -56,7 +65,7 @@ $execute unless score #.snout.gamble_multiplier blue.config matches $(sgm) run d
 $execute unless score #.snout.gamble_limit blue.config matches $(sgl) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.gamble","fallback":"Gamble Multiplier"},{"text":", ","color":"gray"}]
 $execute unless score #.wayfinder.tracker_range blue.config matches $(str) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.tracker","fallback":"Tracker Range"},{"text":", ","color":"gray"}]
 $execute unless score #.wayfinder.void_return blue.config matches $(svr) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.return","fallback":"Void Return"},{"text":", ","color":"gray"}]
-$execute unless score #.rib.strict_skull blue.config matches $(ssk) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.skull","fallback":"Strict Skull"},{"text":", ","color":"gray"}]
+$execute unless score #.rib.strict_projectile blue.config matches $(ssp) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.projectile","fallback":"Strict Projectile"},{"text":", ","color":"gray"}]
 $execute unless score #.rib.strict_scorch blue.config matches $(ssc) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.spawn","fallback":"Strict Spawn"},{"text":", ","color":"gray"}]
 $execute unless score #.rib.strict_ashen blue.config matches $(ssa) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.scorch","fallback":"Strict Scorch"},{"text":", ","color":"gray"}]
 $execute unless score #.rib.strict_spawn blue.config matches $(sss) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.ashen","fallback":"Strict Ashen"},{"text":", ","color":"gray"}]
@@ -67,22 +76,29 @@ $execute unless score #.spire.limit_plunge blue.config matches $(slp) run data m
 $execute unless score #.sentry.bonus_emeralds blue.config matches $(sbe) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.emeralds","fallback":"Bonus Emeralds"},{"text":", ","color":"gray"}]
 $execute unless score #.silence.bonus_shards blue.config matches $(sbs) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.shards","fallback":"Bonus Shards"},{"text":", ","color":"gray"}]
 $execute unless score #.silence.vortex_griefing blue.config matches $(svg) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.vortex","fallback":"Vortex Griefing"},{"text":", ","color":"gray"}]
-$execute unless score #.raiser.uncap_proficiency blue.config matches $(sup) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.proficiency","fallback":"Uncap Proficiency"},{"text":", ","color":"gray"}]
 $execute unless score #.shaper.tnt_bounce blue.config matches $(stb) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.tnt_bounce","fallback":"TNT Bounce"},{"text":", ","color":"gray"}]
 $execute unless score #.wayfinder.warp_type blue.config matches $(swt) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.warp_type","fallback":"Warp Type"},{"text":", ","color":"gray"}]
 $execute unless score #.spire.guidance_range blue.config matches $(sgr) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.guidance_range","fallback":"Guidance Range"},{"text":", ","color":"gray"}]
-$execute unless score #.tr.armor_ownership blue.config matches $(ao) run data modify storage blue:trims display append value [{"translate":"blue.tr.armor_ownership","fallback":"Armor-bound Ownership"},{"text":", ","color":"gray"}]
+$execute unless score #.tr.armor_ownership blue.config matches $(ao) run data modify storage blue:trims display append value [{"translate":"blue.tr.armor_ownership","fallback":"Armor-controlled Ownership"},{"text":", ","color":"gray"}]
 $execute unless score #.tr.egg_bonus blue.config matches $(eb) run data modify storage blue:trims display append value [{"translate":"blue.tr.egg_bonus","fallback":"Dragon Egg Bonus"},{"text":", ","color":"gray"}]
+$execute unless score #.flow.gust_strength blue.config matches $(sgs) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.gust","fallback":"Gust Strength"},{"text":", ","color":"gray"}]
+$execute unless score #.bolt.placement_range blue.config matches $(spr) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.placement","fallback":"Placement Range"},{"text":", ","color":"gray"}]
+$execute unless score #.sentry.charge_speed blue.config matches $(scs) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.charge_speed","fallback":"Charge Speed"},{"text":", ","color":"gray"}]
+$execute unless score #.raiser.limit blue.config matches $(spl) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.proficiency_limit","fallback":"Proficiency Limit"},{"text":", ","color":"gray"}]
+$execute unless score #.raiser.multiplier blue.config matches $(spm) run data modify storage blue:trims display append value [{"translate":"blue.tr.sm.proficiency_multiplier","fallback":"Proficiency Multiplier"},{"text":", ","color":"gray"}]
+$execute unless score #.tr.death_untrim blue.config matches $(du) run data modify storage blue:trims display append value [{"translate":"blue.tr.death_untrim","fallback":"Death Untrim"},{"text":", ","color":"gray"}]
+$execute unless score #.tr.trim_locator_bar blue.config matches $(tlb) run data modify storage blue:trims display append value [{"translate":"blue.tr.trim_locator_bar","fallback":"Trim Locator Bar"},{"text":", ","color":"gray"}]
+$execute unless score #.tr.ability_shortcuts blue.config matches $(ab) run data modify storage blue:trims display append value [{"translate":"blue.tr.ability_shortcuts","fallback":"Ability Shortcuts"},{"text":", ","color":"gray"}]
 data remove storage blue:trims display[-1][-1]
 execute store result score #.temp blue.misc run data get storage blue:trims display
 execute if score #.temp blue.misc matches 3.. run data modify storage blue:trims display[-2][-1].text set value " and "
-execute unless score #.temp blue.misc matches 1 run tellraw @s ""
+execute unless score #.temp blue.misc matches 1 run tellraw @p[gamemode=creative,distance=..9] ""
 execute if score #.temp blue.misc matches 1 run data modify storage blue:trims display set value [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.import_failed","fallback":"No settings were changed"}]
 execute if score #.temp blue.misc matches 2..14 run data modify storage blue:trims display append value [{"translate":"blue.tr.was_changed","fallback":" was changed.","color":"gray"}]
 execute if score #.temp blue.misc matches 15..34 run data modify storage blue:trims display append value [{"translate":"blue.tr.were_changed","fallback":" were changed.","color":"gray"}]
-execute if score #.temp blue.misc matches 15..34 run tellraw @s [{"text":"","underlined":true,"hover_event":{"action":"show_text","value":{"storage":"blue:trims","nbt":"display[]","separator":{"text":". ","color":"black"},"interpret":true}},"hoverEvent":{"action":"show_text","contents":{"storage":"blue:trims","nbt":"display[]","separator":{"text":". ","color":"black"},"interpret":true}}},{"score":{"name":"#.temp","objective":"blue.misc"}},{"translate":"blue.tr.settings_short","fallback":" Settings were changed.","color":"gray"}]
+execute if score #.temp blue.misc matches 15..34 run tellraw @p[gamemode=creative,distance=..9] [{"text":"","underlined":true,"hover_event":{"action":"show_text","value":{"storage":"blue:trims","nbt":"display[]","separator":{"text":". ","color":"black"},"interpret":true}},"hoverEvent":{"action":"show_text","contents":{"storage":"blue:trims","nbt":"display[]","separator":{"text":". ","color":"black"},"interpret":true}}},{"score":{"name":"#.temp","objective":"blue.misc"}},{"translate":"blue.tr.settings_short","fallback":" Settings were changed.","color":"gray"}]
 execute if score #.temp blue.misc matches 35.. run data modify storage blue:trims display set value [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.all_changed","fallback":"All settings were changed","color":"gray"}]
-execute unless score #.temp blue.misc matches 15..34 run tellraw @s {"storage":"blue:trims","nbt":"display","interpret":true}
+execute unless score #.temp blue.misc matches 15..34 run tellraw @p[gamemode=creative,distance=..9] {"storage":"blue:trims","nbt":"display","interpret":true}
 execute unless score #.temp blue.misc matches 1 run function blue:tr/settings/z/import with storage blue:trims temp.export
 $scoreboard players set #.flow.wind_barrage_duration blue.config $(swbd)
 $scoreboard players set #.shaper.throw_cooldown blue.config $(stc)
@@ -94,7 +110,7 @@ $scoreboard players set #.snout.gamble_limit blue.config $(sgl)
 $scoreboard players set #.wayfinder.tracker_range blue.config $(str)
 $scoreboard players set #.wayfinder.void_return blue.config $(svr)
 $scoreboard players set #.rib.strict_ashen blue.config $(ssa)
-$scoreboard players set #.rib.strict_skull blue.config $(ssk)
+$scoreboard players set #.rib.strict_projectile blue.config $(ssp)
 $scoreboard players set #.rib.strict_scorch blue.config $(ssc)
 $scoreboard players set #.rib.strict_spawn blue.config $(sss)
 $scoreboard players set #.spire.origin_tp blue.config $(sot)
@@ -103,12 +119,10 @@ $scoreboard players set #.spire.no_gravity blue.config $(sng)
 $scoreboard players set #.sentry.bonus_emeralds blue.config $(sbe)
 $scoreboard players set #.silence.bonus_shards blue.config $(sbs)
 $scoreboard players set #.silence.vortex_griefing blue.config $(svg)
-$scoreboard players set #.raiser.uncap_proficiency blue.config $(sup)
 $scoreboard players set #.tr.objective_type blue.config $(ot)
 $scoreboard players set #.tr.objective_announcements blue.config $(oa)
 $scoreboard players set #.tr.template_clearing blue.config $(tc)
 $scoreboard players set #.tr.require_unlock blue.config $(ru)
-$scoreboard players set #.tr.allow_empowerment blue.config $(ae)
 $scoreboard players set #.tr.limit_owned_trims blue.config $(lot)
 $scoreboard players set #.tr.random_task_defender blue.config $(rtd)
 $scoreboard players set #.tr.death_transfer_amount blue.config $(dta)
@@ -116,10 +130,18 @@ $scoreboard players set #.tr.manual_transferring blue.config $(mt)
 $scoreboard players set #.tr.manual_untrimming blue.config $(mu)
 $scoreboard players set #.tr.owner_finder blue.config $(of)
 $scoreboard players set #.tr.reload_message blue.config $(rm)
-$scoreboard players set #.shaper.tnt_bounce $(stb)
-$scoreboard players set #.wayfinder.warp_type $(swt)
-$scoreboard players set #.spire.guidance_range $(sgr)
+$scoreboard players set #.shaper.tnt_bounce blue.config $(stb)
+$scoreboard players set #.wayfinder.warp_type blue.config $(swt)
+$scoreboard players set #.spire.guidance_range blue.config $(sgr)
 $scoreboard players set #.spire.limit_plunge blue.config $(slp)
-$scoreboard players set #.tr.armor_ownership $(ao)
-$scoreboard players set #.tr.egg_bonus $(eb)
-data remove storage blue:trims temp.export
+$scoreboard players set #.tr.armor_ownership blue.config $(ao)
+$scoreboard players set #.tr.egg_bonus blue.config $(eb)
+$scoreboard players set #.flow.gust_strength blue.config $(sgs)
+$scoreboard players set #.bolt.placement_range blue.config $(spr)
+$scoreboard players set #.sentry.charge_speed blue.config $(scs)
+$scoreboard players set #.raiser.limit blue.config $(spl)
+$scoreboard players set #.raiser.multiplier blue.config $(spm)
+$scoreboard players set #.tr.death_untrim blue.config $(du)
+$scoreboard players set #.tr.trim_locator_bar blue.config $(tlb)
+$scoreboard players set #.tr.ability_shortcuts blue.config $(ab)
+#data remove storage blue:trims temp.export

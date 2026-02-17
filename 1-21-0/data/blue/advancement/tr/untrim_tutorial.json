@@ -1,7 +1,7 @@
 {
   "criteria": {
     "place": {
-      "trigger": "minecraft:placed_block",
+      "trigger": "placed_block",
       "conditions": {
         "player": {
           "type_specific": {
@@ -20,7 +20,7 @@
       }
     },
     "use": {
-      "trigger": "minecraft:default_block_use",
+      "trigger": "default_block_use",
       "conditions": {
         "player": {
           "type_specific": {
@@ -46,6 +46,6 @@
     ]
   ],
   "rewards": {
-    "function": "blue:tr/inv/untrim_tutorial"
+    "function": "blue:tr/inv/untrim/tutorial"
   }
 }

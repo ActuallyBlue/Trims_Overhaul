@@ -9,7 +9,7 @@ execute if score #.reversal_charge blue.misc matches ..-1 run function blue:tr/e
 execute if entity @s[x_rotation=-90..-75] if predicate blue:shared/on_ground unless score #.reversal_charge blue.misc matches ..-1 rotated 0 0 run function blue:tr/effects/spire/emp/reversal/charge
 execute if score #.reversal_charge blue.misc matches 0.. unless predicate blue:shared/on_ground run function blue:tr/effects/spire/emp/reversal/release
 execute if score #.reversal_charge blue.misc matches 1.. run function blue:tr/effects/spire/emp/reversal/timer
-execute as @e[type=item,tag=!blue.tr.checked,predicate=blue:tr/blast-o-breath,distance=..6,limit=1] run function blue:tr/effects/spire/emp/throw
+execute as @e[tag=!blue.tr.checked,predicate=blue:tr/blast-o-breath,distance=..6,limit=1,type=item] run function blue:tr/effects/spire/emp/throw
 execute as b163102f-0-e-0-1 at @s run function blue:tr/effects/spire/emp/item
 execute if score #.spire.aperture blue.config matches 0 run return fail
 execute if dimension the_end if entity @s[y=-40,dy=-30] positioned ~ -20 ~ run function blue:tr/effects/spire/emp/to_overworld

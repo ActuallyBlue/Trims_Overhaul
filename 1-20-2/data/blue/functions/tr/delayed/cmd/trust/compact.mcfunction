@@ -5,7 +5,7 @@ execute if score #.temp blue.misc matches 1 run return 0
 execute if score #.temp blue.misc matches 0 unless score @s blue.tr.current_trim matches 1.. run playsound ui.button.click player @s 0 -128 0 0 0.75 1
 execute if score #.temp blue.misc matches 0 unless score @s blue.tr.current_trim matches 1.. run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.not_trim_owner","fallback":"You aren't the owner of this trim","color":"gray"}]
 execute if score #.temp blue.misc matches 0 unless score @s blue.tr.current_trim matches 1.. run return 0
-execute store result storage blue:trims temp.score int 1 run scoreboard players get @s blue.tr.current_trim
+execute store result storage blue:trims temp.int int 1 run scoreboard players get @s blue.tr.current_trim
 function blue:tr/delayed/cmd/trust/translate with storage blue:trims temp
 playsound ui.button.click player @s 0 -128 0 0 2 0.75
 data remove storage blue:trims display

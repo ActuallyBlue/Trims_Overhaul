@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:vex_armor_trim_smithing_template",
-         "id": "minecraft:vex_armor_trim_smithing_template"
+         "item": "vex_armor_trim_smithing_template",
+         "id": "vex_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.vex"},
       "description": {"translate":"blue.tr.adv.vex.desc","fallback":"Enemies caught away from allies quickly realize how punishing their disadvantage can be"},

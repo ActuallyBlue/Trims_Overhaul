@@ -1,0 +1,151 @@
+{
+  "criteria": {
+    "wheat": {
+      "trigger": "placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 16
+            }
+          },
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": ["wheat_seeds"]
+                }
+              },
+              "flags": {
+                "is_sneaking": false
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:wheat"
+          }
+        ]
+      }
+    },
+    "potato": {
+      "trigger": "placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 16
+            }
+          },
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": ["potato"]
+                }
+              },
+              "flags": {
+                "is_sneaking": false
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:potatoes"
+          }
+        ]
+      }
+    },
+    "carrot": {
+      "trigger": "placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 16
+            }
+          },
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": ["carrot"]
+                }
+              },
+              "flags": {
+                "is_sneaking": false
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:carrots"
+          }
+        ]
+      }
+    },
+    "beetroot": {
+      "trigger": "placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 16
+            }
+          },
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": ["beetroot_seeds"]
+                }
+              },
+              "flags": {
+                "is_sneaking": false
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:beetroots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "beetroot",
+      "carrot",
+      "potato",
+      "wheat"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/effects/wild/sprout/main"
+  }
+}

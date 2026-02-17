@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:knowledge_book",
-         "id": "minecraft:knowledge_book"
+         "item": "knowledge_book",
+         "id": "knowledge_book"
       },
       "title": [{"translate":"blue.tr.adv.mats.title","fallback":"Trim Materials"},"  "],
       "description": {"translate":"blue.tr.adv.mats.desc","fallback":"Every material has a unique effect as mentioned here. Vanilla increases attributes while custom ones empower a specific trim."},

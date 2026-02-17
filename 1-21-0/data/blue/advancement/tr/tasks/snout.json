@@ -1,7 +1,7 @@
 {
   "criteria": {
     "interact": {
-      "trigger": "minecraft:player_interacted_with_entity",
+      "trigger": "player_interacted_with_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:piglin",
@@ -20,7 +20,7 @@
       }
     },
     "dropped": {
-      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "trigger": "thrown_item_picked_up_by_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:piglin",

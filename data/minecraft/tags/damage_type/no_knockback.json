@@ -1,7 +1,9 @@
 {
   "values": [
     "blue:tr/sacrifice",
+    "blue:tr/no_impact",
     "blue:tr/trap",
-    "blue:tr/fish"
+    "blue:tr/fish",
+    "blue:tr/fire"
   ]
 }

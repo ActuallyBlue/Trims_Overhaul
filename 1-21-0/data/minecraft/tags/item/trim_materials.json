@@ -1,14 +1,14 @@
 {
   "values": [
-    "minecraft:heart_of_the_sea",
-    "minecraft:nautilus_shell",
-    "minecraft:shulker_shell",
-    "minecraft:blaze_powder",
-    "minecraft:nether_star",
-    "minecraft:wind_charge",
-    "minecraft:dragon_egg",
-    "minecraft:echo_shard",
-    "minecraft:ender_eye",
-    "minecraft:gunpowder"
+    "heart_of_the_sea",
+    "nautilus_shell",
+    "shulker_shell",
+    "blaze_powder",
+    "nether_star",
+    "wind_charge",
+    "dragon_egg",
+    "echo_shard",
+    "ender_eye",
+    "gunpowder"
   ]
 }

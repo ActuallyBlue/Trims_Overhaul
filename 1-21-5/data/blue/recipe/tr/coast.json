@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BHB",
+    "HCH",
+    "BHB"
+  ],
+  "key": {
+    "B": [
+      "minecraft:dead_tube_coral_block",
+      "minecraft:dead_horn_coral_block",
+      "minecraft:dead_fire_coral_block",
+      "minecraft:dead_brain_coral_block",
+      "minecraft:dead_bubble_coral_block",
+      "minecraft:tube_coral_block",
+      "minecraft:horn_coral_block",
+      "minecraft:fire_coral_block",
+      "minecraft:brain_coral_block",
+      "minecraft:bubble_coral_block"
+    ],
+    "H": "minecraft:heart_of_the_sea",
+    "C": "minecraft:conduit"
+  },
+  "result": {
+    "id": "minecraft:coast_armor_trim_smithing_template",
+    "components": {
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:lore": [{"translate":"blue.tr.coast_quest_description","fallback":"Crafting without proper conditions will have no benefit","color":"gold"}]
+    }
+  },
+  "show_notification": true
+}

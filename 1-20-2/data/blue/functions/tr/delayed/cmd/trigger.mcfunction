@@ -1,4 +1,4 @@
-schedule function blue:tr/delayed/cmd/loop 1t
+execute unless score #.tr.ability_shortcuts blue.config matches 1..2 run schedule function blue:tr/delayed/cmd/loop 1t
 scoreboard players set #.tr.trigger_loop blue.misc 400
 scoreboard players operation #.temp Trims_Menu.BLUE = @s Trims_Menu.BLUE
 data modify storage blue:trims temp.menu set value {"strikethrough":"false","color":"gray"}
@@ -15,6 +15,7 @@ execute if score #.temp Trims_Menu.BLUE matches 8 at @s run function blue:shared
 execute if score #.temp Trims_Menu.BLUE matches 20..49 at @s run function blue:tr/delayed/cmd/transfer
 execute if score #.temp Trims_Menu.BLUE matches 50..60 at @s run function blue:tr/delayed/cmd/info
 execute if score #.temp Trims_Menu.BLUE matches 61 at @s run function blue:tr/delayed/cmd/objectives
+execute if score #.temp Trims_Menu.BLUE matches 100 at @s run function blue:tr/delayed/cmd/shortcut
 execute if score #.temp Trims_Menu.BLUE matches 500..550 at @s run function blue:tr/inv/transfer/confirm
 execute if score #.temp Trims_Menu.BLUE matches 999 at @s run function blue:tr/delayed/cmd/trust/compact
 execute if score #.temp Trims_Menu.BLUE matches 1000..10000 at @s run function blue:tr/delayed/cmd/trust

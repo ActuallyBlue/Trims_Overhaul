@@ -1,7 +1,7 @@
 {
   "criteria": {
     "kill": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "killing_blow": {
           "direct_entity": {
@@ -10,7 +10,7 @@
         },
         "player": [
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.current_trim": 1
@@ -20,7 +20,7 @@
       }
     },
     "hurt": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "player_hurt_entity",
       "conditions": {
         "damage": {
           "type": {
@@ -31,7 +31,7 @@
         },
         "player": [
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.current_trim": 1

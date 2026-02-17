@@ -1,12 +1,12 @@
 {
   "values": [
-    "minecraft:copper_block",
-    "minecraft:waxed_copper_block",
-    "minecraft:exposed_copper",
-    "minecraft:waxed_exposed_copper",
-    "minecraft:weathered_copper",
-    "minecraft:waxed_weathered_copper",
-    "minecraft:oxidized_copper",
-    "minecraft:waxed_oxidized_copper"
+    "copper_block",
+    "waxed_copper_block",
+    "exposed_copper",
+    "waxed_exposed_copper",
+    "weathered_copper",
+    "waxed_weathered_copper",
+    "oxidized_copper",
+    "waxed_oxidized_copper"
   ]
 }

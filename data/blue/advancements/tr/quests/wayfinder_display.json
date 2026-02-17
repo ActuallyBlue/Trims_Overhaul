@@ -1,7 +1,7 @@
 {
   "criteria": {
     "require_template": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
@@ -22,14 +22,14 @@
             }
           },
           {
-            "condition": "minecraft:any_of",
+            "condition": "any_of",
             "terms": [
               {
                 "condition": "minecraft:reference",
                 "name": "blue:shared/in_structure"
               },
               {
-                "condition": "minecraft:location_check",
+                "condition": "location_check",
                 "predicate": {
                   "biomes": "minecraft:mushroom_fields"
                 }
@@ -42,11 +42,11 @@
       }
     },
     "no_require_template": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "entity_properties",
             "entity": "this",
             "predicate": {
               "type_specific": {
@@ -60,14 +60,14 @@
             }
           },
           {
-            "condition": "minecraft:any_of",
+            "condition": "any_of",
             "terms": [
               {
                 "condition": "minecraft:reference",
                 "name": "blue:shared/in_structure"
               },
               {
-                "condition": "minecraft:location_check",
+                "condition": "location_check",
                 "predicate": {
                   "biomes": "minecraft:mushroom_fields"
                 }

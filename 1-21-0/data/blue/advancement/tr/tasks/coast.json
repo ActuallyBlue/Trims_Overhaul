@@ -1,17 +1,17 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:fishing_rod_hooked",
+      "trigger": "fishing_rod_hooked",
       "conditions": {
         "entity": {
           "type": "fishing_bobber"
         },
         "player": [
           {
-            "condition": "minecraft:any_of",
+            "condition": "any_of",
             "terms": [
               {
-                "condition": "minecraft:location_check",
+                "condition": "location_check",
                 "predicate": {
                   "biomes": "#blue:sandy"
                 }

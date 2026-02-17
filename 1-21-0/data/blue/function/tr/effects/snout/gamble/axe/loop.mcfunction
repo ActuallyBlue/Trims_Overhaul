@@ -1,1 +1,1 @@
-execute as @e[type=item_display,tag=blue.tr.gamble.axe] at @s run function blue:tr/effects/snout/gamble/axe/entity
+execute as @e[tag=blue.tr.gamble.axe,type=item_display] at @s run function blue:tr/effects/snout/gamble/axe/entity

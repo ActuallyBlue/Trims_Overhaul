@@ -1,11 +1,13 @@
 kill
 particle scrape ~ ~ ~ 0 0 0 2 16 force
-execute if entity @s[tag=blue.tr.eye_thrown] run function blue:tr/effects/eye/emp/disfigure/mist
+execute if entity @s[tag=blue.tr.eye_thrown] as @a[scores={blue.tr.current_trim=3}] run function blue:tr/effects/eye/emp/disfigure/mist
 execute if entity @s[tag=blue.tr.eye_thrown] run return 0
 execute on origin if score @s blue.tr.current_trim matches 3 run function blue:tr/effects/eye/emp/disfigure/mist
 execute on origin if score @s blue.tr.current_trim matches 3 run return 0
 execute on origin run playsound entity.ender_eye.death player @s ~ -128 ~ 0 1.25 1
 execute on origin run playsound entity.ender_eye.death player @s ~ -128 ~ 0 1.25 1
+execute on origin run scoreboard players set @s blue.tr.used_pearl -10
+execute on origin run effect give @s nausea 7 17
 playsound entity.ender_eye.death player @a[tag=blue.tr.eye,limit=1] ~ -128 ~ 0 1.1 0.75
 playsound entity.ender_eye.death player @a[tag=blue.tr.eye,limit=1] ~ -128 ~ 0 1.1 0.75
 playsound block.sign.waxed_interact_fail player @a ~ ~ ~ 2 0.5

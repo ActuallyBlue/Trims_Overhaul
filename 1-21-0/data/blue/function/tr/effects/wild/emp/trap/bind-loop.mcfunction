@@ -1,0 +1,1 @@
+execute as @e[tag=blue.tr.wild.bind-entity,type=marker] at @s run function blue:tr/effects/wild/emp/trap/bind-entity

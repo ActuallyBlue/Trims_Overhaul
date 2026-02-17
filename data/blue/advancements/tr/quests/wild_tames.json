@@ -1,7 +1,7 @@
 {
   "criteria": {
     "cat": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:cat"
@@ -9,7 +9,7 @@
       }
     },
     "wolf": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:wolf"
@@ -17,7 +17,7 @@
       }
     },
     "parrot": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:parrot"
@@ -25,7 +25,7 @@
       }
     },
     "horse": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:horse"
@@ -33,7 +33,7 @@
       }
     },
     "donkey": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:donkey"
@@ -41,7 +41,7 @@
       }
     },
     "mule": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:mule"
@@ -49,7 +49,7 @@
       }
     },
     "camel": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:camel"
@@ -57,7 +57,7 @@
       }
     },
     "llama": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:llama"
@@ -65,7 +65,7 @@
       }
     },
     "trader_llama": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:trader_llama"
@@ -73,7 +73,7 @@
       }
     },
     "skeleton_horse": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:skeleton_horse"
@@ -81,7 +81,7 @@
       }
     },
     "zombie_horse": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": {
           "type": "minecraft:zombie_horse"
@@ -89,13 +89,13 @@
       }
     },
     "non_vanilla": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "entity": [
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:entity_properties",
+              "condition": "entity_properties",
               "entity": "this",
               "predicate": {
                 "type": "#blue:shared/peaceful"

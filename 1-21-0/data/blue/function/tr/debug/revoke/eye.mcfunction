@@ -6,4 +6,5 @@ scoreboard players set #.tr.eye_completed blue.config 0
 advancement revoke @a only blue:tr/display/eye
 execute unless entity @a[tag=blue.tr.eye,limit=1] run scoreboard players set #.revoke_eye blue.misc 2
 execute unless entity @a[tag=blue.tr.eye,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.eye] eye_armor_trim_smithing_template
 tag @a[tag=blue.tr.eye] remove blue.tr.eye

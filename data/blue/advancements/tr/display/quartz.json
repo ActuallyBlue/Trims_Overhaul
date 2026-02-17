@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:quartz",
-         "id": "minecraft:quartz"
+         "item": "quartz",
+         "id": "quartz"
       },
       "title": {"translate":"trim_material.minecraft.quartz"},
       "description": ["+0.3 ",{"translate":"attribute.name.generic.attack_damage"}],

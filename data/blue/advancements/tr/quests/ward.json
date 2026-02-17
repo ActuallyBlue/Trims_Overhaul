@@ -1,14 +1,14 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:entity_hurt_player",
+      "trigger": "entity_hurt_player",
       "conditions": {
         "damage": {
           "blocked": true
         },
         "player": [
           {
-            "condition": "minecraft:location_check",
+            "condition": "location_check",
             "predicate": {
               "biome": "minecraft:deep_dark",
               "biomes": "minecraft:deep_dark"

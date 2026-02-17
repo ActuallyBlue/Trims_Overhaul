@@ -1,7 +1,7 @@
 {
   "criteria": {
     "wind_burst": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "player_hurt_entity",
       "conditions": {
         "player": {
           "flags": {
@@ -28,7 +28,23 @@
       }
     },
     "wind_charge": {
-      "trigger": "minecraft:fall_from_height"
+      "trigger": "fall_from_height",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#blue:shared/passable"
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "requirements": [

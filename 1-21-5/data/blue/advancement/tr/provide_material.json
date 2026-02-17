@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:default_block_use",
+      "trigger": "default_block_use",
       "conditions": {
         "location": [
           {

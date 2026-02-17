@@ -1,11 +1,11 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:location_check",
+            "condition": "location_check",
             "predicate": {
               "biomes": "#blue:sandy"
             }
@@ -14,9 +14,9 @@
           {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.dune_completed"},"score":"blue.config"},"range":1}},
           {"condition":"entity_properties","entity":"this","predicate":{"type_specific":{"type":"player","advancements":{"blue:tr/blacklist":{"dune":false}}}}},
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:entity_properties",
+              "condition": "entity_properties",
               "entity": "this",
               "predicate": {
                 "slots": {

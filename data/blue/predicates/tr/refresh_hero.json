@@ -1,0 +1,13 @@
+{
+  "condition": "entity_properties",
+  "entity": "this",
+  "predicate": {
+    "effects": {
+      "hero_of_the_village": {
+        "duration": {
+          "max": 1
+        }
+      }
+    }
+  }
+}

@@ -13,8 +13,8 @@ execute unless score #.temp blue.misc = #.tide.technique blue.misc run function 
 execute unless entity @s[tag=blue.tr.mats.heart] run return 0
 execute if biome ~ ~ ~ #is_ocean run function blue:tr/effects/tide/in_ocean
 execute if entity @s[predicate=blue:shared/is_sneaking,advancements={blue:tr/tags={not_sneaking=true}}] run function blue:tr/effects/tide/emp/tap_sneak
-execute unless score #.tide.weak_cooldown blue.misc matches 1 if score #.tide.stacks blue.misc matches 1.. if score #.sneaking blue.misc matches 2 if score #.temp blue.misc matches 1 run function blue:tr/effects/tide/emp/burst_checks
-execute as @e[type=trident,tag=!blue.tr.tide_checked] at @s run function blue:tr/effects/tide/emp/trident
+execute as @e[tag=!blue.tr.tide_checked,type=trident,sort=nearest] at @s run function blue:tr/effects/tide/emp/trident
+execute if score #.sneaking blue.misc matches 2 unless score #.tide.weak_cooldown blue.misc matches 1 if score #.tide.stacks blue.misc matches 1.. if score #.temp blue.misc matches 1 run function blue:tr/effects/tide/emp/burst_checks
 scoreboard players reset #.sneaking blue.misc
 execute if score #.60 blue.misc matches 30 if predicate blue:shared/in_lava run function blue:tr/effects/tide/emp/lava
 execute if predicate blue:shared/in_monument run scoreboard players remove #.tide.recharge blue.misc 30

@@ -1,16 +1,13 @@
 {
   "criteria": {
     "enter": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:location_check",
+            "condition": "location_check",
             "predicate": {
-              "structures": [
-                "minecraft:pillager_outpost",
-                "minecraft:mansion"
-              ]
+              "structures": "minecraft:pillager_outpost"
             }
           },
           {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.vex_completed"},"score":"blue.config"},"range":1}},
@@ -20,11 +17,11 @@
       }
     },
     "leave": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "entity_properties",
             "entity": "this",
             "predicate": {
               "type_specific": {
@@ -41,9 +38,9 @@
             }
           },
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:location_check",
+              "condition": "location_check",
               "predicate": {
                 "structures": [
                   "minecraft:pillager_outpost",

@@ -1,7 +1,7 @@
 {
   "criteria": {
     "two_items": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:drowned",
@@ -18,7 +18,7 @@
       }
     },
     "one_item": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:drowned",

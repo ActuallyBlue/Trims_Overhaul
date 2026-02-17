@@ -3,7 +3,7 @@
   "description": {
     "color": "#193c9b",
     "translate": "trim_material.blue.echo_shard",
-    "fallback": "Echo Material"
+    "fallback": "Echo Shard Material"
   },
   "ingredient": "minecraft:echo_shard",
   "item_model_index": 0.0002

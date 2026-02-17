@@ -6,6 +6,7 @@ scoreboard players add @s blue.misc 1
 execute unless score @s blue.misc matches 10.. run return fail
 execute store success score #.temp blue.misc if entity @s[tag=blue.tr.dune.no_sandstorm,tag=!blue.tr.dune_tossed]
 execute if score #.temp blue.misc matches 1 if score @s blue.misc matches 22.. run kill
+execute store result score #.temp0 blue.misc run scoreboard players add @s blue.tr.combat 1
 execute positioned ~-0.5 ~-0.5 ~-0.5 as @a[dx=0,gamemode=!creative,gamemode=!spectator] run function blue:tr/effects/dune/raisure/hit
 execute unless score #.temp blue.misc matches -592 positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=!#blue:shared/peaceful,type=!player,dx=0] run function blue:tr/effects/dune/raisure/hit
 execute unless score #.temp blue.misc matches -592 run return fail

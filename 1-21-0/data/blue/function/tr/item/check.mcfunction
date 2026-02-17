@@ -1,10 +1,11 @@
 tag @s add blue.tr.checked
+execute if score #.tr.ability_shortcuts blue.config matches 2..3 if items entity @s contents #blue:tr/weapons run return run function blue:tr/item/shortcut
 execute if items entity @s contents #blue:tr/templates run return run function blue:tr/item/template_tag
 execute unless items entity @s contents *[trim] run return fail
 execute on origin if entity @s[gamemode=creative] run return fail
 execute if data entity @s {Age:5999s} run return run kill
 data remove storage blue:trims merge.item_data.Owner
-data modify storage blue:trims merge.item_data.Owner set from storage blue:trims item.Thrower
+data modify storage blue:trims merge.item_data.Owner set from entity @s Thrower
 data modify entity @s {} merge from storage blue:trims merge.item_data
 execute on origin run tag @s add blue.tr.quick_return
 tp @s @a[tag=blue.tr.quick_return,limit=1]

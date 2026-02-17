@@ -14,6 +14,7 @@ function blue:tr/effects/snout/gamble/overlord_loop
 effect give @s fire_resistance 60 0
 effect give @s instant_health 20 0
 effect give @s health_boost 20 9
+effect give @s saturation 16 0
 effect give @s strength 20 1
 effect give @s speed 20 3
 effect give @s haste 20 1

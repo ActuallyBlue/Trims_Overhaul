@@ -6,4 +6,5 @@ scoreboard players set #.tr.host_completed blue.config 0
 advancement revoke @a only blue:tr/display/host
 execute unless entity @a[tag=blue.tr.host,limit=1] run scoreboard players set #.revoke_host blue.misc 2
 execute unless entity @a[tag=blue.tr.host,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.host] host_armor_trim_smithing_template
 tag @a[tag=blue.tr.host] remove blue.tr.host

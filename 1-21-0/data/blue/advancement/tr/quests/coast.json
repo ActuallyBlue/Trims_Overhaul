@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:recipe_crafted",
+      "trigger": "recipe_crafted",
       "conditions": {
         "recipe_id": "blue:tr/coast"
       }

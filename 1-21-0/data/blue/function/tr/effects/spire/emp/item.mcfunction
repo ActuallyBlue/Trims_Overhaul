@@ -7,9 +7,10 @@ execute if score #.temp blue.misc matches -1 positioned ~-0.5 ~-0.5 ~-0.5 if ent
 execute if score #.temp blue.misc matches ..0 run return fail
 playsound entity.splash_potion.break player @a ~ ~ ~ 0.8 0.75
 kill
-execute positioned ~-3 ~-1 ~-3 if entity @e[type=area_effect_cloud,tag=blue.tr.blast-o-breath,dx=5,dy=2,dz=5,limit=1] run return fail
-summon area_effect_cloud ~ ~ ~ {Rotation:[0,180],Tags:["blue.tr.blast-o-breath"],"potion_contents":{"potion":"harming"},custom_particle:{type:"minecraft:block",block_state:"minecraft:air"},Particle:{type:"minecraft:block",block_state:"minecraft:air"},Duration:15,Radius:0.5,RadiusPerTick:0.15,ReapplicationDelay:0}
-summon area_effect_cloud ~ ~ ~ {Rotation:[0,180],Particle:{type:"dragon_breath"},custom_particle:{type:"dragon_breath"},Duration:15,Radius:1.5,RadiusPerTick:0.1}
+execute positioned ~-3 ~-1 ~-3 if entity @e[tag=blue.tr.blast-o-breath,dx=5,dy=2,dz=5,limit=1,type=area_effect_cloud] run return fail
+summon area_effect_cloud ~ ~ ~ {Rotation:[0,180],Tags:["blue.tr.blast-o-breath"],"potion_contents":{"potion":"harming"},custom_particle:{type:"block",block_state:"air"},Particle:{type:"block",block_state:"air"},Duration:16,Radius:0.5,RadiusPerTick:0.15,ReapplicationDelay:0,WaitTime:0s}
+data modify entity @e[type=area_effect_cloud,distance=..0.1,tag=blue.tr.blast-o-breath,limit=1] Owner set from entity @a[scores={blue.tr.current_trim=11},limit=1] UUID
+summon area_effect_cloud ~ ~ ~ {Rotation:[0,180],Particle:{type:"dragon_breath"},custom_particle:{type:"dragon_breath"},Duration:15,Radius:1.5,RadiusPerTick:0.1,WaitTime:0s}
 playsound entity.ender_dragon.shoot player @a ~ ~ ~ 1.8 1
 playsound entity.dragon_fireball.explode player @a ~ ~ ~ 1.7 2
 particle dragon_breath ~ ~0.25 ~ 0 0 0 0.1 64

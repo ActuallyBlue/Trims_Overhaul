@@ -1,5 +1,9 @@
 scoreboard players reset #.cast blue.misc
 scoreboard players add #.reversal_charge blue.misc 1
+execute if score #.reversal_charge blue.misc matches ..70 run scoreboard players remove #.reversal_timer blue.misc 10
+execute unless score #.reversal_charge blue.misc matches ..70 run scoreboard players remove #.reversal_timer blue.misc 9
+execute if score #.reversal_charge blue.misc matches 10..69 run particle enchant ~ ~1 ~ 0.1 0.1 0.1 3 2
+execute if score #.reversal_charge blue.misc matches 70.. run particle enchant ~ ~1 ~ 0.1 0.1 0.1 3 1
 execute if score #.reversal_charge blue.misc matches 25.. run effect give @s slowness 1 2 true
 execute if score #.reversal_charge blue.misc matches 25 run playsound block.beacon.power_select player @s ~ ~ ~ 1.5 1.25
 execute if score #.reversal_charge blue.misc matches 25 positioned ~0.55 ~0.1 ~ run function blue:tr/effects/spire/emp/reversal/cast_one

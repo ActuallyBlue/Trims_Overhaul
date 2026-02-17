@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:glass_pane",
-         "id": "minecraft:glass_pane"
+         "item": "glass_pane",
+         "id": "glass_pane"
       },
       "title": "0",
       "description": "",

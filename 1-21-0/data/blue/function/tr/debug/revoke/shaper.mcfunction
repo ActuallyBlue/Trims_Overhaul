@@ -6,4 +6,5 @@ scoreboard players set #.tr.shaper_completed blue.config 0
 advancement revoke @a only blue:tr/display/shaper
 execute unless entity @a[tag=blue.tr.shaper,limit=1] run scoreboard players set #.revoke_shaper blue.misc 2
 execute unless entity @a[tag=blue.tr.shaper,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.shaper] shaper_armor_trim_smithing_template
 tag @a[tag=blue.tr.shaper] remove blue.tr.shaper

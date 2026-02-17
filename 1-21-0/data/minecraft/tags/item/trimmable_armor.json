@@ -1,13 +1,13 @@
 {
   "values": [
-    "minecraft:wither_skeleton_skull",
-    "minecraft:carved_pumpkin",
-    "minecraft:skeleton_skull",
-    "minecraft:creeper_head",
-    "minecraft:dragon_head",
-    "minecraft:piglin_head",
-    "minecraft:player_head",
-    "minecraft:zombie_head",
-    "minecraft:elytra"
+    "wither_skeleton_skull",
+    "carved_pumpkin",
+    "skeleton_skull",
+    "creeper_head",
+    "dragon_head",
+    "piglin_head",
+    "player_head",
+    "zombie_head",
+    "elytra"
   ]
 }

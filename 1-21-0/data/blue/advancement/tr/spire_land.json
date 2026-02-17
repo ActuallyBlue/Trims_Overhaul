@@ -1,11 +1,11 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:fall_from_height",
+      "trigger": "fall_from_height",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
               "condition": "minecraft:value_check",
               "value": {
@@ -20,7 +20,7 @@
             }
           },
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "entity_properties",
             "entity": "this",
             "predicate": {
               "effects": {

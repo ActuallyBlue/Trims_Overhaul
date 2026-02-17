@@ -1,4 +1,6 @@
-damage @s[scores={blue.health=..3}] 30 blue:tr/pufferfish
+damage @s[scores={blue.health=..3}] 30 blue:tr/pufferfish by @a[scores={blue.tr.current_trim=1},limit=1]
+execute if score @s blue.health matches ..3 run tag @a[scores={blue.tr.current_trim=1},limit=1] add blue.tr.coast_propel
+scoreboard players reset #.temp blue.misc
 execute if entity @s[gamemode=survival] run scoreboard players set #.temp blue.misc -1
 execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.misc -2
 gamemode creative

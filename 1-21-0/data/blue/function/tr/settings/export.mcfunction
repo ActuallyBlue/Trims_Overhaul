@@ -3,7 +3,6 @@ execute store result storage blue:trims temp.export.objective_type int 1 run sco
 execute store result storage blue:trims temp.export.objective_announcements int 1 run scoreboard players get #.tr.objective_announcements blue.config
 execute store result storage blue:trims temp.export.template_clearing int 1 run scoreboard players get #.tr.template_clearing blue.config
 execute store result storage blue:trims temp.export.require_unlock int 1 run scoreboard players get #.tr.require_unlock blue.config
-execute store result storage blue:trims temp.export.allow_empowerment int 1 run scoreboard players get #.tr.allow_empowerment blue.config
 execute store result storage blue:trims temp.export.limit_owned_trims int 1 run scoreboard players get #.tr.limit_owned_trims blue.config
 execute store result storage blue:trims temp.export.random_task_defender int 1 run scoreboard players get #.tr.random_task_defender blue.config
 execute store result storage blue:trims temp.export.death_transfer_amount int 1 run scoreboard players get #.tr.death_transfer_amount blue.config
@@ -20,7 +19,7 @@ execute store result storage blue:trims temp.export.gamble_multiplier int 1 run 
 execute store result storage blue:trims temp.export.gamble_limit int 1 run scoreboard players get #.snout.gamble_limit blue.config
 execute store result storage blue:trims temp.export.tracker_range int 1 run scoreboard players get #.wayfinder.tracker_range blue.config
 execute store result storage blue:trims temp.export.void_return int 1 run scoreboard players get #.wayfinder.void_return blue.config
-execute store result storage blue:trims temp.export.strict_skull int 1 run scoreboard players get #.rib.strict_skull blue.config
+execute store result storage blue:trims temp.export.strict_projectile int 1 run scoreboard players get #.rib.strict_projectile blue.config
 execute store result storage blue:trims temp.export.strict_ashen int 1 run scoreboard players get #.rib.strict_ashen blue.config
 execute store result storage blue:trims temp.export.strict_scorch int 1 run scoreboard players get #.rib.strict_scorch blue.config
 execute store result storage blue:trims temp.export.strict_spawn int 1 run scoreboard players get #.rib.strict_spawn blue.config
@@ -30,12 +29,19 @@ execute store result storage blue:trims temp.export.no_gravity int 1 run scorebo
 execute store result storage blue:trims temp.export.bonus_emeralds int 1 run scoreboard players get #.sentry.bonus_emeralds blue.config
 execute store result storage blue:trims temp.export.bonus_shards int 1 run scoreboard players get #.silence.bonus_shards blue.config
 execute store result storage blue:trims temp.export.vortex_griefing int 1 run scoreboard players get #.silence.vortex_griefing blue.config
-execute store result storage blue:trims temp.export.uncap_proficiency int 1 run scoreboard players get #.raiser.uncap_proficiency blue.config
 execute store result storage blue:trims temp.export.tnt_bounce int 1 run scoreboard players get #.shaper.tnt_bounce blue.config
 execute store result storage blue:trims temp.export.warp_type int 1 run scoreboard players get #.wayfinder.warp_type blue.config
 execute store result storage blue:trims temp.export.guidance_range int 1 run scoreboard players get #.spire.guidance_range blue.config
 execute store result storage blue:trims temp.export.limit_plunge int 1 run scoreboard players get #.spire.limit_plunge blue.config
 execute store result storage blue:trims temp.export.armor_ownership int 1 run scoreboard players get #.tr.armor_ownership blue.config
 execute store result storage blue:trims temp.export.egg_bonus int 1 run scoreboard players get #.tr.egg_bonus blue.config
+execute store result storage blue:trims temp.export.gust_strength int 1 run scoreboard players get #.flow.gust_strength blue.config
+execute store result storage blue:trims temp.export.placement_range int 1 run scoreboard players get #.bolt.placement_range blue.config
+execute store result storage blue:trims temp.export.charge_speed int 1 run scoreboard players get #.sentry.charge_speed blue.config
+execute store result storage blue:trims temp.export.limit int 1 run scoreboard players get #.raiser.limit blue.config
+execute store result storage blue:trims temp.export.multiplier int 1 run scoreboard players get #.raiser.multiplier blue.config
+execute store result storage blue:trims temp.export.death_untrim int 1 run scoreboard players get #.tr.death_untrim blue.config
+execute store result storage blue:trims temp.export.trim_locator_bar int 1 run scoreboard players get #.tr.trim_locator_bar blue.config
+execute store result storage blue:trims temp.export.ability_shortcuts int 1 run scoreboard players get #.tr.ability_shortcuts blue.config
 function blue:tr/settings/z/export with storage blue:trims temp.export
 data remove storage blue:trims temp.export

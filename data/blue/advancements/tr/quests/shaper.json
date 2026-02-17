@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:entity_hurt_player",
+      "trigger": "entity_hurt_player",
       "conditions": {
         "damage": {
           "taken": {
@@ -33,9 +33,9 @@
             }
           },
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:entity_scores",
+              "condition": "entity_scores",
               "entity": "this",
               "scores": {
                 "blue.tr.died": {

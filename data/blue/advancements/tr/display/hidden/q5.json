@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:structure_void",
-         "id": "minecraft:structure_void"
+         "item": "structure_void",
+         "id": "structure_void"
       },
       "title": {"translate":"blue.tr.adv.q5.title","fallback":"Trim Doesn't Work"},
       "description": {"translate":"blue.tr.adv.q5.desc","fallback":"Make sure you're wearing the full set with it enabled as its owner. Check both in the main menu"},

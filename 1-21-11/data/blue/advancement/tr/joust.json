@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "using_item",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 15
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "#.wayfinder.sprint"
+              },
+              "score": "blue.misc"
+            },
+            "range": {
+              "min": 20
+            }
+          }
+        ],
+        "item": {
+          "items": "#blue:tr/spears"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/wayfinder/joust"
+  }
+}

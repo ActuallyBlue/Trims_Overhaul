@@ -1,1 +1,1 @@
-execute as @e[type=vindicator,tag=blue.tr.vex_quest] at @s run function blue:tr/quests/vex_entity
+execute as @e[tag=blue.tr.vex_quest,type=vindicator] at @s run function blue:tr/quests/vex_entity

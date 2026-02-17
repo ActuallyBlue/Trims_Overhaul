@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:raiser_armor_trim_smithing_template",
-         "id": "minecraft:raiser_armor_trim_smithing_template"
+         "item": "raiser_armor_trim_smithing_template",
+         "id": "raiser_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.raiser"},
       "description": {"translate":"blue.tr.adv.raiser.desc","fallback":"Mastery of experience is proven not by books, but by the foes you continue to burn down with them"},

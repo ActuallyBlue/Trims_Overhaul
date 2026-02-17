@@ -1,4 +1,5 @@
 tp @s @s
+scoreboard players reset #.temp blue.misc
 execute if entity @s[gamemode=survival] run scoreboard players set #.temp blue.misc -1
 execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.misc -2
 gamemode creative

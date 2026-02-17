@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:ender_eye",
-         "id": "minecraft:ender_eye"
+         "item": "ender_eye",
+         "id": "ender_eye"
       },
       "title": [{"translate":"item.minecraft.ender_eye"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
       "description": "",

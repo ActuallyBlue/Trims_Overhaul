@@ -6,4 +6,5 @@ scoreboard players set #.tr.dune_completed blue.config 0
 advancement revoke @a only blue:tr/display/dune
 execute unless entity @a[tag=blue.tr.dune,limit=1] run scoreboard players set #.revoke_dune blue.misc 2
 execute unless entity @a[tag=blue.tr.dune,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.dune] dune_armor_trim_smithing_template
 tag @a[tag=blue.tr.dune] remove blue.tr.dune

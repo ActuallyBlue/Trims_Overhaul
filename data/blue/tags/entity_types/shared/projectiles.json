@@ -1,11 +1,11 @@
 {
   "values": [
-    "minecraft:firework_rocket",
-    "minecraft:fishing_bobber",
-    "minecraft:llama_spit",
-    "minecraft:snowball",
-    "#minecraft:arrows",
-    "minecraft:egg",
+    "firework_rocket",
+    "fishing_bobber",
+    "llama_spit",
+    "snowball",
+    "#arrows",
+    "egg",
     {"id":"#c:arrows","required":false},
     {"id":"archery:arrow_entity","required":false},
     {"id":"projectiles:arrow","required":false},

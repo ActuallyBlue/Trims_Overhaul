@@ -6,4 +6,5 @@ scoreboard players set #.tr.silence_completed blue.config 0
 advancement revoke @a only blue:tr/display/silence
 execute unless entity @a[tag=blue.tr.silence,limit=1] run scoreboard players set #.revoke_silence blue.misc 2
 execute unless entity @a[tag=blue.tr.silence,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.silence] silence_armor_trim_smithing_template
 tag @a[tag=blue.tr.silence] remove blue.tr.silence

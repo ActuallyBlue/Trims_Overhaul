@@ -1,3 +1,3 @@
-execute if entity @s[tag=blue.tr.silence] unless score #.tr.allow_empowerment blue.config matches 0 if data storage blue:trims armor{feet:{material:"minecraft:echo_shard"},legs:{material:"minecraft:echo_shard"},chest:{material:"minecraft:echo_shard"},head:{material:"minecraft:echo_shard"}} run function blue:tr/inv/equip/shard
+execute if entity @s[tag=blue.tr.silence] if data storage blue:trims armor{feet:{material:"minecraft:echo_shard"},legs:{material:"minecraft:echo_shard"},chest:{material:"minecraft:echo_shard"},head:{material:"minecraft:echo_shard"}} run function blue:tr/inv/equip/shard
 scoreboard players set @s[tag=blue.tr.silence] blue.tr.current_trim 9
 tag @s add blue.tr.trim.silence

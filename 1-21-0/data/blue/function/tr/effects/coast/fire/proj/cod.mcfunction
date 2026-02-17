@@ -1,5 +1,5 @@
-tp ^ ^ ^1.1
-kill @s[scores={blue.misc=16..}]
+tp ^ ^ ^1
+kill @s[scores={blue.misc=10..}]
 particle bubble ~ ~ ~ 0.02 0.02 0.02 0 2 normal @a[scores={blue.particles=1..}]
 particle bubble ^ ^ ^-0.55 0.02 0.02 0.02 0 2 normal @a[scores={blue.particles=2..}]
 execute positioned ~-0.5 ~-0.5 ~-0.5 as @n[type=!#blue:shared/peaceful,tag=!blue.tr.coast,dx=0] positioned ~0.5 ~0.5 ~0.5 run function blue:tr/effects/coast/fire/proj/cod_hit

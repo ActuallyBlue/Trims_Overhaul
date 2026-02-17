@@ -1,5 +1,5 @@
 particle smoke ~ ~0.5 ~ 0.3 0.3 0.3 0 1
-particle mycelium ~ ~0.5 ~ 0.2 0.2 0.2 0 4
+particle mycelium ~ ~0.5 ~ 0.2 0.2 0.2 0 2
 execute if score #.shaper.tnt_bounce blue.config matches 0 run return fail
 data modify storage blue:trims Motion set from entity @s Motion
 execute store result score #x blue.misc run data get storage blue:trims Motion[0] 100000

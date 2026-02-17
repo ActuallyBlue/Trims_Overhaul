@@ -9,14 +9,15 @@ execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run team add blue.tr.rib
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.mined_sand mined:sand
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.fear dummy
-execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.damage_blocked custom:damage_blocked_by_shield
-execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run return run schedule function blue:tr/debug/z/toggle_test_world 1t
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.used_pearl used:ender_pearl
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run schedule function blue:tr/debug/z/toggle_test_world 1t
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run return run scoreboard objectives add blue.tr.damage_blocked custom:damage_blocked_by_shield
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run tellraw @a [{"text":"trims.toggle_test_world","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"addServer.resourcePack.disabled","fallback":"%s","with":[{"translate":"manageServer.resourcePack.disabled","fallback":"Disabled"}],"color":"dark_red"}]
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run return run scoreboard objectives remove Set_Trim
 execute unless score #st blue.misc matches 1.. unless entity @s run scoreboard players enable @a Set_Trim
 execute unless score #st blue.misc matches 1.. unless entity @s run schedule function blue:tr/debug/z/toggle_test_world 1t
 execute unless score #st blue.misc matches 1.. unless entity @s run return run execute as @a[scores={Set_Trim=1..}] at @s run function blue:tr/debug/z/toggle_test_world
-execute at @e[type=item,predicate=blue:shared/on_ground,nbt={Item:{id:"minecraft:lightning_rod",components:{"minecraft:custom_data":{t:i}}}}] run summon lightning_bolt
+execute at @e[predicate=blue:shared/on_ground,nbt={Item:{id:"minecraft:lightning_rod",components:{"minecraft:custom_data":{t:i}}}},type=item] run summon lightning_bolt
 execute unless entity @s[advancements={blue:tr/tags={tutorial_barrage=true,tutorial_piercer=true,tutorial_vortex=true,tutorial_resource_pack=true,tutorial_pickup_trim=true,tutorial_new_player=true,tutorial_creative=true,tutorial_transfer=true}}] run function blue:tr/delayed/cmd/toggle_tutorials
 tag @s add blue.tr.ignore_first
 scoreboard players reset @s Set_Trim
@@ -69,6 +70,10 @@ tag @s remove blue.tr.mats.head
 function blue:tr/inv/equip/remove_owner
 advancement revoke @s only blue:tr/trust
 scoreboard players reset @s blue.tr.combat
+execute if score #st blue.misc matches 99 run item modify entity @s armor.head {"function":"set_item","item":"netherite_helmet"}
+execute if score #st blue.misc matches 99 run item modify entity @s armor.chest {"function":"set_item","item":"netherite_chestplate"}
+execute if score #st blue.misc matches 99 run item modify entity @s armor.legs {"function":"set_item","item":"netherite_leggings"}
+execute if score #st blue.misc matches 99 run item modify entity @s armor.feet {"function":"set_item","item":"netherite_boots"}
 execute if score #st blue.misc matches 21.. run item replace entity @s armor.head with diamond_helmet[custom_data={t:i},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 21.. run item replace entity @s armor.chest with diamond_chestplate[custom_data={t:i},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 21.. run item replace entity @s armor.legs with diamond_leggings[custom_data={t:i},enchantments={protection:4},unbreakable={}]
@@ -222,7 +227,7 @@ execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.vex,dista
 execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.vex,distance=0.1..] run item replace entity @s armor.chest with diamond_chestplate[custom_data={t:i},trim={material:quartz,pattern:vex},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.vex,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[custom_data={t:i},trim={material:quartz,pattern:vex},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.vex,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[custom_data={t:i},trim={material:quartz,pattern:vex},enchantments={protection:4},unbreakable={}]
-execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.vex,distance=0.1..] run return run execute unless items entity @s container.* #minecraft:axes run give @s diamond_axe[custom_data={t:i}]
+execute if score #st blue.misc matches 17 unless entity @a[tag=blue.tr.vex,distance=0.1..] run return run execute unless items entity @s container.* #axes run give @s diamond_axe[custom_data={t:i}]
 execute if score #st blue.misc matches 18 if entity @a[tag=blue.tr.wild,distance=0.1..] run return run tellraw @s {"translate":"blue.tr.armor_worn","fallback":"%s is already wearing %s","with":[{"selector":"@a[tag=blue.tr.wild]","color":"white"},{"translate":"Wild","color":"white"}],"color":"gray"}
 execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.wild,distance=0.1..] run advancement grant @s only blue:tr/trust wild
 execute if score #st blue.misc matches 18 unless entity @a[tag=blue.tr.wild,distance=0.1..] run tag @s add blue.tr.wild

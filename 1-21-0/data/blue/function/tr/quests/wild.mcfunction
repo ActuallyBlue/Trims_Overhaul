@@ -17,17 +17,17 @@ execute if entity @s[advancements={blue:tr/quests/wild_tames={non_vanilla=true}}
 execute unless score #.temp blue.misc >= #.tr.wild_quest_tames blue.config run return fail
 execute as @e[type=#blue:shared/peaceful,distance=..12] run function blue:tr/quests/wild_tamed
 execute unless score #.temp blue.misc matches -3211 run return fail
-execute store success score #.temp blue.misc if entity @e[type=skeleton_horse,tag=blue.tr.tamed,limit=1]
-execute if entity @e[type=zombie_horse,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=trader_llama,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=parrot,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=donkey,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=parrot,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=camel,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=horse,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=llama,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=wolf,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=mule,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
-execute if entity @e[type=cat,tag=blue.tr.tamed,limit=1] run scoreboard players add #.temp blue.misc 1
+execute store success score #.temp blue.misc if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=skeleton_horse]
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=zombie_horse] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=trader_llama] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=parrot] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=donkey] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=parrot] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=camel] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=horse] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=llama] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=wolf] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=mule] run scoreboard players add #.temp blue.misc 1
+execute if entity @e[tag=blue.tr.tamed,distance=..14,limit=1,type=cat] run scoreboard players add #.temp blue.misc 1
 tag @e[tag=blue.tr.tamed] remove blue.tr.tamed
 execute if score #.temp blue.misc >= #.tr.wild_quest_cave blue.config run function blue:tr/completion/wild

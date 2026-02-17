@@ -1,3 +1,5 @@
+execute if data storage blue:trims item.Item.tag.Trim if score #.tr.death_untrim blue.config matches 1 run function blue:tr/inv/untrim/item
+execute if data storage blue:trims item.Item.tag.Trim if score #.tr.death_untrim blue.config matches 1 run return 0
 execute if score #.player blue.tr.died matches 1.. unless score #.drop_temp blue.misc >= #.tr.death_transfer_amount blue.config run function blue:tr/inv/died/swap
 execute if score #.temp blue.misc matches 1 run return 0
 execute if entity @s[tag=blue.tr.extra] run return 0

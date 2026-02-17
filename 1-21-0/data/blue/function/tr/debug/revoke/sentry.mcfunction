@@ -6,4 +6,5 @@ scoreboard players set #.tr.sentry_completed blue.config 0
 advancement revoke @a only blue:tr/display/sentry
 execute unless entity @a[tag=blue.tr.sentry,limit=1] run scoreboard players set #.revoke_sentry blue.misc 2
 execute unless entity @a[tag=blue.tr.sentry,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.sentry] sentry_armor_trim_smithing_template
 tag @a[tag=blue.tr.sentry] remove blue.tr.sentry

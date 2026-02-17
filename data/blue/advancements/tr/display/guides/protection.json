@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:knowledge_book",
-         "id": "minecraft:knowledge_book"
+         "item": "knowledge_book",
+         "id": "knowledge_book"
       },
       "title": {"translate":"blue.tr.adv.protection.title","fallback":"Template Protection"},
       "description": {"translate":"blue.tr.adv.protection.desc","fallback":"Multiple systems are in place to make trims nearly impossible to lose (since only 4 templates exist without commands), such as item immortality and low-durability trim removal. However, none of them can interfere with crafting menus or vanishing curse, so be careful."},

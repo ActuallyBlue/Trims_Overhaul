@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:structure_void"
+          "id": "structure_void"
       },
       "title": {"translate":"blue.tr.adv.q3.title","fallback":"Custom Materials Not Working"},
       "description": {"translate":"blue.tr.adv.q3.desc","fallback":"They only buff their single corresponding trim. You'll get a message whenever you get the right combination."},

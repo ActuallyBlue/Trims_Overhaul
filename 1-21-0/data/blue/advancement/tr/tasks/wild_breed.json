@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:bred_animals",
+      "trigger": "bred_animals",
       "conditions": {
         "player": [
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},

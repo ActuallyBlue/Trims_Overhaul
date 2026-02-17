@@ -1,13 +1,13 @@
 {
   "criteria": {
     "pearl": {
-      "trigger": "minecraft:entity_hurt_player",
+      "trigger": "entity_hurt_player",
       "conditions": {
         "damage": {
           "type": {
             "tags": [
               {
-               "id": "minecraft:is_fall",
+               "id": "is_fall",
                 "expected": true
               }
             ]
@@ -15,7 +15,7 @@
         },
         "player": [
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.used_pearl": {
@@ -30,7 +30,7 @@
       }
     },
     "fell": {
-      "trigger": "minecraft:fall_from_height",
+      "trigger": "fall_from_height",
       "conditions": {
         "distance": {
           "absolute": {
@@ -39,7 +39,7 @@
         },
         "player": [
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.used_pearl": {

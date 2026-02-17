@@ -1,21 +1,23 @@
 effect clear @s darkness
 effect clear @s blindness
 scoreboard players add #.silence.ambient blue.misc 1
-execute if score #.60 blue.misc matches 30 as @e[type=!#blue:shared/no_ai,type=!warden,type=!player,tag=!blue.tr.silence.Silent,tag=!smithed.strict,distance=0.01..16] at @s run function blue:tr/effects/silence/entity
+execute if score #.silence.reduce_armor blue.misc matches 1.. run function blue:tr/effects/silence/emp/vortex/armor
+execute if score #.60 blue.misc matches 20 as @e[type=!#blue:shared/no_ai,type=!warden,type=!player,type=!creeper,tag=!blue.tr.silence.Silent,tag=!smithed.strict,distance=0.01..16] at @s run function blue:tr/effects/silence/apply_silent
+execute if score #.60 blue.misc matches 20 run effect give @e[type=!#blue:shared/peaceful,type=!warden,type=!player,distance=..12] weakness 5 0 true
 execute if score #.60 blue.misc matches 40 as @a[distance=..9,advancements={blue:tr/trust={silence=false}},gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/silence/darkness
 execute as @a[distance=0.01..,predicate=blue:tr/muffled,tag=!blue.tr.trim.ward] run function blue:tr/effects/silence/muffled
 execute if score #.silence.ambient blue.misc matches 11.. store success score #.silence.ambient blue.misc run particle sculk_soul ~ ~0.8 ~ 0.2 0.35 0.2 0.01 1 normal @a[scores={blue.particles=1..}]
 execute unless entity @s[tag=blue.tr.mats.shard] run return 0
 execute if score #.silence.ambient blue.misc matches 6 run particle sculk_soul ~ ~0.8 ~ 0.2 0.35 0.2 0.01 2 normal @a[scores={blue.particles=2..}]
-execute if score #.60 blue.misc matches 15 run team join blue.tr.silence @e[type=warden,team=,tag=!blue.tr.silence.was_hit]
-execute if score #.60 blue.misc matches 15 if entity @e[type=warden,team=blue.tr.silence,distance=..100,limit=1] run team join blue.tr.silence
-execute as @e[type=item,tag=!blue.tr.checked,distance=..5,nbt={Item:{id:"minecraft:echo_shard"}},limit=1] run function blue:tr/effects/silence/emp/vortex/throw
+execute if score #.60 blue.misc matches 15 run team join blue.tr.silence @e[team=,tag=!blue.tr.silence.was_hit,type=warden]
+execute if score #.60 blue.misc matches 15 if entity @e[team=blue.tr.silence,distance=..100,limit=1,type=warden] run team join blue.tr.silence
+execute as @e[tag=!blue.tr.checked,distance=..5,nbt={Item:{id:"minecraft:echo_shard"}},limit=1,type=item] run function blue:tr/effects/silence/emp/vortex/throw_check
 execute as b163102f-0-f-0-1 at @s run function blue:tr/effects/silence/emp/vortex/projectile
 execute unless biome ~ ~ ~ deep_dark unless entity @s[tag=blue.tr.dragon_egg] run return 0
-execute unless score #.silence.ambient blue.misc matches 3.. facing entity @a[distance=0.01..16,predicate=blue:shared/is_sprinting] feet run particle sculk_charge_pop ~ ~0.5 ~ ^ ^ ^100000 0.000002 0 force @s
+execute unless score #.silence.ambient blue.misc matches 3.. facing entity @a[distance=0.01..24,predicate=!blue:tr/silence_track,advancements={blue:tr/trust={silence=false}}] feet run particle sculk_charge_pop ~ ~0.5 ~ ^ ^ ^10000000 0.00000002 0 force @s
 execute unless biome ~ ~ ~ deep_dark run return 0
 execute if score #.20 blue.misc matches 7 run playsound entity.warden.heartbeat master @a[tag=!blue.tr.trim.ward] ~ ~ ~ 1.4 0.9
 execute if score #.20 blue.misc matches 7 run playsound entity.warden.heartbeat master @a[tag=blue.tr.trim.ward,tag=blue.tr.ward,limit=1] ~ ~ ~ 1.8 0.9
 particle sculk_charge_pop ~ ~0.8 ~ 0.25 0.3 0.25 0 1
-effect give @s strength 3 0 true
-effect give @s speed 3 0 true
+effect give @s strength 8 0 true
+effect give @s speed 8 0 true

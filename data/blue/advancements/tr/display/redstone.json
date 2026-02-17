@@ -1,11 +1,11 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:redstone",
-         "id": "minecraft:redstone"
+         "item": "redstone",
+         "id": "redstone"
       },
       "title": {"translate":"trim_material.minecraft.redstone"},
-      "description": ["+1.0 ",{"translate":"attribute.name.generic.max_health"},{"translate":"blue.tr.adv.redstone.desc_info","fallback":" (Half)","color":"dark_gray"}],
+      "description": ["+0.6 ",{"translate":"attribute.name.generic.max_health"}],
       "announce_to_chat": false,
       "show_toast": false
   },

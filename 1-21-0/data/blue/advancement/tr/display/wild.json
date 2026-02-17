@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:wild_armor_trim_smithing_template"
+          "id": "wild_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.wild"},
       "description": {"translate":"blue.tr.adv.wild.desc","fallback":"Taming the world reveals more than loyalty; it brings new strength to the nature around you"},

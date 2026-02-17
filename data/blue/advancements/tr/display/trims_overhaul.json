@@ -6,10 +6,10 @@
   },
   "display": {
     "icon": {
-     "item": "minecraft:tide_armor_trim_smithing_template",
-     "id": "minecraft:tide_armor_trim_smithing_template"
+     "item": "tide_armor_trim_smithing_template",
+     "id": "tide_armor_trim_smithing_template"
     },
-    "title": [{"translate":"blue.tr.trims_overhaul","fallback":"Trims Overhaul"}," v3.1.3"],
+    "title": [{"translate":"blue.tr.trims_overhaul","fallback":"Trims Overhaul"}," v3.2.0"],
     "description": {"translate":"blue.tr.adv.root.desc","fallback":"Give each trim unique powers while making them only obtainable via quests"},
     "frame": "goal",
     "announce_to_chat": false

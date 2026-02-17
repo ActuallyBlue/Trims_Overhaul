@@ -1,4 +1,7 @@
 execute if items entity @s armor.head *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/head with storage blue:trims armor.head
+attribute @s water_movement_efficiency modifier remove blue:tr.head
+attribute @s movement_efficiency modifier remove blue:tr.head
+attribute @s sneaking_speed modifier remove blue:tr.head
 attribute @s knockback_resistance modifier remove blue:tr.head
 attribute @s armor_toughness modifier remove blue:tr.head
 attribute @s movement_speed modifier remove blue:tr.head

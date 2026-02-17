@@ -1,0 +1,2 @@
+execute on target if score @s blue.tr.current_trim matches 6 run scoreboard players set #.rib.was_sneaking blue.misc 3
+execute on attacker if score @s blue.tr.current_trim matches 6 run scoreboard players set #.rib.was_sneaking blue.misc 2

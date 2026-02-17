@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:glass_pane"
+          "id": "glass_pane"
       },
       "title": "2",
       "description": "",
@@ -9,7 +9,7 @@
       "hidden": true,
       "show_toast": false
   },
-  "parent": "blue:tr/display/guides/menu",
+  "parent": "blue:tr/display/hidden/1",
   "criteria": {
     "req": {
       "trigger": "impossible"

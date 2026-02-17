@@ -1,7 +1,7 @@
 {
   "criteria": {
     "in_inventory": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "items": [
           {
@@ -11,7 +11,7 @@
       }
     },
     "in_cursor": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "inventory_changed",
       "conditions": {
         "player": {
           "slots": {

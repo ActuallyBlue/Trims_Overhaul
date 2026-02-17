@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:wind_charge"
+          "id": "wind_charge"
       },
       "title": [{"translate":"item.minecraft.wind_charge"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
       "description": "",

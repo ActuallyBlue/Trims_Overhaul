@@ -1,15 +1,15 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:structure_void",
-         "id": "minecraft:structure_void"
+         "item": "structure_void",
+         "id": "structure_void"
       },
       "title": {"translate":"blue.tr.adv.q1.title","fallback":"Objective Not Working"},
       "description": {"translate":"blue.tr.adv.q1.desc","fallback":"If you're positive you're doing it correctly, then the objective has either already been completed, or the server has changed it to another type."},
       "announce_to_chat": false,
       "show_toast": false
   },
-  "parent": "blue:tr/display/guides/menu",
+  "parent": "blue:tr/display/hidden/1",
   "criteria": {
     "req": {
       "trigger": "impossible"

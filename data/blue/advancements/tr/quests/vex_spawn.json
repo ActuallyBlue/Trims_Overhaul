@@ -1,12 +1,15 @@
 {
   "criteria": {
     "enter": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:reference",
-            "name": "blue:tr/vex_isolate"
+            "condition": "location_check",
+            "predicate": {
+              "structures": "minecraft:pillager_outpost",
+              "structure": "minecraft:pillager_outpost"
+            }
           },
           {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.vex_completed"},"score":"blue.config"},"range":1}},
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1},
@@ -15,11 +18,11 @@
       }
     },
     "leave": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "entity_properties",
             "entity": "this",
             "predicate": {
               "type_specific": {
@@ -36,12 +39,15 @@
             }
           },
           {
-            "condition": "minecraft:reference",
-            "name": "blue:tr/vex_isolate"
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "blue:tr/vex_isolate"
+            }
           },
           {
             "condition": "minecraft:random_chance",
-            "chance": 0.02
+            "chance": 0.2
           },
           {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.vex_completed"},"score":"blue.config"},"range":1}},
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":1}

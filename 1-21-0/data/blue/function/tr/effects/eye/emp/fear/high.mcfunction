@@ -11,4 +11,9 @@ execute if score #.temp blue.misc matches 56 run return run effect give @s slown
 execute if score #.temp blue.misc matches 57 run return run effect give @s weakness 2 100
 execute if score #.temp blue.misc matches 58 run return run function blue:tr/effects/eye/emp/fear/curse
 execute if score #.temp blue.misc matches 59 run return run function blue:tr/effects/eye/emp/fear/job
-execute if score #.temp blue.misc matches 60 run tellraw @s {"translate":"death.attack.player","with":[{"selector":"@r"},{"selector":"@r[distance=1..]"}]}
+execute if score #.temp blue.misc matches 60 run function blue:tr/effects/eye/emp/fear/fake_death
+execute if score #.temp blue.misc matches 61..62 run function blue:tr/effects/eye/emp/fear/motion
+execute unless score #.temp blue.misc matches 63 run return fail
+playsound entity.warden.attack_impact player @s ~ ~ ~ 2.5 0.5
+schedule function blue:tr/effects/eye/emp/fear/fake_throw 5
+tag @s add blue.tr.fake_throw

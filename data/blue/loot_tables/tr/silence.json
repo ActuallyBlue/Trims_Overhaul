@@ -1,1 +1,1 @@
-{"pools":[{"rolls":4,"entries":[{"type":"item","name":"silence_armor_trim_smithing_template","functions":[{"function":"set_nbt","tag":"{Enchantments:[{id:\"minecraft:binding_curse\"}],HideFlags:1,blue:trim}"}]}]}]}
+{"pools":[{"rolls":4,"entries":[{"type":"item","name":"silence_armor_trim_smithing_template","functions":[{"function":"reference","name":"blue:tr/template"}]}]}]}

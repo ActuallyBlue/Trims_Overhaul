@@ -1,5 +1,5 @@
 {
-  "description": {"translate":"blue.tr.please_report","fallback":"If you have this item, then please report it in the Trims Overhaul Discord (Minor compatibility bug)"},
+  "description": {"translate":"blue.tr.gust_enchant","fallback":"Unusable enchant from Trims Overhaul - check FAQs (wiki) for more info"},
   "min_cost": {"base":0,"per_level_above_first":0},
   "max_cost": {"base":0,"per_level_above_first":0},
   "weight":1,"anvil_cost":0,"max_level":1,
@@ -12,7 +12,11 @@
           "type": "minecraft:explode",
           "block_interaction": "trigger",
           "immune_blocks": "#minecraft:blocks_wind_charge_explosions",
-          "knockback_multiplier": 1,
+          "knockback_multiplier": {
+            "type": "minecraft:linear",
+            "base": 0.1,
+            "per_level_above_first": 0.1
+          },
           "large_particle": {
             "type": "minecraft:gust_emitter_small"
           },

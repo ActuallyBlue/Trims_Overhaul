@@ -6,4 +6,5 @@ scoreboard players set #.tr.snout_completed blue.config 0
 advancement revoke @a only blue:tr/display/snout
 execute unless entity @a[tag=blue.tr.snout,limit=1] run scoreboard players set #.revoke_snout blue.misc 2
 execute unless entity @a[tag=blue.tr.snout,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.snout] snout_armor_trim_smithing_template
 tag @a[tag=blue.tr.snout] remove blue.tr.snout

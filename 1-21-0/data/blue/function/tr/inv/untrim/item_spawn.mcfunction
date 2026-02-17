@@ -1,0 +1,1 @@
+$summon item ~ ~ ~ {Item:{id:"$(mat)"},Tags:["blue.tr.checked","blue.tr.untrim_temp"],PickupDelay:40s}

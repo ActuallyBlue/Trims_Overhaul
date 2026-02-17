@@ -6,9 +6,10 @@
       "supported_formats": [16,95],
       "min_format": 16,
       "max_format": 95,
-      "description": [
-        {"translate":"blue.mcmeta_info","fallback": "v%s - By ActuallyBlue\n","with":["3.1.3"],"color":"#0a9add"},
-        {"translate":"blue.all_versions","fallback": "Supports every version","color":"#39828f","italic":true}
+      "description": ["",
+        {"translate":"blue.mcmeta_info","fallback": "v%s - By ActuallyBlue\n","with":["3.2.0"],"color":"#0a9add"},
+        {"translate":"blue.tr.all_versions","fallback": "Supports all versions","color":"#39828f","italic":true,"extra":[{"text":" ℹ","color":"gray"}]},
+        {"translate":"blue.tr.mcmeta_note","fallback": "\nPrimarily used for armor with custom materials","color":"gray"}
       ]
     },
     "filter": {

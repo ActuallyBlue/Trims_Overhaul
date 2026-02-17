@@ -1,9 +1,11 @@
 tag @s add blue.tr.checked
-execute on origin if entity @s[gamemode=creative] run return 0
 data modify storage blue:trims item set from entity @s
+execute on origin if entity @s[gamemode=creative] run return 0
 execute if data storage blue:trims item{Age:5999s} run return 0
 execute if data storage blue:trims item.Item.tag.Trim run function blue:tr/item/armor_tag
 data modify entity b163102f-0-0-0-100000000 HandItems[0] set from storage blue:trims item.Item
+execute as b163102f-0-0-0-100000000 store success score #.temp blue.misc if predicate blue:tr/hold_weapon
+execute if score #.temp blue.misc matches 1 if score #.tr.ability_shortcuts blue.config matches 2..3 run function blue:tr/item/shortcut
 execute as b163102f-0-0-0-100000000 unless predicate blue:tr/hold_template run return 0
 data remove storage blue:trims merge.item_data.Owner
 data modify storage blue:trims merge.item_data.Owner set from storage blue:trims item.Thrower

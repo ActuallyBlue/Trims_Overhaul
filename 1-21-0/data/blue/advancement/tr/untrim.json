@@ -1,11 +1,11 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:placed_block",
+      "trigger": "placed_block",
       "conditions": {
         "location": [
           {
-            "condition": "minecraft:location_check",
+            "condition": "location_check",
             "offsetY": -1,
             "predicate": {
               "block": {
@@ -21,12 +21,17 @@
         "player": {
           "flags": {
             "is_sneaking": true
+          },
+          "slots": {
+            "armor.*": {
+              "items": "#minecraft:trimmable_armor"
+            }
           }
         }
       }
     }
   },
   "rewards": {
-    "function": "blue:tr/inv/untrim"
+    "function": "blue:tr/inv/untrim/main"
   }
 }

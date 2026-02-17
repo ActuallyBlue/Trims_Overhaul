@@ -7,10 +7,11 @@ execute unless entity @s[tag=blue.tr.gold_nugget] run scoreboard players operati
 execute if entity @s[tag=blue.tr.gold_block] run scoreboard players operation #.gamble blue.misc *= #9 blue.misc
 scoreboard players operation #.temp blue.misc = #.gamble blue.misc
 scoreboard players operation #.gamble blue.misc *= #.snout.gamble_multiplier blue.config
+scoreboard players operation #.gamble blue.misc /= #10 blue.misc
 execute store result score #.mult blue.misc run loot spawn 0 0 0 loot blue:tr/z/rng_50
 scoreboard players operation #.gamble blue.misc *= #.mult blue.misc
 scoreboard players add #.gamble blue.misc 500
-execute store success score @s blue.tr.combat if score #.gamble blue.misc matches 19000..
+execute store success score @s blue.tr.combat if score #.gamble blue.misc matches 49000..
 execute if score #.temp blue.misc matches 0..575 store result score @s blue.tr.died run loot spawn 0 0 0 loot blue:tr/z/rng_15
 execute if score #.temp blue.misc matches 0..575 if score @s blue.tr.died matches 13.. store result score @s blue.tr.died run loot spawn 0 0 0 loot blue:tr/z/rng_15
 execute if score #.temp blue.misc matches 576.. store result score @s blue.tr.died run loot spawn 0 0 0 loot blue:tr/z/rng_15

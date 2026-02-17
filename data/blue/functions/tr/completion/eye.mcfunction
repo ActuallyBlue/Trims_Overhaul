@@ -5,6 +5,7 @@ scoreboard players set @s blue.tr.silverfish_killed 0
 scoreboard players set #.tr.eye_completed blue.config 1
 advancement revoke @s only blue:tr/quests/eye
 scoreboard objectives add blue.tr.fear dummy
+scoreboard objectives add blue.tr.used_pearl used:ender_pearl
 data modify storage blue:trims logs.append.trim set value {"translate":"Eye","color":"#1F8A46"}
 function blue:tr/completion/z/setup
 data modify storage blue:trims eye.owner.text set from storage blue:shared player_name

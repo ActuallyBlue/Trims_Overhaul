@@ -9,7 +9,7 @@ execute unless predicate {condition:"random_chance",chance:{min:0,max:{type:"sco
 scoreboard players operation #.temp0 blue.misc = @s blue.tr.fear
 scoreboard players operation #.temp0 blue.misc /= #10 blue.misc
 scoreboard players operation @s blue.tr.fear -= #.temp0 blue.misc
-execute store result score #.temp blue.misc run random value 0..60
+execute store result score #.temp blue.misc run random value 1..60
 scoreboard players operation #.temp0 blue.misc /= #2 blue.misc
 scoreboard players operation #.temp blue.misc += #.temp0 blue.misc
 execute if score #.temp blue.misc matches 59.. store result score #.temp blue.misc run random value 45..60

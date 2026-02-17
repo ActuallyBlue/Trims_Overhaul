@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:knowledge_book",
-         "id": "minecraft:knowledge_book"
+         "item": "knowledge_book",
+         "id": "knowledge_book"
       },
       "title": [{"translate":"blue.tr.adv.combat.title","fallback":"Combat Timer"},"   "],
       "description": {"translate":"blue.tr.adv.combat.desc","fallback":"Taking damage from enemies will put you in combat, which will either enable or restrict the use of certain abilities, depending on the situation."},
@@ -11,7 +11,7 @@
   "parent": "blue:tr/display/guides/trust",
   "criteria": {
     "req": {
-      "trigger": "minecraft:entity_hurt_player",
+      "trigger": "entity_hurt_player",
       "conditions": {
         "damage": {
           "source_entity": {}

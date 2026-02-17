@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:sentry_armor_trim_smithing_template"
+          "id": "sentry_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.sentry"},
       "description": {"translate":"blue.tr.adv.sentry.desc","fallback":"Enduring countless raids can sharpen your aim and your defense, making it easier than ever before"},

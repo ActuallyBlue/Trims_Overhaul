@@ -1,11 +1,11 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:location",
+      "trigger": "location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:location_check",
+            "condition": "location_check",
             "predicate": {
               "structures": "#minecraft:village"
             }

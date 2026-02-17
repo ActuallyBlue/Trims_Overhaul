@@ -16,9 +16,9 @@ loot give @s loot blue:tr/rib
 scoreboard players reset #.rib_stored blue.misc
 execute store result score #.temp blue.misc run clear @s rib_armor_trim_smithing_template 0
 execute if score #.temp blue.misc matches 0 run scoreboard players set #.rib_stored blue.misc 4
-execute as @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run damage @s 8 on_fire by @a[tag=blue.tr.rib,limit=1]
+execute as @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run damage @s 14 blue:tr/fire by @a[tag=blue.tr.rib,limit=1]
 execute at @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run particle small_flame ~ ~1 ~ 0.3 0.5 0.3 0.02 6
-execute as @e[type=!#blue:shared/peaceful,type=!player,distance=..4.5,team=!blue.tr.rib] run damage @s 8 on_fire by @a[tag=blue.tr.rib,limit=1]
+execute as @e[type=!#blue:shared/peaceful,type=!player,distance=..4.5,team=!blue.tr.rib] run damage @s 14 blue:tr/fire by @a[tag=blue.tr.rib,limit=1]
 execute at @e[type=!#blue:shared/peaceful,type=!player,distance=..4.5,team=!blue.tr.rib] run particle small_flame ~ ~1 ~ 0.3 0.5 0.3 0.02 6
 particle flame ~ ~1 ~ 0 0.2 0 0.2 20 normal @a[scores={blue.particles=2..}]
 playsound entity.blaze.shoot player @a ~ ~ ~ 1 1.25

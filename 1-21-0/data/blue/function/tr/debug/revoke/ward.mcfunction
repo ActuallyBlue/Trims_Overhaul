@@ -6,4 +6,5 @@ scoreboard players set #.tr.ward_completed blue.config 0
 advancement revoke @a only blue:tr/display/ward
 execute unless entity @a[tag=blue.tr.ward,limit=1] run scoreboard players set #.revoke_ward blue.misc 2
 execute unless entity @a[tag=blue.tr.ward,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.ward] ward_armor_trim_smithing_template
 tag @a[tag=blue.tr.ward] remove blue.tr.ward

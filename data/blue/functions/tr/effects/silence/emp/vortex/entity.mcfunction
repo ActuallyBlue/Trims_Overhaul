@@ -45,6 +45,6 @@ execute as @e[type=!#blue:shared/no_ai,tag=!blue.tr.silence,distance=6.51..7] ru
 execute as @e[type=!#blue:shared/no_ai,tag=!blue.tr.silence,distance=7.51..9] run damage @s 27 blue:tr/vortex by b163102f-0-6-0-1 from @a[tag=blue.tr.silence,limit=1]
 execute unless score #.silence.vortex_griefing blue.config matches 1 run kill
 execute unless score #.silence.vortex_griefing blue.config matches 1 run return 0
-summon creeper ~ ~ ~ {CustomName:'"Vortex"',Fuse:0s,ignited:1b,ExplosionRadius:4b}
+summon creeper ~ ~ ~ {Fuse:0s,ignited:1b,ExplosionRadius:4b,DeathLootTable:""}
 schedule function blue:tr/effects/silence/emp/vortex/sound 1t
 kill

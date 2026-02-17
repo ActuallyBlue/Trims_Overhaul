@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:iron_ingot",
-         "id": "minecraft:iron_ingot"
+         "item": "iron_ingot",
+         "id": "iron_ingot"
       },
       "title": {"translate":"trim_material.minecraft.iron"},
       "description": ["+0.5 ",{"translate":"attribute.name.generic.armor"}],

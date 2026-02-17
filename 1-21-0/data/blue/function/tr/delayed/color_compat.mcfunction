@@ -33,4 +33,4 @@ execute if score @s[tag=blue.tr.trim.rib] color matches -13 run return run team 
 execute if score @s[tag=blue.tr.trim.rib] color matches -14 run return run team modify blue.tr.rib color red
 execute if score @s[tag=blue.tr.trim.rib] color matches -15 run return run team modify blue.tr.rib color light_purple
 execute if score @s[tag=blue.tr.trim.rib] color matches -16 run return run team modify blue.tr.rib color yellow
-execute if score @s[tag=blue.tr.trim.rib] color matches -17 run return run team modify blue.tr.rib color white
+execute if score @s[tag=blue.tr.trim.rib] color matches -17 run team modify blue.tr.rib color white

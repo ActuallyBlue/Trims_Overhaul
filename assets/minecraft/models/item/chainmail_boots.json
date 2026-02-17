@@ -56,7 +56,7 @@
       }
     },
     {
-      "model": "minecraft:item/blue/_wind_charge_trim",
+      "model": "minecraft:item/blue/chainmail_boots_wind_charge_trim",
       "predicate": {
         "trim_type": 0.001
       }

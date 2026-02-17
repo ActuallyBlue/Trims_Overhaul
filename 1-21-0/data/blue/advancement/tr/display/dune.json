@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:dune_armor_trim_smithing_template"
+          "id": "dune_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.dune"},
       "description": {"translate":"blue.tr.adv.dune.desc","fallback":"Deserts burn strength into those who endure their storms and shifting ground"},

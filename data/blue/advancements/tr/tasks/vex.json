@@ -1,7 +1,7 @@
 {
   "criteria": {
     "generic": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "player": [
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},
@@ -10,9 +10,9 @@
         ],
         "entity": [
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:entity_properties",
+              "condition": "entity_properties",
               "entity": "this",
               "predicate": {
                 "type": "minecraft:silverfish"
@@ -20,9 +20,9 @@
             }
           },
           {
-            "condition": "minecraft:inverted",
+            "condition": "inverted",
             "term": {
-              "condition": "minecraft:entity_properties",
+              "condition": "entity_properties",
               "entity": "this",
               "predicate": {
                 "type": "minecraft:warden"
@@ -33,7 +33,7 @@
       }
     },
     "vex": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:vex"
@@ -46,7 +46,7 @@
       }
     },
     "player": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "entity": {
           "type": "player"
@@ -59,7 +59,7 @@
       }
     },
     "tick": {
-      "trigger": "minecraft:tick"
+      "trigger": "tick"
     }
   },
   "requirements": [

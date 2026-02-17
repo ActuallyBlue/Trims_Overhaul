@@ -2,15 +2,16 @@ playsound ui.button.click player @s 0 -128 0 0 2 0.75
 tellraw @s {"text":"-- -- -- -- -- -- -- -- -- -- -- --","color":"gray"}
 scoreboard players set #.temp blue.misc -123
 function blue:tr/settings/objective_type
-execute if score #.tr.objective_type blue.config matches 0 run function blue:tr/settings/armor_ownership
+function blue:tr/settings/armor_ownership
 function blue:tr/settings/objective_announcements
 function blue:tr/settings/template_clearing
 function blue:tr/settings/require_unlock
-function blue:tr/settings/allow_empowerment
+function blue:tr/settings/ability_shortcuts
 function blue:tr/settings/egg_bonus
 function blue:tr/settings/limit_owned_trims
 function blue:tr/settings/random_task_defender
 function blue:tr/settings/death_transfer_amount
+function blue:tr/settings/death_untrim
 function blue:tr/settings/manual_transferring
 function blue:tr/settings/manual_untrimming
 function blue:tr/settings/owner_finder
@@ -35,8 +36,9 @@ execute if score #.tr.host_toggle blue.config matches 0 run data modify storage 
 execute if score #.tr.eye_toggle blue.config matches 0 run data modify storage blue:trims display append value ['{"translate":"Eye","color":"#1F8A46"}','{"text":", ","color":"dark_gray"}']
 execute if score #.tr.rib_toggle blue.config matches 0 run data modify storage blue:trims display append value ['{"translate":"Rib","color":"#E6484B"}','{"text":", ","color":"dark_gray"}']
 execute if score #.tr.vex_toggle blue.config matches 0 run data modify storage blue:trims display append value ['{"translate":"Vex","color":"#CFC6A5"}','{"text":", ","color":"dark_gray"}']
-execute unless data storage blue:trims display run data modify storage blue:trims display append value ['{"translate":"gui.none","color":"dark_green"}','{"text":", ","color":"dark_gray"}']
+execute unless data storage blue:trims display run tellraw @s {"text":"-- -- -- -- -- -- -- -- -- -- -- --","color":"gray"}
+execute unless data storage blue:trims display run return 0
 data modify storage blue:trims display prepend value ['{"translate":"blue.tr.disabled_trims","fallback":"Disabled Trims","color":"gray"}','{"text":": ","color":"dark_gray"}']
 data remove storage blue:trims display[-1][-1]
 tellraw @s {"storage":"blue:trims","nbt":"display[][]","interpret":true,"separator":""}
-tellraw @s {"text":"-- -- -- -- -- -- -- -- -- -- -- -- -- --","color":"gray"}
+tellraw @s {"text":"-- -- -- -- -- -- -- -- -- -- -- --","color":"gray"}

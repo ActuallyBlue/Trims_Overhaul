@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:smithing_table",
-         "id": "minecraft:smithing_table"
+         "item": "smithing_table",
+         "id": "smithing_table"
       },
       "title": {"translate":"blue.tr.adv.trim_sets.title","fallback":"Trimmed Sets"},
       "description": {"translate":"blue.tr.adv.trim_sets.desc","fallback":"Wearing the full set of a trim will grant multiple unique passives and abilities (if owned)"},

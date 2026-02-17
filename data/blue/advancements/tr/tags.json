@@ -1,7 +1,7 @@
 {
   "criteria": {
     "not_sneaking": {
-      "trigger": "minecraft:tick",
+      "trigger": "tick",
       "conditions": {
         "player": {
           "flags": {
@@ -21,7 +21,7 @@
       }
     },
     "heavy_hit": {
-      "trigger": "minecraft:entity_hurt_player",
+      "trigger": "entity_hurt_player",
       "conditions": {
         "damage": {
           "taken": {
@@ -31,7 +31,7 @@
       }
     },
     "trim_limit": {
-      "trigger": "minecraft:impossible"
+      "trigger": "impossible"
     },
     "unlocked_wayfinder": {
       "trigger": "impossible"
@@ -109,6 +109,12 @@
       "trigger": "impossible"
     },
     "tutorial_new_player": {
+      "trigger": "impossible"
+    },
+    "tutorial_unowned": {
+      "trigger": "impossible"
+    },
+    "tutorial_defender": {
       "trigger": "impossible"
     }
   }

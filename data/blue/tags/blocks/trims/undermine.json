@@ -1,19 +1,19 @@
 {
   "values": [
-    "minecraft:coal_ore",
-    "minecraft:emerald_ore",
-    "minecraft:diamond_ore",
-    "minecraft:iron_ore",
-    "minecraft:gold_ore",
-    "minecraft:lapis_ore",
-    "minecraft:copper_ore",
-    "minecraft:redstone_ore",
-    "minecraft:andesite",
-    "minecraft:granite",
-    "minecraft:stone",
-    "minecraft:cobblestone",
-    "minecraft:diorite",
-    "minecraft:dirt",
-    "minecraft:gravel"
+    "coal_ore",
+    "emerald_ore",
+    "diamond_ore",
+    "iron_ore",
+    "gold_ore",
+    "lapis_ore",
+    "copper_ore",
+    "redstone_ore",
+    "andesite",
+    "granite",
+    "stone",
+    "cobblestone",
+    "diorite",
+    "dirt",
+    "gravel"
   ]
 }

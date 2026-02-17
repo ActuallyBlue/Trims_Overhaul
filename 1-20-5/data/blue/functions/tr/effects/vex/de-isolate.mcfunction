@@ -1,3 +1,3 @@
-playsound entity.allay.ambient_without_item player @a ~ ~ ~ 1 2
-particle white_smoke ~ ~1 ~ 0.1 0.1 0.1 0.1 24
+execute unless predicate blue:shared/is_sneaking run playsound entity.allay.ambient_without_item player @a ~ ~ ~ 0.6 2
 scoreboard players reset #.vex.isolated blue.misc
+particle white_smoke ~ ~0.75 ~ 0.2 0.3 0.2 0 8

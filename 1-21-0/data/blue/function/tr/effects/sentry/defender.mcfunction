@@ -1,6 +1,6 @@
-execute as @e[type=vex,distance=..16,limit=2,sort=nearest] at @s run function blue:tr/effects/sentry/vex
-execute if entity @e[type=ravager,distance=..24,limit=1] run effect give @s resistance 2 0 true
-execute if entity @e[type=vindicator,distance=..24,limit=1] run effect give @s strength 2 0 true
+execute as @e[distance=..16,limit=2,sort=nearest,type=vex] at @s run function blue:tr/effects/sentry/vex
+execute if entity @e[distance=..24,limit=1,type=ravager] run effect give @s resistance 2 0 true
+execute if entity @e[distance=..24,limit=1,type=vindicator] run effect give @s strength 2 0 true
 execute if entity @e[type=#raiders,type=!ravager,type=!vindicator,type=!pillager,distance=..32,limit=1] run effect give @s speed 4 0
 execute store success score #.temp blue.misc run effect give @n[type=#raiders,predicate=blue:shared/can_see_sky,distance=..80] glowing 3 0
 execute if score #.temp blue.misc matches 0 run effect give @n[type=#raiders,distance=..80] glowing 3 0

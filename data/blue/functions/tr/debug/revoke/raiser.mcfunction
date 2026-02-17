@@ -6,4 +6,5 @@ scoreboard players set #.tr.raiser_completed blue.config 0
 advancement revoke @a only blue:tr/display/raiser
 execute unless entity @a[tag=blue.tr.raiser,limit=1] run scoreboard players set #.revoke_raiser blue.misc 2
 execute unless entity @a[tag=blue.tr.raiser,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.raiser] raiser_armor_trim_smithing_template
 tag @a[tag=blue.tr.raiser] remove blue.tr.raiser

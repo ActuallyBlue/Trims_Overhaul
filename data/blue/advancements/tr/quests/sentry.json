@@ -7,7 +7,7 @@
       "start_4":{"trigger":"voluntary_exile","conditions":{"player":{"effects":{"bad_omen":{"amplifier":{"min":4}}}}}
     },
     "end": {
-      "trigger": "minecraft:hero_of_the_village",
+      "trigger": "hero_of_the_village",
       "conditions": {
         "player": [
           {"condition":"inverted","term":{"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.sentry_completed"},"score":"blue.config"},"range":1}},

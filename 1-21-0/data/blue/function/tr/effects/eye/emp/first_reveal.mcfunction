@@ -1,6 +1,7 @@
 effect give @e[type=!#blue:shared/no_ai,distance=5..128] glowing 9 9 true
 scoreboard players add @a[distance=5..80] blue.tr.fear 50
 playsound entity.phantom.ambient player @a ~ ~ ~ 1 0.5
+scoreboard players add #.eye.grand_reveal blue.misc 1
 effect give @a[distance=5..100] slowness 5 1 true
 particle glow ~ ~2 ~ 24 10 24 0 40 force
 effect give @s invisibility 5 0 true

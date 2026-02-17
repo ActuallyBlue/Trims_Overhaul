@@ -1,3 +1,4 @@
+scoreboard players reset #.temp blue.misc
 execute if entity @s[gamemode=survival] run scoreboard players set #.temp blue.misc -1
 execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.misc -2
 gamemode creative
@@ -9,6 +10,10 @@ execute if score #.temp blue.misc matches -1 run gamemode survival
 execute if score #.temp blue.misc matches -2 run gamemode adventure
 playsound item.lead.tied player @s ~ ~ ~ 2 0.5
 schedule function blue:tr/effects/wayfinder/sound 2t
+execute unless items entity @s weapon fishing_rod[enchantments~[{enchantments:unbreaking}]] run scoreboard players set #.temp blue.misc -7500
+execute if items entity @s weapon fishing_rod[enchantments~[{enchantments:unbreaking,levels:1}]] run scoreboard players set #.temp blue.misc -5625
+execute if items entity @s weapon fishing_rod[enchantments~[{enchantments:unbreaking,levels:2}]] run scoreboard players set #.temp blue.misc -3750
+execute if items entity @s weapon fishing_rod[enchantments~[{enchantments:unbreaking,levels:{min:3}}]] run scoreboard players set #.temp blue.misc -1875
 item modify entity @s[gamemode=!creative] weapon blue:shared/damage
 execute if items entity @s weapon fishing_rod[damage~{damage:{max:63}}] run return fail
 particle item{item:"fishing_rod"} ^ ^1 ^0.5 0.1 0.1 0.1 0.1 8

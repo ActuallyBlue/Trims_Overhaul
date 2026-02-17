@@ -6,6 +6,7 @@ execute unless entity @s[tag=blue.tr.gold_nugget] run scoreboard players operati
 execute if entity @s[tag=blue.tr.gold_block] run scoreboard players operation #.gamble blue.misc *= #9 blue.misc
 scoreboard players operation #.temp blue.misc = #.gamble blue.misc
 scoreboard players operation #.gamble blue.misc *= #.snout.gamble_multiplier blue.config
+scoreboard players operation #.gamble blue.misc /= #10 blue.misc
 scoreboard players add #.gamble blue.misc 500
 execute store success score @s blue.tr.combat if predicate {condition:"random_chance",chance:{min:{type:"score",target:{type:"fixed",name:"#.gamble"},score:"blue.misc",scale:0.0002},max:{type:"score",target:{type:"fixed",name:"#.gamble"},score:"blue.misc",scale:0.0002}}}
 execute if score #.temp blue.misc matches 0..575 store result score @s blue.tr.died run random value 1..15

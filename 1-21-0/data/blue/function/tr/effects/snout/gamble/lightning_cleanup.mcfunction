@@ -1,1 +1,1 @@
-kill @e[type=marker,tag=blue.tr.gamble.lightning]
+kill @e[tag=blue.tr.gamble.lightning,type=marker]

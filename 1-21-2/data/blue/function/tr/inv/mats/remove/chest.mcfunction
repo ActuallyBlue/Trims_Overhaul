@@ -1,4 +1,7 @@
 execute if items entity @s armor.chest *[damage~{durability:{max:10}},trim] run function blue:tr/inv/mats/dura/chest with storage blue:trims armor.chest
+attribute @s water_movement_efficiency modifier remove blue:tr.chest
+attribute @s movement_efficiency modifier remove blue:tr.chest
+attribute @s sneaking_speed modifier remove blue:tr.chest
 attribute @s knockback_resistance modifier remove blue:tr.chest
 attribute @s armor_toughness modifier remove blue:tr.chest
 attribute @s movement_speed modifier remove blue:tr.chest

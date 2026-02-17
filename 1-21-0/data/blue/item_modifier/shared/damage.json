@@ -1,5 +1,13 @@
 {
   "function": "minecraft:set_damage",
-  "damage": -0.1,
+  "damage": {
+    "type": "minecraft:score",
+    "target": {
+      "type": "minecraft:fixed",
+      "name": "#.temp"
+    },
+    "score": "blue.misc",
+    "scale": 0.00001
+  },
   "add": true
 }

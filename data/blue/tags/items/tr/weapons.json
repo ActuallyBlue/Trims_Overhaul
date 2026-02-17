@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#swords",
+    "#axes",
+    "trident",
+    "bow",
+    "crossbow",
+    {"id":"mace","required":false},
+    {"id":"#blue:tr/spears","required":false}
+  ]
+}

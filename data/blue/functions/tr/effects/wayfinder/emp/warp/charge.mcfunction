@@ -14,15 +14,15 @@ execute if data storage blue:trims compass.tag.smithed.ignore run title @s actio
 execute if data storage blue:trims compass.tag.smithed.ignore run return 0
 scoreboard players add #.warp_charge blue.misc 1
 execute if score #.warp_charge blue.misc matches 1 run function blue:tr/effects/wayfinder/emp/warp/first
-execute unless data storage blue:trims compass{id:"minecraft:compass"} at b163102f-0-3-0-1 run particle nautilus ~ ~1.5 ~ 0.3 0.45 0.3 1.4 2
-execute at b163102f-0-3-0-1 run particle enchant ~ ~1.3 ~ 0.2 0.15 0.2 0.6 3
+execute unless data storage blue:trims compass{id:"minecraft:compass"} at @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1] run particle nautilus ~ ~1.5 ~ 0.3 0.45 0.3 1.4 2
+execute at @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1] run particle enchant ~ ~1.3 ~ 0.2 0.15 0.2 0.6 3
 particle enchant ~ ~1.2 ~ 0.2 0.15 0.2 0.6 4
 execute unless score #.warp_charge blue.misc matches 100.. run return 0
 execute if data storage blue:trims compass{id:"minecraft:compass"} if score #.warp_charge blue.misc matches 205.. run function blue:tr/effects/wayfinder/emp/warp/teleport
-execute if data storage blue:trims compass{id:"minecraft:compass"} at b163102f-0-3-0-1 run particle portal ~ ~1.1 ~ 0.1 0.2 0.1 0.9 3
+execute if data storage blue:trims compass{id:"minecraft:compass"} at @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1] run particle portal ~ ~1.1 ~ 0.1 0.2 0.1 0.9 3
 execute if data storage blue:trims compass{id:"minecraft:compass"} run particle reverse_portal ~ ~1.2 ~ 0.2 0.3 0.2 0.1 2
 execute unless data storage blue:trims compass{id:"minecraft:compass"} if score #.warp_charge blue.misc matches 235.. run function blue:tr/effects/wayfinder/emp/warp/teleport
-execute unless data storage blue:trims compass{id:"minecraft:compass"} at b163102f-0-3-0-1 run particle nautilus ~ ~1.5 ~ 0.3 0.45 0.3 1.4 2
+execute unless data storage blue:trims compass{id:"minecraft:compass"} at @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1] run particle nautilus ~ ~1.5 ~ 0.3 0.45 0.3 1.4 2
 execute unless data storage blue:trims compass{id:"minecraft:compass"} run particle sculk_charge_pop ~ ~1 ~ 0.3 0.4 0.3 0.05 1
-execute at b163102f-0-3-0-1 run particle enchant ~ ~1.3 ~ 0.2 0.15 0.2 0.6 7
+execute at @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1] run particle enchant ~ ~1.3 ~ 0.2 0.15 0.2 0.6 7
 particle enchant ~ ~1.2 ~ 0.2 0.15 0.2 0.6 7

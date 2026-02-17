@@ -1,3 +1,4 @@
+execute if score #.sneaking blue.misc matches 1 run function blue:tr/effects/eye/emp/disfigure/tp
 particle large_smoke ~ ~ ~ 0 0 0 0.25 250
 particle large_smoke ~ ~ ~ 0 0 0 0.25 100 force
 particle large_smoke ~ ~ ~ 0 0 0 0.25 100 force @a[scores={blue.particles=2..}]
@@ -10,7 +11,7 @@ particle glow_squid_ink ~ ~0.5 ~ 0 0 0 0.35 75
 particle glow_squid_ink ~ ~0.5 ~ 0 0 0 0.35 40 force
 particle glow_squid_ink ~ ~0.5 ~ 0 0 0 0.35 40 force @a[scores={blue.particles=2..}]
 particle glow_squid_ink ~ ~0.5 ~ 0 0 0 0.35 75 normal @a[scores={blue.particles=2..}]
-execute as @e[type=!#blue:shared/peaceful,distance=..14] run function blue:tr/effects/eye/emp/disfigure/player
+execute as @e[type=!#blue:shared/peaceful,distance=0.01..14] run function blue:tr/effects/eye/emp/disfigure/player
 playsound entity.glow_squid.squirt player @a[tag=blue.tr.eye,limit=1] ~ ~ ~ 0 0.6 1
 playsound entity.glow_squid.squirt player @a[tag=blue.tr.eye,limit=1] ~ ~ ~ 0 0.6 1
 playsound entity.glow_squid.squirt player @a ~ ~ ~ 2.5 0.6

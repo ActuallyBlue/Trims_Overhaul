@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:shulker_shell",
-         "id": "minecraft:shulker_shell"
+         "item": "shulker_shell",
+         "id": "shulker_shell"
       },
       "title": [{"translate":"item.minecraft.shulker_shell"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
       "description": "",

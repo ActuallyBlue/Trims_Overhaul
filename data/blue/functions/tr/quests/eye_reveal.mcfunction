@@ -1,2 +1,2 @@
-execute at @e[type=area_effect_cloud,tag=blue.tr.eye_quest] run particle scrape ~ ~ ~ 1.5 0.5 1.5 12 2 force
-execute if entity @e[type=area_effect_cloud,tag=blue.tr.eye_quest,limit=1] run schedule function blue:tr/quests/eye_reveal 1t
+execute at @e[tag=blue.tr.eye_quest,type=area_effect_cloud] run particle scrape ~ ~ ~ 1.5 0.5 1.5 12 2 force
+execute if entity @e[tag=blue.tr.eye_quest,limit=1,type=area_effect_cloud] run schedule function blue:tr/quests/eye_reveal 1t

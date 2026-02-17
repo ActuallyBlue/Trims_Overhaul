@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ smithing_table if block ~ ~-1 ~ smithing_table store success score #.temp blue.misc run fill ~ ~ ~ ~ ~ ~ air destroy
+execute positioned ^ ^ ^0.1 if score #.temp blue.misc matches 0 if entity @s[distance=..5] run function blue:tr/inv/untrim/cast

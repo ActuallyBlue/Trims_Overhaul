@@ -1,5 +1,5 @@
 tp ^ ^ ^0.9
-kill @s[scores={blue.misc=17..}]
+kill @s[scores={blue.misc=15..}]
 execute store success score #.temp blue.misc if entity @s[tag=blue.tr.coast_reverse]
 execute if score #.temp blue.misc matches 0 run particle effect ~ ~ ~ 0.02 0.02 0.02 0 1 normal @a[scores={blue.particles=1..}]
 execute if score #.temp blue.misc matches 1 run particle instant_effect ~ ~ ~ 0.02 0.02 0.02 0 1 normal @a[scores={blue.particles=1..}]

@@ -1,13 +1,13 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:entity_hurt_player",
+      "trigger": "entity_hurt_player",
       "conditions": {
         "damage": {
           "type": {
             "tags": [
               {
-               "id": "minecraft:is_explosion",
+               "id": "is_explosion",
                 "expected": true
               }
             ]
@@ -15,7 +15,7 @@
         },
         "player": [
           {
-            "condition": "minecraft:entity_scores",
+            "condition": "entity_scores",
             "entity": "this",
             "scores": {
               "blue.tr.current_trim": 8

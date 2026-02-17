@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:diamond"
+          "id": "diamond"
       },
       "title": {"translate":"trim_material.minecraft.diamond"},
       "description": ["+0.7 ",{"translate":"attribute.name.armor_toughness"}],

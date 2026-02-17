@@ -1,8 +1,8 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:silence_armor_trim_smithing_template",
-         "id": "minecraft:silence_armor_trim_smithing_template"
+         "item": "silence_armor_trim_smithing_template",
+         "id": "silence_armor_trim_smithing_template"
       },
       "title": {"translate":"trim_pattern.minecraft.silence"},
       "description": {"translate":"blue.tr.adv.silence.desc","fallback":"Surpassing the Wardens granted you their secrets, inflicting the fear you conquered to those around"},

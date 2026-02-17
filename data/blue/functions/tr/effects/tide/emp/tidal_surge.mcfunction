@@ -2,7 +2,7 @@ tp @s @s
 execute align y run tp ~ ~-20 ~
 effect give @s slow_falling 1 0 true
 effect give @s dolphins_grace 3 0 true
-execute positioned ~ ~-20 ~ as @e[distance=..9,type=!#blue:shared/peaceful,tag=!blue.tr.mats.heart] run damage @s 34 blue:tr/tide by @a[tag=blue.tr.mats.heart,limit=1]
+execute positioned ~ ~-20 ~ as @e[distance=..9,type=!#blue:shared/peaceful,tag=!blue.tr.mats.heart] run damage @s 50 blue:tr/tide by @a[tag=blue.tr.mats.heart,limit=1]
 particle dust_color_transition 0 0.1 1 1.3 0 0.9 1 ~ ~-19.6 ~ 4 0.4 4 0 400 force @s
 particle dust_color_transition 0 0.1 1 1.4 0 0.9 1 ~ ~-19.6 ~ 4 0.4 4 0 300 force
 particle dust_color_transition 0 0.1 1 1.3 0 0.9 1 ~ ~-19.6 ~ 4 0.4 4 0 800 normal @a[scores={blue.particles=1..}]

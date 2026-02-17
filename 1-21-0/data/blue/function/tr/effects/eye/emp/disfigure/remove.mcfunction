@@ -1,2 +1,2 @@
-execute as @e[type=ender_pearl,scores={blue.misc=..0}] run function blue:tr/effects/eye/emp/disfigure/clear
-execute as @e[type=eye_of_ender,scores={blue.misc=..0}] run function blue:tr/effects/eye/emp/disfigure/clear
+execute as @e[scores={blue.misc=..0},type=ender_pearl] run function blue:tr/effects/eye/emp/disfigure/clear
+execute as @e[scores={blue.misc=..0},type=eye_of_ender] run function blue:tr/effects/eye/emp/disfigure/clear

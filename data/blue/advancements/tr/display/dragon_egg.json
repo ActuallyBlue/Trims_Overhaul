@@ -1,11 +1,11 @@
 {
   "display": {
       "icon": {
-         "item": "minecraft:dragon_egg",
-         "id": "minecraft:dragon_egg"
+         "item": "dragon_egg",
+         "id": "dragon_egg"
       },
       "title": [{"translate":"block.minecraft.dragon_egg"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
-      "description": {"translate":"blue.tr.adv.dragon_egg.desc","fallback":"Counts towards any set, and grants one of its trim's enviromental bonuses"},
+      "description": {"translate":"blue.tr.adv.dragon_egg.desc","fallback":"Counts towards any set, and grants one of its trim's environmental bonuses"},
       "announce_to_chat": false,
       "show_toast": false,
       "hidden": true
@@ -13,7 +13,7 @@
   "parent": "blue:tr/display/star",
   "criteria": {
     "req": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:ender_dragon"

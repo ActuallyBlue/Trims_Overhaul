@@ -1,1 +1,1 @@
-execute as @e[type=marker,tag=blue.tr.ward_field] at @s run function blue:tr/effects/ward/kinetic/field/entity
+execute as @e[tag=blue.tr.ward_field,type=marker] at @s run function blue:tr/effects/ward/kinetic/field/entity

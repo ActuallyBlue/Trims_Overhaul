@@ -1,5 +1,6 @@
 advancement revoke @s only blue:tr/tags not_sneaking
-scoreboard players set #.vex.sneak blue.misc -120
+scoreboard players set #.vex.sneak blue.misc -202
+scoreboard players reset #.temp blue.misc
 execute if entity @s[gamemode=survival] run scoreboard players set #.temp blue.misc -1
 execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.misc -2
 scoreboard players operation #.vex.isolated_lunge blue.misc = #.vex.isolated blue.misc

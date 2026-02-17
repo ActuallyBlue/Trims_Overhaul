@@ -1,3 +1,4 @@
+tag @s add blue.tr.eye_tick
 particle smoke ~ ~ ~ 0.1 0.1 0.1 0.005 1 force
 particle electric_spark ~ ~ ~ 0.1 0.1 0.1 0.005 1 force
 execute if score #.eye.two_tick blue.misc matches 0 run playsound item.lodestone_compass.lock player @a ~ ~ ~ 1.5 1
@@ -9,3 +10,8 @@ scoreboard players add @s blue.tr.fear 1
 execute if score @s blue.tr.fear > #.eye.disfigure_time blue.config run function blue:tr/effects/eye/emp/disfigure/explode
 schedule function blue:tr/effects/eye/emp/disfigure/remove 6t
 scoreboard players set #.eye.disfigure_time blue.misc 7
+execute if entity @s[tag=blue.tr.checked] run return fail
+tag @s add blue.tr.checked
+execute on origin if score @s blue.tr.current_trim matches 3 run return fail
+scoreboard players operation @s blue.tr.fear = #.eye.disfigure_time blue.config
+scoreboard players operation @s blue.tr.fear /= #2 blue.misc

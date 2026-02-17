@@ -1,9 +1,10 @@
 advancement revoke @s only blue:tr/tags using_shield
+execute store success score #.temp blue.misc if predicate blue:shared/is_sneaking
+execute unless score #.temp blue.misc = #.ward.stonewall blue.misc run function blue:tr/effects/ward/stonewall
+execute if score #.ward.kinetic_cooldown blue.misc matches 1 run return fail
 scoreboard players operation @s blue.tr.damage_blocked += #.ward.auto_damage blue.config
 execute if biome ~ ~ ~ deep_dark unless entity @s[tag=blue.tr.dragon_egg] run scoreboard players add @s blue.tr.damage_blocked 3
 execute if entity @s[tag=blue.tr.dragon_egg] run scoreboard players add @s blue.tr.damage_blocked 3
-execute store success score #.temp blue.misc if predicate blue:shared/is_sneaking
-execute unless score #.temp blue.misc = #.ward.stonewall blue.misc run function blue:tr/effects/ward/stonewall
 execute unless score #.ward.blocking blue.misc matches 1 store success score #.ward.blocking blue.misc run scoreboard players set @s blue.tr.damage_blocked 0
 execute if score @s blue.tr.damage_blocked matches 2002.. run scoreboard players set @s blue.tr.damage_blocked 2001
 scoreboard players operation #.temp blue.misc = @s blue.tr.damage_blocked

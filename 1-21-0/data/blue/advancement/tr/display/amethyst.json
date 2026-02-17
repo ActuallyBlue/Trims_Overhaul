@@ -1,7 +1,7 @@
 {
   "display": {
       "icon": {
-          "id": "minecraft:amethyst_shard"
+          "id": "amethyst_shard"
       },
       "title": {"translate":"trim_material.minecraft.amethyst"},
       "description": {"translate":"blue.tr.adv.amethyst.desc","fallback":"Vanity / Particles"},

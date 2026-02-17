@@ -6,4 +6,5 @@ scoreboard players set #.tr.rib_completed blue.config 0
 advancement revoke @a only blue:tr/display/rib
 execute unless entity @a[tag=blue.tr.rib,limit=1] run scoreboard players set #.revoke_rib blue.misc 2
 execute unless entity @a[tag=blue.tr.rib,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.rib] rib_armor_trim_smithing_template
 tag @a[tag=blue.tr.rib] remove blue.tr.rib

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/birch_button_inventory",
+  "overrides": [
+    {
+      "predicate": {"custom_model_data":200600},
+      "model": "minecraft:block/air"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 {
-  "condition": "minecraft:any_of",
+  "condition": "any_of",
   "terms": [
     {
-      "condition": "minecraft:location_check",
+      "condition": "location_check",
       "predicate": {
         "structure": "minecraft:mansion",
         "structures": "minecraft:mansion"
       }
     },
     {
-      "condition": "minecraft:location_check",
+      "condition": "location_check",
       "predicate": {
         "structure": "minecraft:pillager_outpost",
         "structures": "minecraft:pillager_outpost"

@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:changed_dimension"
+      "trigger": "changed_dimension"
     }
   },
   "rewards": {

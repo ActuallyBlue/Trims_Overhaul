@@ -1,7 +1,7 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:tame_animal",
+      "trigger": "tame_animal",
       "conditions": {
         "player": [
           {"condition":"value_check","value":{"type":"score","target":{"type":"fixed","name":"#.tr.objective_type"},"score":"blue.config"},"range":2},

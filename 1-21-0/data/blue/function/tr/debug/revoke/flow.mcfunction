@@ -6,4 +6,5 @@ scoreboard players set #.tr.flow_completed blue.config 0
 advancement revoke @a only blue:tr/display/flow
 execute unless entity @a[tag=blue.tr.flow,limit=1] run scoreboard players set #.revoke_flow blue.misc 2
 execute unless entity @a[tag=blue.tr.flow,limit=1] run scoreboard players set #.admin_trim_revoke blue.misc 1
+clear @a[tag=blue.tr.flow] flow_armor_trim_smithing_template
 tag @a[tag=blue.tr.flow] remove blue.tr.flow

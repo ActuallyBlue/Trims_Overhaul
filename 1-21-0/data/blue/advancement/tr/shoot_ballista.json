@@ -1,21 +1,34 @@
 {
   "criteria": {
     "req": {
-      "trigger": "minecraft:shot_crossbow",
+      "trigger": "shot_crossbow",
       "conditions": {
-        "player": {
-          "effects": {
-            "minecraft:hero_of_the_village": {}
-          },
-          "equipment": {
-            "mainhand": {
-              "items": "minecraft:crossbow"
+        "player": [
+          {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "effects": {
+                "minecraft:hero_of_the_village": {}
+              },
+              "equipment": {
+                "mainhand": {
+                  "items": "minecraft:crossbow"
+                }
+              },
+              "flags": {
+                "is_sneaking": true
+              }
             }
           },
-          "flags": {
-            "is_sneaking": true
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 7
+            }
           }
-        }
+        ]
       }
     }
   },

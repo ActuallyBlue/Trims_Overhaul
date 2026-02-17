@@ -1,3 +1,4 @@
+effect give @s slow_falling 1 0 true
 scoreboard players reset #.temp blue.misc
 execute if entity @s[gamemode=survival] run scoreboard players set #.temp blue.misc -1
 execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.misc -2
@@ -7,9 +8,12 @@ tp @s @s
 tp ~ ~1000 ~
 execute unless score #.spire.limit_plunge blue.config matches 0 if score #.reversal_charge blue.misc matches ..0 if score #.can_plunge blue.misc matches 1 rotated ~ 0 run return run function blue:tr/effects/spire/emp/plunge/start
 execute if score #.spire.limit_plunge blue.config matches 0 if score #.reversal_charge blue.misc matches ..0 if score #.can_plunge blue.misc matches 1 run return run function blue:tr/effects/spire/emp/plunge/start
-execute positioned ^ ^ ^-1 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
+execute store success score #.temp0 blue.misc if predicate blue:tr/hold_spear
+execute if score #.temp0 blue.misc matches 1 run scoreboard players remove #.spire.guidance_range blue.config 1
+execute positioned ^ ^ ^-0.5 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
 execute if score #.spire.guidance_range blue.config matches 2.. positioned ^ ^ ^-6 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
 execute if score #.spire.guidance_range blue.config matches 3.. positioned ^ ^ ^-7 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
+execute if score #.temp0 blue.misc matches 1 run scoreboard players add #.spire.guidance_range blue.config 1
 tp ~ ~ ~
 execute if score #.temp blue.misc matches -1 run gamemode survival
 execute if score #.temp blue.misc matches -2 run gamemode adventure

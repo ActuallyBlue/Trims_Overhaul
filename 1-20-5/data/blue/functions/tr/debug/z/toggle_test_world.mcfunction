@@ -9,8 +9,9 @@ execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run team add blue.tr.rib
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.mined_sand mined:sand
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.fear dummy
-execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.damage_blocked custom:damage_blocked_by_shield
-execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run return run schedule function blue:tr/debug/z/toggle_test_world 1t
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.used_pearl used:ender_pearl
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run schedule function blue:tr/debug/z/toggle_test_world 1t
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run return run scoreboard objectives add blue.tr.damage_blocked custom:damage_blocked_by_shield
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run tellraw @a [{"text":"trims.toggle_test_world","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"addServer.resourcePack.disabled","fallback":"%s","with":[{"translate":"manageServer.resourcePack.disabled","fallback":"Disabled"}],"color":"dark_red"}]
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 1 run return run scoreboard objectives remove Set_Trim
 execute unless score #st blue.misc matches 1.. unless entity @s run scoreboard players enable @a Set_Trim

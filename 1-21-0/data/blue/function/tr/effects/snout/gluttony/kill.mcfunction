@@ -1,0 +1,1 @@
+kill @e[tag=blue.tr.gamble.apple,type=text_display]

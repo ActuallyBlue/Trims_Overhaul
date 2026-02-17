@@ -1,2 +1,3 @@
 execute positioned ~ ~1 ~ run tag @s[distance=..1] add blue.tr.eye_thrown
-tag @s add blue.tr.eye_checked
+scoreboard players set #.eye.disfigure_time blue.misc 10
+tag @s add blue.tr.checked

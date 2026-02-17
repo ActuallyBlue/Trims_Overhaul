@@ -1,13 +1,16 @@
 execute store result score #.temp blue.misc run loot spawn 0 0 0 loot blue:tr/z/rng_12
-execute if score #.temp blue.misc matches 2 run effect give @s speed 3 0
-execute if score #.temp blue.misc matches 3 run effect give @s haste 3 0
-execute if score #.temp blue.misc matches 4 run effect give @s strength 3 0
-execute if score #.temp blue.misc matches 5 run effect give @s fire_resistance 3 0
-execute if score #.temp blue.misc matches 6 run effect give @s regeneration 5 0
-execute if score #.temp blue.misc matches 7 run effect give @s absorption 2 0
-execute if score #.temp blue.misc matches 8 run effect give @s saturation 1 0
-execute if score #.temp blue.misc matches 9 run effect give @s resistance 2 0
-execute if score #.temp blue.misc matches 10 run effect give @s luck 3 0
-execute if score #.temp blue.misc matches 11 run effect give @s dolphins_grace 2 0
-execute if score #.temp blue.misc matches 12 run effect give @s night_vision 3 0
-execute if score #.temp blue.misc matches 13 run effect give @s conduit_power 3 0
+scoreboard players add #.temp blue.misc 1
+execute if predicate blue:r/40c run scoreboard players add #.temp blue.misc 1
+execute if score #.temp blue.misc matches 2 run effect give @s luck 9 0
+execute if score #.temp blue.misc matches 3 run effect give @s haste 9 0
+execute if score #.temp blue.misc matches 4 run effect give @s strength 9 0
+execute if score #.temp blue.misc matches 5 run effect give @s fire_resistance 9 0
+execute if score #.temp blue.misc matches 6 run effect give @s regeneration 9 0
+execute if score #.temp blue.misc matches 7 run effect give @s absorption 9 0
+execute if score #.temp blue.misc matches 8 run effect give @s saturation 5 0
+execute if score #.temp blue.misc matches 9 run effect give @s resistance 9 0
+execute if score #.temp blue.misc matches 10 run effect give @s conduit_power 9 0
+execute if score #.temp blue.misc matches 11 run effect give @s dolphins_grace 9 0
+execute if score #.temp blue.misc matches 12 run effect give @s night_vision 9 0
+execute if score #.temp blue.misc matches 13 run effect give @s speed 9 0
+execute if score #.temp blue.misc matches 14 run effect give @s instant_health 1 0

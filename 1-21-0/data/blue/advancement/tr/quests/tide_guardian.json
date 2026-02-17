@@ -1,14 +1,14 @@
 {
   "criteria": {
     "elder_guardian": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "player_killed_entity",
       "conditions": {
         "entity": {
           "type": "minecraft:elder_guardian"
         },
         "player": [
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "entity_properties",
             "entity": "this",
             "predicate": {
               "location": {
