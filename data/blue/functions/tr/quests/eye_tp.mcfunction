@@ -8,4 +8,3 @@ execute if score #.tr.limit_owned_trims blue.config matches 1.. if entity @s[adv
 execute unless entity @e[tag=blue.tr.eye_quest,distance=..20,limit=1,type=area_effect_cloud] run return 0
 function blue:tr/completion/eye
 kill @e[tag=blue.tr.eye_quest,type=area_effect_cloud]
-scoreboard objectives remove blue.tr.used_pearl

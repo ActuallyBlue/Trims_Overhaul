@@ -5,6 +5,7 @@ data modify storage blue:trims flow.m set from entity @s Motion
 execute store result storage blue:trims flow.Motion[0] double -0.125 run data get storage blue:trims flow.m[0]
 execute store result storage blue:trims flow.Motion[1] double -0.125 run data get storage blue:trims flow.m[1]
 execute store result storage blue:trims flow.Motion[2] double -0.125 run data get storage blue:trims flow.m[2]
+execute if score #.barrage_time blue.misc matches 1.. run function blue:tr/effects/flow/emp/barrage/deflect
 data modify entity @s Motion set from storage blue:trims flow.Motion
 playsound entity.breeze.deflect player @a
 particle cloud

@@ -1,0 +1,1 @@
+execute as @e[tag=blue.tr.return,type=item] run function blue:tr/item/return_checks

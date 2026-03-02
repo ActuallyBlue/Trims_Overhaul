@@ -1,4 +1,5 @@
 tag @s add blue.tr.respawn
+scoreboard players add #.18s blue.misc 3
 execute if entity @s[tag=blue.tr.shaper.falling] run function blue:tr/effects/shaper/emp/fall
 stopsound @s * item.elytra.flying
 advancement revoke @s only blue:tr/died

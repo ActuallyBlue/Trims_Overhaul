@@ -2,7 +2,7 @@ scoreboard players set #.temp blue.misc 1
 data modify storage blue:trims fake_inv append from storage blue:trims item.Item
 data modify entity @s {} merge from storage blue:trims merge.item_data
 scoreboard players add #.drop_temp blue.misc 1
-tp @a[tag=blue.tr.killer,limit=1]
+tp @s @a[tag=blue.tr.killer,limit=1]
 execute unless data storage blue:trims item.Item.tag.Trim run return 0
 execute if data storage blue:trims item.Item.tag.Trim{pattern:"minecraft:wayfinder"} as @e[distance=..3,tag=!blue.tr.checked,nbt={Item:{tag:{Trim:{pattern:"minecraft:wayfinder"}}}},type=item] run function blue:tr/inv/died/extra
 execute if data storage blue:trims item.Item.tag.Trim{pattern:"minecraft:silence"} as @e[distance=..3,tag=!blue.tr.checked,nbt={Item:{tag:{Trim:{pattern:"minecraft:silence"}}}},type=item] run function blue:tr/inv/died/extra

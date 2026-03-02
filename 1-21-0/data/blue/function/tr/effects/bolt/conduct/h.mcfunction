@@ -1,5 +1,5 @@
 execute at @s[distance=..1] run return run function blue:tr/effects/bolt/destroy
-execute positioned ^ ^ ^-3 at @s[distance=..3] run return run function blue:tr/effects/bolt/destroy
+execute positioned ^ ^ ^-5 at @s[distance=..5] run return run function blue:tr/effects/bolt/destroy
 particle electric_spark
 scoreboard players add #.hPos blue.misc 1
 execute positioned ~-0.5 ~-0.5 ~-0.5 as @a[dx=0,tag=!blue.tr.hit,gamemode=!spectator,gamemode=!creative] positioned ~0.25 ~0.25 ~0.25 at @s[dx=0] run function blue:tr/effects/bolt/conduct/hit

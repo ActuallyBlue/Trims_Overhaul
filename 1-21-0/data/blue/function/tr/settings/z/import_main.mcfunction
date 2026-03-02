@@ -144,4 +144,4 @@ $scoreboard players set #.raiser.multiplier blue.config $(spm)
 $scoreboard players set #.tr.death_untrim blue.config $(du)
 $scoreboard players set #.tr.trim_locator_bar blue.config $(tlb)
 $scoreboard players set #.tr.ability_shortcuts blue.config $(ab)
-#data remove storage blue:trims temp.export
+data remove storage blue:trims temp.export

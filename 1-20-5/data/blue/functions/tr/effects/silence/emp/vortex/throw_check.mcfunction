@@ -1,5 +1,4 @@
 tag @s add blue.tr.checked
-scoreboard players set #.silence.reduce_armor blue.misc 300
 execute on origin if entity @s[tag=blue.tr.silence] run scoreboard players set #.temp blue.misc -633
 execute unless score #.temp blue.misc matches -633 run return fail
 execute store result score #.temp blue.misc run data get entity @s Item.count

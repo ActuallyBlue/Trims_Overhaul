@@ -9,11 +9,10 @@ particle dust_color_transition{from_color:[0f,0.1f,1f],scale:1.3,to_color:[0f,0.
 particle dust_color_transition{from_color:[0f,0.1f,1f],scale:1.7,to_color:[0f,0.9f,1f]} ~ ~-19.6 ~ 4 0.4 4 0 300 normal @a[scores={blue.particles=2..}]
 particle fishing ~ ~-19.4 ~ 0 0 0 0.15 100 normal @a[scores={blue.particles=2..}]
 particle fishing ~ ~-19.4 ~ 0 0 0 0.15 100
-playsound item.trident.thunder master @a[distance=..16] 0 -128 0 0 0.9 1
-playsound item.trident.thunder master @a ~ ~-19 ~ 2 0.9
-playsound item.trident.return master @a[x=0] ~ ~-19 ~ 3 0.5
+execute positioned ~ ~-19 ~ run playsound item.trident.thunder player @a[distance=..16] ~ ~ ~ 8 0.9
+playsound item.trident.thunder player @a ~ ~-19 ~ 2 0.9
+playsound item.trident.return player @a[x=0] ~ ~-19 ~ 3 0.5
 playsound item.trident.return player @s ~ -128 ~ 0 0.5 1
-playsound item.trident.thunder master @s ~ -128 ~ 0 0.9 1
 particle enchanted_hit ~ ~-19 ~ 0.3 0.3 0.3 2.5 250 force @a[scores={blue.particles=1..}]
 schedule function blue:tr/effects/tide/emp/surge_cooldown 20s
 schedule function blue:tr/effects/tide/emp/weak_cooldown 40t

@@ -1,4 +1,8 @@
-execute store result score #.temp blue.misc run data get entity @s Item.Count
+execute at @s[tag=blue.tr.armor] run return run function blue:tr/item/armor_return
+execute if items entity @s contents *[count=1] run scoreboard players set #.temp blue.misc 1
+execute if items entity @s contents *[count=2] run scoreboard players set #.temp blue.misc 2
+execute if items entity @s contents *[count=3] run scoreboard players set #.temp blue.misc 3
+execute if items entity @s contents *[count={min:4}] run scoreboard players set #.temp blue.misc 4
 execute if entity @s[tag=blue.tr.wayfinder_item] run scoreboard players operation #.wayfinder_stored blue.misc += #.temp blue.misc
 execute if entity @s[tag=blue.tr.silence_item] run scoreboard players operation #.silence_stored blue.misc += #.temp blue.misc
 execute if entity @s[tag=blue.tr.shaper_item] run scoreboard players operation #.shaper_stored blue.misc += #.temp blue.misc

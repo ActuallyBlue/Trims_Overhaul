@@ -1,1 +1,2 @@
-execute store success score #.restarted blue.misc run damage b163102f-0-0-0-1 1 blue:tr/tide
+execute store success score #.restarted blue.misc run damage @s 1 blue:tr/tide
+kill

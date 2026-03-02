@@ -12,21 +12,40 @@ tp @s @a[tag=blue.tr.quick_return,limit=1]
 tag @a[tag=blue.tr.quick_return,limit=1] remove blue.tr.quick_return
 tag @s add blue.tr.armor
 tag @s add blue.tr.return
+schedule function blue:tr/item/store 2t replace
+execute if items entity @s contents *[trim~{pattern:"silence"}] run tp @s @a[tag=blue.tr.silence,limit=1]
 execute if items entity @s contents *[trim~{pattern:"silence"}] run return run tag @s add blue.tr.silence_item
+execute if items entity @s contents *[trim~{pattern:"shaper"}] run tp @s @a[tag=blue.tr.shaper,limit=1]
 execute if items entity @s contents *[trim~{pattern:"shaper"}] run return run tag @s add blue.tr.shaper_item
+execute if items entity @s contents *[trim~{pattern:"spire"}] run tp @s @a[tag=blue.tr.spire,limit=1]
 execute if items entity @s contents *[trim~{pattern:"spire"}] run return run tag @s add blue.tr.spire_item
+execute if items entity @s contents *[trim~{pattern:"wild"}] run tp @s @a[tag=blue.tr.wild,limit=1]
 execute if items entity @s contents *[trim~{pattern:"wild"}] run return run tag @s add blue.tr.wild_item
+execute if items entity @s contents *[trim~{pattern:"wayfinder"}] run tp @s @a[tag=blue.tr.wayfinder,limit=1]
 execute if items entity @s contents *[trim~{pattern:"wayfinder"}] run return run tag @s add blue.tr.wayfinder_item
+execute if items entity @s contents *[trim~{pattern:"tide"}] run tp @s @a[tag=blue.tr.tide,limit=1]
 execute if items entity @s contents *[trim~{pattern:"tide"}] run return run tag @s add blue.tr.tide_item
+execute if items entity @s contents *[trim~{pattern:"eye"}] run tp @s @a[tag=blue.tr.eye,limit=1]
 execute if items entity @s contents *[trim~{pattern:"eye"}] run return run tag @s add blue.tr.eye_item
+execute if items entity @s contents *[trim~{pattern:"rib"}] run tp @s @a[tag=blue.tr.rib,limit=1]
 execute if items entity @s contents *[trim~{pattern:"rib"}] run return run tag @s add blue.tr.rib_item
+execute if items entity @s contents *[trim~{pattern:"flow"}] run tp @s @a[tag=blue.tr.flow,limit=1]
 execute if items entity @s contents *[trim~{pattern:"flow"}] run return run tag @s add blue.tr.flow_item
+execute if items entity @s contents *[trim~{pattern:"bolt"}] run tp @s @a[tag=blue.tr.bolt,limit=1]
 execute if items entity @s contents *[trim~{pattern:"bolt"}] run return run tag @s add blue.tr.bolt_item
+execute if items entity @s contents *[trim~{pattern:"snout"}] run tp @s @a[tag=blue.tr.snout,limit=1]
 execute if items entity @s contents *[trim~{pattern:"snout"}] run return run tag @s add blue.tr.snout_item
+execute if items entity @s contents *[trim~{pattern:"dune"}] run tp @s @a[tag=blue.tr.dune,limit=1]
 execute if items entity @s contents *[trim~{pattern:"dune"}] run return run tag @s add blue.tr.dune_item
+execute if items entity @s contents *[trim~{pattern:"raiser"}] run tp @s @a[tag=blue.tr.raiser,limit=1]
 execute if items entity @s contents *[trim~{pattern:"raiser"}] run return run tag @s add blue.tr.raiser_item
+execute if items entity @s contents *[trim~{pattern:"host"}] run tp @s @a[tag=blue.tr.host,limit=1]
 execute if items entity @s contents *[trim~{pattern:"host"}] run return run tag @s add blue.tr.host_item
+execute if items entity @s contents *[trim~{pattern:"coast"}] run tp @s @a[tag=blue.tr.coast,limit=1]
 execute if items entity @s contents *[trim~{pattern:"coast"}] run return run tag @s add blue.tr.coast_item
+execute if items entity @s contents *[trim~{pattern:"sentry"}] run tp @s @a[tag=blue.tr.sentry,limit=1]
 execute if items entity @s contents *[trim~{pattern:"sentry"}] run return run tag @s add blue.tr.sentry_item
+execute if items entity @s contents *[trim~{pattern:"vex"}] run tp @s @a[tag=blue.tr.vex,limit=1]
 execute if items entity @s contents *[trim~{pattern:"vex"}] run return run tag @s add blue.tr.vex_item
+execute if items entity @s contents *[trim~{pattern:"ward"}] run tp @s @a[tag=blue.tr.ward,limit=1]
 execute if items entity @s contents *[trim~{pattern:"ward"}] run tag @s add blue.tr.ward_item

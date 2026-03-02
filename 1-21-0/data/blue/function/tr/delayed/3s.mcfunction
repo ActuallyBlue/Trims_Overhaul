@@ -7,7 +7,7 @@ execute unless score #.18s blue.misc matches 6.. run return fail
   execute as @a[predicate=blue:tr/armored_elytra] run function blue:tr/delayed/armored_elytra_compat
   tag @a[tag=blue.tr.ignore_first] remove blue.tr.ignore_first
   scoreboard players reset #.no_breeze_pickup blue.misc
-  execute as @e[tag=blue.tr.return,type=item] run function blue:tr/item/return_checks
+  execute as @e[tag=blue.tr.armor,type=item] run function blue:tr/item/return_checks
   execute if score #.remove_NoGravity blue.misc matches 1.. run function blue:tr/effects/spire/check_remove
   execute if score #.remove_Silent blue.misc matches 1.. run function blue:tr/effects/silence/check_remove
   execute if score #.wayfinder_stored blue.misc matches 1.. as @a[tag=blue.tr.wayfinder,scores={blue.tr.combat=200..},gamemode=!spectator,limit=1] at @s run function blue:tr/delayed/return/macro {trim:"wayfinder",translate:"Wayfinder",color:"#F1FFC8"}

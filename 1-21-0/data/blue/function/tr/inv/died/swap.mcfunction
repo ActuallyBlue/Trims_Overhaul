@@ -1,7 +1,7 @@
 data modify storage blue:trims fake_inv append from entity @s Item
 data modify entity @s {} merge from storage blue:trims merge.item_data
 scoreboard players add #.drop_temp blue.misc 1
-tp @a[tag=blue.tr.killer,limit=1]
+tp @s @a[tag=blue.tr.killer,limit=1]
 execute unless items entity @s contents *[trim] run return fail
 execute if items entity @s contents *[trim~{pattern:wayfinder}] as @e[distance=..3,tag=!blue.tr.checked,type=item] if items entity @s contents *[trim~{pattern:wayfinder}] run function blue:tr/inv/died/extra
 execute if items entity @s contents *[trim~{pattern:silence}] as @e[distance=..3,tag=!blue.tr.checked,type=item] if items entity @s contents *[trim~{pattern:silence}] run function blue:tr/inv/died/extra

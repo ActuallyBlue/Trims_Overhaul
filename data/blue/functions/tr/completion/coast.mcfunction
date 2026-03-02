@@ -3,6 +3,7 @@ advancement grant @s only blue:tr/trust coast
 advancement grant @a only blue:tr/display/coast
 scoreboard players set @s blue.tr.items_fished 0
 scoreboard players set #.tr.coast_completed blue.config 1
+scoreboard objectives add blue.tr.salmon_cooldown dummy
 data modify storage blue:trims logs.append.trim set value {"translate":"Coast","color":"#C1C888"}
 function blue:tr/completion/z/setup
 data modify storage blue:trims coast.owner.text set from storage blue:shared player_name

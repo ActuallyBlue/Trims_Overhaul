@@ -1,13 +1,6 @@
 {
   "type": "minecraft:multi_action",
-  "title": [
-    "     ",
-    {
-      "translate": "blue.tr.trims_overhaul",
-      "fallback": "Trims Overhaul",
-      "color": "#3aa56a"
-    }
-  ],
+  "title": ["     ",{"translate": "blue.tr.trims_overhaul","fallback": "Trims Overhaul","color": "#3aa56a"}],
   "external_title": {
     "translate": "blue.tr.trims_overhaul",
     "fallback": "Trims Overhaul",
@@ -17,90 +10,43 @@
     {
       "type": "minecraft:plain_message",
       "contents": [
-        {
-          "text": "/    v3.2.0    \\\n",
-          "color": "gray"
-        },
-        {
-          "translate":"blue.pack_credit",
-          "fallback": "By ActuallyBlue"
-        }
+        {"text": "/     v3.2.1     \\\n","color":"gray"},
+        {"translate":"blue.pack_credit","fallback":"By ActuallyBlue"}
     ]
     },
     {
       "type": "minecraft:plain_message",
       "contents": [
-        {
-          "translate": "blue.beg_for_followers",
-          "fallback": "If you've enjoyed this project, then\n please consider following on Modrinth",
-          "color": "gray"
-        },
-        {
-          "text": "\n┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐"
-        }
+        {"translate": "blue.beg_for_followers","fallback": "If you've enjoyed this project, then\n please consider following on Modrinth"},
+        {"text": "\n┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐","color":"gray"}
       ]
     }
   ],
   "columns": 1,
   "actions": [
     {
-      "label": {
-        "translate": "blue.resource_pack_button",
-        "fallback": "[Resource Pack]",
-        "color": "#1bd96a"
-      },
-      "action": {
-        "type": "open_url",
-        "url": "https://modrinth.com/datapack/trims-overhaul"
-      }
+      "label": {"translate": "blue.resource_pack_button","fallback":"[Resource Pack]","color":"#1bd96a"},
+      "action": {"type":"open_url","url":"https://modrinth.com/datapack/trims-overhaul"}
     },
     {
       "width": 140,
-      "label": {
-        "translate": "blue.modrinth_button",
-        "fallback": "[Modrinth]",
-        "color": "#1bd96a"
-      },
-      "action": {
-        "type": "open_url",
-        "url": "https://modrinth.com/datapack/trims-overhaul"
-      }
+      "label": {"translate": "blue.modrinth_button","fallback":"[Modrinth]","color":"#1bd96a"},
+      "action": {"type":"open_url","url":"https://modrinth.com/datapack/trims-overhaul"}
     },
     {
       "width": 130,
-      "label": {
-        "translate": "blue.discord_button",
-        "fallback": "[Discord]",
-        "color": "#7289da"
-      },
-      "action": {
-        "type": "open_url",
-        "url": "https://discord.gg/TsC8AnaZeV"
-      }
+      "label": {"translate": "blue.discord_button","fallback":"[Discord]","color":"#7289da"},
+      "action": {"type":"open_url","url":"https://discord.gg/TsC8AnaZeV"}
     },
     {
       "width": 120,
-      "label": {
-        "translate": "blue.github_button",
-        "fallback": "[GitHub]",
-        "color": "#797b83"
-      },
-      "action": {
-        "type": "open_url",
-        "url": "https://github.com/ActuallyBlue/Trims_Overhaul"
-      }
+      "label": {"translate": "blue.github_button","fallback":"[GitHub]","color":"#797b83"},
+      "action": {"type":"open_url","url":"https://github.com/ActuallyBlue/Trims_Overhaul"}
     },
     {
       "width": 110,
-      "label": {
-        "translate": "blue.wiki_button",
-        "fallback": "[Wiki]",
-        "color": "#797b83"
-      },
-      "action": {
-        "type": "open_url",
-        "url": "https://github.com/ActuallyBlue/Trims_Overhaul/wiki"
-      }
+      "label": {"translate": "blue.wiki_button","fallback":"[Wiki]","color":"#797b83"},
+      "action": {"type":"open_url","url":"https://github.com/ActuallyBlue/Trims_Overhaul/wiki"}
     }
   ],
   "exit_action": {
@@ -108,9 +54,7 @@
       "type": "show_dialog",
       "dialog": "smithed:data_packs"
     },
-    "label": {
-      "translate": "gui.back"
-    },
+    "label": {"translate":"gui.back"},
     "width": 100
   }
 }

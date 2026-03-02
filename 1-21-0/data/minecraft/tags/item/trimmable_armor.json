@@ -1,5 +1,6 @@
 {
   "values": [
+    {"id":"#enchantable/equippable","required":false},
     "wither_skeleton_skull",
     "carved_pumpkin",
     "skeleton_skull",
