@@ -8,8 +8,8 @@ execute if score #.flow.ambient blue.misc matches 1 if predicate blue:tr/aerial 
 execute if entity @s[advancements={blue:tr/tags={tutorial_barrage=false}}] if items entity @e[tag=!blue.tr.checked,distance=..3,type=item] contents wind_charge[count=1] run function blue:tr/effects/flow/emp/barrage/tutorial
 execute positioned ~ ~0.75 ~ as @e[type=#blue:shared/projectiles,distance=..3,tag=!blue.tr.checked,predicate=blue:tr/moving,tag=!smithed.strict] at @s run function blue:tr/effects/flow/emp/projectile
 execute at b163102f-0-4-0-1 run particle small_gust ~ ~ ~ 0.1 0.1 0.1 0 2 force
-execute as @e[tag=!blue.tr.checked,predicate=blue:tr/barrage,distance=..6,type=item] if function blue:tr/effects/flow/emp/own run function blue:tr/effects/flow/emp/barrage/dropped
-execute if score #.barrage_time blue.misc matches 1.. run return run function blue:tr/effects/flow/emp/barrage/loop
+execute as @e[tag=!blue.tr.checked,predicate=blue:tr/barrage,distance=..6,type=item] if function blue:tr/effects/flow/emp/air run function blue:tr/effects/flow/emp/barrage/dropped
+execute if score #.flow.barrage_time blue.misc matches 1.. run return run function blue:tr/effects/flow/emp/barrage/loop
 attribute @s gravity modifier remove blue:tr.trim
 execute if score #.flow.chamber blue.misc matches 0 if entity @s[x_rotation=-90..-12,predicate=!blue:shared/is_sneaking] run return run attribute @s gravity modifier add blue:tr.trim -0.05 add_value
 execute if score #.flow.chamber blue.misc matches 1 if entity @s[x_rotation=-90..-12,predicate=!blue:shared/is_sneaking] run return run attribute @s gravity modifier add blue:tr.trim -0.06 add_value

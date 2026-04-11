@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
+  "version": "3.2.2",
   "id": "trims_overhaul",
-  "version": "3.2.1",
   "name": "Trims Overhaul",
-  "description": "Give every trim unique powers, obtainable though quests",
-  "license": "LicenseRef-Datapack",
-  "environment": "*",
+  "description": "Give every trim unique powers, obtainable through quests",
+  "authors": ["ActuallyBlue"],
+  "license": "MIT",
   "depends": {
     "fabric-resource-loader-v0": "*"
   },
@@ -14,5 +14,18 @@
     "homepage": "https://modrinth.com/datapack/trims-overhaul",
     "sources": "https://github.com/ActuallyBlue/Trims_Overhaul",
     "issues": "https://github.com/ActuallyBlue/Trims_Overhaul/issues"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.wiki": "https://github.com/ActuallyBlue/Trims_Overhaul/wiki",
+        "modmenu.modrinth": "https://modrinth.com/datapack/trims-overhaul",
+        "modmenu.issues": "https://github.com/ActuallyBlue/Trims_Overhaul/issues",
+        "modmenu.discord": "https://discord.gg/TsC8AnaZeV"
+      }
+    },
+    "duckyupdater": {
+      "modrinthId": "lBHH38D3"
+    }
   }
 }

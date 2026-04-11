@@ -1,5 +1,5 @@
-damage @s 4 blue:tr/trap
-damage @s 4 blue:tr/trap
+damage @s 4 blue:tr/trap by @a[tag=blue.tr.wild,limit=1]
+damage @s 4 blue:tr/trap by @a[tag=blue.tr.wild,limit=1]
 effect give @s slowness 1 20 true
 effect give @s slowness 2 0 true
 effect give @s weakness 2 0 true

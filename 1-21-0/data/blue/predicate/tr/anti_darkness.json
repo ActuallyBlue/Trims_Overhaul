@@ -1,0 +1,23 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "slots": {
+      "weapon.*": {
+        "items": [
+          "minecraft:torch",
+          "minecraft:lantern",
+          "minecraft:glowstone",
+          "minecraft:sea_lantern",
+          "minecraft:ochre_froglight",
+          "minecraft:pearlescent_froglight",
+          "minecraft:verdant_froglight",
+          "minecraft:jack_o_lantern",
+          "minecraft:shroomlight",
+          "minecraft:end_rod",
+          "minecraft:beacon"
+        ]
+      }
+    }
+  }
+}

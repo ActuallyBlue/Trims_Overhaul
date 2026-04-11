@@ -1,5 +1,5 @@
-scoreboard players set @s blue.tr.RTDtime 1
+scoreboard players set @s blue.tr.rtd_time 1
 function blue:tr/tasks/rtd/universal
-tag @s add blue.tr.RTD.dune
-title @s subtitle {"score":{"name":"@s","objective":"blue.tr.RTDval"},"color":"#E7C547"}
+tag @s add blue.tr.rtd.dune
+title @s subtitle {"score":{"name":"@s","objective":"blue.tr.rtd_value"},"color":"#E7C547"}
 title @s title ""

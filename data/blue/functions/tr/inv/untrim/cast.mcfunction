@@ -1,2 +1,3 @@
-execute if block ~ ~ ~ smithing_table if block ~ ~-1 ~ smithing_table store success score #.temp blue.misc run fill ~ ~ ~ ~ ~ ~ air destroy
+execute if block ~ ~ ~ smithing_table if score #.temp0 blue.misc matches 0 if block ~ ~-1 ~ smithing_table run function blue:tr/inv/untrim/found
+execute if block ~ ~ ~ smithing_table if score #.temp0 blue.misc matches 1 if block ~ ~-1 ~ #replaceable positioned ~ ~-2 ~ align xyz if entity @s[dx=0] positioned ~ ~2 ~ run function blue:tr/inv/untrim/found
 execute positioned ^ ^ ^0.1 if score #.temp blue.misc matches 0 if entity @s[distance=..5] run function blue:tr/inv/untrim/cast

@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "req": {
+    "normal": {
       "trigger": "placed_block",
       "conditions": {
         "location": [
@@ -29,8 +29,44 @@
           }
         }
       }
+    },
+    "above": {
+      "trigger": "placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:smithing_table"
+          },
+          {
+            "condition": "location_check",
+            "offsetY": -1,
+            "predicate": {
+              "block": {
+                "blocks": "#replaceable"
+              }
+            }
+          }
+        ],
+        "player": {
+          "flags": {
+            "is_sneaking": true
+          },
+          "slots": {
+            "armor.*": {
+              "items": "#minecraft:trimmable_armor"
+            }
+          }
+        }
+      }
     }
   },
+  "requirements": [
+    [
+      "above",
+      "normal"
+    ]
+  ],
   "rewards": {
     "function": "blue:tr/inv/untrim/main"
   }

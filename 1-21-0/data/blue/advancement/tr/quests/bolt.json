@@ -12,10 +12,12 @@
             }
           },
           {
-            "condition": "minecraft:time_check",
+            "condition": "time_check",
             "value": {
-              "min": 13000
-            }
+              "min": 13000,
+              "max": 23500
+            },
+            "period": 24000
           },
           {
             "condition": "any_of",

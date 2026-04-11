@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "hurt": {
+    "req": {
       "trigger": "entity_hurt_player",
       "conditions": {
         "player": [

@@ -4,6 +4,7 @@ execute if score #.dune.ambient blue.misc matches 7.. store success score #.dune
 execute if score #.60 blue.misc matches 23 run function blue:tr/effects/dune/endurance
 execute unless score @s blue.tr.mined_sand matches 1.. run return fail
 scoreboard players reset @s blue.tr.mined_sand
+effect give @s haste 2 2 true
 execute if items entity @s weapon #shovels run return fail
 execute store success score #.temp blue.misc if predicate blue:shared/is_sneaking
 execute positioned ^ ^ ^1.5 as @e[distance=..4,tag=!blue.tr.checked,type=item] at @s align xyz run function blue:tr/effects/dune/raisure/item

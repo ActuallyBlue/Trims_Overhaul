@@ -1,0 +1,1 @@
+particle flash{color:[0f,0f,0.4f,0.5]} ~ ~0.1 ~ 0 0 0 0 2

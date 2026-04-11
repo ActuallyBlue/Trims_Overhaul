@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "has_template": {
+    "req": {
       "trigger": "inventory_changed",
       "conditions": {
         "items": [

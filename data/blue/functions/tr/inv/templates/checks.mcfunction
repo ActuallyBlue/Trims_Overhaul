@@ -1,4 +1,5 @@
 data modify storage blue:trims inventory set from entity @s Inventory
+execute if data storage blue:trims inventory[{tag:{blue:trim}}] run function blue:tr/inv/templates/update_data
 execute if data storage blue:trims inventory[{id:"minecraft:wayfinder_armor_trim_smithing_template"}] run function blue:tr/inv/templates/wayfinder
 execute if data storage blue:trims inventory[{id:"minecraft:silence_armor_trim_smithing_template"}] run function blue:tr/inv/templates/silence
 execute if data storage blue:trims inventory[{id:"minecraft:shaper_armor_trim_smithing_template"}] run function blue:tr/inv/templates/shaper
@@ -15,9 +16,9 @@ execute if data storage blue:trims inventory[{id:"minecraft:host_armor_trim_smit
 execute if data storage blue:trims inventory[{id:"minecraft:eye_armor_trim_smithing_template"}] run function blue:tr/inv/templates/eye
 execute if data storage blue:trims inventory[{id:"minecraft:rib_armor_trim_smithing_template"}] run function blue:tr/inv/templates/rib
 execute if data storage blue:trims inventory[{id:"minecraft:vex_armor_trim_smithing_template"}] run function blue:tr/inv/templates/vex
-execute if score #.tr.template_clearing blue.config matches 0 run advancement revoke @s only blue:tr/has_template
+execute if score #.tr.template_clearing blue.config matches 0 run advancement revoke @s only blue:tr/has_template req
 execute if score #.tr.template_clearing blue.config matches 0 run return 0
-data remove storage blue:trims inventory[{tag:{blue:trim}}]
+data remove storage blue:trims inventory[{tag:{blue:{trim:1b}}}]
 execute if entity @s[tag=blue.tr.wayfinder] if data storage blue:trims inventory[{id:"minecraft:wayfinder_armor_trim_smithing_template"}] unless score #.tr.template_clearing blue.config matches 2 store result score #.slot blue.misc run data get storage blue:trims inventory[{id:"minecraft:wayfinder_armor_trim_smithing_template"}].Slot
 execute if entity @s[tag=blue.tr.silence] if data storage blue:trims inventory[{id:"minecraft:silence_armor_trim_smithing_template"}] unless score #.tr.template_clearing blue.config matches 2 store result score #.slot blue.misc run data get storage blue:trims inventory[{id:"minecraft:silence_armor_trim_smithing_template"}].Slot
 execute if entity @s[tag=blue.tr.shaper] if data storage blue:trims inventory[{id:"minecraft:shaper_armor_trim_smithing_template"}] unless score #.tr.template_clearing blue.config matches 2 store result score #.slot blue.misc run data get storage blue:trims inventory[{id:"minecraft:shaper_armor_trim_smithing_template"}].Slot
@@ -36,5 +37,5 @@ execute if entity @s[tag=blue.tr.rib] if data storage blue:trims inventory[{id:"
 execute if entity @s[tag=blue.tr.vex] if data storage blue:trims inventory[{id:"minecraft:vex_armor_trim_smithing_template"}] unless score #.tr.template_clearing blue.config matches 2 store result score #.slot blue.misc run data get storage blue:trims inventory[{id:"minecraft:vex_armor_trim_smithing_template"}].Slot
 execute if score #.slot blue.misc matches ..18 run function blue:tr/inv/templates/low
 execute if score #.slot blue.misc matches 19.. run function blue:tr/inv/templates/high
-advancement revoke @s only blue:tr/has_template
+advancement revoke @s only blue:tr/has_template req
 scoreboard players reset #.slot blue.misc

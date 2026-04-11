@@ -1,6 +1,6 @@
 kill
 particle scrape ~ ~ ~ 0 0 0 2 16 force
-execute if entity @s[tag=blue.tr.eye_thrown] as @a[scores={blue.tr.current_trim=3}] run return run function blue:tr/effects/eye/emp/disfigure/mist
+execute if entity @s[tag=blue.tr.eye.thrown] as @a[scores={blue.tr.current_trim=3}] run return run function blue:tr/effects/eye/emp/disfigure/mist
 execute on origin if score @s blue.tr.current_trim matches 3 run return run function blue:tr/effects/eye/emp/disfigure/mist
 execute on origin run playsound entity.ender_eye.death player @s ~ -128 ~ 0 1.25 1
 execute on origin run playsound entity.ender_eye.death player @s ~ -128 ~ 0 1.25 1

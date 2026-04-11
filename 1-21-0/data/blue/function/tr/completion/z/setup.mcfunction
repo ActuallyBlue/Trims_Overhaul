@@ -7,4 +7,4 @@ data modify storage blue:trims logs.completion append from storage blue:trims lo
 scoreboard players set #.temp Trims_Menu.BLUE 51
 schedule function blue:tr/completion/z/delay 2t
 advancement grant @s only blue:tr/inv_checks
-tag @s add blue.tr.RTDCD
+tag @s add blue.tr.rtd_cooldown

@@ -1,5 +1,4 @@
 tag @s add blue.tr.checked
-scoreboard players reset #.temp blue.misc
 data modify storage blue:trims item.Item set from entity @s Item
 execute if data storage blue:trims item.Item.tag.Trim run function blue:tr/inv/died/keep
 execute if data storage blue:trims item.Item.tag.Trim run return 0

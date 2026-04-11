@@ -1,5 +1,5 @@
-execute on origin if entity @s[tag=blue.tr.shaper] run scoreboard players set #.temp blue.misc -823
-execute unless score #.temp blue.misc matches -823 run tag @s add blue.tr.shaper_checked
+execute on origin if score @s blue.tr.current_trim matches 8 run scoreboard players set #.temp blue.misc -823
+execute unless score #.temp blue.misc matches -823 run tag @s add blue.tr.shaper.checked
 execute unless score #.temp blue.misc matches -823 run return 0
 scoreboard players reset #.temp blue.misc
 particle item tnt ~ ~0.5 ~ 0.3 0.3 0.3 0.01 4

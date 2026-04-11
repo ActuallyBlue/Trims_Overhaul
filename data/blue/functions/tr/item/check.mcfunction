@@ -13,8 +13,8 @@ data modify entity @s {} merge from storage blue:trims merge.item_data
 execute on origin run tag @s add blue.tr.quick_return
 tp @s @a[tag=blue.tr.quick_return,limit=1]
 tag @a[tag=blue.tr.quick_return,limit=1] remove blue.tr.quick_return
-tag @s add blue.tr.return
-schedule function blue:tr/item/store 2t replace
+execute if data storage blue:trims item.Item{tag:{blue:{trim:1b}}} run tag @s add blue.tr.return
+execute if data storage blue:trims item.Item{tag:{blue:{trim:1b}}} run schedule function blue:tr/item/store 2t replace
 execute if data storage blue:trims item.Item{id:"minecraft:wayfinder_armor_trim_smithing_template"} run tp @s @a[tag=blue.tr.wayfinder,limit=1]
 execute if data storage blue:trims item.Item{id:"minecraft:wayfinder_armor_trim_smithing_template"} run tag @s add blue.tr.wayfinder_item
 execute if data storage blue:trims item.Item{id:"minecraft:silence_armor_trim_smithing_template"} run tp @s @a[tag=blue.tr.silence,limit=1]

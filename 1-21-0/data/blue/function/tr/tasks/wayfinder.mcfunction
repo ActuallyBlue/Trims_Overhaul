@@ -15,4 +15,4 @@ scoreboard players operation #.temp blue.misc += #.tr.wayfinder_task blue.config
 execute if score #.temp0 blue.misc matches 22..31 run title @s[scores={blue.tr.combat=0..}] actionbar [{"score":{"name":"@s","objective":"blue.tr.blocks_walked"},"color":"#F1FFC8"},{"text":"/","color":"gray"},{"score":{"name":"#.temp","objective":"blue.misc"}}," ",{"translate":"blue.tr.blocks_walked","fallback":"Blocks Walked"}]
 execute if score #.temp0 blue.misc matches 22..31 if score @s blue.tr.blocks_walked >= #.temp blue.misc run scoreboard players set @s blue.tr.structures 32
 execute if score #.temp0 blue.misc matches 22..31 if score @s blue.tr.blocks_walked >= #.temp blue.misc at @s run function blue:tr/completion/z/wayfinder
-execute unless score #.tr.random_task_defender blue.config matches 0 if entity @s[tag=!blue.tr.RTDCD,predicate=blue:r/10c] unless score @s blue.tr.structures matches 32.. at @s run function blue:tr/tasks/rtd/wayfinder
+execute unless score #.tr.random_task_defender blue.config matches 0 if entity @s[tag=!blue.tr.rtd_cooldown,predicate=blue:r/10c] unless score @s blue.tr.structures matches 32.. at @s run function blue:tr/tasks/rtd/wayfinder

@@ -11,10 +11,9 @@ data modify storage blue:trims raiser.owner.color set value "#95B623"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#95B623"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Raiser","color":"#95B623"}]
 function blue:tr/delayed/cmd/msg/raiser
-loot give @s loot blue:tr/raiser
-scoreboard players reset #.raiser_stored blue.misc
-execute store result score #.temp blue.misc run clear @s raiser_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.raiser_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/raiser
+scoreboard players set #.template_loot blue.misc 1
 effect give @s haste 7 5 true
 effect give @s speed 7 0 true
 effect give @s speed 6 1 true

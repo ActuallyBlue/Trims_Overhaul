@@ -1,6 +1,8 @@
-advancement revoke @s only blue:tr/untrim req
+execute store success score #.temp0 blue.misc if entity @s[advancements={blue:tr/untrim={above=true}}]
+advancement revoke @s only blue:tr/untrim
 scoreboard players set #.temp blue.misc 0
 execute anchored eyes positioned ^ ^ ^0.25 run function blue:tr/inv/untrim/cast
+execute if score #.temp0 blue.misc matches 1 if score #.temp blue.misc matches 0 run return fail
 execute if score #.tr.manual_untrimming blue.config matches 0 run return run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.manual_untrimming","fallback":"Manual Untrimming","color":"white","hoverEvent":{"action":"show_text","contents":{"translate":"blue.tr.manual_untrimming_hover","fallback":"Players can un-trim their armor with Smithing Tables (ON, OFF)","color":"gray"}},"hover_event":{"action":"show_text","value":{"translate":"blue.tr.manual_untrimming_hover","fallback":"Players can un-trim their armor with Smithing Tables (ON, OFF)","color":"gray"}},"italic":true},{"translate":"blue.tr.is_disabled","fallback":" is disabled on this server","color":"gray"}]
 item replace block 200600 2 200600 container.3 from entity @s armor.head
 item replace block 200600 2 200600 container.2 from entity @s armor.chest

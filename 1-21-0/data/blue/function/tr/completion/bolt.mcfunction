@@ -11,10 +11,9 @@ data modify storage blue:trims bolt.owner.color set value "#B65D1A"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#B65D1A"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Bolt","color":"#B65D1A"}]
 function blue:tr/delayed/cmd/msg/bolt
-loot give @s loot blue:tr/bolt
-scoreboard players reset #.bolt_stored blue.misc
-execute store result score #.temp blue.misc run clear @s bolt_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.bolt_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/bolt
+scoreboard players set #.template_loot blue.misc 1
 execute positioned ^6 ^1 ^-5 positioned ~ ~-0.5 ~ facing entity @s eyes run function blue:tr/effects/bolt/conduct/player/start
 execute positioned ^-8 ^ ^1 positioned ~ ~-0.5 ~ facing entity @s eyes run function blue:tr/effects/bolt/conduct/player/start
 execute positioned ^-3 ^-5 ^-2 positioned ~ ~-0.5 ~ facing entity @s eyes run function blue:tr/effects/bolt/conduct/player/start

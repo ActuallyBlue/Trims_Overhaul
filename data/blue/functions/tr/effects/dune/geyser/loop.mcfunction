@@ -1,2 +1,2 @@
-execute as @e[tag=blue.tr.dune_geyser,type=block_display] at @s run function blue:tr/effects/dune/geyser/main
-execute as @e[tag=blue.tr.dune_geyser.temp,type=block_display] run function blue:tr/effects/dune/geyser/shrink
+execute as @e[tag=blue.tr.dune.geyser,type=block_display] at @s run function blue:tr/effects/dune/geyser/main
+execute as @e[tag=blue.tr.dune.geyser.temp,type=block_display] run function blue:tr/effects/dune/geyser/shrink

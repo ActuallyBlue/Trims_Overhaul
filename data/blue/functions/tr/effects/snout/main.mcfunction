@@ -1,7 +1,7 @@
 scoreboard players add #.snout.ambient blue.misc 1
 execute if score #.snout.ambient blue.misc matches 4 run particle item raw_gold_block ~ ~0.8 ~ 0.2 0.3 0.2 0.01 1 normal @a[scores={blue.particles=2..}]
 execute if score #.snout.ambient blue.misc matches 7 store success score #.snout.ambient blue.misc run particle item raw_gold_block ~ ~0.8 ~ 0.2 0.3 0.2 0.01 1 normal @a[scores={blue.particles=1..}]
-execute positioned ~ ~1 ~ as @e[tag=!blue.tr.snout_checked,distance=..64,type=item] run function blue:tr/effects/snout/gamble/item/main
+execute positioned ~ ~1 ~ as @e[tag=!blue.tr.snout.checked,distance=..64,type=item] run function blue:tr/effects/snout/gamble/item/main
 execute unless score #.20 blue.misc matches 13 run return 0
 execute if predicate blue:tr/gold_tool run effect give @s haste 2 2 true
 execute if predicate blue:shared/in_bastion run effect give @s fire_resistance 2 0 true

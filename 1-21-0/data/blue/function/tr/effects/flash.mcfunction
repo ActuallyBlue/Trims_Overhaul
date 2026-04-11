@@ -1,0 +1,1 @@
+$particle flash$(args)

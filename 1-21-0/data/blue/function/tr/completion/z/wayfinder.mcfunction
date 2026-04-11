@@ -19,9 +19,8 @@ data modify storage blue:trims wayfinder.owner.color set value "#F1FFC8"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#F1FFC8"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Wayfinder","color":"#F1FFC8"}]
 function blue:tr/delayed/cmd/msg/wayfinder
-loot give @s loot blue:tr/wayfinder
-scoreboard players reset #.wayfinder_stored blue.misc
-execute store result score #.temp blue.misc run clear @s wayfinder_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.wayfinder_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/wayfinder
+scoreboard players set #.template_loot blue.misc 1
 playsound block.end_portal.spawn player @a ~ ~ ~ 1.2 1.6
 particle enchant ~ ~2 ~ 0.4 0.6 0.4 10 640

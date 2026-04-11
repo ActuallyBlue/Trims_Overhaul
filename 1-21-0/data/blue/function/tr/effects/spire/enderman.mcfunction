@@ -1,1 +1,1 @@
-execute on target if entity @s[tag=blue.tr.spire] run return 1
+execute on target if score @s blue.tr.current_trim matches 11 run return 1

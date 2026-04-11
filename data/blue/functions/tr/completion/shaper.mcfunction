@@ -11,10 +11,9 @@ data modify storage blue:trims shaper.owner.color set value "#8F8F8F"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#8F8F8F"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Shaper","color":"#8F8F8F"}]
 function blue:tr/delayed/cmd/msg/shaper
-loot give @s loot blue:tr/shaper
-scoreboard players reset #.shaper_stored blue.misc
-execute store result score #.temp blue.misc run clear @s shaper_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.shaper_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/shaper
+scoreboard players set #.template_loot blue.misc 1
 playsound entity.tnt.primed player @a[distance=..20] ~ ~ ~ 2.5 1.4
 playsound item.flintandsteel.use player @a ~ ~ ~ 0.6 0.5
 playsound block.lava.pop player @a ~ ~ ~ 1 0.5

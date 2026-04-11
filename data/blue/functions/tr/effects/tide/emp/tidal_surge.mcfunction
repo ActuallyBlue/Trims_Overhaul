@@ -19,6 +19,8 @@ schedule function blue:tr/effects/tide/emp/weak_cooldown 40t
 scoreboard players set #.tide.surge_cooldown blue.misc 1
 scoreboard players set #.tide.weak_cooldown blue.misc 1
 scoreboard players remove #.tide.stacks blue.misc 1
+execute if biome ~ ~ ~ #blue:sandy if score #.tide.stacks blue.misc matches 1.. run scoreboard players remove #.tide.stacks blue.misc 1
+execute if dimension the_nether if score #.tide.stacks blue.misc matches 1.. run scoreboard players remove #.tide.stacks blue.misc 1
 scoreboard players set #.tide.cancel blue.misc 1
 particle rain ~ ~-10 ~ 0.25 12 0.25 0 250 normal @a[scores={blue.particles=1..}]
 particle rain ~ ~-10 ~ 0.25 12 0.25 0 250 force

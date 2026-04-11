@@ -19,4 +19,4 @@ execute if predicate blue:r/10c at @s run tp @s ~ ~ ~ ~10 ~-10
 execute if predicate blue:r/10c at @s run tp @s ~ ~ ~ ~-10 ~10
 execute if predicate blue:r/10c at @s run tp @s ~ ~ ~ ~-10 ~-10
 execute if predicate blue:r/10c at @s run tp @s ~ ~ ~ ~10 ~10
-execute if score #.temp0 blue.misc matches -597 run scoreboard players set @s blue.misc -1
+execute if score #.temp0 blue.misc matches -597 unless dimension the_nether run scoreboard players set @s blue.misc -1

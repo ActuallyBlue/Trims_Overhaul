@@ -25,6 +25,7 @@ scoreboard players set #.sentry.charge_speed blue.config 5
 scoreboard players set #.sentry.bonus_emeralds blue.config 100
 scoreboard players set #.silence.bonus_shards blue.config 100
 scoreboard players set #.silence.vortex_griefing blue.config 0
+scoreboard players set #.vex.quick_lunge blue.config 0
 scoreboard players set #.raiser.limit blue.config 125
 scoreboard players set #.raiser.multiplier blue.config 100
 scoreboard players set #.tr.objective_type blue.config 1

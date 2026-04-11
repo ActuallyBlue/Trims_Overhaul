@@ -1,9 +1,0 @@
-{
-  "condition": "location_check",
-  "predicate": {
-    "fluid": {
-      "tag": "minecraft:water",
-      "fluids": "#minecraft:water"
-    }
-  }
-}

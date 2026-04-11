@@ -1,3 +1,3 @@
 execute if block ~ ~ ~ #blue:shared/transparent if block ^ ^ ^0.8 #blue:shared/transparent if block ^ ^ ^1.6 #blue:shared/transparent positioned ^ ^ ^2.5 if entity @s[distance=..144] run function blue:tr/effects/eye/emp/disfigure/cast
-execute as @e[distance=..4,limit=1,tag=!blue.tr.eye_tick,type=ender_pearl] at @s run return run function blue:tr/effects/eye/emp/disfigure/entity
-execute as @e[distance=..4,limit=1,tag=!blue.tr.eye_tick,type=eye_of_ender] at @s run function blue:tr/effects/eye/emp/disfigure/entity
+execute as @e[distance=..4,limit=1,tag=!blue.tr.eye.tick,type=ender_pearl] at @s run return run function blue:tr/effects/eye/emp/disfigure/entity
+execute as @e[distance=..4,limit=1,tag=!blue.tr.eye.tick,type=eye_of_ender] at @s run function blue:tr/effects/eye/emp/disfigure/entity

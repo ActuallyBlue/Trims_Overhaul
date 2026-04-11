@@ -1,0 +1,51 @@
+{
+  "criteria": {
+    "was_hit": {
+      "trigger": "entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type_specific": {
+              "type": "player",
+              "advancements": {
+                "blue:tr/afterstrike": {
+                  "can_hit": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "delay": {
+      "trigger": "location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "blue:tr/afterstrike": {
+                "was_hit": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "can_hit": {
+      "trigger": "impossible"
+    }
+  },
+  "requirements": [
+    [
+      "delay"
+    ],
+    [
+      "can_hit",
+      "was_hit"
+    ]
+  ],
+  "rewards": {
+    "function": "blue:tr/effects/snout/afterstrike"
+  }
+}

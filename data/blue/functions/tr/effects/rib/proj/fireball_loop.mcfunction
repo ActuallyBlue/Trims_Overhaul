@@ -1,0 +1,1 @@
+execute as b163102f-0-c-0-1 at @s[type=small_fireball] run function blue:tr/effects/rib/proj/melt

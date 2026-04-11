@@ -1,1 +1,1 @@
-scoreboard players reset #.can_plunge blue.misc
+scoreboard players reset #.spire.can_plunge blue.misc

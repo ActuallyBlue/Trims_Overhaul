@@ -33,8 +33,8 @@ scoreboard objectives add blue.tr.items_fished dummy
 scoreboard objectives add blue.tr.items_enchanted dummy
 scoreboard objectives add blue.tr.raids_won dummy
 scoreboard objectives add blue.tr.lava_seconds dummy
-scoreboard objectives add blue.tr.RTDtime dummy
-scoreboard objectives add blue.tr.RTDval dummy
+scoreboard objectives add blue.tr.rtd_time dummy
+scoreboard objectives add blue.tr.rtd_value dummy
 scoreboard objectives add RTD.BLUE trigger
 scoreboard players reset * blue.tr.swim
 scoreboard players reset * blue.tr.walk

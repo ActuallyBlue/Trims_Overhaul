@@ -1,4 +1,4 @@
-advancement revoke @s only blue:tr/quests/coast
+advancement revoke @s only blue:tr/quests/coast req
 execute store success score #.temp blue.misc if score #.tr.coast_completed blue.config matches 0
 execute if score #.tr.coast_completed blue.config matches 2 if entity @s[tag=blue.tr.coast] run scoreboard players set #.temp blue.misc 1
 execute if score #.tr.coast_completed blue.config matches 1 run scoreboard players set #.temp blue.misc -1

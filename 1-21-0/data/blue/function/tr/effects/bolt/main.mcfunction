@@ -7,7 +7,8 @@ execute unless predicate {"condition":"entity_properties","entity":"this","predi
 particle electric_spark ~ ~1 ~ 0.25 0.35 0.25 0.1 2
 execute store result score #.temp blue.misc run random value 1..8
 execute unless score #.temp blue.misc matches 8 run return fail
-execute as @a[distance=0.01..1.8,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/bolt/zap
 playsound entity.firework_rocket.twinkle player @a ~ ~ ~ 0.4 2
 particle electric_spark ~ ~1 ~ 0.3 0.4 0.3 0.8 10
 particle wax_off ~ ~1 ~ 0.3 0.4 0.3 0 1
+execute if predicate {"condition":"any_of","terms":[{"condition":"location_check","predicate":{"fluid":{"fluids":"water"}}},{"condition":"all_of","terms":[{"condition":"weather_check","raining":true},{"condition":"location_check","predicate":{"can_see_sky":true}},{"condition":"inverted","term":{"condition":"location_check","predicate":{"biomes":"#blue:no_rain"}}}]}]} run return run execute as @a[distance=0.01..3,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/bolt/zap
+execute if score #.temp blue.misc matches 0 as @a[distance=0.01..1.8,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/bolt/zap

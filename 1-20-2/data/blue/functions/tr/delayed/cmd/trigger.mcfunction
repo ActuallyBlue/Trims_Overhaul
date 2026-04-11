@@ -13,6 +13,7 @@ execute if score #.temp Trims_Menu.BLUE matches 5 run function blue:tr/delayed/c
 execute if score #.temp Trims_Menu.BLUE matches 6 run function blue:tr/delayed/cmd/settings
 execute if score #.temp Trims_Menu.BLUE matches 7 run function blue:tr/delayed/cmd/trim_settings
 execute if score #.temp Trims_Menu.BLUE matches 8 at @s run function blue:shared/particles
+execute if score #.temp Trims_Menu.BLUE matches 10 run function blue:tr/delayed/cmd/combat
 execute if score #.temp Trims_Menu.BLUE matches 20..49 at @s run function blue:tr/delayed/cmd/transfer
 execute if score #.temp Trims_Menu.BLUE matches 50..60 at @s run function blue:tr/delayed/cmd/info
 execute if score #.temp Trims_Menu.BLUE matches 100 at @s run function blue:tr/delayed/cmd/shortcut

@@ -1,7 +1,8 @@
 execute if score #.rib.ambient blue.misc matches 3 run particle flame ~ ~0.7 ~ 0.2 0.3 0.2 0.04 1
-execute as @e[type=#blue:shared/projectiles,tag=!blue.tr.rib_checked,distance=..5,sort=nearest,limit=1] at @s run function blue:tr/effects/rib/emp/aegis_burn
+execute as @e[type=#blue:shared/projectiles,tag=!blue.tr.rib.checked,distance=..5,sort=nearest,limit=1] at @s run function blue:tr/effects/rib/emp/aegis_burn
 execute if score #.rib.strict_scorch blue.config matches 1 if score @s blue.tr.combat matches -100.. run return 0
-execute store success score #.temp blue.misc if predicate blue:tr/rib_hot
+execute store success score #.temp blue.misc if predicate blue:tr/rib_bonus
+execute if score #.temp blue.misc matches 1 if biome ~ ~ ~ #is_ocean run scoreboard players set #.temp blue.misc 0
 execute unless score #.temp blue.misc matches 1 unless predicate blue:r/03c run return 0
 execute if score #.temp blue.misc matches 1 unless predicate blue:r/04c run return 0
 execute as @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run damage @s 6 blue:tr/fire by @a[tag=blue.tr.rib,limit=1]

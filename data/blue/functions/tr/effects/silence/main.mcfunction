@@ -2,9 +2,9 @@ effect clear @s darkness
 effect clear @s blindness
 scoreboard players add #.silence.ambient blue.misc 1
 execute if score #.silence.reduce_armor blue.misc matches 1.. run function blue:tr/effects/silence/emp/vortex/armor
-execute if score #.60 blue.misc matches 20 as @e[type=!#blue:shared/no_ai,type=!warden,type=!player,type=!creeper,tag=!blue.tr.silence.Silent,tag=!smithed.strict,distance=0.01..16] at @s run function blue:tr/effects/silence/apply_silent
+execute if score #.60 blue.misc matches 20 as @e[type=!#blue:shared/no_ai,type=!warden,type=!player,type=!creeper,tag=!blue.tr.silence.serene,tag=!smithed.strict,distance=0.01..16] at @s run function blue:tr/effects/silence/apply_serene
 execute if score #.60 blue.misc matches 20 run effect give @e[type=!#blue:shared/peaceful,type=!warden,type=!player,distance=..12] weakness 5 0 true
-execute if score #.60 blue.misc matches 40 as @a[distance=..9,advancements={blue:tr/trust={silence=false}},gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/silence/darkness
+execute if score #.60 blue.misc matches 40 as @a[distance=..9,advancements={blue:tr/trust={silence=false}},predicate=!blue:tr/anti_darkness,gamemode=!spectator,gamemode=!creative] at @s run function blue:tr/effects/silence/darkness
 execute as @a[distance=0.01..,predicate=blue:tr/muffled,tag=!blue.tr.trim.ward] run function blue:tr/effects/silence/muffled
 execute if score #.silence.ambient blue.misc matches 11.. store success score #.silence.ambient blue.misc run particle sculk_soul ~ ~0.8 ~ 0.2 0.35 0.2 0.01 1 normal @a[scores={blue.particles=1..}]
 execute unless entity @s[tag=blue.tr.mats.shard] run return 0

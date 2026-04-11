@@ -16,7 +16,7 @@ execute if score #.sneaking blue.misc matches 1 run function blue:tr/effects/eye
 execute if score #.sneaking blue.misc matches 0 if score #.eye.grand_reveal blue.misc matches 1.. run function blue:tr/effects/eye/emp/end_reveal
 execute unless score #.eye.disfigure_time blue.misc matches 1.. unless score #.20 blue.misc matches 2..10 unless score #.20 blue.misc matches 12.. anchored eyes positioned ^ ^ ^2.5 run function blue:tr/effects/eye/emp/disfigure/cast
 execute unless score #.eye.disfigure_time blue.misc matches 1.. run return 0
-tag @e[tag=blue.tr.eye_tick] remove blue.tr.eye_tick
+tag @e[tag=blue.tr.eye.tick] remove blue.tr.eye.tick
 scoreboard players remove #.eye.disfigure_time blue.misc 1
 scoreboard players remove @e[scores={blue.misc=1..},type=ender_pearl] blue.misc 1
 scoreboard players remove @e[scores={blue.misc=1..},type=eye_of_ender] blue.misc 1

@@ -76,18 +76,12 @@
           }
         ]
       }
-    },
-    "delay": {
-      "trigger": "location"
     }
   },
   "requirements": [
     [
       "fangs",
       "main"
-    ],
-    [
-      "delay"
     ]
   ],
   "rewards": {

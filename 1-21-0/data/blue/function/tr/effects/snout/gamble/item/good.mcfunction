@@ -10,6 +10,9 @@ execute if score #.temp blue.misc matches 9 as @a[advancements={blue:tr/trust={s
 execute if score #.temp blue.misc matches 10 run function blue:tr/effects/snout/gamble/throw/t1
 execute if score #.temp blue.misc matches 11 run function blue:tr/effects/snout/gamble/throw/t2
 execute if score #.temp blue.misc matches 12 run function blue:tr/effects/snout/gamble/throw/t3
-execute if score #.temp blue.misc matches 13 if entity @s[distance=..16] run function blue:tr/effects/snout/gamble/overlord
-execute if score #.temp blue.misc matches 14 run function blue:tr/effects/snout/gamble/halt/start
-execute if score #.temp blue.misc matches 15 run function blue:tr/effects/snout/gamble/axe/start
+execute if score #.temp blue.misc matches 13 run function blue:tr/effects/snout/gamble/afterstrike
+execute if score #.temp blue.misc matches 14 run title @s actionbar {"translate":"enchantment.minecraft.knockback","color":"gray"}
+execute if score #.temp blue.misc matches 14 as @a[advancements={blue:tr/trust={snout=false}},distance=..12,gamemode=!spectator,gamemode=!creative] facing entity @s eyes positioned as @s run function blue:tr/effects/snout/gamble/knockback
+execute if score #.temp blue.misc matches 15 if entity @s[distance=..16] run function blue:tr/effects/snout/gamble/overlord
+execute if score #.temp blue.misc matches 16 run function blue:tr/effects/snout/gamble/halt/start
+execute if score #.temp blue.misc matches 17 run function blue:tr/effects/snout/gamble/axe/start

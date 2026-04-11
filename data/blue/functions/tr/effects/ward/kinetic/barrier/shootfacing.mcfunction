@@ -1,3 +1,7 @@
+execute if entity @s[type=item,tag=!blue.tr.item_projectile] run return 0
+execute if entity @s[type=#arrows,nbt={inBlockState:{}}] run return 0
+execute if entity @s[type=tnt,tag=!blue.tr.shaper.tnt] run return 0
+execute unless entity @s[type=!#blue:shared/projectiles,type=!tnt,type=!item,type=!falling_block] run tag @s add blue.tr.ward.deflected
 particle enchanted_hit ~ ~1 ~ 0.4 0.4 0.4 0.1 32
 execute if score #.temp blue.misc matches ..800 positioned 0.0 0 0.0 positioned ^ ^ ^1.2 summon marker run function blue:shared/shootfacing
 execute if score #.temp blue.misc matches 801..1200 positioned 0.0 0 0.0 positioned ^ ^ ^1.6 summon marker run function blue:shared/shootfacing

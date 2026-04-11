@@ -3,12 +3,14 @@
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer-when-downgrade">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://trims.theactuallyblue.workers.dev">
+<link rel="dns-prefetch" href="https://trims.theactuallyblue.workers.dev">
 <title>Trims Overhaul Downloader</title>
 <link rel="icon" href="pack.png" type="image/png" sizes="32x32">
 <style>
 :root{--bg:#0d1117;--card:#161b22;--muted:#8b949e;--accent:#58a6ff;--positive:#238636}
-html{color-scheme:dark}
-body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--bg);color:#c9d1d9;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+html{color-scheme:dark;overflow:hidden}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--bg);color:#c9d1d9;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;overflow:hidden}
 .container{max-width:400px;width:100%}
 .card{position:relative;background:var(--card);border:1px solid #30363d;border-radius:10px;padding:1.3rem;box-shadow:0 6px 18px rgba(0,0,0,.45)}
 h1{margin:0 0 1.25rem;font-size:1.2rem;text-align:center;color:#f0f6fc}
@@ -26,6 +28,7 @@ button:hover{filter:brightness(1.2)}
 .in-card-icon:hover{transform:scale(1.15);opacity:.9}
 .in-card-icon svg{width:100%;height:100%;display:block}
 #current-file{font-size:12px;text-align:center;color:#666;margin-top:6px}
+#mod-info{display:block;min-height:1.1em;font-size:.78rem;color:var(--muted);margin-top:.3rem;visibility:hidden}
 </style>
 </head>
 <body>
@@ -62,34 +65,41 @@ button:hover{filter:brightness(1.2)}
         <option value="data_resource_pack">Data + Resource pack</option>
         <option value="mod">Mod (.jar)</option>
       </select>
-      <small id="mod-info" hidden>Mod supports: Fabric, Forge, Quilt, and Neo-Forge</small>
+      <small id="mod-info">Mod supports: Fabric, Forge, Quilt, and Neo-Forge</small>
     </div>
     <button class="btn" id="download" disabled>Download Pack</button>
-    <div class="progress-container" aria-hidden="true"><div class="progress-bar" id="progress"></div></div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
     <div id="current-file"></div>
     <div class="status" id="status">Select version, language, and pack type</div>
   </div>
 </div>
 
 <script>
-
-
 window.addEventListener('load', () => {
   fetch('https://trims.theactuallyblue.workers.dev/api', {
     method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: 'v=0-00-0&l=none&t=test_ping'})
     .then(r => r.text().then(t => { if (t !== 'valid') throw 0; }))
-    .catch(() => { const d = document.createElement('div');
+    .catch(() => {
+      const d = document.createElement('div');
       d.innerText = '"Tracking" blocked - please enable it (for this site) to help me out.\n(Anonymously sends me the selected version, language, and pack type)';
-      d.style = "position:fixed;top:6rem;left:50%;transform:translateX(-50%);z-index:9999;background:var(--card);padding:1rem 1.4rem;border-radius:10px;border:1px solid #30363d;box-shadow:0 6px 18px #0006;white-space:pre-line;text-align:center";
-      requestAnimationFrame(() => document.body.appendChild(d))})}
-    );
-
-
+      d.style = "position:fixed;top:6rem;left:50%;transform:translateX(-50%);z-index:9999;background:var(--card);padding:1rem 1.4rem;border-radius:10px;border:1px solid #30363d;box-shadow:0 6px 18px #0006;white-space:pre-line;text-align:center;cursor:pointer";
+      d.title = "Click to dismiss";
+      d.addEventListener('click', () => d.remove(), { once: true });
+      requestAnimationFrame(() => document.body.appendChild(d));
+    });
+});
 
 const mcSel=document.getElementById('mcver'), langSel=document.getElementById('lang'), typeSel=document.getElementById('type'),
 btn=document.getElementById('download'), status=document.getElementById('status'), prog=document.getElementById('progress'),
 modInfo=document.getElementById('mod-info'),
-SUPPORTED_VERSIONS=['1.20.0','1.20.1','1.20.2','1.20.3','1.20.4','1.20.5','1.20.6','1.21.0','1.21.1','1.21.2','1.21.3','1.21.4','1.21.5','1.21.6','1.21.7','1.21.8','1.21.9','1.21.10', '1.21.11'],
+SUPPORTED_VERSIONS=[
+  '1.20.0','1.20.1','1.20.2','1.20.3','1.20.4','1.20.5','1.20.6',
+  '1.21.0','1.21.1','1.21.2','1.21.3','1.21.4','1.21.5','1.21.6',
+  '1.21.7','1.21.8','1.21.9','1.21.10','1.21.11',
+  '26.1','26.1.1','26.1.2'
+],
 DONT_COMPRESS_RE=/\.(nbt|ogg|jar|zip)$/i,
 TYPE_CODE={data_pack:'DP',resource_pack:'RP',data_resource_pack:'DP_RP',mod:'MOD'};
 
@@ -104,42 +114,35 @@ mcSel.addEventListener('change',()=>btn.disabled=!mcSel.value);
 typeSel.addEventListener('change',()=>{
   const d=typeSel.value==='data_pack';
   langSel.classList.toggle('disabled',d); langSel.disabled=d;
-  modInfo.style.display = typeSel.value==='mod' ? 'block' : 'none';
+  modInfo.style.visibility=typeSel.value==='mod'?'visible':'hidden';
 });
 typeSel.dispatchEvent(new Event('change'));
 
-function repoInfo(){const h=location.hostname.split('.'),p=location.pathname.split('/').filter(Boolean),u=h[0]||'';return{user:u,repo:p[0]||(`${u}.github.io`) }};
+const RAW_BASE='https://raw.githubusercontent.com/ActuallyBlue/Trims_Overhaul/HEAD/';
+function raw(p){return RAW_BASE+p;}
 
-function raw(p) {
-  return new URL(p, location.origin + location.pathname.replace(/\/[^/]*$/, '/')).href;
+async function getTree(){
+  try{
+    const res=await fetch(
+      'https://api.github.com/repos/ActuallyBlue/Trims_Overhaul/git/trees/HEAD?recursive=1',
+      {headers:{Accept:'application/vnd.github.v3+json'}}
+    );
+    if(res.status===403){setStatus("GitHub rate limit reached.\nDownloads may be slower temporarily.","error");return[];}
+    if(!res.ok) throw new Error("Tree failed: "+res.status);
+    return (await res.json()).tree||[];
+  }catch(e){setStatus("Could not load repository index.\nFalling back to direct downloads.","error");return[];}
 }
 
-async function getTree() {
-  const r = repoInfo();
-  const url = `https://api.github.com/repos/${r.user}/${r.repo}/git/trees/HEAD?recursive=1`;
-  try {
-    const res = await fetch(url, { headers: { Accept: 'application/vnd.github.v3+json' } });
-
-    if (res.status === 403) {
-      setStatus("GitHub rate limit reached.\nDownloads may be slower temporarily.", "error");
-      return [];
-    }
-
-    if (!res.ok) throw new Error("Tree failed: " + res.status);
-    return (await res.json()).tree || [];
-
-  } catch (e) {
-    setStatus("Could not load repository index.\nFalling back to direct downloads.", "error");
-    return [];
-  }
-}
-
-async function fetchBuf(url,retries=2){for(let i=0;;i++){try{const r=await fetch(url);if(!r.ok)throw new Error('HTTP '+r.status);return await r.arrayBuffer()}catch(e){if(i>=retries)throw e;await new Promise(s=>setTimeout(s,200*(i+1)))}}};
+async function fetchBuf(url,retries=2){for(let i=0;;i++){try{const r=await fetch(url);if(!r.ok)throw new Error('HTTP '+r.status);return await r.arrayBuffer()}catch(e){if(i>=retries)throw e;await new Promise(s=>setTimeout(s,200*(i+1)))}}}
 let repoTree=[];
 
-const fileLabel=document.getElementById('current-file');
+function setProg(value){
+  const pct=Math.min(100,Math.round(value));
+  prog.style.width=pct+'%';
+  prog.setAttribute('aria-valuenow',pct);
+}
 
-async function addMany(entries, paths, weightPerFile=1, onFileDone){
+async function addMany(entries,paths,weightPerFile=1,onFileDone){
   if(!paths?.length)return 0;
   const limit=14,pool=new Set();
   for(const p of paths){
@@ -160,11 +163,11 @@ async function addMany(entries, paths, weightPerFile=1, onFileDone){
 
 async function addIf(entries,path,dest,packFormat){
   try{
-    let content = await fetchBuf(raw(path));
-    if (path.endsWith("pack.mcmeta")) {
-      const obj = JSON.parse(new TextDecoder().decode(content));
-      if (packFormat !== undefined) obj.pack.pack_format = packFormat;
-      content = new TextEncoder().encode(JSON.stringify(obj));
+    let content=await fetchBuf(raw(path));
+    if(path.endsWith("pack.mcmeta")){
+      const obj=JSON.parse(new TextDecoder().decode(content));
+      if(packFormat!==undefined) obj.pack.pack_format=packFormat;
+      content=new TextEncoder().encode(JSON.stringify(obj));
     }
     const u=new Uint8Array(content);
     entries[dest||path]=DONT_COMPRESS_RE.test(path)?{data:u,compress:false}:u;
@@ -172,46 +175,71 @@ async function addIf(entries,path,dest,packFormat){
   }catch{return false;}
 }
 
+function loadFflate(){
+  if(window.fflate) return Promise.resolve();
+  return new Promise((resolve,reject)=>{
+    const s=document.createElement('script');
+    s.src='https://unpkg.com/fflate@0.8.2/umd/index.js';
+    s.integrity='sha384-DT0Ls0mO7JmjTnT+oBuMhEJzYJO1zUqzuuMXNdnOmOQRIpN2BgSjvBV/j50NngIT';
+    s.crossOrigin='anonymous';
+    s.onload=resolve; s.onerror=()=>reject(new Error('Failed to load fflate'));
+    document.head.appendChild(s);
+  });
+}
+
 btn.addEventListener('click',async()=>{
-  btn.disabled=true; prog.style.width='0%';
+  btn.disabled=true; setProg(0);
   if(!repoTree.length) repoTree=await getTree();
+  await loadFflate();
   const sel=mcSel.value, lang=langSel.value||'en_us', type=typeSel.value;
   const entries={};
-  const normalizedSel = sel.replace(/-/g,'.');
-  const packFormat = (normalizedSel === '1.20.0' || normalizedSel === '1.20.1') ? 15 : undefined;
+  const packFormat=(sel==='1-20-0'||sel==='1-20-1')?15:undefined;
+  let downloadSucceeded=false;
+
   try{
-    setStatus('Adding metadata…'); prog.style.width='2%';
+    setStatus('Adding metadata…'); setProg(2);
     await addIf(entries,'pack.mcmeta','pack.mcmeta',packFormat);
     await addIf(entries,'pack.png','pack.png');
 
     const assetsNeeded=type!=='data_pack', dataNeeded=type!=='resource_pack', wantMod=type==='mod';
+
+    if((assetsNeeded||dataNeeded)&&!repoTree.length){
+      setStatus('Download aborted: could not fetch file list.\nTry again in a moment.','error');
+      return;
+    }
+
     const existingRootFolders=new Set(repoTree.map(t=>t.path.split('/')[0])),foldersToInclude=[];
 
-    if (dataNeeded) {
-      const selMaj = +sel.split('-')[1] || 0;
-      const available = SUPPORTED_VERSIONS.map(v => v.replace(/\./g, '-'));
-      const index = available.indexOf(sel);
-
-      for (let i = 0; i <= index; i++) {
-        const v = available[i];
-        const maj = +v.split('-')[1] || 0;
-        if (maj === selMaj || (selMaj >= 21 && maj >= 21)) {
-          if (existingRootFolders.has(v)) foldersToInclude.push(v);
+    if(dataNeeded){
+      const available=SUPPORTED_VERSIONS.map(v=>v.replace(/\./g,'-'));
+      const index=available.indexOf(sel);
+      if(!sel.startsWith('1-')){
+        const selMajor=sel.split('-')[0];
+        for(let i=0;i<=index;i++){
+          const v=available[i];
+          if((v.startsWith(selMajor+'-')||v.startsWith('1-21-'))&&existingRootFolders.has(v)) foldersToInclude.push(v);
         }
-      }
-
-      if (selMaj === 20 && existingRootFolders.has('data')) {
-        foldersToInclude.unshift('data');
+      } else {
+        const selMaj=+sel.split('-')[1]||0;
+        for(let i=0;i<=index;i++){
+          const v=available[i];
+          if(!v.startsWith('1-')) continue;
+          const maj=+v.split('-')[1]||0;
+          if(maj===selMaj||(selMaj>=21&&maj>=21)){
+            if(existingRootFolders.has(v)) foldersToInclude.push(v);
+          }
+        }
+        if(selMaj===20&&existingRootFolders.has('data')) foldersToInclude.unshift('data');
       }
     }
 
-    const assetPaths=repoTree.length&&assetsNeeded?repoTree.filter(t=>t.type==='blob'&&t.path.startsWith('assets/')&&!t.path.startsWith('assets/minecraft/lang/')).map(t=>t.path):[];
+    const assetPaths=assetsNeeded?repoTree.filter(t=>t.type==='blob'&&(t.path.startsWith('assets/')&&!t.path.startsWith('assets/minecraft/lang/'))||(sel>='1-21-2'&&t.path.startsWith('humanoid-atlas/'))).map(t=>t.path):[];
     const langPath=`assets/minecraft/lang/${lang}.json`;
-    const dataPaths=repoTree.length&&dataNeeded?repoTree.filter(t=>{if(t.type!=='blob')return false;for(const f of foldersToInclude){if(f==='data'&&t.path.startsWith('data/'))return true;if(t.path.startsWith(f+'/'))return true}return false}).map(t=>t.path):[];
-    const modPaths=repoTree.length&&wantMod?repoTree.filter(t=>t.type==='blob'&&(t.path.startsWith('META-INF/')||['fabric.mod.json','quilt.mod.json','pack.mcmeta'].includes(t.path))).map(t=>t.path):[];
+    const dataPaths=dataNeeded?repoTree.filter(t=>{if(t.type!=='blob')return false;for(const f of foldersToInclude){if(f==='data'&&t.path.startsWith('data/'))return true;if(t.path.startsWith(f+'/'))return true}return false}).map(t=>t.path):[];
+    const modPaths=wantMod?repoTree.filter(t=>t.type==='blob'&&(t.path.startsWith('META-INF/')||['fabric.mod.json','quilt.mod.json','pack.mcmeta'].includes(t.path))).map(t=>t.path):[];
 
     let totalWeight=Math.max(1,assetPaths.length+dataPaths.length*3+modPaths.length),doneWeight=0;
-    const updateProg=()=>prog.style.width=Math.min(100,Math.round((doneWeight/totalWeight)*100))+'%';
+    const updateProg=()=>setProg((doneWeight/totalWeight)*100);
 
     if(assetsNeeded){
       await addMany(entries,assetPaths,1,(w)=>{doneWeight+=w;updateProg()});
@@ -225,50 +253,43 @@ btn.addEventListener('click',async()=>{
       }
       if(lang==='en_us') try{
         const buf=await fetchBuf(raw(langPath));
-        entries[langPath]=new TextEncoder().encode(JSON.stringify(Object.fromEntries(Object.entries(JSON.parse(new TextDecoder().decode(buf))).slice(0,18))));
+        entries[langPath]=new TextEncoder().encode(JSON.stringify(Object.fromEntries(Object.entries(JSON.parse(new TextDecoder().decode(buf))).slice(0,22))));
       }catch{}
-      else{let merged={};try{const buf=await fetchBuf(raw(langPath));merged=JSON.parse(new TextDecoder().decode(buf))}catch{}for(const[k,v]of Object.entries({"blue.gap.1":"\uE99A","blue.gap.2":"\uE99B","blue.gap.3":"\uE99C","blue.gap.5":"\uE99D"}))merged[k]=v;entries[langPath]=new TextEncoder().encode(JSON.stringify(merged));doneWeight+=0.5;updateProg()}
+      else{let merged={};try{const buf=await fetchBuf(raw(langPath));merged=JSON.parse(new TextDecoder().decode(buf))}catch{}for(const[k,v]of Object.entries({"blue.tr.invisible":"","blue.gap.1":"\uE99A","blue.gap.2":"\uE99B","blue.gap.3":"\uE99C","blue.gap.5":"\uE99D"}))merged[k]=v;entries[langPath]=new TextEncoder().encode(JSON.stringify(merged));doneWeight+=0.5;updateProg()}
     }
 
     if(dataNeeded) await addMany(entries,dataPaths,3,(w)=>{doneWeight+=w;updateProg()});
-    if (wantMod) await addMany(entries, modPaths.filter(p => p !== 'pack.mcmeta'), 1, w=>{doneWeight+=w;updateProg()});
+    if(wantMod) await addMany(entries,modPaths.filter(p=>p!=='pack.mcmeta'),1,w=>{doneWeight+=w;updateProg()});
 
     setStatus('Compressing archive…');
-    const base=Math.min(95,Math.round((doneWeight/totalWeight)*100));
-    const { zipSync } = await import("https://unpkg.com/fflate@0.8.2/esm/browser.js");
-    const zipBytes = zipSync(entries,{level:9});
-    const ext = wantMod ? 'jar' : 'zip',
-      code = TYPE_CODE[type] || 'DP',
-      fname = `CUSTOM_trims_overhaul-${code}-v${
-        JSON.parse(new TextDecoder().decode(await fetchBuf(raw("pack.mcmeta"))))
-            .pack.description?.[0]?.with?.[0]
-      }.${ext}`;
-    const blob=new Blob([zipBytes]);
-    const url=URL.createObjectURL(blob);
+    const url=URL.createObjectURL(new Blob([fflate.zipSync(entries,{level:9})]));
+    const metaBytes=(m=>m instanceof Uint8Array?m:m?.data)(entries['pack.mcmeta']);
+    const fname=`CUSTOM_trims_overhaul-${TYPE_CODE[type]||'DP'}-v${metaBytes?(JSON.parse(new TextDecoder().decode(metaBytes)).pack.description?.find(d=>d?.with)?.with?.[0]??'unknown'):'unknown'}.${wantMod?'jar':'zip'}`;
     const a=document.createElement('a');
     a.href=url;a.download=fname;document.body.appendChild(a);a.click();a.remove();
     setTimeout(()=>URL.revokeObjectURL(url),600000);
-    setStatus(`Downloaded ${fname}`,'success'); prog.style.width='100%';
+    setStatus(`Downloaded ${fname}`,'success'); setProg(100);
+    downloadSucceeded=true;
+
   }catch(e){console.error(e);setStatus('Error: '+(e&&e.message?e.message:e),'error')}
 
-finally {
-  const v = sel || 'unknown', l = lang || 'unknown', t = type || 'unknown';
-  const key = `limit:${v}|${l}|${t}`;
-  const API_ENDPOINT = 'https://trims.theactuallyblue.workers.dev/api';
-  try {
-    const r = sessionStorage.getItem(key);
-    if (!r || (Date.now() - parseInt(r, 10)) > 60000) {
-      sessionStorage.setItem(key, String(Date.now()));
-      const body = `v=${v}&l=${l}&t=${TYPE_CODE[type]}`;
-      const blob = new Blob([body], { type: 'text/plain' });
-      if (!(navigator.sendBeacon && navigator.sendBeacon(API_ENDPOINT, blob))) {
-        await fetch(API_ENDPOINT, { method: 'POST', body: blob, keepalive: true, credentials: 'omit', headers: { 'Content-Type': 'text/plain' } }); // Simplified header
-      }
+  finally{
+    if(downloadSucceeded){
+      const key=`limit:${sel}|${lang}|${type}`;
+      const API_ENDPOINT='https://trims.theactuallyblue.workers.dev/api';
+      try{
+        const r=sessionStorage.getItem(key);
+        if(!r||(Date.now()-parseInt(r,10))>60000){
+          sessionStorage.setItem(key,String(Date.now()));
+          const beaconBody=new Blob([`v=${sel}&l=${lang}&t=${TYPE_CODE[type]}`],{type:'text/plain'});
+          if(!(navigator.sendBeacon&&navigator.sendBeacon(API_ENDPOINT,beaconBody))){
+            await fetch(API_ENDPOINT,{method:'POST',body:beaconBody,keepalive:true,credentials:'omit',headers:{'Content-Type':'text/plain'}});
+          }
+        }
+      }catch{}
     }
-  } catch {}
-  btn.disabled = !mcSel.value;
-}
-
+    btn.disabled=!mcSel.value;
+  }
 });
 
 function setStatus(t,c=''){status.textContent=t;status.className=c?`status ${c}`:'status'}

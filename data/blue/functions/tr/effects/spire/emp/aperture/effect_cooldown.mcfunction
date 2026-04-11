@@ -1,1 +1,1 @@
-scoreboard players reset #.entity_tp_effect blue.misc
+scoreboard players reset #.spire.entity_tp_effect blue.misc

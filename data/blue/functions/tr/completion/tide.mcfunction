@@ -11,10 +11,9 @@ data modify storage blue:trims tide.owner.color set value "#199ADD"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#199ADD"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Tide","color":"#199ADD"}]
 function blue:tr/delayed/cmd/msg/tide
-loot give @s loot blue:tr/tide
-scoreboard players reset #.tide_stored blue.misc
-execute store result score #.temp blue.misc run clear @s tide_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.tide_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/tide
+scoreboard players set #.template_loot blue.misc 1
 playsound entity.elder_guardian.death player @a[distance=..24] ~ ~ ~ 3 0.65
 particle dripping_water ~ ~1 ~ 2 2 2 0 480
 function blue:tr/effects/tide/emp/water_burst

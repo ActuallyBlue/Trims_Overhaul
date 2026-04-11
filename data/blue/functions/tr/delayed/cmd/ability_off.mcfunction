@@ -13,7 +13,7 @@ execute if score @s blue.tr.current_trim matches 10 run kill @e[tag=blue.tr.gamb
 execute if score @s blue.tr.current_trim matches 10 as @e[tag=blue.tr.gamble.item,type=item] run data merge entity @s {PickupDelay:10s,Age:400,Health:5s}
 execute if score @s blue.tr.current_trim matches 10 run tag @e[tag=blue.tr.gamble.item,type=item] remove blue.tr.ground
 execute if score @s blue.tr.current_trim matches 10 run tag @e[tag=blue.tr.gamble.item,type=item] remove blue.tr.gamble.item
-execute if score @s blue.tr.current_trim matches 11 run scoreboard players set #.reversal_charge blue.misc 0
+execute if score @s blue.tr.current_trim matches 11 run scoreboard players set #.spire.reversal_charge blue.misc 0
 execute if score @s blue.tr.current_trim matches 11 if predicate blue:tr/aperture_res run effect clear @s resistance
 execute if score @s blue.tr.current_trim matches 12 run scoreboard players reset #.tide.in_rain blue.misc
 execute if score @s blue.tr.current_trim matches 12 run scoreboard players set #.tide.technique blue.misc 0

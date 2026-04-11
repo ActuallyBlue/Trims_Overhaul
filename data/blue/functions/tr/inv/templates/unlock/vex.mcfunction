@@ -1,4 +1,4 @@
-execute store result score #.clear_temp blue.misc run clear @s vex_armor_trim_smithing_template{blue:trim} 0
+execute store result score #.clear_temp blue.misc run clear @s vex_armor_trim_smithing_template{blue:{trim:1b}} 0
 execute store result score #.clear_temp0 blue.misc run clear @s vex_armor_trim_smithing_template 0
 scoreboard players operation #.clear_temp0 blue.misc -= #.clear_temp blue.misc
 execute unless score #.clear_temp0 blue.misc matches 1.. run return 0

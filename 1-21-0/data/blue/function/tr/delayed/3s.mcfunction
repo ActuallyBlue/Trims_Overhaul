@@ -6,10 +6,10 @@ execute unless score #.18s blue.misc matches 6.. run return fail
   scoreboard players reset #.18s blue.misc
   execute as @a[predicate=blue:tr/armored_elytra] run function blue:tr/delayed/armored_elytra_compat
   tag @a[tag=blue.tr.ignore_first] remove blue.tr.ignore_first
-  scoreboard players reset #.no_breeze_pickup blue.misc
+  scoreboard players reset #.flow.no_breeze_pickup blue.misc
   execute as @e[tag=blue.tr.armor,type=item] run function blue:tr/item/return_checks
-  execute if score #.remove_NoGravity blue.misc matches 1.. run function blue:tr/effects/spire/check_remove
-  execute if score #.remove_Silent blue.misc matches 1.. run function blue:tr/effects/silence/check_remove
+  execute if score #.spire.remove_weightless blue.misc matches 1.. run function blue:tr/effects/spire/check_remove
+  execute if score #.silence.remove_serene blue.misc matches 1.. run function blue:tr/effects/silence/check_remove
   execute if score #.wayfinder_stored blue.misc matches 1.. as @a[tag=blue.tr.wayfinder,scores={blue.tr.combat=200..},gamemode=!spectator,limit=1] at @s run function blue:tr/delayed/return/macro {trim:"wayfinder",translate:"Wayfinder",color:"#F1FFC8"}
   execute if score #.silence_stored blue.misc matches 1.. as @a[tag=blue.tr.silence,scores={blue.tr.combat=200..},gamemode=!spectator,limit=1] at @s run function blue:tr/delayed/return/macro {trim:"silence",translate:"Silence",color:"#3842Cf"}
   execute if score #.shaper_stored blue.misc matches 1.. as @a[tag=blue.tr.shaper,scores={blue.tr.combat=200..},gamemode=!spectator,limit=1] at @s run function blue:tr/delayed/return/macro {trim:"shaper",translate:"Raiser",color:"#95B623"}
@@ -38,7 +38,7 @@ execute unless score #.18s blue.misc matches 6.. run return fail
     execute as @a[advancements={blue:tr/tags={tutorial_new_player=false}}] at @s run function blue:tr/delayed/player_guide
     scoreboard players reset @a[scores={Trims_Menu.BLUE=..-1}] Trims_Menu.BLUE
     scoreboard players enable @a Trims_Menu.BLUE
-    tag @a[tag=blue.tr.RTDCD] remove blue.tr.RTDCD
+    tag @a[tag=blue.tr.rtd_cooldown] remove blue.tr.rtd_cooldown
     scoreboard players add #.108s blue.misc 1
     execute unless score #.108s blue.misc matches 3.. run return fail
       scoreboard players reset #.108s blue.misc

@@ -1,3 +1,4 @@
+execute if items entity @s container.* #blue:tr/templates[custom_data~{blue:trim}] run function blue:tr/inv/templates/update_data
 execute if items entity @s container.* wayfinder_armor_trim_smithing_template run function blue:tr/inv/templates/macro {trim:wayfinder}
 execute if items entity @s weapon.offhand wayfinder_armor_trim_smithing_template run function blue:tr/inv/templates/macro {trim:wayfinder}
 execute if items entity @s container.* silence_armor_trim_smithing_template run function blue:tr/inv/templates/macro {trim:silence}
@@ -30,6 +31,22 @@ execute if items entity @s container.* rib_armor_trim_smithing_template run func
 execute if items entity @s weapon.offhand rib_armor_trim_smithing_template run function blue:tr/inv/templates/macro {trim:rib}
 execute if items entity @s container.* vex_armor_trim_smithing_template run function blue:tr/inv/templates/macro {trim:vex}
 execute if items entity @s weapon.offhand vex_armor_trim_smithing_template run function blue:tr/inv/templates/macro {trim:vex}
-execute if score #.tr.template_clearing blue.config matches 2 run function blue:tr/inv/templates/non_own
-execute if score #.tr.template_clearing blue.config matches 1 run clear @s #blue:tr/templates[!custom_data~{blue:trim}]
-advancement revoke @s only blue:tr/has_template
+execute if score #.tr.template_clearing blue.config matches 1 run clear @s #blue:tr/templates[!custom_data~{blue:{trim:1b}}]
+execute unless score #.tr.template_clearing blue.config matches 2 run return run advancement revoke @s only blue:tr/has_template req
+clear @s[tag=!blue.tr.wayfinder] wayfinder_armor_trim_smithing_template
+clear @s[tag=!blue.tr.silence] silence_armor_trim_smithing_template
+clear @s[tag=!blue.tr.shaper] shaper_armor_trim_smithing_template
+clear @s[tag=!blue.tr.raiser] raiser_armor_trim_smithing_template
+clear @s[tag=!blue.tr.sentry] sentry_armor_trim_smithing_template
+clear @s[tag=!blue.tr.spire] spire_armor_trim_smithing_template
+clear @s[tag=!blue.tr.coast] coast_armor_trim_smithing_template
+clear @s[tag=!blue.tr.snout] snout_armor_trim_smithing_template
+clear @s[tag=!blue.tr.ward] ward_armor_trim_smithing_template
+clear @s[tag=!blue.tr.dune] dune_armor_trim_smithing_template
+clear @s[tag=!blue.tr.wild] wild_armor_trim_smithing_template
+clear @s[tag=!blue.tr.tide] tide_armor_trim_smithing_template
+clear @s[tag=!blue.tr.host] host_armor_trim_smithing_template
+clear @s[tag=!blue.tr.eye] eye_armor_trim_smithing_template
+clear @s[tag=!blue.tr.rib] rib_armor_trim_smithing_template
+clear @s[tag=!blue.tr.vex] vex_armor_trim_smithing_template
+advancement revoke @s only blue:tr/has_template req

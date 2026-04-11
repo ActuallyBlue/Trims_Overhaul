@@ -1,0 +1,1 @@
+execute store result score #.temp blue.misc run attribute @s generic.luck get 10

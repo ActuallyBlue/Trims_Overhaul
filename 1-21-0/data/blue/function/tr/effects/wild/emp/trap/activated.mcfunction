@@ -1,4 +1,4 @@
-damage @s 6 blue:tr/trap
+damage @s 6 blue:tr/trap by @a[tag=blue.tr.wild,limit=1]
 effect give @s nausea 10 100
 effect give @s hunger 1 100 true
 effect give @s slowness 9 1 true

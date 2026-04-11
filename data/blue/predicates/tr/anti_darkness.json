@@ -1,0 +1,51 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": [
+              "minecraft:torch",
+              "minecraft:lantern",
+              "minecraft:glowstone",
+              "minecraft:sea_lantern",
+              "minecraft:ochre_froglight",
+              "minecraft:pearlescent_froglight",
+              "minecraft:verdant_froglight",
+              "minecraft:jack_o_lantern",
+              "minecraft:shroomlight",
+              "minecraft:end_rod",
+              "minecraft:beacon"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "offhand": {
+            "items": [
+              "minecraft:torch",
+              "minecraft:lantern",
+              "minecraft:glowstone",
+              "minecraft:sea_lantern",
+              "minecraft:ochre_froglight",
+              "minecraft:pearlescent_froglight",
+              "minecraft:verdant_froglight",
+              "minecraft:jack_o_lantern",
+              "minecraft:shroomlight",
+              "minecraft:end_rod",
+              "minecraft:beacon"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

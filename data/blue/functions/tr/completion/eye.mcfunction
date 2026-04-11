@@ -13,10 +13,9 @@ data modify storage blue:trims eye.owner.color set value "#1F8A46"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#1F8A46"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Eye","color":"#1F8A46"}]
 function blue:tr/delayed/cmd/msg/eye
-loot give @s loot blue:tr/eye
-scoreboard players reset #.eye_stored blue.misc
-execute store result score #.temp blue.misc run clear @s eye_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.eye_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/eye
+scoreboard players set #.template_loot blue.misc 1
 particle scrape ~ ~1 ~ 0.3 0.3 0.3 70 400
 particle glow ~ ~2 ~ 5 3 5 0 180 force
 playsound entity.phantom.ambient player @a ~ ~ ~ 2.5 2

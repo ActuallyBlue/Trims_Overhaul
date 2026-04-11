@@ -11,10 +11,9 @@ data modify storage blue:trims coast.owner.color set value "#C1C888"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#C1C888"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Coast","color":"#C1C888"}]
 function blue:tr/delayed/cmd/msg/coast
-loot give @s loot blue:tr/coast
-scoreboard players reset #.coast_stored blue.misc
-execute store result score #.temp blue.misc run clear @s coast_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.coast_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/coast
+scoreboard players set #.template_loot blue.misc 1
 particle white_ash ~ ~1 ~ 2 2.25 2 0 1800
 playsound item.brush.brushing.sand.complete player @a ~ ~ ~ 2 0.5
 playsound entity.puffer_fish.death player @a ~ ~ ~ 0.8 1.5

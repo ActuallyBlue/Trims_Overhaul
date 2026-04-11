@@ -2,7 +2,7 @@ execute as @e[distance=..16,limit=2,sort=nearest,type=vex] at @s run function bl
 execute if entity @e[distance=..24,limit=1,type=ravager] run effect give @s resistance 2 0 true
 execute if entity @e[distance=..24,limit=1,type=vindicator] run effect give @s strength 2 0 true
 execute if entity @e[type=#raiders,type=!ravager,type=!vindicator,type=!pillager,distance=..32,limit=1] run effect give @s speed 4 0
-execute as @e[type=#raiders,distance=..80] positioned over motion_blocking_no_leaves run tag @s[distance=..2] add blue.tr.surface
+execute as @e[type=#raiders,tag=!smithed.strict,distance=..80] positioned over motion_blocking_no_leaves run tag @s[distance=..2] add blue.tr.surface
 execute store success score #.temp blue.misc run effect give @e[tag=blue.tr.surface,distance=..80,sort=nearest,limit=1] glowing 3 0
 execute if score #.temp blue.misc matches 0 run effect give @e[type=#raiders,distance=..80,sort=nearest,limit=1] glowing 3 0
 tag @e[tag=blue.tr.surface,distance=..80] remove blue.tr.surface

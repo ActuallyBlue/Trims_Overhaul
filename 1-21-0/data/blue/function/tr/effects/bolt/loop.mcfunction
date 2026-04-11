@@ -1,1 +1,1 @@
-execute as @e[tag=blue.tr.bolt_block,limit=1,type=marker] at @s run function blue:tr/effects/bolt/entity
+execute as @e[tag=blue.tr.bolt.block,limit=1,type=marker] at @s run function blue:tr/effects/bolt/entity

@@ -1,6 +1,6 @@
-scoreboard players set #.vPos blue.misc 0
-scoreboard players set #.hPos blue.misc 0
-scoreboard players set #.zap_steps blue.misc 1
+scoreboard players set #.bolt.vertical blue.misc 0
+scoreboard players set #.bolt.horizontal blue.misc 0
+scoreboard players set #.bolt.zap_steps blue.misc 1
 playsound entity.firework_rocket.twinkle player @a[distance=..8] ~ ~ ~ 0.75 1.25
 playsound entity.firework_rocket.twinkle player @a[distance=8.01..24] ~ ~ ~ 1.5 1.25
 execute store result score #.temp blue.misc run random value 1..4

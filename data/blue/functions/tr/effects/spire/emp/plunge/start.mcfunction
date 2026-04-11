@@ -1,4 +1,4 @@
-scoreboard players reset #.can_plunge blue.misc
+scoreboard players reset #.spire.can_plunge blue.misc
 tp @s @s
 execute positioned ^ ^ ^-0.8 positioned ~ ~1001.8 ~ summon end_crystal run damage @s 1
 execute positioned ^ ^ ^-0.8 positioned ~ ~1001.8 ~ summon end_crystal run damage @s 1
@@ -22,6 +22,6 @@ execute if score #.spire.last_reversal_charge blue.misc matches 70.. run playsou
 execute if score #.temp blue.misc matches -1 run gamemode survival
 execute if score #.temp blue.misc matches -2 run gamemode adventure
 execute positioned ~ ~-0.5 ~ run particle dust 0.81 0.78 0.65 1 ^ ^ ^-0.3 0.1 0.2 0.1 0.1 128
-execute if score #.spire.last_reversal_charge blue.misc matches 55.. run scoreboard players set #.reversal_charge blue.misc -1000
+execute if score #.spire.last_reversal_charge blue.misc matches 55.. run scoreboard players set #.spire.reversal_charge blue.misc -1000
 execute unless score #.spire.last_reversal_charge blue.misc matches 55.. run schedule function blue:tr/effects/spire/guidance_cooldown 70t
-execute unless score #.spire.last_reversal_charge blue.misc matches 55.. run scoreboard players set #.reversal_charge blue.misc -340
+execute unless score #.spire.last_reversal_charge blue.misc matches 55.. run scoreboard players set #.spire.reversal_charge blue.misc -340

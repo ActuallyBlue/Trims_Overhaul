@@ -1,6 +1,7 @@
-execute if entity @s[tag=blue.tr.add_trail] run function blue:tr/effects/snout/gamble/throw/trail
+execute if entity @s[tag=blue.tr.snout.add_trail] run function blue:tr/effects/snout/gamble/throw/trail
 execute if entity @s[tag=blue.tr.air_toggle] store result entity @s Air byte 1 run scoreboard players get #.20 blue.misc
 execute unless predicate blue:shared/on_ground run return fail
+tag @s remove blue.tr.item_projectile
 summon text_display ~ ~ ~ {Tags:["blue.tr.gamble.display"],alignment:center,text:'{"text":"#","obfuscated":true,"color":"gold"}',billboard:center,transformation:{scale:[3,3,3],translation:[0f,0.5f,0f],left_rotation:[0,0,0,1],right_rotation:[0,0,0,1]}}
 ride @n[tag=blue.tr.gamble.display,type=text_display] mount @s
 schedule function blue:tr/effects/snout/gamble/item/display 1t

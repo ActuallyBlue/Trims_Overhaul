@@ -18,5 +18,5 @@ execute unless score #.eye.disfigure_time blue.misc matches 1.. run return run e
 scoreboard players remove #.eye.disfigure_time blue.misc 1
 scoreboard players remove @e[scores={blue.misc=1..},type=ender_pearl] blue.misc 1
 scoreboard players remove @e[scores={blue.misc=1..},type=eye_of_ender] blue.misc 1
-tag @e[tag=blue.tr.eye_tick] remove blue.tr.eye_tick
+tag @e[tag=blue.tr.eye.tick] remove blue.tr.eye.tick
 execute anchored eyes positioned ^ ^ ^2.5 run function blue:tr/effects/eye/emp/disfigure/cast

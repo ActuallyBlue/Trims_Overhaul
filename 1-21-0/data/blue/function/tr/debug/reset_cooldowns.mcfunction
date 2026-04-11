@@ -26,6 +26,6 @@ scoreboard players reset #.tide.weak_cooldown blue.misc
 scoreboard players reset #.wayfinder.return_cooldown blue.misc
 scoreboard players reset #.wild.florist_cooldown blue.misc
 scoreboard players reset #.coast.fire_cooldown blue.misc
-execute if score #.reversal_charge blue.misc matches -600..-1 run scoreboard players set #.reversal_charge blue.misc 0
+execute if score #.spire.reversal_charge blue.misc matches -600..-1 run scoreboard players set #.spire.reversal_charge blue.misc 0
 execute if score #.vex.sneak blue.misc matches -95..-80 run scoreboard players set #.vex.sneak blue.misc -1
 execute if score #.sentry.charge blue.misc matches ..-1 run scoreboard players set #.sentry.charge blue.misc 0

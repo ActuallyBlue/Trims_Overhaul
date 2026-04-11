@@ -1,11 +1,11 @@
 scoreboard players set #.wild.florist_active blue.misc -1
-execute positioned ^ ^ ^1 store success score #.temp blue.misc run tp @e[tag=blue.tr.wild_florist_hitbox,limit=1,type=interaction] ~ ~-0.2 ~
-execute unless score #.temp blue.misc matches 1 unless entity @e[tag=blue.tr.wild_florist_hitbox,limit=1,type=interaction] positioned ^ ^ ^1 run summon interaction ~ ~-0.2 ~ {response:1b,width:0.3,height:0.4,Tags:["blue.tr.wild_florist_hitbox"]}
-execute positioned ^ ^ ^1 as @e[tag=blue.tr.wild_florist_hitbox,distance=..5,nbt={interaction:{}},limit=1,type=interaction] on target if score @s blue.tr.current_trim matches 16 run scoreboard players set #.wild.florist_active blue.misc -2
+execute positioned ^ ^ ^1 store success score #.temp blue.misc run tp @e[tag=blue.tr.wild.florist_hitbox,limit=1,type=interaction] ~ ~-0.2 ~
+execute unless score #.temp blue.misc matches 1 unless entity @e[tag=blue.tr.wild.florist_hitbox,limit=1,type=interaction] positioned ^ ^ ^1 run summon interaction ~ ~-0.2 ~ {response:1b,width:0.3,height:0.4,Tags:["blue.tr.wild.florist_hitbox"]}
+execute positioned ^ ^ ^1 as @e[tag=blue.tr.wild.florist_hitbox,distance=..5,nbt={interaction:{}},limit=1,type=interaction] on target if score @s blue.tr.current_trim matches 16 run scoreboard players set #.wild.florist_active blue.misc -2
 execute unless score #.wild.florist_active blue.misc matches -2 run return fail
 scoreboard players set #.wild.florist_cooldown blue.misc 1
 schedule function blue:tr/effects/wild/florist_cooldown 30t
-kill @e[tag=blue.tr.wild_florist_hitbox,limit=1,type=interaction]
+kill @e[tag=blue.tr.wild.florist_hitbox,limit=1,type=interaction]
 effect give @s saturation 1 0
 execute if items entity @s weapon allium run effect give @s fire_resistance 3 0
 execute if items entity @s weapon azure_bluet run effect give @s blindness 11 0

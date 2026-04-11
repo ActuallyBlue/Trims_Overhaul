@@ -29,6 +29,7 @@ execute store result storage blue:trims temp.export.no_gravity int 1 run scorebo
 execute store result storage blue:trims temp.export.bonus_emeralds int 1 run scoreboard players get #.sentry.bonus_emeralds blue.config
 execute store result storage blue:trims temp.export.bonus_shards int 1 run scoreboard players get #.silence.bonus_shards blue.config
 execute store result storage blue:trims temp.export.vortex_griefing int 1 run scoreboard players get #.silence.vortex_griefing blue.config
+execute store result storage blue:trims temp.export.quick_lunge int 1 run scoreboard players get #.vex.quick_lunge blue.config
 execute store result storage blue:trims temp.export.tnt_bounce int 1 run scoreboard players get #.shaper.tnt_bounce blue.config
 execute store result storage blue:trims temp.export.warp_type int 1 run scoreboard players get #.wayfinder.warp_type blue.config
 execute store result storage blue:trims temp.export.guidance_range int 1 run scoreboard players get #.spire.guidance_range blue.config

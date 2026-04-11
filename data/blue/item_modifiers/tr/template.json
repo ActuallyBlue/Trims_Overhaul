@@ -1,4 +1,14 @@
-{
-  "function": "set_nbt",
-  "tag": "{Enchantments:[{id:\"minecraft:binding_curse\"}],HideFlags:1,blue:trim}"
-}
+[
+  {
+    "function": "set_nbt",
+    "tag": "{Enchantments:[{id:\"minecraft:binding_curse\"}],HideFlags:1,blue:{trim:1b},smithed:{ignore:{crafting:1b}}}"
+  },
+  {
+    "function": "set_count",
+    "count": {
+      "type": "score",
+      "target": {"type":"fixed","name":"#.template_loot"},
+      "score": "blue.misc"
+    }
+  }
+]

@@ -4,7 +4,7 @@
           "id": "dragon_egg"
       },
       "title": [{"translate":"block.minecraft.dragon_egg"},{"translate":"blue.tr.adv.material","fallback":" Material"}],
-      "description": {"translate":"blue.tr.adv.dragon_egg.desc","fallback":"Counts towards any set, and grants one of its trim's environmental bonuses"},
+      "description": {"translate":"blue.tr.adv.dragon_egg.desc","fallback":"Can be used as a trim/template or material, and counts towards any set while also granting one of its trim's environmental bonuses"},
       "announce_to_chat": false,
       "show_toast": false,
       "hidden": true
@@ -21,6 +21,7 @@
     }
   },
   "rewards": {
-    "function": "blue:tr/debug/egg_advancement"
+    "function": "blue:tr/debug/egg_advancement",
+    "recipes": ["blue:tr/dragon_egg_smithing_trim"]
   }
 }

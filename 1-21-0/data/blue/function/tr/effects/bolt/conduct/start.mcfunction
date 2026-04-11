@@ -1,7 +1,7 @@
-summon marker ~ ~ ~ {Tags:["smithed.entity","smithed.strict"],Tags:["blue.tr.bolt_block"]}
-scoreboard players set #.vPos blue.misc 0
-scoreboard players set #.hPos blue.misc 0
-scoreboard players set #.zap_steps blue.misc 1
+summon marker ~ ~ ~ {Tags:["smithed.entity","smithed.strict"],Tags:["blue.tr.bolt.block"]}
+scoreboard players set #.bolt.vertical blue.misc 0
+scoreboard players set #.bolt.horizontal blue.misc 0
+scoreboard players set #.bolt.zap_steps blue.misc 1
 particle electric_spark ~ ~ ~ 0.35 0.35 0.35 0.1 18
 playsound entity.firework_rocket.twinkle player @a ~ ~ ~ 0.75 1.5
 execute store result score #.temp blue.misc run random value 1..4

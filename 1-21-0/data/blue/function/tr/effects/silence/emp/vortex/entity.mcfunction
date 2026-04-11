@@ -16,7 +16,7 @@ execute if score @s blue.misc matches 5 run particle nautilus ~ ~1 ~ 0.1 0.1 0.1
 execute if score @s blue.misc matches 35 run stopsound @a master entity.warden.nearby_closest
 execute if score @s blue.misc matches 36 run particle sonic_boom ~ ~ ~ 0.1 0.1 0.1 0 24 force
 execute unless score @s blue.misc matches 44 run return fail
-particle flash ~ ~0.1 ~
+function blue:tr/effects/silence/emp/vortex/flash
 playsound block.sculk_catalyst.bloom master @a[distance=..48] ~ ~ ~ 10 0.5
 playsound block.sculk_catalyst.bloom master @a[distance=..48] ~ ~ ~ 10 0.5
 playsound block.sculk_catalyst.bloom master @a[distance=..48] ~ ~ ~ 10 0.5

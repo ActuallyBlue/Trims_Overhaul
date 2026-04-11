@@ -1,0 +1,34 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "stepping_on": {
+          "block": {
+            "blocks": [
+            "minecraft:dirt_path",
+            "minecraft:gravel",
+            "minecraft:coarse_dirt"
+          ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "weapon.*": {
+            "items": [
+              "minecraft:filled_map",
+              "map"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

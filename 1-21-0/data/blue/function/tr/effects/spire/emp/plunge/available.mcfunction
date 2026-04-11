@@ -1,1 +1,1 @@
-scoreboard players set #.can_plunge blue.misc 1
+scoreboard players set #.spire.can_plunge blue.misc 1

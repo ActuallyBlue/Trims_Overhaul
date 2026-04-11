@@ -1,9 +1,9 @@
 execute if score #.spire.origin_tp blue.config matches 0 run return run title @s actionbar {"translate":"blue.tr.spire_disabled","fallback":"Spire's ability to teleport to the End is disabled"}
-execute if score #.reversal_charge blue.misc matches ..-600 run function blue:tr/effects/spire/emp/plunge/end
+execute if score #.spire.reversal_charge blue.misc matches ..-600 run function blue:tr/effects/spire/emp/plunge/end
 scoreboard players reset #.spire.guidance_cooldown blue.misc
 tp ~ -32 ~
 effect clear @s levitation
-scoreboard players reset #.can_plunge blue.misc
+scoreboard players reset #.spire.can_plunge blue.misc
 effect give @s glowing 6 0 true
 effect give @s slow_falling 15 0
 effect give @s levitation 10 12 true

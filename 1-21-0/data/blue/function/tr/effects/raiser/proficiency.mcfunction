@@ -2,6 +2,7 @@ execute if entity @s[advancements={blue:tr/tags={tutorial_piercer=false}},predic
 execute store result score #.temp blue.misc run xp query @s levels
 execute if score #.temp blue.misc = #.raiser.level_old blue.misc run return fail
 scoreboard players operation #.raiser.level_old blue.misc = #.temp blue.misc
+particle enchant ~ ~1 ~ 0.3 0.4 0.3 0.5 2
 attribute @s generic.movement_speed modifier remove blue:tr.trim
 attribute @s generic.attack_speed modifier remove blue:tr.trim
 attribute @s generic.attack_damage modifier remove blue:tr.trim

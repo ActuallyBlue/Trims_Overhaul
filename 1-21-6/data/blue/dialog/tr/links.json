@@ -10,7 +10,7 @@
     {
       "type": "minecraft:plain_message",
       "contents": [
-        {"text": "/     v3.2.1     \\\n","color":"gray"},
+        {"text": "/     v3.2.2     \\\n","color":"gray"},
         {"translate":"blue.pack_credit","fallback":"By ActuallyBlue"}
     ]
     },

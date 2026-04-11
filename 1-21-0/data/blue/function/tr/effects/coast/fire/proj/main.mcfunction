@@ -1,5 +1,6 @@
+execute if block ~ ~ ~ lava run return run function blue:tr/effects/coast/fire/proj/burn
 scoreboard players add @s blue.misc 1
-execute if entity @s[tag=blue.tr.coast_cod] run return run function blue:tr/effects/coast/fire/proj/cod
-execute if entity @s[tag=blue.tr.coast_salmon] run return run function blue:tr/effects/coast/fire/proj/salmon
-execute if entity @s[tag=blue.tr.coast_pufferfish] run return run function blue:tr/effects/coast/fire/proj/pufferfish
-execute if entity @s[tag=blue.tr.coast_tropical] run function blue:tr/effects/coast/fire/proj/tropical/main
+execute if entity @s[tag=blue.tr.coast.cod] run return run function blue:tr/effects/coast/fire/proj/cod
+execute if entity @s[tag=blue.tr.coast.salmon] run return run function blue:tr/effects/coast/fire/proj/salmon
+execute if entity @s[tag=blue.tr.coast.pufferfish] run return run function blue:tr/effects/coast/fire/proj/pufferfish
+execute if entity @s[tag=blue.tr.coast.tropical] run function blue:tr/effects/coast/fire/proj/tropical/main

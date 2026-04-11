@@ -1,0 +1,1 @@
+execute store success score #.temp blue.misc run gamerule keep_inventory

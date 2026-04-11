@@ -1,2 +1,2 @@
 scoreboard players reset #.rib.was_sneaking blue.misc
-kill @e[tag=blue.tr.rib_hitbox,type=interaction]
+kill @e[tag=blue.tr.rib.hitbox,type=interaction]

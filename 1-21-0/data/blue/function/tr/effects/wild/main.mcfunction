@@ -2,7 +2,7 @@ execute as @e[distance=..8,tag=blue.tr.shaper.tnt,limit=1,type=tnt] unless entit
 execute if score #.20 blue.misc matches 7 unless score #.wild.charging blue.misc matches 1 run particle spore_blossom_air ~ ~0.9 ~ 0.1 0.3 0.1 0 1 normal @a[scores={blue.particles=1..}]
 execute if score #.20 blue.misc matches 15 run function blue:tr/effects/wild/zoologist
 execute unless score #.wild.florist_cooldown blue.misc matches 1 if predicate blue:tr/florist anchored eyes run function blue:tr/effects/wild/florist
-execute if score #.wild.florist_active blue.misc matches -1 unless predicate blue:tr/florist store success score #.wild.florist_active blue.misc run kill @e[tag=blue.tr.wild_florist_hitbox,limit=1,type=interaction]
+execute if score #.wild.florist_active blue.misc matches -1 unless predicate blue:tr/florist store success score #.wild.florist_active blue.misc run kill @e[tag=blue.tr.wild.florist_hitbox,limit=1,type=interaction]
 execute unless entity @s[tag=blue.tr.mats.naut] run return fail
 damage @e[type=!#blue:shared/peaceful,distance=..0.6,tag=!blue.tr.wild,limit=1] 4.5 blue:tr/poke by @s
 execute store success score #.wild.ambient blue.misc unless score #.wild.ambient blue.misc matches 1

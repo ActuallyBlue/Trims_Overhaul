@@ -23,6 +23,7 @@ data remove storage blue:trims eye
 data remove storage blue:trims rib
 data remove storage blue:trims vex
 data remove storage blue:trims logs
+data remove storage blue:trims temp
 execute as @a run function blue:tr/inv/unequip/attributes
 function blue:tr/settings/set_default
 scoreboard players reset #.tr.wayfinder_completed blue.config
@@ -63,8 +64,8 @@ scoreboard objectives remove blue.tr.items_fished
 scoreboard objectives remove blue.tr.items_enchanted
 scoreboard objectives remove blue.tr.raids_won
 scoreboard objectives remove blue.tr.lava_seconds
-scoreboard objectives remove blue.tr.RTDtime
-scoreboard objectives remove blue.tr.RTDval
+scoreboard objectives remove blue.tr.rtd_time
+scoreboard objectives remove blue.tr.rtd_value
 scoreboard objectives remove RTD.BLUE
 scoreboard objectives remove blue.tr.structures
 scoreboard objectives remove blue.tr.current_trim
@@ -74,6 +75,8 @@ scoreboard objectives remove blue.tr.died
 scoreboard objectives remove blue.tr.transfer
 scoreboard objectives remove Trims_Menu.BLUE
 scoreboard objectives remove blue.tr.mined_sand
+scoreboard objectives remove blue.tr.used_pearl
+scoreboard objectives remove blue.tr.salmon_cooldown
 team remove blue.tr.rib
 team remove blue.tr.silence
 execute as @a run function blue:tr/inv/equip/remove_owner
@@ -81,13 +84,13 @@ tag @a remove blue.tr.ignore_first
 tag @e remove blue.tr.armor
 tag @e remove blue.tr.checked
 tag @e remove blue.tr.return
-tag @e remove blue.tr.snout_checked
-tag @a remove b.tr.3x
+tag @e remove blue.tr.snout.checked
+tag @a remove blue.tr.coast.propel
 kill @e[tag=blue.tr.wild.trap]
 kill b163102f-0-0-0-1
 kill b163102f-0-1-0-1
 kill b163102f-0-2-0-1
-kill @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1]
+kill @e[tag=blue.tr.wayfinder.warp,type=marker,limit=1]
 kill b163102f-0-4-0-1
 kill b163102f-0-5-0-1
 kill b163102f-0-6-0-1
@@ -102,14 +105,13 @@ kill b163102f-0-e-0-1
 kill b163102f-0-f-0-1
 kill b163102f-0-10-0-1
 kill b163102f-0-11-0-1
-kill b163102f-0-12-0-1
-kill b163102f-0-13-0-1
-kill b163102f-0-14-0-1
+function blue:tr/effects/spire/check_remove
+function blue:tr/effects/silence/check_remove
 tellraw @a {"translate":"blue.tr.delete_success","fallback":"\nYou have disabled ActuallyBlue's %s datapack, and it has removed most of its data from your world.\n\n - Please confirm the datapack is disabled by confirming it doesn't appear in %s\n - If you wish to re-enable the datapack, just run: %s\n\n   (the `trims...` is a placeholder. Fill in whatever looks correct)","color":"gray","with":[{"translate":"blue.tr.trims_overhaul","fallback":"Trims Overhaul","color":"#3aa56a"},{"text":"/datapack disable \"file/trims...\"","color":"white"},{"text":"/datapack enable \"file/trims...\"","color":"white"}]}
 playsound block.bell.use master @a 0 -128 0 0 0.75 1
-datapack disable "file/CUSTOM_trims_overhaul-MOD-v3.2.1.jar"
-datapack disable "file/CUSTOM_trims_overhaul-DP_RP-v3.2.1.zip"
-datapack disable "file/CUSTOM_trims_overhaul-DP-v3.2.1"
-datapack disable "file/trims_overhaul-MOD-v3.2.1.jar"
-datapack disable "file/trims_overhaul-DP_RP-v3.2.1.zip"
-datapack disable "file/trims_overhaul-DP_RP-v3.2.1"
+datapack disable "file/CUSTOM_trims_overhaul-MOD-v3.2.2.jar"
+datapack disable "file/CUSTOM_trims_overhaul-DP_RP-v3.2.2.zip"
+datapack disable "file/CUSTOM_trims_overhaul-DP-v3.2.2"
+datapack disable "file/trims_overhaul-MOD-v3.2.2.jar"
+datapack disable "file/trims_overhaul-DP_RP-v3.2.2.zip"
+datapack disable "file/trims_overhaul-DP_RP-v3.2.2"

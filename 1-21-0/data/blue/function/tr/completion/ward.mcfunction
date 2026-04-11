@@ -12,10 +12,9 @@ data modify storage blue:trims ward.owner.color set value "#5C70AE"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#5C70AE"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Ward","color":"#5C70AE"}]
 function blue:tr/delayed/cmd/msg/ward
-loot give @s loot blue:tr/ward
-scoreboard players reset #.ward_stored blue.misc
-execute store result score #.temp blue.misc run clear @s ward_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.ward_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/ward
+scoreboard players set #.template_loot blue.misc 1
 playsound item.shield.break player @a ~ ~ ~ 2 0.5
 playsound item.shield.block player @a ~ ~ ~ 2 0.5
 playsound item.shield.block player @a ~ ~ ~ 2 1

@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "req": {
+    "normal": {
       "trigger": "placed_block",
       "conditions": {
         "location": [
@@ -24,8 +24,39 @@
           }
         }
       }
+    },
+    "above": {
+      "trigger": "placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:smithing_table"
+          },
+          {
+            "condition": "location_check",
+            "offsetY": -1,
+            "predicate": {
+              "block": {
+                "blocks": ["air"]
+              }
+            }
+          }
+        ],
+        "player": {
+          "flags": {
+            "is_sneaking": true
+          }
+        }
+      }
     }
   },
+  "requirements": [
+    [
+      "above",
+      "normal"
+    ]
+  ],
   "rewards": {
     "function": "blue:tr/inv/untrim/main"
   }

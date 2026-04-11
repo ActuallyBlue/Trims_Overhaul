@@ -5,11 +5,11 @@ execute if entity @s[advancements={blue:tr/sprout={potato=true}}] run scoreboard
 execute if entity @s[advancements={blue:tr/sprout={carrot=true}}] run scoreboard players set #.temp blue.misc -3
 execute if entity @s[advancements={blue:tr/sprout={beetroot=true}}] run scoreboard players set #.temp blue.misc -4
 item modify entity @s[gamemode=!creative] weapon blue:shared/reduce_count
-execute positioned ~ ~ ~-1 if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
-execute positioned ~1 ~ ~ if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
-execute positioned ~ ~ ~1 if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
-execute positioned ~-1 ~ ~ if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
-execute positioned ~1 ~ ~-1 if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
-execute positioned ~-1 ~ ~-1 if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
-execute positioned ~-1 ~ ~1 if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
-execute positioned ~1 ~ ~1 if block ~ ~-1 ~ farmland if block ~ ~ ~ air run function blue:tr/effects/wild/sprout/place
+execute positioned ~ ~ ~-1 if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place
+execute positioned ~1 ~ ~ if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place
+execute positioned ~ ~ ~1 if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place
+execute positioned ~-1 ~ ~ if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place
+execute positioned ~1 ~ ~-1 if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place
+execute positioned ~-1 ~ ~-1 if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place
+execute positioned ~-1 ~ ~1 if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place
+execute positioned ~1 ~ ~1 if block ~ ~-1 ~ #supports_crops if block ~ ~ ~ #air run function blue:tr/effects/wild/sprout/place

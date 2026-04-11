@@ -1,7 +1,6 @@
-execute if score #.snout_stored blue.misc matches 1 run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if score #.snout_stored blue.misc matches 2 run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1} 2
-execute if score #.snout_stored blue.misc matches 3 run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1} 3
-execute if score #.snout_stored blue.misc matches 4.. run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1} 4
+scoreboard players operation #.template_loot blue.misc = #.snout_stored blue.misc
+loot spawn ~ ~0.5 ~ loot blue:tr/snout
+scoreboard players set #.template_loot blue.misc 1
 tellraw @s [{"translate":"Snout","color":"#F2B01A"},{"translate":"blue.tr.returned","fallback":" template(s) have been returned to you","color":"gray"}]
 advancement grant @s[advancements={blue:tr/display/guides/protection=false}] only blue:tr/display/guides/protection
 playsound entity.enderman.teleport player @s ~ ~-2 ~ 0.8 0.75

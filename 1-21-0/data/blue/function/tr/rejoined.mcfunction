@@ -1,4 +1,5 @@
-tag @s remove blue.tr.coast_delay
+tag @s remove blue.tr.coast.delay
+tag @s remove blue.tr.coast.delay_strong
 advancement revoke @s only blue:tr/vulnerability
 execute if score #.tr.armor_ownership blue.config matches 1 if score @s blue.tr.current_trim matches 1.. run function blue:tr/inv/rejoin_ownership
 execute if entity @s[tag=blue.tr.custom_waypoint] run function blue:tr/delayed/locator_bar

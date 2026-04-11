@@ -1,5 +1,5 @@
-scoreboard players set @s blue.tr.RTDtime -5
+scoreboard players set @s blue.tr.rtd_time -5
 function blue:tr/tasks/rtd/universal
-tag @s add blue.tr.RTD.silence
-title @s subtitle {"score":{"name":"@s","objective":"blue.tr.RTDval"},"color":"#3842Cf"}
+tag @s add blue.tr.rtd.silence
+title @s subtitle {"score":{"name":"@s","objective":"blue.tr.rtd_value"},"color":"#3842Cf"}
 title @s title ""

@@ -11,13 +11,12 @@ data modify storage blue:trims host.owner.color set value "#A34646"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#A34646"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Host","color":"#A34646"}]
 function blue:tr/delayed/cmd/msg/host
-loot give @s loot blue:tr/host
-scoreboard players reset #.host_stored blue.misc
-execute store result score #.temp blue.misc run clear @s host_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.host_stored blue.misc 4
 execute at @e[type=!#blue:shared/no_ai,tag=!smithed.strict,distance=0.01..12,sort=random,limit=1] run summon marker ~ ~ ~ {UUID:[I;-1318907857,11,0,1]}
 execute at b163102f-0-b-0-1 as @e[type=!#blue:shared/no_ai,tag=!smithed.strict,distance=..0.01,limit=1] at @p[tag=blue.tr.host] run tp ~ ~ ~
 execute at b163102f-0-b-0-1 run tp ~ ~ ~
 execute at @s run playsound entity.evoker.cast_spell player @a ~ ~ ~ 2 1.25
 execute at @s run particle damage_indicator ~ ~1 ~ 0.1 0.1 0.1 3 320
+scoreboard players set #.template_loot blue.misc 4
+execute at @s run loot spawn ~ ~0.5 ~ loot blue:tr/host
+scoreboard players set #.template_loot blue.misc 1
 kill b163102f-0-b-0-1

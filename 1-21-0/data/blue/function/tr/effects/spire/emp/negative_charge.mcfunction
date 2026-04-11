@@ -1,13 +1,15 @@
-scoreboard players add #.reversal_charge blue.misc 1
-execute if score #.reversal_charge blue.misc matches -1 run function blue:tr/effects/spire/emp/available_notif
-execute if score #.can_plunge blue.misc matches 1 run particle enchanted_hit ~ ~ ~ 0.2 0.3 0.2 0.7 10
-execute if score #.can_plunge blue.misc matches 1 run scoreboard players reset #.cast blue.misc
-execute if score #.can_plunge blue.misc matches 1 unless score #.spire.limit_plunge blue.config matches 0 rotated ~ 20 positioned ^ ^ ^2 run function blue:tr/effects/spire/emp/plunge/cast
-execute if score #.can_plunge blue.misc matches 0 run particle end_rod ~ ~0.7 ~ 0.1 0.3 0.1 0.02 2
-execute if score #.reversal_charge blue.misc matches -600..-549 as @a[distance=0.01..48,tag=!blue.tr.spire] at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=blue.tr.plunge_aec,dy=2,limit=1,type=area_effect_cloud] run effect give @s instant_damage 3 0 true
-execute if score #.reversal_charge blue.misc matches -600..-549 as @e[type=!#blue:shared/peaceful,type=!player,distance=0.01..48] at @s positioned ~-0.5 ~-1 ~-0.5 if entity @e[tag=blue.tr.plunge_aec,dy=2,limit=1,type=area_effect_cloud] run damage @s 5 magic
-execute unless score #.reversal_charge blue.misc matches ..-600 run return fail
+scoreboard players add #.spire.reversal_charge blue.misc 1
+execute if score #.spire.reversal_charge blue.misc matches -1 run function blue:tr/effects/spire/emp/available_notif
+execute if score #.spire.can_plunge blue.misc matches 1 run particle enchanted_hit ~ ~ ~ 0.2 0.3 0.2 0.7 10
+execute if score #.spire.can_plunge blue.misc matches 1 run scoreboard players reset #.cast blue.misc
+execute if score #.spire.can_plunge blue.misc matches 1 unless score #.spire.limit_plunge blue.config matches 0 rotated ~ 20 positioned ^ ^ ^2 run function blue:tr/effects/spire/emp/plunge/cast
+execute if score #.spire.can_plunge blue.misc matches 0 run particle end_rod ~ ~0.7 ~ 0.1 0.3 0.1 0.02 2
+execute if score #.spire.reversal_charge blue.misc matches -600..-549 as @a[distance=0.01..48,tag=!blue.tr.spire] at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=blue.tr.plunge_aec,dy=2,limit=1,type=area_effect_cloud] run effect give @s instant_damage 3 0 true
+execute if score #.spire.reversal_charge blue.misc matches -600..-549 as @e[type=!#blue:shared/peaceful,type=!player,distance=0.01..48] at @s positioned ~-0.5 ~-1 ~-0.5 if entity @e[tag=blue.tr.plunge_aec,dy=2,limit=1,type=area_effect_cloud] run damage @s 5 magic
+execute unless score #.spire.reversal_charge blue.misc matches ..-600 run return fail
 execute unless entity @s[gamemode=creative] if items entity @s armor.chest elytra if predicate {"condition":"entity_properties","entity":"this","predicate":{"flags":{"is_flying":true}}} run function blue:tr/effects/spire/emp/plunge/end
+execute if block ~ ~ ~ water run function blue:tr/effects/spire/emp/plunge/end
+execute if block ~ ~ ~ lava run function blue:tr/effects/spire/emp/plunge/end
 effect give @s slow_falling 1 10 true
 particle dragon_breath ~ ~0.7 ~ 0.3 0.3 0.3 0.02 3 force
 execute if score #.spire.last_reversal_charge blue.misc matches 40.. run particle dragon_breath ~ ~0.7 ~ 0.35 0.35 0.35 0.02 4 normal @a[scores={blue.particles=1..}]

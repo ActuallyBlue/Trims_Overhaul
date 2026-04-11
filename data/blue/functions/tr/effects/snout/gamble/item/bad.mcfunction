@@ -13,7 +13,10 @@ execute if score #.temp blue.misc matches 8 at @s run function blue:tr/effects/s
 execute if score #.temp blue.misc matches 9 run function blue:tr/effects/snout/gamble/withdrawal
 execute if score #.temp blue.misc matches 10 run function blue:tr/effects/snout/gamble/scramble
 execute if score #.temp blue.misc matches 11..12 run function blue:tr/effects/snout/gamble/damage
-execute if score #.temp blue.misc matches 13 run function blue:tr/effects/snout/gamble/punishers
-execute if score #.temp blue.misc matches 14 run title @s actionbar {"translate":"effect.minecraft.wither","color":"dark_red"}
-execute if score #.temp blue.misc matches 14 run function blue:tr/effects/snout/gamble/wither
-execute if score #.temp blue.misc matches 15 run function blue:tr/effects/snout/gamble/explode
+execute if score #.temp blue.misc matches 13 run function blue:tr/effects/snout/gamble/flim_flam
+execute if score #.temp blue.misc matches 14 run title @s actionbar {"translate":"enchantment.minecraft.knockback","color":"gray"}
+execute if score #.temp blue.misc matches 14 as @a[advancements={blue:tr/trust={snout=true}},distance=..12,gamemode=!spectator,gamemode=!creative] facing entity @s eyes positioned as @s run function blue:tr/effects/snout/gamble/knockback
+execute if score #.temp blue.misc matches 15 run function blue:tr/effects/snout/gamble/punishers
+execute if score #.temp blue.misc matches 16 run title @s actionbar {"translate":"effect.minecraft.wither","color":"dark_red"}
+execute if score #.temp blue.misc matches 16 run function blue:tr/effects/snout/gamble/wither
+execute if score #.temp blue.misc matches 17 run function blue:tr/effects/snout/gamble/explode

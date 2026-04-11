@@ -3,5 +3,5 @@ execute if entity @a[distance=..7,advancements={blue:tr/trust={wild=false}},limi
 playsound block.grass.place block @a[tag=blue.tr.wild,limit=1] ~ -128 ~ 0 1.5 1
 playsound block.grass.place block @a ~ ~ ~ 0.7 1.5
 scoreboard players set #.temp blue.misc -10
-particle crit ~ ~0.125 ~ 0 0 0 0.3 32
+particle enchanted_hit ~ ~0.2 ~ 0 0 0 0.3 24
 kill

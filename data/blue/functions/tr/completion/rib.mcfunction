@@ -12,10 +12,9 @@ data modify storage blue:trims rib.owner.color set value "#E6484B"
 execute if score #.tr.armor_ownership blue.config matches 1 run return 0
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#E6484B"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Rib","color":"#E6484B"}]
 function blue:tr/delayed/cmd/msg/rib
-loot give @s loot blue:tr/rib
-scoreboard players reset #.rib_stored blue.misc
-execute store result score #.temp blue.misc run clear @s rib_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.rib_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/rib
+scoreboard players set #.template_loot blue.misc 1
 execute as @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run damage @s 14 blue:tr/fire by @a[tag=blue.tr.rib,limit=1]
 execute at @a[distance=..4.5,advancements={blue:tr/trust={rib=false}},team=!blue.tr.rib] run particle small_flame ~ ~1 ~ 0.3 0.5 0.3 0.02 6
 execute as @e[type=!#blue:shared/peaceful,type=!player,distance=..4.5,team=!blue.tr.rib] run damage @s 14 blue:tr/fire by @a[tag=blue.tr.rib,limit=1]

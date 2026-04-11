@@ -1,4 +1,4 @@
-execute if items entity @s contents #fishes[count=1] on origin if entity @s[tag=blue.tr.coast] run scoreboard players set #.temp0 blue.misc -596
+execute if items entity @s contents #fishes[count=1] on origin if score @s blue.tr.current_trim matches 1 run scoreboard players set #.temp0 blue.misc -596
 execute unless score #.temp0 blue.misc matches -596 run return fail
 scoreboard players reset #.temp0 blue.misc
 execute on origin unless entity @s[predicate=!blue:shared/in_shipwreck,tag=!blue.tr.dragon_egg] run scoreboard players set #.temp0 blue.misc -597

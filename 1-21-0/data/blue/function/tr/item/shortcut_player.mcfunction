@@ -19,4 +19,4 @@ execute if score @s blue.tr.current_trim matches 1 if score #.temp blue.misc mat
 execute anchored eyes positioned 0.0 0.15 0.0 positioned ^ ^ ^0.3 summon marker run function blue:shared/shootfacing
 data modify storage blue:trims merge.shortcut.Motion set from storage blue:shared Pos
 data modify storage blue:trims merge.shortcut.Thrower set from entity @s UUID
-execute anchored eyes positioned ^ ^-0.3 ^ run data modify entity @e[type=item,distance=..1,tag=blue.tr.fake_owner,limit=1] {} merge from storage blue:trims merge.shortcut
+execute anchored eyes positioned ^ ^-0.3 ^ run data modify entity @e[tag=blue.tr.fake_owner,type=item,distance=..1,limit=1] {} merge from storage blue:trims merge.shortcut

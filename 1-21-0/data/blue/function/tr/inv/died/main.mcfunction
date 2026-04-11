@@ -1,12 +1,12 @@
 tag @s add blue.tr.respawn
+scoreboard players add #.tr.respawning blue.misc 1
 scoreboard players add #.18s blue.misc 3
 execute if entity @s[tag=blue.tr.shaper.falling] run function blue:tr/effects/shaper/emp/fall
 stopsound @s * item.elytra.flying
-advancement revoke @s only blue:tr/died
+advancement revoke @s only blue:tr/died req
 scoreboard players reset @s blue.tr.fear
 scoreboard players reset @s blue.tr.died
 scoreboard players set @s blue.tr.combat 0
-scoreboard players add #.tr.respawning blue.misc 1
 scoreboard players operation #.link blue.id = @s blue.id
 scoreboard players reset #.player blue.tr.died
 execute if score #.tr.limit_owned_trims blue.config matches 1 store success score #.player blue.tr.died if score #.tr.death_transfer_amount blue.config matches 1.. on attacker run tag @s[type=player,advancements={blue:tr/blacklist=false,blue:tr/tags={trim_limit=false}},tag=!blue.tr.respawn] add blue.tr.killer

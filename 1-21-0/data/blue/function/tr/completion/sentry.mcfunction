@@ -11,10 +11,9 @@ data modify storage blue:trims sentry.owner.color set value "#4B885B"
 execute if score #.tr.armor_ownership blue.config matches 1 run return fail
 execute if score #.tr.objective_announcements blue.config matches 1 run tellraw @a [{"text":"- ","color":"dark_gray"},{"selector":"@s","color":"#4B885B"}," ",{"translate":"blue.tr.announce_completion","fallback":"has completed the objective for","color":"gray"}," ",{"translate":"Sentry","color":"#4B885B"}]
 function blue:tr/delayed/cmd/msg/sentry
-loot give @s loot blue:tr/sentry
-scoreboard players reset #.sentry_stored blue.misc
-execute store result score #.temp blue.misc run clear @s sentry_armor_trim_smithing_template 0
-execute if score #.temp blue.misc matches 0 run scoreboard players set #.sentry_stored blue.misc 4
+scoreboard players set #.template_loot blue.misc 4
+loot spawn ~ ~0.5 ~ loot blue:tr/sentry
+scoreboard players set #.template_loot blue.misc 1
 playsound item.goat_horn.sound.0 player @a ~ ~ ~ 1.5 0.9
 playsound block.anvil.destroy player @a ~ ~ ~ 1.6 1.5
 playsound entity.dragon_fireball.explode player @a ^ ^ ^2 1.5 1.5
@@ -24,4 +23,4 @@ particle happy_villager ~ ~1 ~ 5 2.5 5 0 400
 particle enchanted_hit ~ ~1 ~ 2 2.5 2 0.2 200
 effect give @s hero_of_the_village 180 4 true
 scoreboard players set #.temp blue.misc 500
-loot spawn ~ ~1 ~ loot blue:tr/z/emeralds
+loot spawn ~ ~1 ~ loot {"pools":[{"rolls":1,"entries":[{"type":"item","name":"emerald","functions":[{"function":"set_count","count":{"min":0,"max":{"type":"score","target":{"type":"fixed","name":"#.temp"},"score":"blue.misc","scale":0.1}}}]}]}]}

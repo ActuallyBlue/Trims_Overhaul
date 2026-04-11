@@ -13,6 +13,7 @@
     {"id":"projectiles:arrow","required":false},
     {"id":"twilightforest:moonworm_shot","required":false},
     {"id":"twilightforest:thrown_weapon","required":false},
+    {"id":"#twilightforest:lich_deflects_phase_2","required":false},
     {"id":"aether:golden_dart","required":false},
     {"id":"aether:poison_dart","required":false}
   ]

@@ -1,9 +1,9 @@
-scoreboard players add #.aperture_sound blue.misc 1
-scoreboard players add #.aperture_duration blue.misc 1
-execute if score #.aperture_sound blue.misc matches 100 store success score #.aperture_sound blue.misc run playsound block.portal.ambient player @a[x=0] ~ ~ ~ 17 0.5
+scoreboard players add #.spire.aperture_sound blue.misc 1
+scoreboard players add #.spire.aperture_duration blue.misc 1
+execute if score #.spire.aperture_sound blue.misc matches 100 store success score #.spire.aperture_sound blue.misc run playsound block.portal.ambient player @a[x=0] ~ ~ ~ 17 0.5
 execute positioned ~-9 ~-1.5 ~-9 as @e[dx=18,dy=-40,dz=18,type=!marker,tag=!blue.tr.mats.shulker] at @s run function blue:tr/effects/spire/emp/aperture/entity
-execute if score #.aperture_duration blue.misc matches 900.. run function blue:tr/effects/spire/emp/aperture/kill
-execute unless score #.aperture_duration blue.misc matches ..850 run return fail
+execute if score #.spire.aperture_duration blue.misc matches 900.. run function blue:tr/effects/spire/emp/aperture/kill
+execute unless score #.spire.aperture_duration blue.misc matches ..850 run return fail
 execute in overworld positioned ~ 400 ~ run particle firework ^-10 ^4 ^ 0.2 0.1 0.2 0 2 force
 execute in overworld positioned ~ 400 ~ run particle firework ^10 ^4 ^ 0.2 0.1 0.2 0 2 force
 execute in overworld positioned ~ 400 ~ run particle firework ^ ^4 ^-10 0.2 0.1 0.2 0 2 force

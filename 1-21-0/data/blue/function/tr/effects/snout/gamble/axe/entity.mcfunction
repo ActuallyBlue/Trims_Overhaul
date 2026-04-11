@@ -9,7 +9,7 @@ execute if score @s blue.misc matches 17 run particle wax_on ~ ~4 ~ 0.8 2 0.8 2 
 execute if score @s blue.misc matches 27 run tp @s ~ ~ ~ ~ 84
 execute if score @s blue.misc matches 30 run particle wax_on ^ ^7.5 ^2 0.1 0 0.1 35 128 normal @a[scores={blue.particles=2..}]
 execute if score @s blue.misc matches 30 run particle wax_on ^ ^7.5 ^2 0.1 0 0.1 35 128
-execute if score @s blue.misc matches 31 run particle flash ^ ^7.5 ^0.5
+execute if score @s blue.misc matches 31 run function blue:tr/effects/flash {args:" ^ ^7.5 ^0.5"}
 execute unless score @s blue.misc matches 32 run return fail
 execute positioned ^ ^8.5 ^0.5 as @e[type=!#blue:shared/no_ai,type=!player,distance=..10] run damage @s 55 player_attack by @a[tag=blue.tr.snout,limit=1]
 execute positioned ^ ^8.5 ^0.5 as @a[gamemode=!spectator,tag=!blue.tr.snout,distance=..10] run damage @s 55 player_attack by @a[tag=blue.tr.snout,limit=1]
@@ -18,4 +18,4 @@ playsound item.armor.equip_gold player @a ^ ^7.5 ^0.5 2 0.5
 playsound item.armor.equip_gold player @a ^ ^7.5 ^0.5 2 0.5
 particle wax_on ^ ^7.5 ^0.5 3 0.7 3 5 64 normal @a[scores={blue.particles=2..}]
 particle wax_on ^ ^7.5 ^0.5 3 0.7 3 5 64
-particle flash ^ ^7.5 ^0.5
+function blue:tr/effects/flash {args:" ^ ^7.5 ^0.5"}

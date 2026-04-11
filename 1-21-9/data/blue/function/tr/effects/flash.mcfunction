@@ -1,0 +1,1 @@
+$particle flash{color:[1,1,1,1]}$(args)

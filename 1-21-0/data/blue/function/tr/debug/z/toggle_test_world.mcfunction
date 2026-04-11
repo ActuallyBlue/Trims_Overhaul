@@ -5,7 +5,7 @@ scoreboard players operation #st blue.misc = @s Set_Trim
 execute unless score #st blue.misc matches 1.. if entity @s store success score enabled Set_Trim run schedule clear blue:tr/debug/z/toggle_test_world
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run tellraw @a [{"text":"trims.toggle_test_world","color":"gray"},{"text":": ","color":"dark_gray"},{"translate":"addServer.resourcePack.enabled","fallback":"%s","with":[{"translate":"manageServer.resourcePack.enabled","fallback":"Enabled"}],"color":"dark_green"}]
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run tellraw @a [{"text":"\n'/trigger Set_Trim'","color":"white","clickEvent":{"action":"run_command","value":"/trigger Set_Trim"},"click_event":{"action":"run_command","command":"/trigger Set_Trim"}},{"translate":"blue.tr.test_world_guide","fallback":" to change trims and give yourself items","color":"gray"}]
-execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run tellraw @s [{"translate":"blue.tr.test_world_warn","fallback":"Also ask yourself: \"Is this world important?\" before using this. If the answer is yes, run this function again.\n"}]
+execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run tellraw @s {"translate":"blue.tr.test_world_warn","fallback":"Also ask yourself: \"Is this world important?\" before using this. If the answer is yes, run this function again.\n"}
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run team add blue.tr.silence
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run team add blue.tr.rib
 execute unless score #st blue.misc matches 1.. if entity @s if score enabled Set_Trim matches 0 run scoreboard objectives add blue.tr.mined_sand mined:sand
@@ -71,10 +71,6 @@ tag @s remove blue.tr.mats.head
 function blue:tr/inv/equip/remove_owner
 advancement revoke @s only blue:tr/trust
 scoreboard players reset @s blue.tr.combat
-execute if score #st blue.misc matches 99 run item modify entity @s armor.head {"function":"set_item","item":"netherite_helmet"}
-execute if score #st blue.misc matches 99 run item modify entity @s armor.chest {"function":"set_item","item":"netherite_chestplate"}
-execute if score #st blue.misc matches 99 run item modify entity @s armor.legs {"function":"set_item","item":"netherite_leggings"}
-execute if score #st blue.misc matches 99 run item modify entity @s armor.feet {"function":"set_item","item":"netherite_boots"}
 execute if score #st blue.misc matches 21.. run item replace entity @s armor.head with diamond_helmet[custom_data={t:i},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 21.. run item replace entity @s armor.chest with diamond_chestplate[custom_data={t:i},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 21.. run item replace entity @s armor.legs with diamond_leggings[custom_data={t:i},enchantments={protection:4},unbreakable={}]
@@ -190,7 +186,7 @@ execute if score #st blue.misc matches 13 unless entity @a[tag=blue.tr.flow,dist
 execute if score #st blue.misc matches 13 unless entity @a[tag=blue.tr.flow,distance=0.1..] run item replace entity @s armor.legs with diamond_leggings[custom_data={t:i},trim={material:wind_charge,pattern:flow},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 13 unless entity @a[tag=blue.tr.flow,distance=0.1..] run item replace entity @s armor.feet with diamond_boots[custom_data={t:i},trim={material:wind_charge,pattern:flow},enchantments={protection:4},unbreakable={}]
 execute if score #st blue.misc matches 13 unless entity @a[tag=blue.tr.flow,distance=0.1..] run give @s wind_charge 64
-execute if score #st blue.misc matches 13 unless entity @a[tag=blue.tr.flow,distance=0.1..] run return run give @s mace[enchantments={wind_burst:2,density:2},damage=420,custom_data={t:i}]
+execute if score #st blue.misc matches 13 unless entity @a[tag=blue.tr.flow,distance=0.1..] run return run give @s mace[enchantments={wind_burst:2,density:1},custom_data={t:i}]
 execute if score #st blue.misc matches 14 if entity @a[tag=blue.tr.tide,distance=0.1..] run return run tellraw @s {"translate":"blue.tr.armor_worn","fallback":"%s is already wearing %s","with":[{"selector":"@a[tag=blue.tr.tide]","color":"white"},{"translate":"Tide","color":"white"}],"color":"gray"}
 execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.tide,distance=0.1..] run advancement grant @s only blue:tr/trust tide
 execute if score #st blue.misc matches 14 unless entity @a[tag=blue.tr.tide,distance=0.1..] run tag @s add blue.tr.tide

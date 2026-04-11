@@ -6,11 +6,12 @@ execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.
 scoreboard players operation #.vex.isolated_lunge blue.misc = #.vex.isolated blue.misc
 execute if entity @s[tag=blue.tr.dragon_egg] run scoreboard players set #.vex.isolated_lunge blue.misc 1
 execute store success score #.temp0 blue.misc if predicate blue:shared/on_ground
+tp @s @s
 gamemode creative
 tp @s ~ ~1000 ~
-execute if score #.temp0 blue.misc matches 1 positioned ^ ^ ^-2.25 positioned ~ ~1001.5 ~ summon end_crystal run damage @s 1
+execute if score #.temp0 blue.misc matches 1 positioned ^ ^ ^-3.5 positioned ~ ~1001.5 ~ summon end_crystal run damage @s 1
 execute if score #.vex.isolated_lunge blue.misc matches 1 rotated ~ -12 positioned ^ ^ ^-6.5 positioned ~ ~1001.5 ~ summon end_crystal run damage @s 1
-execute positioned ^ ^ ^-1.5 positioned ~ ~1001.5 ~ summon end_crystal run damage @s 1
+execute positioned ^ ^ ^-2.5 positioned ~ ~1001.5 ~ summon end_crystal run damage @s 1
 tp @s ~ ~ ~
 execute if score #.temp blue.misc matches -1 run gamemode survival
 execute if score #.temp blue.misc matches -2 run gamemode adventure

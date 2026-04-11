@@ -10,6 +10,18 @@
         },
         "player": [
           {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "blue:tr/display/guides/ownership": true
+                }
+              }
+            }
+          },
+          {
             "condition": "entity_scores",
             "entity": "this",
             "scores": {

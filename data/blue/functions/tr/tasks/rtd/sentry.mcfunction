@@ -1,5 +1,5 @@
-scoreboard players set @s blue.tr.RTDtime 0
+scoreboard players set @s blue.tr.rtd_time 0
 function blue:tr/tasks/rtd/universal
-tag @s add blue.tr.RTD.sentry
-title @s subtitle {"score":{"name":"@s","objective":"blue.tr.RTDval"},"color":"#4B885B"}
+tag @s add blue.tr.rtd.sentry
+title @s subtitle {"score":{"name":"@s","objective":"blue.tr.rtd_value"},"color":"#4B885B"}
 title @s title ""

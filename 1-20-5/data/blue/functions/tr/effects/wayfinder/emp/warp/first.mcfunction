@@ -1,5 +1,5 @@
-execute at @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1] run forceload remove ~ ~
-kill @e[tag=blue.tr.wayfinder_warp,type=marker,limit=1]
+execute at @e[tag=blue.tr.wayfinder.warp,type=marker,limit=1] run forceload remove ~ ~
+kill @e[tag=blue.tr.wayfinder.warp,type=marker,limit=1]
 execute unless data storage blue:trims compass{id:"minecraft:compass"} run data modify storage blue:trims temp.warp set from entity @s LastDeathLocation
 execute if data storage blue:trims compass{id:"minecraft:compass"} run data modify storage blue:trims temp.warp set from storage blue:trims compass.components."minecraft:lodestone_tracker".target
 data modify storage blue:trims temp.warp.Pos set value [0.0d,0.0d,0.0d]
@@ -14,3 +14,4 @@ execute if data storage blue:trims compass{id:"minecraft:compass"} run effect gi
 execute unless data storage blue:trims compass{id:"minecraft:compass"} run playsound block.portal.travel player @a ~ ~ ~ 0.4 0.68
 execute unless data storage blue:trims compass{id:"minecraft:compass"} run playsound block.sculk_shrieker.shriek player @a ~ ~ ~ 0.4 0.5
 execute unless data storage blue:trims compass{id:"minecraft:compass"} run effect give @s darkness 14 100 true
+data remove storage blue:trims temp.warp

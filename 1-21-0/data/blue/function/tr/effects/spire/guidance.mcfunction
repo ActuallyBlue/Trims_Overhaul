@@ -6,8 +6,8 @@ scoreboard players set #.spire.guidance_cooldown blue.misc 1
 gamemode creative
 tp @s @s
 tp ~ ~1000 ~
-execute unless score #.spire.limit_plunge blue.config matches 0 if score #.reversal_charge blue.misc matches ..0 if score #.can_plunge blue.misc matches 1 rotated ~ 0 run return run function blue:tr/effects/spire/emp/plunge/start
-execute if score #.spire.limit_plunge blue.config matches 0 if score #.reversal_charge blue.misc matches ..0 if score #.can_plunge blue.misc matches 1 run return run function blue:tr/effects/spire/emp/plunge/start
+execute unless score #.spire.limit_plunge blue.config matches 0 if score #.spire.reversal_charge blue.misc matches ..0 if score #.spire.can_plunge blue.misc matches 1 rotated ~ 0 run return run function blue:tr/effects/spire/emp/plunge/start
+execute if score #.spire.limit_plunge blue.config matches 0 if score #.spire.reversal_charge blue.misc matches ..0 if score #.spire.can_plunge blue.misc matches 1 run return run function blue:tr/effects/spire/emp/plunge/start
 execute store success score #.temp0 blue.misc if predicate blue:tr/hold_spear
 execute if score #.temp0 blue.misc matches 1 run scoreboard players remove #.spire.guidance_range blue.config 1
 execute positioned ^ ^ ^-0.5 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1

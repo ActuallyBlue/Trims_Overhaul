@@ -1,23 +1,12 @@
-advancement revoke @s only blue:tr/untrim req
+execute store success score #.temp0 blue.misc if entity @s[advancements={blue:tr/untrim={above=true}}]
+advancement revoke @s only blue:tr/untrim
 item replace block 200600 2 200600 container.7 from entity @s armor.head
 item replace block 200600 2 200600 container.6 from entity @s armor.chest
 item replace block 200600 2 200600 container.5 from entity @s armor.legs
 item replace block 200600 2 200600 container.4 from entity @s armor.feet
 data modify storage blue:trims temp.inventory set from block 200600 2 200600 Items
-execute unless data storage blue:trims temp.inventory[].tag.Trim run return 0
-scoreboard players set #.temp blue.misc 0
-execute anchored eyes positioned ^ ^ ^0.25 run function blue:tr/inv/untrim/cast
-execute if score #.tr.manual_untrimming blue.config matches 0 run tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.manual_untrimming","fallback":"Manual Untrimming","color":"white","hoverEvent":{"action":"show_text","contents":{"translate":"blue.tr.manual_untrimming_hover","fallback":"Players can un-trim their armor with Smithing Tables (ON, OFF)","color":"gray"}},"italic":true},{"translate":"blue.tr.is_disabled","fallback":" is disabled on this server","color":"gray"}]
-execute if score #.tr.manual_untrimming blue.config matches 0 run return 0
-playsound item.armor.equip_chain player @s ~ ~ ~ 1 0.6
-data remove block 200600 2 200600 Items[].tag.Trim
-item replace entity @s armor.head from block 200600 2 200600 container.7
-item replace entity @s armor.chest from block 200600 2 200600 container.6
-item replace entity @s armor.legs from block 200600 2 200600 container.5
-item replace entity @s armor.feet from block 200600 2 200600 container.4
-setblock 200600 2 200600 barrel{}
-execute unless data storage blue:trims temp.inventory[].tag.Trim run return 0
-particle item sculk_vein ~ ~1.3 ~ 0.24 0.4 0.24 0.05 32
+function blue:tr/inv/untrim/split
+execute if score #.temp0 blue.misc matches 1 if score #.temp blue.misc matches 0 run return 0
 execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{material:"minecraft:quartz"}}}] run give @s quartz
 execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{material:"minecraft:quartz"}}}] run give @s quartz
 execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{material:"minecraft:quartz"}}}] run give @s quartz
@@ -94,69 +83,74 @@ execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{material:"
 execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{material:"minecraft:heart_of_the_sea"}}}] run give @s heart_of_the_sea
 execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{material:"minecraft:heart_of_the_sea"}}}] run give @s heart_of_the_sea
 execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{material:"minecraft:heart_of_the_sea"}}}] run give @s heart_of_the_sea
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:eye"}}}] run give @s eye_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:eye"}}}] run give @s eye_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:eye"}}}] run give @s eye_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:eye"}}}] run give @s eye_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:rib"}}}] run give @s rib_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:rib"}}}] run give @s rib_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:rib"}}}] run give @s rib_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:rib"}}}] run give @s rib_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:vex"}}}] run give @s vex_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:vex"}}}] run give @s vex_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:vex"}}}] run give @s vex_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:vex"}}}] run give @s vex_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:tide"}}}] run give @s tide_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:tide"}}}] run give @s tide_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:tide"}}}] run give @s tide_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:tide"}}}] run give @s tide_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:ward"}}}] run give @s ward_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:ward"}}}] run give @s ward_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:ward"}}}] run give @s ward_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:ward"}}}] run give @s ward_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:dune"}}}] run give @s dune_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:dune"}}}] run give @s dune_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:dune"}}}] run give @s dune_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:dune"}}}] run give @s dune_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:wild"}}}] run give @s wild_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:wild"}}}] run give @s wild_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:wild"}}}] run give @s wild_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:wild"}}}] run give @s wild_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:host"}}}] run give @s host_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:host"}}}] run give @s host_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:host"}}}] run give @s host_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:host"}}}] run give @s host_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:spire"}}}] run give @s spire_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:spire"}}}] run give @s spire_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:spire"}}}] run give @s spire_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:spire"}}}] run give @s spire_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:snout"}}}] run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:snout"}}}] run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:snout"}}}] run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:snout"}}}] run give @s snout_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:coast"}}}] run give @s coast_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:coast"}}}] run give @s coast_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:coast"}}}] run give @s coast_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:coast"}}}] run give @s coast_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run give @s shaper_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run give @s shaper_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run give @s shaper_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run give @s shaper_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run give @s sentry_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run give @s sentry_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run give @s sentry_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run give @s sentry_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run give @s raiser_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run give @s raiser_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run give @s raiser_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run give @s raiser_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:silence"}}}] run give @s silence_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:silence"}}}] run give @s silence_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:silence"}}}] run give @s silence_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:silence"}}}] run give @s silence_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run give @s wayfinder_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run give @s wayfinder_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run give @s wayfinder_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
-execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run give @s wayfinder_armor_trim_smithing_template{blue:trim,Enchantments:[{id:binding_curse}],HideFlags:1}
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:dragon_egg"}}}] run give @s dragon_egg
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:dragon_egg"}}}] run give @s dragon_egg
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:dragon_egg"}}}] run give @s dragon_egg
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:dragon_egg"}}}] run give @s dragon_egg
+scoreboard players set #.template_loot blue.misc 1
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:eye"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/eye
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:eye"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/eye
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:eye"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/eye
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:eye"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/eye
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:rib"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/rib
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:rib"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/rib
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:rib"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/rib
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:rib"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/rib
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:vex"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/vex
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:vex"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/vex
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:vex"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/vex
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:vex"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/vex
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:tide"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/tide
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:tide"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/tide
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:tide"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/tide
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:tide"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/tide
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:ward"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/ward
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:ward"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/ward
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:ward"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/ward
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:ward"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/ward
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:dune"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/dune
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:dune"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/dune
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:dune"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/dune
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:dune"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/dune
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:wild"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/wild
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:wild"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/wild
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:wild"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/wild
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:wild"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/wild
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:host"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/host
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:host"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/host
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:host"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/host
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:host"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/host
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:spire"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/spire
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:spire"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/spire
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:spire"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/spire
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:spire"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/spire
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:snout"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/snout
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:snout"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/snout
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:snout"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/snout
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:snout"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/snout
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:coast"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/coast
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:coast"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/coast
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:coast"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/coast
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:coast"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/coast
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/shaper
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/shaper
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/shaper
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:shaper"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/shaper
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/sentry
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/sentry
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/sentry
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:sentry"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/sentry
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/raiser
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/raiser
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/raiser
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:raiser"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/raiser
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:silence"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/silence
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:silence"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/silence
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:silence"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/silence
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:silence"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/silence
+execute if data storage blue:trims temp.inventory[{Slot:7b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run loot spawn ~ ~0.6 ~ loot blue:tr/wayfinder
+execute if data storage blue:trims temp.inventory[{Slot:6b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run loot spawn ~ ~0.5 ~ loot blue:tr/wayfinder
+execute if data storage blue:trims temp.inventory[{Slot:5b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run loot spawn ~ ~0.4 ~ loot blue:tr/wayfinder
+execute if data storage blue:trims temp.inventory[{Slot:4b,tag:{Trim:{pattern:"minecraft:wayfinder"}}}] run loot spawn ~ ~0.3 ~ loot blue:tr/wayfinder
 data remove storage blue:trims temp.inventory
 setblock 200600 2 200600 barrel{}

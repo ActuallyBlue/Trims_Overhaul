@@ -1,9 +1,9 @@
 {
   "values": [
+    "#blue:shared/projectiles",
     "#impact_projectiles",
     "area_effect_cloud",
     "experience_bottle",
-    "firework_rocket",
     "glow_item_frame",
     "lightning_bolt",
     "shulker_bullet",
@@ -29,6 +29,7 @@
     {"id":"potion","required":false},
     {"id":"splash_potion","required":false},
     {"id":"mannequin","required":false},
+    {"id":"ominous_item_spawner","required":false},
     {"id":"#c:arrows","required":false},
     {"id":"lingering_potion","required":false},
     {"id":"create:contraption","required":false},
@@ -39,6 +40,8 @@
     {"id":"ars_nouveau:flying_item","required":false},
     {"id":"immersiveengineering:sawblade","required":false},
     {"id":"immersiveengineering:fluroscent_tube","required":false},
-    {"id":"botania:mana_burst","required":false}
+    {"id":"botania:corporea_spark","required":false},
+    {"id":"botania:mana_burst","required":false},
+    {"id":"botania:spark","required":false}
   ]
 }

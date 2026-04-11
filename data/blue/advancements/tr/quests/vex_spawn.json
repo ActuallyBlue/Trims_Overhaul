@@ -42,7 +42,7 @@
             "condition": "minecraft:inverted",
             "term": {
               "condition": "minecraft:reference",
-              "name": "blue:tr/vex_isolate"
+              "name": "blue:tr/isolation"
             }
           },
           {

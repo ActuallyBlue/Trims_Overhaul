@@ -1,5 +1,5 @@
 kill b163102f-0-c-0-1
-kill @e[tag=blue.tr.rib_hitbox,type=interaction]
+kill @e[tag=blue.tr.rib.hitbox,type=interaction]
 summon wither_skull ^ ^ ^2 {UUID:[I;-1318907857,12,0,1]}
 scoreboard players reset #.rib.was_sneaking blue.misc
 scoreboard players set #.rib.projectile_cooldown blue.misc 1

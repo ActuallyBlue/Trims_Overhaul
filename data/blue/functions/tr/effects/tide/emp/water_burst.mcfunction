@@ -1,5 +1,8 @@
-execute as @e[distance=..6.5,type=!#blue:shared/peaceful,tag=!blue.tr.tide] run damage @s 12.25 blue:tr/tide by @a[tag=blue.tr.mats.heart,limit=1]
-playsound item.trident.return player @a ~ ~ ~ 1.2 1
+execute unless entity @s[type=trident] as @e[distance=..6.5,type=!#blue:shared/peaceful,tag=!blue.tr.tide] run damage @s 12.25 blue:tr/tide by @a[tag=blue.tr.mats.heart,limit=1]
+execute if entity @s[type=trident] run summon marker ~ ~ ~ {UUID:[I;-1318907857,100,0,1]}
+execute if entity @s[type=trident] as @e[distance=..6.5,type=!#blue:shared/peaceful,tag=!blue.tr.tide] run damage @s 12.25 blue:tr/tide by b163102f-0-64-0-1 from @a[tag=blue.tr.mats.heart,limit=1]
+execute if entity @s[type=trident] run kill b163102f-0-64-0-1
+playsound item.trident.return player @a ~ ~ ~ 1.2 0.9
 particle dust_color_transition 0 0.5 0.8 1.1 0 0 1 ~ ~0.7 ~ 3 0.3 3 1 200 normal @a[scores={blue.particles=2..}]
 particle dust_color_transition 0 0.5 0.8 1.1 0 0 1 ~ ~0.7 ~ 3 0.3 3 1 300 normal @a[scores={blue.particles=1..}]
 particle dust_color_transition 0 0.5 0.8 1.1 0 0 1 ~ ~0.7 ~ 3 0.3 3 1 200 force

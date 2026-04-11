@@ -1,4 +1,4 @@
-execute if entity @s[tag=blue.tr.bolt] run return run function blue:tr/effects/bolt/conduct/user
+execute if score @s blue.tr.current_trim matches 17 run return run function blue:tr/effects/bolt/conduct/user
 tag @s add blue.tr.hit
 effect give @s nausea 4 0 true
 damage @s 0.05 lightning_bolt

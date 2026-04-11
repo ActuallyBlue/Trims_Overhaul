@@ -30,6 +30,7 @@ execute store result storage blue:trims temp.export.no_gravity int 1 run scorebo
 execute store result storage blue:trims temp.export.bonus_emeralds int 1 run scoreboard players get #.sentry.bonus_emeralds blue.config
 execute store result storage blue:trims temp.export.bonus_shards int 1 run scoreboard players get #.silence.bonus_shards blue.config
 execute store result storage blue:trims temp.export.vortex_griefing int 1 run scoreboard players get #.silence.vortex_griefing blue.config
+execute store result storage blue:trims temp.export.quick_lunge int 1 run scoreboard players get #.vex.quick_lunge blue.config
 execute store result storage blue:trims temp.export.tnt_bounce int 1 run scoreboard players get #.shaper.tnt_bounce blue.config
 execute store result storage blue:trims temp.export.warp_type int 1 run scoreboard players get #.wayfinder.warp_type blue.config
 execute store result storage blue:trims temp.export.guidance_range int 1 run scoreboard players get #.spire.guidance_range blue.config
@@ -76,6 +77,7 @@ $execute unless score #.spire.limit_plunge blue.config matches $(slp) run data m
 $execute unless score #.sentry.bonus_emeralds blue.config matches $(sbe) run data modify storage blue:trims display append value ['{"translate":"blue.tr.sm.emeralds","fallback":"Bonus Emeralds"}','{"text":", ","color":"gray"}']
 $execute unless score #.silence.bonus_shards blue.config matches $(sbs) run data modify storage blue:trims display append value ['{"translate":"blue.tr.sm.shards","fallback":"Bonus Shards"}','{"text":", ","color":"gray"}']
 $execute unless score #.silence.vortex_griefing blue.config matches $(svg) run data modify storage blue:trims display append value ['{"translate":"blue.tr.sm.vortex","fallback":"Vortex Griefing"}','{"text":", ","color":"gray"}']
+$execute unless score #.vex.quick_lunge blue.config matches $(sql) run data modify storage blue:trims display append value ['{"translate":"blue.tr.sm.quick_lunge","fallback":"Quick Lunge"}','{"text":", ","color":"gray"}']
 $execute unless score #.shaper.tnt_bounce blue.config matches $(stb) run data modify storage blue:trims display append value ['{"translate":"blue.tr.sm.tnt_bounce","fallback":"TNT Bounce"}','{"text":", ","color":"gray"}']
 $execute unless score #.wayfinder.warp_type blue.config matches $(swt) run data modify storage blue:trims display append value ['{"translate":"blue.tr.sm.warp_type","fallback":"Warp Type"}','{"text":", ","color":"gray"}']
 $execute unless score #.spire.guidance_range blue.config matches $(sgr) run data modify storage blue:trims display append value ['{"translate":"blue.tr.sm.guidance_range","fallback":"Guidance Range"}','{"text":", ","color":"gray"}']
@@ -119,6 +121,7 @@ $scoreboard players set #.spire.no_gravity blue.config $(sng)
 $scoreboard players set #.sentry.bonus_emeralds blue.config $(sbe)
 $scoreboard players set #.silence.bonus_shards blue.config $(sbs)
 $scoreboard players set #.silence.vortex_griefing blue.config $(svg)
+$scoreboard players set #.vex.quick_lunge blue.config $(sql)
 $scoreboard players set #.tr.objective_type blue.config $(ot)
 $scoreboard players set #.tr.objective_announcements blue.config $(oa)
 $scoreboard players set #.tr.template_clearing blue.config $(tc)

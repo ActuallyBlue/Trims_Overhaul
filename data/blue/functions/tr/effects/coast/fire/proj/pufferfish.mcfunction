@@ -5,5 +5,6 @@ execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=!#blue:shared/peaceful,tag=!blue
 execute if score #.temp blue.misc matches -99 run function blue:tr/effects/coast/fire/proj/kill
 execute if block ~ ~ ~ #blue:shared/passable if block ^ ^ ^0.3 #blue:shared/passable if block ^ ^ ^0.6 #blue:shared/passable if block ^ ^ ^0.9 #blue:shared/passable run return 0
 playsound item.bucket.fill player @a ~ ~ ~ 0.9 2
-particle splash ^ ^ ^-0.2 0.1 0.1 0.1 0 32
+particle splash ^ ^ ^-0.2 0.1 0.1 0.1 0 12
+execute unless dimension the_nether run particle splash ^ ^ ^-0.2 0.1 0.1 0.1 0 16
 kill

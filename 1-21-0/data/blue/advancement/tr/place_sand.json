@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "req": {
+      "trigger": "placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+              "blue.tr.current_trim": 2
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "block_state_property",
+            "block": "sand"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "blue:tr/effects/dune/haste"
+  }
+}

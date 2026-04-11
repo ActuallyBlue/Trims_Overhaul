@@ -1,0 +1,8 @@
+{
+  "asset_id": "minecraft:dragon_egg",
+  "description": {
+    "translate": "trim_pattern.minecraft.dragon_egg",
+    "fallback": "Dragon Egg Armor Trim"
+  },
+  "template_item": "minecraft:dragon_egg"
+}
