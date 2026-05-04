@@ -4,14 +4,15 @@ execute if entity @s[gamemode=survival] run scoreboard players set #.temp blue.m
 execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.misc -2
 scoreboard players set #.spire.guidance_cooldown blue.misc 1
 gamemode creative
-tp @s @s
+tp ~ 0 ~
+tp ~ ~ ~
 tp @s ~ ~1000 ~
 scoreboard players reset #.spire.plunge blue.misc
 execute if score #.spire.reversal_charge blue.misc matches ..0 if score #.spire.can_plunge blue.misc matches 1 run scoreboard players set #.spire.plunge blue.misc -1
 execute if score #.spire.plunge blue.misc matches -1 unless score #.spire.limit_plunge blue.config matches 0 rotated ~ 0 run function blue:tr/effects/spire/emp/plunge/start
 execute if score #.spire.plunge blue.misc matches -1 if score #.spire.limit_plunge blue.config matches 0 run function blue:tr/effects/spire/emp/plunge/start
 execute if score #.spire.plunge blue.misc matches -1 run return 0
-execute positioned ^ ^ ^-0.5 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
+execute positioned ^ ^ ^-2 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
 execute if score #.spire.guidance_range blue.config matches 2.. positioned ^ ^ ^-6 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
 execute if score #.spire.guidance_range blue.config matches 3.. positioned ^ ^ ^-7 positioned ~ ~1001.2 ~ summon end_crystal run damage @s 1
 tp @s ~ ~ ~

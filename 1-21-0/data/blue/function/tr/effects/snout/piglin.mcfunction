@@ -1,5 +1,6 @@
 execute store result score #.temp blue.misc run data get entity @s Brain.memories."minecraft:admiring_item".ttl
 execute unless score #.temp blue.misc matches 90.. run return fail
+execute at @s run particle happy_villager ~ ~1 ~ 0.4 0.4 0.4 0 6
 execute if score #.temp0 blue.misc matches 0 run return run data modify entity @s Brain.memories."minecraft:admiring_item".ttl set value 90L
 execute store success score #.temp blue.misc if entity @a[tag=blue.tr.snout,predicate=blue:tr/gold_set,limit=1]
 execute if score #.temp blue.misc matches 0 run data modify entity @s Brain.memories."minecraft:admiring_item".ttl set value 60L

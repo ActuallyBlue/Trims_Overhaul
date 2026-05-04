@@ -5,6 +5,7 @@ execute if score #.temp blue.misc matches 1 run function blue:tr/effects/spire/o
 execute store success score #.temp blue.misc if dimension the_end
 execute if score #.temp blue.misc = #.spire.origin blue.misc run return fail
 scoreboard players operation #.spire.origin blue.misc = #.temp blue.misc
+particle end_rod ~ ~1 ~ 0.4 0.6 0.4 0.1 16
 execute if score #.temp blue.misc matches 1 run attribute @s attack_damage modifier add blue:tr.trim 1.5 add_value
 execute if score #.temp blue.misc matches 1 run return run attribute @s armor modifier add blue:tr.trim 4 add_value
 attribute @s attack_damage modifier remove blue:tr.trim

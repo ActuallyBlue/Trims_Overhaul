@@ -1,0 +1,9 @@
+advancement grant @s[advancements={blue:tr/tags={trim_limit=false}}] only blue:tr/tags trim_limit
+advancement grant @s[advancements={blue:tr/display/guides/ownership=false}] only blue:tr/display/guides/ownership
+tellraw @s[tag=blue.tr.transfer_target] [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.given_ownership","fallback":"%s gave you ownership over %s ","color":"gray","with":[{"selector":"@a[tag=blue.tr.transfer_user,limit=1]","color":"white"},{"storage":"blue:trims","nbt":"logs.append.trim","interpret":true}]},{"text":"ℹ","hoverEvent":{"action":"show_text","value":{"translate":"blue.tr.info_shortcut","fallback":"Click here for a shortcut to the info menu","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger Trims_Menu.BLUE set 50"},"color":"gray"}]
+execute if entity @s[tag=blue.tr.transfer_target] run return 0
+tellraw @s [{"text":"- ","color":"dark_gray"},{"translate":"blue.tr.stolen_ownership","fallback":"You've stolen %s ownership over %s ","color":"gray","with":[{"storage":"blue:shared","nbt":"player_name_temp","color":"white","interpret":true,"extra":["'s"]},{"storage":"blue:trims","nbt":"logs.append.trim","interpret":true}]},{"text":"ℹ","hoverEvent":{"action":"show_text","value":{"translate":"blue.tr.info_shortcut","fallback":"Click here for a shortcut to the info menu","color":"gray"}},"clickEvent":{"action":"run_command","value":"/trigger Trims_Menu.BLUE set 50"},"color":"gray"}]
+data modify storage blue:trims logs.append.target set from storage blue:shared player_name
+data modify storage blue:trims logs.append.user set from storage blue:shared player_name_temp
+data modify storage blue:trims logs.append.stolen set value 1b
+function blue:tr/inv/transfer/log

@@ -1,17 +1,23 @@
-{
-  "condition": "entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "items": [
-          "minecraft:air",
-          "minecraft:experience_bottle"
-        ]
+[
+  {
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:air",
+            "minecraft:experience_bottle"
+          ]
+        }
+      },
+      "flags": {
+        "is_sneaking": true
       }
-    },
-    "flags": {
-      "is_sneaking": true
     }
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "blue:shared/is_sneaking"
   }
-}
+]

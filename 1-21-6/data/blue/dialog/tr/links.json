@@ -10,7 +10,7 @@
     {
       "type": "minecraft:plain_message",
       "contents": [
-        {"text": "/     v3.2.2     \\\n","color":"gray"},
+        {"text": "/     v3.2.3     \\\n","color":"gray"},
         {"translate":"blue.pack_credit","fallback":"By ActuallyBlue"}
     ]
     },
@@ -26,12 +26,12 @@
   "actions": [
     {
       "label": {"translate": "blue.resource_pack_button","fallback":"[Resource Pack]","color":"#1bd96a"},
-      "action": {"type":"open_url","url":"https://modrinth.com/datapack/trims-overhaul"}
+      "action": {"type":"open_url","url":"https://modrinth.com/project/lBHH38D3"}
     },
     {
       "width": 140,
       "label": {"translate": "blue.modrinth_button","fallback":"[Modrinth]","color":"#1bd96a"},
-      "action": {"type":"open_url","url":"https://modrinth.com/datapack/trims-overhaul"}
+      "action": {"type":"open_url","url":"https://modrinth.com/project/lBHH38D3"}
     },
     {
       "width": 130,

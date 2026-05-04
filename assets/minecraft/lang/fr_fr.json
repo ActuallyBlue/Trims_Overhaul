@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "a perdu",
   "blue.tr.cancelled_delete": "- Suppression Annulée",
   "blue.tr.no_delete_confirmation": "Vous n'avez pas de confirmation de suppression, veuillez d'abord exécuter la fonction de débogage remove_trims_overhaul.",
-  "blue.tr.clear": "Nettoyer",
-  "blue.tr.doc": "Doc",
   "blue.tr.trim_abilities": "Compétences de Ornement",
   "blue.tr.info.first": "[Premier]",
   "blue.tr.info.first_message": "Premier Message",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "Les joueurs proches qui brillent reçoivent une faible %s, quelle que soit la source.",
   "blue.tr.fear_name": "Peur",
   "blue.tr.flow_title": "Ornement Flux • L'Aérien",
-  "blue.tr.gravity_name": "Gravité",
   "blue.tr.gravity_description": "Gravité réduite permanente. Encore plus réduite dans les Salles de Procès.",
   "blue.tr.graceful_name": "Gracieux",
   "blue.tr.graceful_description": "Distance de Chute Sûre et Recul d'Attaque accrus, avec des dégâts de chute réduits.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Confirmation",
   "blue.tr.transfer_failed": " Quelque chose a mal tourné avec votre transfert. Confirmez que vous possédez la ornement que vous essayez de transférer et que vous avez sélectionné la bonne avec les bons objets.",
   "blue.tr.transfer_blacklist": "a été blacklisté pour obtenir",
-  "blue.tr.given_ownership": "Vous avez reçu la propriété sur ",
   "blue.tr.info_shortcut": "Cliquez ici pour un raccourci vers le menu d'informations",
-  "blue.tr.stolen_ownership": "Vous avez volé la propriété sur ",
   "blue.tr.tutorial.transfer_title": "Transfert de propriété",
   "blue.tr.tutorial.transfer_1": " Ce menu peut être utilisé pour transférer la propriété de l'une de vos ornements au joueur le plus proche. Vous devez avoir les 4 modèles n'importe où dans votre inventaire ",
   "blue.tr.tutorial.transfer_2": "OU",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Ruée rapide",
   "blue.tr.out_combat": "Vous êtes hors combat depuis %s secondes",
   "blue.tr.in_combat": "Vous êtes en combat depuis %s,%s secondes",
-  "blue.tr.gamble.afterstrike": "Après-frappe"
+  "blue.tr.gamble.afterstrike": "Après-frappe",
+  "blue.tr.given_ownership": "%s vous a cédé la propriété de %s ",
+  "blue.tr.gave_ownership": "La propriété de %s a bien été accordée à %s ",
+  "blue.tr.stolen_ownership": "Vous avez volé à %s la propriété de %s "
 }

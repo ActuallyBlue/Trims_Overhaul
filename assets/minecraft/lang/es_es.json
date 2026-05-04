@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "ha perdido",
   "blue.tr.cancelled_delete": "- Eliminación Cancelada",
   "blue.tr.no_delete_confirmation": "No tienes confirmación de eliminación, por favor, ejecuta la función de depuración remove_trims_overhaul primero.",
-  "blue.tr.clear": "Limpiar",
-  "blue.tr.doc": "Doc",
   "blue.tr.trim_abilities": "Habilidades de Recorte",
   "blue.tr.info.first": "[Primero]",
   "blue.tr.info.first_message": "Primer Mensaje",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "Los jugadores cercanos que brillan reciben un %s bajo, independientemente de la fuente.",
   "blue.tr.fear_name": "Miedo",
   "blue.tr.flow_title": "Recorte Flujo • El Aéreo",
-  "blue.tr.gravity_name": "Gravedad",
   "blue.tr.gravity_description": "Gravedad reducida permanente. Reducida aún más en las Cámaras de Juicio.",
   "blue.tr.graceful_name": "Grácil",
   "blue.tr.graceful_description": "Mayor Distancia de Caída Segura y Retroceso de Ataque, con daño de caída reducido.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Confirmación",
   "blue.tr.transfer_failed": " Algo salió mal con tu transferencia. Confirma que posees el recorte que estás intentando transferir y que seleccionaste el correcto con los objetos correctos.",
   "blue.tr.transfer_blacklist": "ha sido puesto en la lista negra para obtener",
-  "blue.tr.given_ownership": "Se te ha dado la propiedad sobre ",
   "blue.tr.info_shortcut": "Haz clic aquí para un acceso directo al menú de información",
-  "blue.tr.stolen_ownership": "Has robado la propiedad sobre ",
   "blue.tr.tutorial.transfer_title": "Transferencia de Propiedad",
   "blue.tr.tutorial.transfer_1": " Este menú se puede usar para transferir la propiedad de cualquiera de tus recortes al jugador más cercano. Debes tener las 4 plantillas en cualquier lugar de tu inventario ",
   "blue.tr.tutorial.transfer_2": "O",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Acometida rápida",
   "blue.tr.out_combat": "Llevas %s segundos fuera de combate",
   "blue.tr.in_combat": "Llevas %s,%s segundos en combate",
-  "blue.tr.gamble.afterstrike": "Golpe final"
+  "blue.tr.gamble.afterstrike": "Golpe final",
+  "blue.tr.given_ownership": "%s te transfirió la propiedad de %s ",
+  "blue.tr.gave_ownership": "Se transfirió correctamente la propiedad de %s a %s ",
+  "blue.tr.stolen_ownership": "Le has robado a %s la propiedad de %s "
 }

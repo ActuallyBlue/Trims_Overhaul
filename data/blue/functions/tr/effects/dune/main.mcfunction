@@ -9,7 +9,8 @@ execute if predicate blue:tr/hold_shovel run return 0
 execute store success score #.temp blue.misc if predicate blue:shared/is_sneaking
 execute positioned ^ ^ ^1.5 as @e[distance=..4,tag=!blue.tr.checked,type=item] at @s align xyz run function blue:tr/effects/dune/raisure/item
 execute unless score #.temp blue.misc matches -5256 run return 0
-tp @s @s
+tp ~ 0 ~
+tp ~ ~ ~
 execute if entity @s[gamemode=survival] run scoreboard players set #.temp blue.misc -1
 execute if entity @s[gamemode=adventure] run scoreboard players set #.temp blue.misc -2
 gamemode creative

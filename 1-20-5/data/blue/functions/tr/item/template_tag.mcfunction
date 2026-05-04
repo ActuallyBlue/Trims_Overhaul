@@ -6,8 +6,9 @@ data modify entity @s {} merge from storage blue:trims merge.item_data
 execute on origin run tag @s add blue.tr.quick_return
 tp @s @a[tag=blue.tr.quick_return,limit=1]
 tag @a[tag=blue.tr.quick_return,limit=1] remove blue.tr.quick_return
-execute if items entity @s contents *[custom_data~{blue:{trim:1b}}] run tag @s add blue.tr.return
-execute if items entity @s contents *[custom_data~{blue:{trim:1b}}] run schedule function blue:tr/item/store 2t replace
+execute unless items entity @s contents *[custom_data~{blue:{trim:1b}}] run return fail
+tag @s add blue.tr.return
+schedule function blue:tr/item/store 2t replace
 execute if items entity @s contents silence_armor_trim_smithing_template run tp @s @a[tag=blue.tr.silence,limit=1]
 execute if items entity @s contents silence_armor_trim_smithing_template run return run tag @s add blue.tr.silence_item
 execute if items entity @s contents shaper_armor_trim_smithing_template run tp @s @a[tag=blue.tr.shaper,limit=1]

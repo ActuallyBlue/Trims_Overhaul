@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "kaybetti",
   "blue.tr.cancelled_delete": "- Silme İptal Edildi",
   "blue.tr.no_delete_confirmation": "Silme onayınız yok, lütfen önce remove_trims_overhaul hata ayıklama fonksiyonunu çalıştırın.",
-  "blue.tr.clear": "Temizle",
-  "blue.tr.doc": "Belge",
   "blue.tr.trim_abilities": "Süsleme Yetenekleri",
   "blue.tr.info.first": "[Birinci]",
   "blue.tr.info.first_message": "Birinci Mesaj",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "Yakındaki parlayan oyuncu, kaynağı ne olursa olsun düşük %s alır.",
   "blue.tr.fear_name": "Korku",
   "blue.tr.flow_title": "Akış Süslemesi • Havai",
-  "blue.tr.gravity_name": "Yerçekimi",
   "blue.tr.gravity_description": "Kalıcı azaltılmış Yerçekimi. Deneme Odalarında daha da azaltılır.",
   "blue.tr.graceful_name": "Zarif",
   "blue.tr.graceful_description": "Artırılmış Güvenli Düşme Mesafesi ve Saldırı Savurması, azaltılmış Düşme Hasarı ile.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Onay",
   "blue.tr.transfer_failed": " Aktarmanızla ilgili bir sorun oluştu. Aktarmaya çalıştığınız süslemenin sahibi olduğunuzu ve doğru eşyalarla doğru olanı seçtiğinizi onaylayın.",
   "blue.tr.transfer_blacklist": "almaktan kara listeye alındı",
-  "blue.tr.given_ownership": "Size şunun üzerinde sahiplik verildi: ",
   "blue.tr.info_shortcut": "Bilgi menüsüne bir kısayol için buraya tıklayın",
-  "blue.tr.stolen_ownership": "Şunun üzerindeki sahipliği çaldınız: ",
   "blue.tr.tutorial.transfer_title": "Sahiplik Aktarma",
   "blue.tr.tutorial.transfer_1": " Bu menü, süslemelerinizden herhangi birinin sahipliğini en yakın oyuncuya aktarmak için kullanılabilir. 4 şablonun envanterinizin herhangi bir yerinde olması ",
   "blue.tr.tutorial.transfer_2": "VEYA",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Hızlı Hamle",
   "blue.tr.out_combat": "%s saniyedir savaş dışındasınız",
   "blue.tr.in_combat": "%s,%s saniyedir savaştasınız",
-  "blue.tr.gamble.afterstrike": "Artçı Vuruş"
+  "blue.tr.gamble.afterstrike": "Artçı Vuruş",
+  "blue.tr.given_ownership": "%s, %s üzerindeki sahipliği size verdi ",
+  "blue.tr.gave_ownership": "%s kullanıcısına %s üzerindeki sahiplik başarıyla verildi ",
+  "blue.tr.stolen_ownership": "%s'in %s üzerindeki sahipliğini çaldınız "
 }

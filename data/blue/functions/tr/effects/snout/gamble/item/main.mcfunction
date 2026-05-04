@@ -11,6 +11,7 @@ scoreboard players reset #.temp blue.misc
 execute if data storage blue:trims item{id:"minecraft:gold_nugget"} store success score #.temp blue.misc run tag @s add blue.tr.gold_nugget
 execute if data storage blue:trims item{id:"minecraft:gold_ingot"} store success score #.temp blue.misc run tag @s add blue.tr.gold_ingot
 execute if data storage blue:trims item{id:"minecraft:gold_block"} store success score #.temp blue.misc run tag @s add blue.tr.gold_block
+execute if entity @s[tag=blue.tr.gold_ingot] if entity @e[distance=..7,type=piglin,limit=1] run scoreboard players set #.temp blue.misc 0
 execute unless score #.temp blue.misc matches 1 run tag @s add blue.tr.snout.checked
 execute if score #.temp blue.misc matches 1 if score #.snout.throw_buff blue.misc matches 1.. run function blue:tr/effects/snout/gamble/throw/entity
 execute if score #.temp blue.misc matches 1 run tag @s add blue.tr.gamble.item

@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "потерял",
   "blue.tr.cancelled_delete": "- Удаление отменено",
   "blue.tr.no_delete_confirmation": "У вас нет подтверждения на удаление, пожалуйста, сначала выполните отладочную функцию 'remove_trims_overhaul'.",
-  "blue.tr.clear": "Очистить",
-  "blue.tr.doc": "Док",
   "blue.tr.trim_abilities": "Способности шаблона",
   "blue.tr.info.first": "[Первый]",
   "blue.tr.info.first_message": "Первое сообщение",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "Ближайшие светящиеся игроки получают слабый %s, независимо от источника.",
   "blue.tr.fear_name": "Страх",
   "blue.tr.flow_title": "Шаблон Поток • Воздушный",
-  "blue.tr.gravity_name": "Гравитация",
   "blue.tr.gravity_description": "Постоянно сниженная гравитация. Снижается еще больше в Залах Суда.",
   "blue.tr.graceful_name": "Грациозность",
   "blue.tr.graceful_description": "Увеличенное безопасное расстояние падения и отбрасывание от атак, со сниженным уроном от падения.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Подтверждение",
   "blue.tr.transfer_failed": " Что-то пошло не так с вашей передачей. Подтвердите, что вы владеете шаблоном, который пытаетесь передать, и что вы выбрали правильный с правильными предметами.",
   "blue.tr.transfer_blacklist": "был занесен в черный список для получения",
-  "blue.tr.given_ownership": "Вы получили владение над ",
   "blue.tr.info_shortcut": "Нажмите здесь для ярлыка в меню информации",
-  "blue.tr.stolen_ownership": "Вы украли владение над ",
   "blue.tr.tutorial.transfer_title": "Передача владения",
   "blue.tr.tutorial.transfer_1": " Это меню можно использовать для передачи владения одним из ваших шаблонов ближайшему игроку. У вас должно быть 4 шаблона в любом месте вашего инвентаря ",
   "blue.tr.tutorial.transfer_2": "ИЛИ",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Быстрый выпад",
   "blue.tr.out_combat": "Вы вне боя уже %s секунд",
   "blue.tr.in_combat": "Вы в бою уже %s,%s секунд",
-  "blue.tr.gamble.afterstrike": "Добивание"
+  "blue.tr.gamble.afterstrike": "Добивание",
+  "blue.tr.given_ownership": "%s передал(а) вам права владения на %s ",
+  "blue.tr.gave_ownership": "Права владения на %s успешно переданы %s ",
+  "blue.tr.stolen_ownership": "Вы отобрали у %s права владения на %s "
 }

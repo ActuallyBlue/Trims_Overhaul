@@ -3,15 +3,19 @@
     "condition": "entity_properties",
     "entity": "this",
     "predicate": {
-      "flags": {
-        "is_sneaking": true
-      },
       "equipment": {
         "mainhand": {
           "items": "minecraft:crossbow"
         }
+      },
+      "flags": {
+        "is_sneaking": true
       }
     }
+  },
+  {
+    "condition": "reference",
+    "name": "blue:shared/is_sneaking"
   },
   {
     "condition": "inverted",

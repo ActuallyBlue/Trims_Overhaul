@@ -3,7 +3,7 @@
   "quilt_loader": {
     "group": "com.modrinth",
     "id": "trims_overhaul",
-    "version": "3.2.2",
+    "version": "3.2.3",
     "metadata": {
       "name": "Trims Overhaul",
       "description": "Give every trim unique powers, obtainable through quests",
@@ -11,7 +11,7 @@
       "license": "MIT",
       "icon": "pack.png",
       "contact": {
-        "homepage": "https://modrinth.com/datapack/trims-overhaul",
+        "homepage": "https://modrinth.com/project/lBHH38D3",
         "sources": "https://github.com/ActuallyBlue/Trims_Overhaul",
         "issues": "https://github.com/ActuallyBlue/Trims_Overhaul/issues"
       }

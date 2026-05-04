@@ -7,3 +7,5 @@ summon marker ~ ~-1.25 ~ {Tags:["blue.tr.wild.trap"]}
 particle falling_spore_blossom ~ ~0.5 ~ 0.4 0.05 0.4 0 64
 particle composter ~ ~0.25 ~ 0.2 0.05 0.2 0 16
 playsound block.grass.place block @s ~ ~ ~ 0.8 0.8
+scoreboard players set #.wild.trap_cooldown blue.misc 1
+schedule function blue:tr/effects/wild/emp/trap/cooldown 60t

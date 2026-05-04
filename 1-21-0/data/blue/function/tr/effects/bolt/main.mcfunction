@@ -1,6 +1,6 @@
 execute store success score #.bolt.ambient blue.misc unless score #.bolt.ambient blue.misc matches 1
-execute if score #.bolt.ambient blue.misc matches 0 run particle dust{color:[0.8f,0.5f,0f],scale:0.6f} ~ ~0.7 ~ 0.3 0.3 0.3 0 1 normal @a[scores={blue.particles=1..}]
-execute if score #.bolt.ambient blue.misc matches 1 run particle dust{color:[0.8f,0.5f,0f],scale:0.6f} ~ ~0.7 ~ 0.3 0.3 0.3 0 1 normal @a[scores={blue.particles=2..}]
+execute if score #.bolt.ambient blue.misc matches 0 run particle dust{color:[0.8f,0.5f,0.2f],scale:0.6f} ~ ~0.7 ~ 0.3 0.3 0.3 0 1 normal @a[scores={blue.particles=1..}]
+execute if score #.bolt.ambient blue.misc matches 1 run particle dust{color:[0.8f,0.5f,0.2f],scale:0.6f} ~ ~0.7 ~ 0.3 0.3 0.3 0 1 normal @a[scores={blue.particles=2..}]
 execute as @n[distance=..4,tag=!blue.tr.checked,predicate=blue:tr/copper,type=item] if function blue:tr/effects/bolt/owner run function blue:tr/effects/bolt/item with storage blue:trims temp
 execute if score #.20 blue.misc matches 5 run function blue:tr/effects/bolt/charge
 execute unless predicate {"condition":"entity_properties","entity":"this","predicate":{"effects":{"glowing":{"amplifier":44},"speed":{},"haste":{}}}} run return fail

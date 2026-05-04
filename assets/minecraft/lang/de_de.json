@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "hat verloren",
   "blue.tr.cancelled_delete": "- Löschung abgebrochen",
   "blue.tr.no_delete_confirmation": "Du hast keine Löschbestätigung, bitte führe zuerst die Debug-Funktion remove_trims_overhaul aus.",
-  "blue.tr.clear": "Löschen",
-  "blue.tr.doc": "Dokument",
   "blue.tr.trim_abilities": "Trim-Fähigkeiten",
   "blue.tr.info.first": "[Erste]",
   "blue.tr.info.first_message": "Erste Nachricht",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "Leuchtende Spieler in der Nähe erhalten eine niedrige %s, unabhängig von der Quelle.",
   "blue.tr.fear_name": "Angst",
   "blue.tr.flow_title": "Strömung-Rüstungsbesatz • Der Luftige",
-  "blue.tr.gravity_name": "Schwerkraft",
   "blue.tr.gravity_description": "Permanente reduzierte Schwerkraft. Noch weiter reduziert in Versuchskammern.",
   "blue.tr.graceful_name": "Anmutig",
   "blue.tr.graceful_description": "Erhöhte sichere Fallweite und Angriffs-Rückstoß, mit reduziertem Fallschaden.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Bestätigung",
   "blue.tr.transfer_failed": " Etwas ist bei deiner Übertragung schiefgelaufen. Bestätige, dass du den rüstungsbesatz, den du übertragen möchtest, besitzt und dass du den richtigen mit den richtigen Gegenständen ausgewählt hast.",
   "blue.tr.transfer_blacklist": "wurde auf die schwarze Liste gesetzt, um zu erhalten",
-  "blue.tr.given_ownership": "Du hast den Besitz über ",
   "blue.tr.info_shortcut": "Klicke hier für einen Shortcut zum Infomenü",
-  "blue.tr.stolen_ownership": "Du hast den Besitz über ",
   "blue.tr.tutorial.transfer_title": "Besitzübertragung",
   "blue.tr.tutorial.transfer_1": " Dieses Menü kann verwendet werden, um den Besitz eines deiner Rüstungsbesatze an den nächsten Spieler zu übertragen. Du musst die 4 Vorlagen überall in deinem Inventar haben ",
   "blue.tr.tutorial.transfer_2": "ODER",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Schnellausfall",
   "blue.tr.out_combat": "Du bist seit %s Sekunden außerhalb des Kampfes",
   "blue.tr.in_combat": "Du bist seit %s,%s Sekunden im Kampf",
-  "blue.tr.gamble.afterstrike": "Nachschlag"
+  "blue.tr.gamble.afterstrike": "Nachschlag",
+  "blue.tr.given_ownership": "%s hat dir die Eigentumsrechte an %s übertragen ",
+  "blue.tr.gave_ownership": "%s hat erfolgreich die Eigentumsrechte an %s erhalten ",
+  "blue.tr.stolen_ownership": "Du hast %s die Eigentumsrechte an %s gestohlen "
 }

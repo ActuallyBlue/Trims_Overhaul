@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "perdeu",
   "blue.tr.cancelled_delete": "- Exclusão cancelada",
   "blue.tr.no_delete_confirmation": "Você não tem uma confirmação de exclusão, por favor, execute a função de depuração 'remove_trims_overhaul' primeiro.",
-  "blue.tr.clear": "Limpar",
-  "blue.tr.doc": "Doc",
   "blue.tr.trim_abilities": "Habilidades do ornamento",
   "blue.tr.info.first": "[Primeiro]",
   "blue.tr.info.first_message": "Primeira mensagem",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "Jogadores brilhando próximos recebem um fraco %s, independentemente da fonte.",
   "blue.tr.fear_name": "Medo",
   "blue.tr.flow_title": "Ornamento Fluxo • O Aéreo",
-  "blue.tr.gravity_name": "Gravidade",
   "blue.tr.gravity_description": "Gravidade reduzida permanente. Reduzida ainda mais em Câmaras de Julgamento.",
   "blue.tr.graceful_name": "Gracioso",
   "blue.tr.graceful_description": "Distância de queda segura e Repulsão de ataque aumentados, com dano de queda reduzido.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Confirmação",
   "blue.tr.transfer_failed": " Algo deu errado com a sua transferência. Confirme que você possui o ornamento que está tentando transferir e que selecionou o correto com os itens corretos.",
   "blue.tr.transfer_blacklist": "foi colocado na lista negra para obter",
-  "blue.tr.given_ownership": "Você recebeu a posse sobre ",
   "blue.tr.info_shortcut": "Clique aqui para um atalho para o menu de informações",
-  "blue.tr.stolen_ownership": "Você roubou a posse sobre ",
   "blue.tr.tutorial.transfer_title": "Transferência de posse",
   "blue.tr.tutorial.transfer_1": " Este menu pode ser usado para transferir a posse de um de seus ornamentos para o jogador mais próximo. Você deve ter os 4 modelos em qualquer lugar do seu inventário ",
   "blue.tr.tutorial.transfer_2": "OU",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Arremetida rápida",
   "blue.tr.out_combat": "Você está fora de combate há %s segundos",
   "blue.tr.in_combat": "Você está em combate há %s,%s segundos",
-  "blue.tr.gamble.afterstrike": "Golpe final"
+  "blue.tr.gamble.afterstrike": "Golpe final",
+  "blue.tr.given_ownership": "%s transferiu a propriedade de %s para você ",
+  "blue.tr.gave_ownership": "A propriedade de %s foi transferida com sucesso para %s ",
+  "blue.tr.stolen_ownership": "Você roubou de %s a propriedade de %s "
 }

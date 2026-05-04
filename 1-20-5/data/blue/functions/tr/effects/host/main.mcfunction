@@ -12,10 +12,10 @@ execute if score @s blue.tr.combat matches -59 unless entity b163102f-0-11-0-1 o
 execute unless score #.20 blue.misc matches 5 run return fail
 execute at @a[tag=blue.tr.host.morale,scores={blue.health=..10}] run particle damage_indicator ~ ~2.25 ~ 0.2 0 0.2 0 2 force @s
 attribute @s generic.max_health modifier remove b163102f-0-5-0-1
-execute store result score #.temp blue.misc if entity @e[distance=..20,limit=32,type=villager]
+execute store result score #.temp blue.misc if entity @e[distance=..24,limit=32,type=villager]
 scoreboard players operation #.temp blue.misc *= #5 blue.misc
 execute as @e[distance=..22,limit=7,type=iron_golem] run scoreboard players add #.temp blue.misc 20
-execute as @a[advancements={blue:tr/trust={host=true}},gamemode=!spectator,gamemode=!creative,distance=0.01..24,limit=3] run scoreboard players add #.temp blue.misc 50
+execute as @a[advancements={blue:tr/trust={host=true}},gamemode=!spectator,gamemode=!creative,distance=0.01..20,limit=3] run scoreboard players add #.temp blue.misc 50
 execute unless entity @s[predicate=!blue:shared/in_village,tag=!blue.tr.dragon_egg] run scoreboard players add #.temp blue.misc 15
 execute if score #.host.ambient blue.misc matches 1 if score #.temp blue.misc matches 1.. run particle dust_color_transition{from_color:[0.9f,0.2f,0.2f],scale:0.6f,to_color:[0.1f,0f,0f]} ~ ~0.8 ~ 0.25 0.3 0.25 0 1 normal @a[scores={blue.particles=2..}]
 execute if score #.temp blue.misc matches 160.. store success score #.temp blue.misc run attribute @s[advancements={blue:tr/cure={7=true}}] generic.max_health modifier add b163102f-0-5-0-1 "blue:tr.trim" 15.2 add_value

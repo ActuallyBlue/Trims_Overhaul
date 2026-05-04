@@ -5,9 +5,9 @@ issueTrackerURL = 'https://github.com/ActuallyBlue/Trims_Overhaul/issues'
 
 [[mods]]
 	modId = 'trims_overhaul'
-	version = '3.2.2'
+	version = '3.2.3'
 	displayName = 'Trims Overhaul'
 	description = "Give every trim unique powers, obtainable through quests"
 	logoFile = 'pack.png'
 	authors = "ActuallyBlue"
-	displayURL = 'https://modrinth.com/datapack/trims-overhaul'
+	displayURL = 'https://modrinth.com/project/lBHH38D3'

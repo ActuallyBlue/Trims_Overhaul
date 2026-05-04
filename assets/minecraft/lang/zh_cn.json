@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "已失去",
   "blue.tr.cancelled_delete": "- 已取消删除",
   "blue.tr.no_delete_confirmation": "你未开启删除确认，请先运行 remove_trims_overhaul 调试函数。",
-  "blue.tr.clear": "清除",
-  "blue.tr.doc": "文档",
   "blue.tr.trim_abilities": "纹饰能力",
   "blue.tr.info.first": "[第一]",
   "blue.tr.info.first_message": "第一条消息",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "附近处于发光状态的玩家会受到少量%s，无论来源。",
   "blue.tr.fear_name": "恐惧",
   "blue.tr.flow_title": "气流纹饰 • 飞行者",
-  "blue.tr.gravity_name": "重力",
   "blue.tr.gravity_description": "永久降低重力；在试炼密室中进一步降低。",
   "blue.tr.graceful_name": "优雅",
   "blue.tr.graceful_description": "提高安全坠落距离与攻击击退，降低跌落伤害。",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " 确认",
   "blue.tr.transfer_failed": " 你的转移出现问题。请确认你拥有尝试转移的纹饰，并选择了正确的纹饰与对应物品.",
   "blue.tr.transfer_blacklist": "已被加入黑名单，无法获得",
-  "blue.tr.given_ownership": "你已被授予以下内容的所有权：",
   "blue.tr.info_shortcut": "点击此处快捷打开信息菜单",
-  "blue.tr.stolen_ownership": "你已偷得以下内容的所有权：",
   "blue.tr.tutorial.transfer_title": "所有权转移",
   "blue.tr.tutorial.transfer_1": " 此菜单可将你任意纹饰的所有权转移给最近的玩家。你必须在背包任意位置拥有 4 份模板 ",
   "blue.tr.tutorial.transfer_2": "或",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "快速突刺",
   "blue.tr.out_combat": "你已脱离战斗 %s 秒",
   "blue.tr.in_combat": "你已在战斗中 %s.%s 秒",
-  "blue.tr.gamble.afterstrike": "余击"
+  "blue.tr.gamble.afterstrike": "余击",
+  "blue.tr.given_ownership": "%s 将 %s 的所有权转让给了你 ",
+  "blue.tr.gave_ownership": "已成功将 %s 的所有权转让给 %s ",
+  "blue.tr.stolen_ownership": "你夺取了 %s 对 %s 的所有权 "
 }

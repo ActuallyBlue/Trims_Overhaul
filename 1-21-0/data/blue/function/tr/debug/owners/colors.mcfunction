@@ -1,19 +1,19 @@
-tellraw @s {"text":"Wayfinder wayfinder","color":"#F1FFC8"}
-tellraw @s {"text":"Silence silence","color":"#3842Cf"}
-tellraw @s {"text":"Raiser shaper","color":"#95B623"}
-tellraw @s {"text":"Shaper raiser","color":"#8F8F8F"}
-tellraw @s {"text":"Sentry sentry","color":"#4B885B"}
-tellraw @s {"text":"Spire spire","color":"#BE20C7"}
-tellraw @s {"text":"Coast coast","color":"#C1C888"}
-tellraw @s {"text":"Snout snout","color":"#F2B01A"}
-tellraw @s {"text":"Ward wild","color":"#5C70AE"}
-tellraw @s {"text":"Bolt host","color":"#B65D1A"}
-tellraw @s {"text":"Flow tide","color":"#85B2C5"}
-tellraw @s {"text":"Dune flow","color":"#E7C547"}
-tellraw @s {"text":"Wild dune","color":"#00D529"}
-tellraw @s {"text":"Tide bolt","color":"#199ADD"}
-tellraw @s {"text":"Host ward","color":"#A34646"}
-tellraw @s {"text":"Eye vex","color":"#1F8A46"}
-tellraw @s {"text":"Rib rib","color":"#E6484B"}
-tellraw @s {"text":"Vex eye","color":"#CFC6A5"}
+tellraw @s {"text":"Wayfinder","color":"#F1FFC8"}
+tellraw @s {"text":"Silence","color":"#3842Cf"}
+tellraw @s {"text":"Raiser","color":"#95B623"}
+tellraw @s {"text":"Shaper","color":"#8F8F8F"}
+tellraw @s {"text":"Sentry","color":"#4B885B"}
+tellraw @s {"text":"Spire","color":"#BE20C7"}
+tellraw @s {"text":"Coast","color":"#C1C888"}
+tellraw @s {"text":"Snout","color":"#F2B01A"}
+tellraw @s {"text":"Ward","color":"#5C70AE"}
+tellraw @s {"text":"Bolt","color":"#B65D1A"}
+tellraw @s {"text":"Flow","color":"#85B2C5"}
+tellraw @s {"text":"Dune","color":"#E7C547"}
+tellraw @s {"text":"Wild","color":"#00D529"}
+tellraw @s {"text":"Tide","color":"#199ADD"}
+tellraw @s {"text":"Host","color":"#A34646"}
+tellraw @s {"text":"Eye","color":"#1F8A46"}
+tellraw @s {"text":"Rib","color":"#E6484B"}
+tellraw @s {"text":"Vex","color":"#CFC6A5"}
 tellraw @s {"text":"• Base •","color":"gray"}

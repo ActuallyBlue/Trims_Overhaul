@@ -1,4 +1,3 @@
-playsound block.end_portal_frame.fill player @a ~ ~ ~ 1 0.5
 execute if entity @a[tag=blue.tr.transfer_target,advancements={blue:tr/blacklist={ward=true}}] run tellraw @s [{"text":"- ","color":"dark_gray"},{"selector":"@a[tag=blue.tr.transfer_target]"}," ",{"translate":"blue.tr.transfer_blacklist","fallback":"has been blacklisted from getting","color":"gray"}," ",{"translate":"Ward","color":"#5C70AE"}]
 execute if entity @a[tag=blue.tr.transfer_target,advancements={blue:tr/blacklist={ward=true}}] run return 0
 execute unless entity @s[tag=blue.tr.trim.ward] store result score #.temp blue.misc run clear @s ward_armor_trim_smithing_template 0
@@ -9,7 +8,5 @@ execute if entity @s[tag=blue.tr.trim.ward] unless entity @s[tag=blue.tr.ward] r
 execute if entity @s[tag=blue.tr.ward] run function blue:tr/inv/transfer/owner/fail
 execute if entity @s[tag=blue.tr.ward] run return 0
 execute as @a[tag=blue.tr.transfer_target,limit=1] facing entity @s feet run function blue:tr/inv/transfer/raycast/ward
-data modify storage blue:trims logs.append.target set from storage blue:shared player_name
-function blue:shared/get_name
 data modify storage blue:trims logs.append.trim set value {"translate":"Ward","color":"#5C70AE"}
-function blue:tr/inv/transfer/log
+function blue:tr/inv/transfer/owner/all

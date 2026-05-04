@@ -1,4 +1,5 @@
 scoreboard players operation #.ward.stonewall blue.misc = #.temp blue.misc
+execute if score #.temp blue.misc matches 1 run particle sculk_charge_pop ~ ~1 ~ 0.3 0.4 0.3 0 8
 execute if score #.temp blue.misc matches 1 run attribute @s generic.armor modifier add b163102f-0-5-0-1 "blue:tr.trim" 6 add
 execute if score #.temp blue.misc matches 1 run attribute @s generic.knockback_resistance modifier add b163102f-0-5-0-1 "blue:tr.trim" 0.3 add
 execute if score #.temp blue.misc matches 1 run return 0

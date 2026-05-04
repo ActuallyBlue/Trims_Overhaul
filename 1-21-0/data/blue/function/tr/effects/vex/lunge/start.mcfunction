@@ -15,5 +15,5 @@ execute positioned ^ ^ ^-2.5 positioned ~ ~1001.5 ~ summon end_crystal run damag
 tp @s ~ ~ ~
 execute if score #.temp blue.misc matches -1 run gamemode survival
 execute if score #.temp blue.misc matches -2 run gamemode adventure
-execute unless score #.vex.isolated_lunge blue.misc matches 1 run playsound entity.vex.charge player @a ~ ~ ~ 2 1.5
+execute unless score #.vex.isolated_lunge blue.misc matches 1 run return run playsound entity.vex.charge player @a ~ ~ ~ 2 1.5
 execute if score #.vex.isolated_lunge blue.misc matches 1 run playsound entity.vex.charge player @a ~ ~ ~ 2.5 1

@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "は失いました",
   "blue.tr.cancelled_delete": "- 削除はキャンセルされました",
   "blue.tr.no_delete_confirmation": "削除確認がありません。まずremove_trims_overhaulデバッグファンクションを実行してください。",
-  "blue.tr.clear": "クリア",
-  "blue.tr.doc": "ドキュメント",
   "blue.tr.trim_abilities": "装飾アビリティ",
   "blue.tr.info.first": "[1番目]",
   "blue.tr.info.first_message": "最初のメッセージ",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "近くの発光しているプレイヤーは、原因に関わらず低い %s を受ける。",
   "blue.tr.fear_name": "恐怖",
   "blue.tr.flow_title": "フロウの装飾 • エアボーン",
-  "blue.tr.gravity_name": "グラビティ",
   "blue.tr.gravity_description": "永続的な重力軽減。トライアルチャンバー内ではさらに軽減される。",
   "blue.tr.graceful_name": "グレイスフル",
   "blue.tr.graceful_description": "安全な落下距離と攻撃ノックバックが増加し、落下ダメージが減少する。",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " 確認",
   "blue.tr.transfer_failed": " 譲渡に何か問題が発生しました。譲渡しようとしている装飾を所有していること、正しいアイテムで正しいものを選択したことを確認してください.",
   "blue.tr.transfer_blacklist": "は、 を取得することからブラックリストに登録されました",
-  "blue.tr.given_ownership": "あなたは の所有権を与えられました",
   "blue.tr.info_shortcut": "情報メニューへのショートカットはこちらをクリック",
-  "blue.tr.stolen_ownership": "あなたは の所有権を盗みました",
   "blue.tr.tutorial.transfer_title": "所有権の譲渡",
   "blue.tr.tutorial.transfer_1": " このメニューを使用して、あなたの装飾の所有権を最も近いプレイヤーに譲渡できます。インベントリのどこかに4つの鍛冶型を持っている必要があります ",
   "blue.tr.tutorial.transfer_2": "または",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "クイックランジ",
   "blue.tr.out_combat": "%s秒間、戦闘から離脱しています",
   "blue.tr.in_combat": "%s.%s秒間、戦闘中です",
-  "blue.tr.gamble.afterstrike": "残撃"
+  "blue.tr.gamble.afterstrike": "残撃",
+  "blue.tr.given_ownership": "%s が %s の所有権をあなたに譲渡しました ",
+  "blue.tr.gave_ownership": "%s への %s の所有権の譲渡が完了しました ",
+  "blue.tr.stolen_ownership": "%s から %s の所有権を奪いました "
 }

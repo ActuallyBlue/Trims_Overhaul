@@ -1,0 +1,8 @@
+{
+  "values": [
+    "#blue:shared/projectiles",
+    "falling_block",
+    "item",
+    "tnt"
+  ]
+}

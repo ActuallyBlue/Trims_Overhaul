@@ -1,0 +1,1 @@
+scoreboard players reset #.wild.trap_cooldown blue.misc

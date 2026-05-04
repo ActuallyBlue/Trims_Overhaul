@@ -1,5 +1,5 @@
-playsound block.note_block.chime player @s ~ ~ ~ 1 1.5
-tellraw @p ["\n\n",{"translate":"blue.tr.import_success","fallback":"Settings have been successfully imported.","color":"gray"}]
+playsound block.note_block.chime player @p[gamemode=creative,distance=..9] ~ ~ ~ 1 1.5
+tellraw @p[gamemode=creative,distance=..9] ["\n\n",{"translate":"blue.tr.import_success","fallback":"Settings have been successfully imported.","color":"gray"}]
 execute store result storage blue:trims temp.export.objective_type int 1 run scoreboard players get #.tr.objective_type blue.config
 execute store result storage blue:trims temp.export.objective_announcements int 1 run scoreboard players get #.tr.objective_announcements blue.config
 execute store result storage blue:trims temp.export.template_clearing int 1 run scoreboard players get #.tr.template_clearing blue.config

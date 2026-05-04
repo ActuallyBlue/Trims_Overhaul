@@ -39,3 +39,8 @@ execute if entity @s[tag=blue.tr.eye] if entity @a[tag=blue.tr.killer,advancemen
 execute if entity @s[tag=blue.tr.rib] if entity @a[tag=blue.tr.killer,advancements={blue:tr/blacklist={rib=false}},limit=1] run function blue:tr/inv/died/macro {trim:rib,translate:"Rib","color":"#E6484B"}
 execute if entity @s[tag=blue.tr.vex] if entity @a[tag=blue.tr.killer,advancements={blue:tr/blacklist={vex=false}},limit=1] run function blue:tr/inv/died/macro {trim:vex,translate:"Vex","color":"#CFC6A5"}
 tag @a[tag=blue.tr.killer,limit=1] remove blue.tr.killer
+execute if score #.drop_temp blue.misc matches 0 run return fail
+playsound block.beacon.deactivate player @a ~ ~ ~ 2 0.8
+playsound block.beacon.deactivate player @a ~ ~ ~ 2 1.9
+particle enchant ~ ~1 ~ 0.3 0.4 0.3 0 64
+particle enchant ~ ~2 ~ 0 2 0 0 16

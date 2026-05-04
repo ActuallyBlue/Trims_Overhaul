@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "ha perso",
   "blue.tr.cancelled_delete": "- Eliminazione Annullata",
   "blue.tr.no_delete_confirmation": "Non hai la conferma di eliminazione, esegui prima la funzione di debug remove_trims_overhaul.",
-  "blue.tr.clear": "Pulisci",
-  "blue.tr.doc": "Doc",
   "blue.tr.trim_abilities": "Abilità Trim",
   "blue.tr.info.first": "[Primo]",
   "blue.tr.info.first_message": "Primo Messaggio",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "I giocatori brillanti vicini ricevono bassa %s, indipendentemente dalla fonte.",
   "blue.tr.fear_name": "Paura",
   "blue.tr.flow_title": "Flow Trim • The Airborne",
-  "blue.tr.gravity_name": "Gravità",
   "blue.tr.gravity_description": "Gravità permanentemente ridotta. Ancora più ridotta nelle Trial Chambers.",
   "blue.tr.graceful_name": "Agile",
   "blue.tr.graceful_description": "Aumentata distanza di Safe-Fall e Knockback d'attacco, con ridotto danno da caduta.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Conferma",
   "blue.tr.transfer_failed": " Qualcosa è andato storto con il trasferimento. Controlla di possedere il trim che stai tentando di trasferire e di aver selezionato quello corretto con gli oggetti corretti.",
   "blue.tr.transfer_blacklist": "è stato inserito nella blacklist dal ricevere",
-  "blue.tr.given_ownership": "Ti è stata data la proprietà su ",
   "blue.tr.info_shortcut": "Clicca qui per una scorciatoia al menu info",
-  "blue.tr.stolen_ownership": "Hai rubato la proprietà su ",
   "blue.tr.tutorial.transfer_title": "Trasferimento della Proprietà",
   "blue.tr.tutorial.transfer_1": " Questo menu può essere usato per trasferire la proprietà di uno qualsiasi dei tuoi trim al giocatore più vicino. Devi avere i 4 template ovunque nel tuo inventario ",
   "blue.tr.tutorial.transfer_2": "OPPURE",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Affondo rapido",
   "blue.tr.out_combat": "Sei fuori dal combattimento da %s secondi",
   "blue.tr.in_combat": "Sei in combattimento da %s,%s secondi",
-  "blue.tr.gamble.afterstrike": "Colpo finale"
+  "blue.tr.gamble.afterstrike": "Colpo finale",
+  "blue.tr.given_ownership": "%s ti ha trasferito la proprietà di %s ",
+  "blue.tr.gave_ownership": "La proprietà di %s è stata trasferita con successo a %s ",
+  "blue.tr.stolen_ownership": "Hai sottratto a %s la proprietà di %s "
 }

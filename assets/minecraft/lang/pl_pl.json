@@ -199,8 +199,6 @@
   "blue.tr.has_lost": "stracił",
   "blue.tr.cancelled_delete": "- Usuwanie anulowane",
   "blue.tr.no_delete_confirmation": "Nie masz potwierdzenia usunięcia, najpierw uruchom funkcję debugowania remove_trims_overhaul.",
-  "blue.tr.clear": "Wyczyść",
-  "blue.tr.doc": "Dok.",
   "blue.tr.trim_abilities": "Zdolności zdobień",
   "blue.tr.info.first": "[Pierwsza]",
   "blue.tr.info.first_message": "Pierwsza wiadomość",
@@ -275,7 +273,6 @@
   "blue.tr.presence_description": "Poblizcy świecący gracze otrzymują niski %s, niezależnie od źródła.",
   "blue.tr.fear_name": "Strach",
   "blue.tr.flow_title": "Zdobienie przepływu • Powietrzne",
-  "blue.tr.gravity_name": "Grawitacja",
   "blue.tr.gravity_description": "Stała zmniejszona grawitacja. Zmniejszona jeszcze bardziej w komnatach prób.",
   "blue.tr.graceful_name": "Wdzięk",
   "blue.tr.graceful_description": "Zwiększona bezpieczna odległość upadku i odrzut od ataku, ze zmniejszonymi obrażeniami od upadku.",
@@ -532,9 +529,7 @@
   "blue.tr.confirmation": " Potwierdzenie",
   "blue.tr.transfer_failed": " Coś poszło nie tak z twoim przekazaniem. Upewnij się, że jesteś właścicielem zdobienia, które próbujesz przekazać, i że wybrałeś właściwe zdobienie z właściwymi przedmiotami.",
   "blue.tr.transfer_blacklist": "został dodany do czarnej listy otrzymywania",
-  "blue.tr.given_ownership": "Otrzymałeś własność nad ",
   "blue.tr.info_shortcut": "Kliknij tutaj, aby przejść do menu informacji",
-  "blue.tr.stolen_ownership": "Ukradłeś własność nad ",
   "blue.tr.tutorial.transfer_title": "Przekazywanie własności",
   "blue.tr.tutorial.transfer_1": " To menu może być użyte do przekazania własności dowolnego z twoich zdobień najbliższemu graczowi. Musisz mieć 4 wzorniki gdziekolwiek w swoim ekwipunku ",
   "blue.tr.tutorial.transfer_2": "LUB",
@@ -861,5 +856,8 @@
   "blue.tr.sm.quick_lunge": "Szybki wypad",
   "blue.tr.out_combat": "Od %s sekund jesteś poza walką",
   "blue.tr.in_combat": "Walczysz od %s,%s sekund",
-  "blue.tr.gamble.afterstrike": "Uderzenie końcowe"
+  "blue.tr.gamble.afterstrike": "Uderzenie końcowe",
+  "blue.tr.given_ownership": "%s przekazał(a) ci własność nad %s ",
+  "blue.tr.gave_ownership": "Pomyślnie przekazano %s własność nad %s ",
+  "blue.tr.stolen_ownership": "Przejąłeś/Przejęłaś własność nad %s od %s "
 }

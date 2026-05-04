@@ -7,3 +7,5 @@ effect give @s[type=wolf] strength infinite 1 true
 effect give @s[type=wolf] speed infinite 0 true
 effect give @s[type=cat] speed infinite 1 true
 scoreboard players set @s blue.misc -721
+execute at @s run particle spore_blossom_air ~ ~0.5 ~ 0.4 0.4 0.4 0 32
+execute at @s run playsound entity.player.levelup player @a ~ ~ ~ 0.5 1.5

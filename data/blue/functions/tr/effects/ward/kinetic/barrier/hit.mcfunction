@@ -14,11 +14,11 @@ tp @s ~ ~ ~
 execute if score #.temp0 blue.misc matches -1 run gamemode survival
 execute if score #.temp0 blue.misc matches -2 run gamemode adventure
 scoreboard players set #.temp0 blue.misc 0
-execute if score #.temp blue.misc matches ..800 store success score #.temp0 blue.misc run damage @s[type=!#blue:shared/peaceful] 5 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
-execute if score #.temp blue.misc matches 801..1200 store success score #.temp0 blue.misc run damage @s[type=!#blue:shared/peaceful] 9 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
-execute if score #.temp blue.misc matches 1201..1600 store success score #.temp0 blue.misc run damage @s[type=!#blue:shared/peaceful] 13 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
-execute if score #.temp blue.misc matches 1601..2000 store success score #.temp0 blue.misc run damage @s[type=!#blue:shared/peaceful] 17 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
-execute if score #.temp blue.misc matches 2001.. store success score #.temp0 blue.misc run damage @s[type=!#blue:shared/peaceful] 21 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
+execute if score #.temp blue.misc matches ..800 store success score #.temp0 blue.misc run damage @s 5 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
+execute if score #.temp blue.misc matches 801..1200 store success score #.temp0 blue.misc run damage @s 9 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
+execute if score #.temp blue.misc matches 1201..1600 store success score #.temp0 blue.misc run damage @s 13 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
+execute if score #.temp blue.misc matches 1601..2000 store success score #.temp0 blue.misc run damage @s 17 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
+execute if score #.temp blue.misc matches 2001.. store success score #.temp0 blue.misc run damage @s 21 blue:tr/no_impact by @a[tag=blue.tr.ward,limit=1]
 execute if score #.temp0 blue.misc matches 0 run return 0
 execute if score #.temp blue.misc matches ..800 run playsound item.shield.block player @a ~ ~ ~ 1 0.8
 execute if score #.temp blue.misc matches 801..1200 run playsound item.shield.block player @a ~ ~ ~ 1.25 0.75
